@@ -192,7 +192,7 @@ class SignInScreen extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: ' Log in',
+                          text: 'Log in',
                           style: GoogleFonts.poppins(
                             textStyle: TextStyle(
                               fontWeight: FontWeight.w600,
