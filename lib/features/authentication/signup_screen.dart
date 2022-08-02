@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobile_assessment_flutter/common_widgets/textfield_with_header.dart';
 import 'package:mobile_assessment_flutter/constants/app_constants.dart';
+import 'package:mobile_assessment_flutter/features/routing/app_router.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({
@@ -133,20 +134,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                           ),
                           const SizedBox(width: 60),
-                          Container(
-                            height: 60,
-                            width: 120,
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 75, 177, 197),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: const Center(
-                              child: Text(
-                                'Next',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.w500,
+                          GestureDetector(
+                            onTap: () =>
+                                context.pushNamed(AppRoute.verification.name),
+                            child: Container(
+                              height: 60,
+                              width: 120,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 75, 177, 197),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  'Next',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
                               ),
                             ),
