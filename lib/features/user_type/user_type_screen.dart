@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:mobile_assessment_flutter/features/constants/app_constants.dart';
 
 class UserType extends StatelessWidget {
   const UserType({Key? key}) : super(key: key);
@@ -21,41 +20,17 @@ class UserType extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text(
-                      'What kind of user are',
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w500,
-                        color: Color.fromARGB(255, 110, 109, 109),
-                      ),
-                    ),
+                    Text('What kind of user are',
+                        style: AppTextStyles.kHeaderStyle),
                     SizedBox(height: 8),
-                    Text(
-                      'you?',
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w500,
-                        color: Color.fromARGB(255, 110, 109, 109),
-                      ),
-                    ),
+                    Text('you?', style: AppTextStyles.kHeaderStyle),
                     SizedBox(height: 5),
                     Text(
                       'We will adapt the app to suite your',
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                        color: Color.fromARGB(255, 110, 109, 109),
-                      ),
+                      style: AppTextStyles.kSubHeaderStyle,
                     ),
                     SizedBox(height: 5),
-                    Text(
-                      'needs',
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                        color: Color.fromARGB(255, 110, 109, 109),
-                      ),
-                    ),
+                    Text('needs', style: AppTextStyles.kSubHeaderStyle),
                   ],
                 ),
               ),
