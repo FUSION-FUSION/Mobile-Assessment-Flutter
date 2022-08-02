@@ -6,6 +6,7 @@ import 'package:mobile_assessment_flutter/view/widgets/custom_button.dart';
 import 'package:mobile_assessment_flutter/view/widgets/form_field.dart';
 import '../../constants/assets_constant_name.dart';
 import '../../constants/color_pallette.dart';
+import '../sign_in/sign_in_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String routeName = '/welcome_screen';
@@ -126,7 +127,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           text: 'Log In',
                           style: const TextStyle(
                               color: kPrimary, fontWeight: FontWeight.w600),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
+                          recognizer: TapGestureRecognizer()..onTap = () {
+                            Navigator.pushNamed(context, SignInScreen.routeName);
+                          },
                         )
                       ]),
                     ),

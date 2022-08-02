@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           color: isLightbackground ? kSecBackground : kPrimary,
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(15),
           border: isLightbackground?Border.all(color: Colors.white): Border.all(color: kPrimary)
         ),
         child: Center(
