@@ -11,7 +11,7 @@ class ThemeProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  static AppTheme of(BuildContext context, {bool listen = true}) {
+  static AppTheme current(BuildContext context, {bool listen = true}) {
     return Provider.of<ThemeProvider>(context, listen: listen).theme;
   }
 }

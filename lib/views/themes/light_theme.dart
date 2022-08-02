@@ -7,5 +7,6 @@ class LightTheme extends AppTheme {
       : super(
           primaryColor: const Color(0xFF46A5BA),
           primaryTextColor: const Color(0xFF1F1F1F),
+          darkBackgroundColor: const Color(0xFF040405),
         );
 }
