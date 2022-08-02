@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mobile_assessment_flutter/features/constants/app_constants.dart';
+import 'package:mobile_assessment_flutter/features/routing/app_router.dart';
 
 class UserType extends StatelessWidget {
   const UserType({Key? key}) : super(key: key);
@@ -36,37 +38,49 @@ class UserType extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 35),
-            Container(
-              height: 125,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 75, 177, 197),
-                borderRadius: BorderRadius.circular(20),
+            GestureDetector(
+              onTap: () => context.goNamed(
+                AppRoute.signUp.name,
+                params: {'type': 'personal'},
               ),
-              child: const Center(
-                child: Text(
-                  'Personal',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontWeight: FontWeight.w900,
+              child: Container(
+                height: 125,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 75, 177, 197),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Personal',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
                 ),
               ),
             ),
             const SizedBox(height: 30),
-            Container(
-              height: 125,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 75, 177, 197),
-                borderRadius: BorderRadius.circular(20),
+            GestureDetector(
+              onTap: () => context.goNamed(
+                AppRoute.signUp.name,
+                params: {'type': 'business'},
               ),
-              child: const Center(
-                child: Text(
-                  'E-commerce',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontWeight: FontWeight.w900,
+              child: Container(
+                height: 125,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 75, 177, 197),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Center(
+                  child: Text(
+                    'E-commerce',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
                 ),
               ),
