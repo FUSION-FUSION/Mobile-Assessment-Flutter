@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shipify/screens/home_screen.dart';
+import 'package:mobile_assessment_flutter/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
