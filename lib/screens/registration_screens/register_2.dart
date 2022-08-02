@@ -12,13 +12,13 @@ class Registration2 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('register 2'),
+            Text('register 2 screen'),
 
             MaterialButton(
               child: Text('Go forward'),
               onPressed: () {
                 // go to register 3
-                Navigator.of(context).pushReplacement(
+                Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => Registration3()),
                 );
               },

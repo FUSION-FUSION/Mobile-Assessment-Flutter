@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'choose_purpose_screen.dart';
 import 'register_2.dart';
 
 class Registration1 extends StatelessWidget {
@@ -11,16 +12,17 @@ class Registration1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('register 1'),
+            Text('register 1 screen'),
+
             MaterialButton(
               child: Text('Go forward'),
               onPressed: () {
-                // go to register 2
+                // go to register 3
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => Registration2()),
                 );
               },
-            )
+            ),
           ],
         ),
       ),

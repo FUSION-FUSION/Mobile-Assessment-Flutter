@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // screens
-import 'package:mobile_assessment_flutter/screens/home_screen/home_screen.dart';
-import 'screens/registration_screens/register_1.dart';
+import 'screens/loading_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
+  runApp(const Shopify());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Shopify extends StatelessWidget {
+  const Shopify({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Shopify',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const LoadingScreen(),
     );
   }
 }
-
