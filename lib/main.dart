@@ -1,30 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('assets/google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
+
+  runApp(ChangeNotifierProvider<ThemeProvider>(
+    create: (context) => ThemeProvider(),
+    child: const App(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final routes = {
+      '/': (context) => const MyHomePage(title: 'Hello'),
+    };
+
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Shipify',
+      initialRoute: '/',
+      routes: routes,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: ThemeProvider.of(context).primaryColor,
+        textTheme:
+        GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme.apply(
+          bodyColor: ThemeProvider.of(context).primaryTextColor,
+          displayColor: ThemeProvider.of(context).primaryTextColor,
+        )),
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: ThemeProvider.of(context).primaryTextColor,
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
