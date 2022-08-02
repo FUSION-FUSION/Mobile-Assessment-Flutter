@@ -33,6 +33,14 @@ class AppRouter extends _i2.RootStackRouter {
     HomeScreen.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.HomeScreen());
+    },
+    SignUpPersonal.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.SignUpPersonal());
+    },
+    SignUpEcommerce.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.SignUpEcommerce());
     }
   };
 
@@ -40,7 +48,9 @@ class AppRouter extends _i2.RootStackRouter {
   List<_i2.RouteConfig> get routes => [
         _i2.RouteConfig(Splashscreen.name, path: '/'),
         _i2.RouteConfig(Usertype.name, path: '/Usertype'),
-        _i2.RouteConfig(HomeScreen.name, path: '/home-screen')
+        _i2.RouteConfig(HomeScreen.name, path: '/home-screen'),
+        _i2.RouteConfig(SignUpPersonal.name, path: '/sign-up-personal'),
+        _i2.RouteConfig(SignUpEcommerce.name, path: '/sign-up-ecommerce')
       ];
 }
 
@@ -66,4 +76,22 @@ class HomeScreen extends _i2.PageRouteInfo<void> {
   const HomeScreen() : super(HomeScreen.name, path: '/home-screen');
 
   static const String name = 'HomeScreen';
+}
+
+/// generated route for
+/// [_i1.SignUpPersonal]
+class SignUpPersonal extends _i2.PageRouteInfo<void> {
+  const SignUpPersonal()
+      : super(SignUpPersonal.name, path: '/sign-up-personal');
+
+  static const String name = 'SignUpPersonal';
+}
+
+/// generated route for
+/// [_i1.SignUpEcommerce]
+class SignUpEcommerce extends _i2.PageRouteInfo<void> {
+  const SignUpEcommerce()
+      : super(SignUpEcommerce.name, path: '/sign-up-ecommerce');
+
+  static const String name = 'SignUpEcommerce';
 }
