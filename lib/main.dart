@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 // screens
-import 'package:mobile_assessment_flutter/screens/home_screen.dart';
+import 'package:mobile_assessment_flutter/screens/home_screen/home_screen.dart';
+import 'screens/registration_screens/register_1.dart';
 
 void main() {
   runApp(const MyApp());
