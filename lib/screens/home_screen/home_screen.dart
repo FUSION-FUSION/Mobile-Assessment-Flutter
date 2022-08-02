@@ -33,15 +33,15 @@ class HomeScreen extends StatelessWidget {
         actions: [
           // Notifications button
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 18),
             child: GestureDetector(
               onTap: () {
                 print('Notification button tapped');
               },
               child: Image.asset(
                 'images/ic-notification.png',
-                width: 30,
-                height: 30,
+                width: 26,
+                height: 26,
               ),
             ),
           ),
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
       ),
 
       body: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         children: [
           // Account balance section
           Container(
@@ -132,7 +132,7 @@ class HomeScreen extends StatelessWidget {
 
           // "Track your waybill" section
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 10),
+            margin: const EdgeInsets.symmetric(vertical: 15),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
@@ -162,7 +162,7 @@ class HomeScreen extends StatelessWidget {
                 // TextField container
                 Container(
                   height: 37,
-                  margin: const EdgeInsets.fromLTRB(37, 0, 37, 30),
+                  margin: const EdgeInsets.fromLTRB(34, 0, 34, 30),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.cyan,
@@ -173,8 +173,12 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       // search icon
                       const Padding(
-                        padding: EdgeInsets.only(left: 4),
-                        child: Icon(Icons.search),
+                        padding: EdgeInsets.only(left: 10, right: 3),
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.black45,
+                          size: 18,
+                        ),
                       ),
                       // "Waybill Number" TextField
                       const Expanded(
@@ -294,6 +298,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 50),
         ],
       ),
     );

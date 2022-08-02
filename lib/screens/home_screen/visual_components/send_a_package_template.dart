@@ -19,16 +19,17 @@ class SendAPackageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 190,
       width: (MediaQuery.of(context).size.width / 2) - 30,
-      padding: const EdgeInsets.all(5),
-      margin: const EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
         color: Colors.white,
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
         image: bgImage != null
             ? DecorationImage(
                 image: AssetImage(bgImage!),
                 fit: BoxFit.contain,
+                alignment: Alignment.bottomCenter,
               )
             : null,
         boxShadow: const [
@@ -38,48 +39,78 @@ class SendAPackageCard extends StatelessWidget {
             spreadRadius: 0.1,
           ),
         ],
-        borderRadius: const BorderRadius.all(Radius.circular(8)),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
         children: [
-          // Header
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-
-          // Small blue divider
-          Container(
-            width: 20,
-            height: 5,
-            decoration: const BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.all(Radius.circular(3)),
-            ),
-          ),
-
-          // Description
-          Text(
-            description,
-            style: const TextStyle(
-              // fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-
-          // Overlay picture, if any
-          overlayImage != null
-              ? Expanded(
-                child: Image.asset(
-                    overlayImage!,
-                    fit: BoxFit.contain,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Header
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 25, 0, 3),
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
-              )
-              : const SizedBox(),
+                ),
+              ),
+
+              // Small blue divider
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 2, 0, 2),
+                child: Container(
+                  width: 22,
+                  height: 3,
+                  decoration: const BoxDecoration(
+                    color: Colors.cyan,
+                    borderRadius: BorderRadius.all(Radius.circular(3)),
+                  ),
+                ),
+              ),
+
+              // Description
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 2, 0, 3),
+                child: Text(
+                  description,
+                  style: const TextStyle(),
+                ),
+              ),
+
+              // Overlay picture, if any
+              overlayImage != null
+                  ? Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 2),
+                        child: Image.asset(
+                          overlayImage!,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    )
+                  : const SizedBox(),
+            ],
+          ),
+
+          // overlaying bottom icon
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              width: 20,
+              height: 20,
+              margin: const EdgeInsets.only(bottom: 20, right: 10),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.arrow_forward,
+                size: 12,
+              ),
+            ),
+          ),
         ],
       ),
     );
