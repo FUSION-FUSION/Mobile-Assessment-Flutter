@@ -16,12 +16,14 @@ class CongratulationsScreen extends StatelessWidget {
             SizedBox(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
                 children: const [
-                  Text(
-                    'Congratulations!',
-                    textAlign: TextAlign.left,
-                    style: AppTextStyles.kHeaderStyle,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Congratulations!',
+                      textAlign: TextAlign.left,
+                      style: AppTextStyles.kHeaderStyle,
+                    ),
                   ),
                   SizedBox(height: 8),
                   Text(
@@ -33,7 +35,35 @@ class CongratulationsScreen extends StatelessWidget {
                     'created',
                     style: AppTextStyles.kSubHeaderStyle,
                   ),
+                  SizedBox(height: 30),
                 ],
+              ),
+            ),
+            Container(
+              height: 300,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/ic-congratulations.png'),
+                ),
+              ),
+            ),
+            const SizedBox(height: 40),
+            Container(
+              height: 60,
+              width: 180,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 75, 177, 197),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: const Center(
+                child: Text(
+                  'Continue',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ),
             ),
           ],
