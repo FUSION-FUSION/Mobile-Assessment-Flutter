@@ -27,6 +27,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  go_router: 3.0.3
+  solid_bottom_sheet: ^0.1.10
   flutter:
     sdk: flutter
 
