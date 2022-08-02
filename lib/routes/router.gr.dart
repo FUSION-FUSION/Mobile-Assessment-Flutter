@@ -25,12 +25,23 @@ class AppRouter extends _i2.RootStackRouter {
     Splashscreen.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.Splashscreen());
+    },
+    Usertype.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.Usertype());
+    },
+    HomeScreen.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.HomeScreen());
     }
   };
 
   @override
-  List<_i2.RouteConfig> get routes =>
-      [_i2.RouteConfig(Splashscreen.name, path: '/')];
+  List<_i2.RouteConfig> get routes => [
+        _i2.RouteConfig(Splashscreen.name, path: '/'),
+        _i2.RouteConfig(Usertype.name, path: '/Usertype'),
+        _i2.RouteConfig(HomeScreen.name, path: '/home-screen')
+      ];
 }
 
 /// generated route for
@@ -39,4 +50,20 @@ class Splashscreen extends _i2.PageRouteInfo<void> {
   const Splashscreen() : super(Splashscreen.name, path: '/');
 
   static const String name = 'Splashscreen';
+}
+
+/// generated route for
+/// [_i1.Usertype]
+class Usertype extends _i2.PageRouteInfo<void> {
+  const Usertype() : super(Usertype.name, path: '/Usertype');
+
+  static const String name = 'Usertype';
+}
+
+/// generated route for
+/// [_i1.HomeScreen]
+class HomeScreen extends _i2.PageRouteInfo<void> {
+  const HomeScreen() : super(HomeScreen.name, path: '/home-screen');
+
+  static const String name = 'HomeScreen';
 }
