@@ -3,20 +3,20 @@ import 'package:mobile_assessment_flutter/constants/color_pallette.dart';
 import '../../constants/size_configuration.dart';
 
 class CustomButton extends StatelessWidget {
-  final String text;
+  final String? text;
   final double height;
   final double width;
   final VoidCallback? press;
-  final bool? isIcon;
+  final bool isIcon;
   final bool isLightbackground;
   final Color? color;
   final String? icon;
   final double? fontSize;
   const CustomButton({
     Key? key,
-    required this.text,
+    this.text,
     this.press,
-    this.isIcon,
+    this.isIcon = true,
     this.icon,
     this.fontSize,
     required this.height,
@@ -34,18 +34,18 @@ class CustomButton extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           color: isLightbackground ? kSecBackground : kPrimary,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(25),
           border: isLightbackground?Border.all(color: Colors.white): Border.all(color: kPrimary)
         ),
         child: Center(
-          child: Text(
-            text,
+          child: isIcon ? Text(
+            text??'null',
             style: TextStyle(
               color: isLightbackground ? Colors.black : Colors.white,
               fontSize: fontSize,
               fontWeight: FontWeight.bold,
             ),
-          ),
+          ) : Icon(Icons.arrow_forward, color: kSecBackground,)
         ),
         //padding: EdgeInsets.symmetric(vertical: 20,horizontal: 100),
       ),
