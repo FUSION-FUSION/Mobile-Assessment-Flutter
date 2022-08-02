@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class YMargin extends StatelessWidget {
   final double y;
-  const YMargin({Key? key, required this.y}) : super(key: key);
+  const YMargin(this.y, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class YMargin extends StatelessWidget {
 
 class XMargin extends StatelessWidget {
   final double x;
-  const XMargin({Key? key, required this.x}) : super(key: key);
+  const XMargin(this.x, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

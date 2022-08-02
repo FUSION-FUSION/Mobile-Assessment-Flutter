@@ -8,7 +8,7 @@ class AppColor {
   static const basetext = Color(0XFF484848);
   static const flatbutton = Color(0XFF1F1F1F);
   static const warning = Color(0XFFFF0000);
-  static const bottomlinear = Color(0XFFEDEEF1);
+  static const bottomlinear = Color(0XFFEEEFF2);
   static const toplinear = Color(0XFFDEE6EA);
   static const buttonwhite = Color(0XFFF5F5F5);
 }
