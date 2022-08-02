@@ -8,6 +8,7 @@ class CustomButton extends StatelessWidget {
   final double width;
   final VoidCallback? press;
   final bool? isIcon;
+  final bool isLightbackground;
   final Color? color;
   final String? icon;
   final double? fontSize;
@@ -21,28 +22,33 @@ class CustomButton extends StatelessWidget {
     required this.height,
     required this.width,
     this.color = kBackground,
+    this.isLightbackground = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      decoration: BoxDecoration(
-        color: kPrimary,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: Center(
-        child: Text(
-          text,
-          style: TextStyle(
-            color: color,
-            fontSize: fontSize,
-            fontWeight: FontWeight.bold
+    return GestureDetector(
+      onTap: press,
+      child: Container(
+        height: height,
+        width: width,
+        decoration: BoxDecoration(
+          color: isLightbackground ? kSecBackground : kPrimary,
+          borderRadius: BorderRadius.circular(20),
+          border: isLightbackground?Border.all(color: Colors.white): Border.all(color: kPrimary)
+        ),
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              color: isLightbackground ? Colors.black : Colors.white,
+              fontSize: fontSize,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
+        //padding: EdgeInsets.symmetric(vertical: 20,horizontal: 100),
       ),
-      //padding: EdgeInsets.symmetric(vertical: 20,horizontal: 100),
     );
   }
 }

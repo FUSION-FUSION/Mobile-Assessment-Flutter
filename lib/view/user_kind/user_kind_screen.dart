@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/constants/assets_constant_name.dart';
 import 'package:mobile_assessment_flutter/constants/color_pallette.dart';
+import 'package:mobile_assessment_flutter/view/welcome/welcome_screen.dart';
 
 import '../widgets/custom_button.dart';
 
 class UserKindScreen extends StatelessWidget {
+  static String routeName = '/user_kind_screen';
   const UserKindScreen({Key? key}) : super(key: key);
 
   @override
@@ -72,6 +74,9 @@ class UserKindScreen extends StatelessWidget {
                   height: height * 0.15,
                   width: width * 0.8,
                   fontSize: 44,
+                  press: (){
+                    Navigator.pushNamed(context, WelcomeScreen.routeName);
+                  },
                 ),
                 SizedBox(
                   height: height * 0.05,
@@ -81,6 +86,9 @@ class UserKindScreen extends StatelessWidget {
                   height: height * 0.15,
                   width: width * 0.8,
                   fontSize: 44,
+                  press: (){
+                    Navigator.pushNamed(context, WelcomeScreen.routeName);
+                  },
                 ),
               ],
             )

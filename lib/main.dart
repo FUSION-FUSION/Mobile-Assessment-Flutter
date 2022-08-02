@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/view/user_kind/user_kind_screen.dart';
+import 'package:mobile_assessment_flutter/view/welcome/welcome_screen.dart';
 
 import 'constants/routes.dart';
 
@@ -12,15 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Shipify',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          fontFamily: 'Poppins'
-        ),
-        routes: routes,
-        home: const UserKindScreen());
+      title: 'Shipify',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: 'Poppins',
+      ),
+      routes: routes,
+      home: const UserKindScreen(),
+    );
   }
 }
-
-
