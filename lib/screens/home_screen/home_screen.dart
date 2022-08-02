@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       // Appbar
       appBar: AppBar(
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           onPressed: () {},
@@ -26,41 +26,92 @@ class HomeScreen extends StatelessWidget {
           'Hello, John',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 21,
+            fontSize: 20,
             color: Colors.black87,
           ),
         ),
         actions: [
           // Notifications button
-          GestureDetector(
-            onTap: () {
-              print('Notification button tapped');
-            },
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('images/ic-notification.png'),
-                  fit: BoxFit.cover,
-                )
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: GestureDetector(
+              onTap: () {
+                print('Notification button tapped');
+              },
+              child: Image.asset(
+                'images/ic-notification.png',
+                width: 30,
+                height: 30,
               ),
             ),
           ),
         ],
       ),
 
-      body: Container(
-        height: 500,
-        child: ListView(
-          children: [
-            // Account balance section
+      body: ListView(
+        children: [
+          // Account balance section
 
-            // "Track your waybill" section
+          // "Track your waybill" section
 
-            // "Send a package" section
+          // "Send a package" Header
+          const Text(
+            'Send a Package',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
 
-            // "other actions" section
-          ],
-        ),
+          // "Send a package" section
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  SendAPackageCard(
+                    title: 'Same State',
+                    description: 'Deliveries within the same state',
+                    bgImage: 'images/ic-road-same-state.png',
+                    overlayImage: 'images/ic-bike.png',
+                  ),
+                  SendAPackageCard(
+                    title: 'Interstate',
+                    description: 'Deliveries outside your current state',
+                    bgImage: 'images/ic-road-interstate.png',
+                    overlayImage: 'images/delivery_van.png',
+                  ),
+                ],
+              ),
+              Row(
+                children: const [
+                  SendAPackageCard(
+                    title: 'Charter',
+                    description: 'Request a vehicle',
+                    bgImage: 'images/ic-road-charter.png',
+                    overlayImage: 'images/ic-truck.png',
+                  ),
+                  SendAPackageCard(
+                    title: 'International',
+                    description: 'Send packages to other countries',
+                    overlayImage: 'images/ic-aeroplane.png',
+                  ),
+                ],
+              ),
+            ],
+          ),
+
+          // "Other actions" text
+          const Text(
+            'Other Actions',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+
+          // "other actions" section
+        ],
       ),
     );
   }

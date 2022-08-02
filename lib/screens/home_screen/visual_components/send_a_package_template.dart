@@ -3,28 +3,39 @@ import 'package:flutter/material.dart';
 class SendAPackageCard extends StatelessWidget {
   final String title;
   final String description;
-  final String bgImage;
+  final String? bgImage;
   final String? overlayImage;
+  final bool activated;
 
   const SendAPackageCard({
     Key? key,
     required this.title,
     required this.description,
-    required this.bgImage,
+    this.bgImage,
     this.overlayImage,
+    this.activated = true,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 200,
-      width: 100,
+      width: (MediaQuery.of(context).size.width / 2) - 30,
+      margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
-        image: DecorationImage(
-          image: AssetImage(bgImage),
-          fit: BoxFit.cover,
-        ),
+        image: bgImage != null
+            ? DecorationImage(
+                image: AssetImage(bgImage!),
+                fit: BoxFit.contain,
+              )
+            : null,
+        boxShadow: const [
+          BoxShadow(
+            blurRadius: 1,
+            spreadRadius: 0.02,
+          ),
+        ],
         borderRadius: const BorderRadius.all(Radius.circular(8)),
       ),
       child: Column(
@@ -59,7 +70,12 @@ class SendAPackageCard extends StatelessWidget {
           ),
 
           // Overlay picture, if any
-          overlayImage != null ? Image.asset(overlayImage!) : const SizedBox(),
+          overlayImage != null
+              ? Image.asset(
+                  overlayImage!,
+                  fit: BoxFit.contain,
+                )
+              : const SizedBox(),
         ],
       ),
     );
