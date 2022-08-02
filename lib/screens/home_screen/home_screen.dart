@@ -49,17 +49,182 @@ class HomeScreen extends StatelessWidget {
       ),
 
       body: ListView(
+        padding: const EdgeInsets.all(20),
         children: [
           // Account balance section
+          Container(
+            height: 70,
+            margin: const EdgeInsets.symmetric(vertical: 10),
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                image: AssetImage('images/bg-dashboard-balance.png'),
+                fit: BoxFit.fill,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 2,
+                  spreadRadius: 0.1,
+                ),
+              ],
+              borderRadius: BorderRadius.all(Radius.circular(18)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Total balance
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Total Balance',
+                        style: TextStyle(
+                          fontSize: 13,
+                        ),
+                      ),
+                      Text(
+                        '# 50,000',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Top up button
+                Padding(
+                  padding: const EdgeInsets.only(right: 18),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.cyan,
+                    padding: const EdgeInsets.all(0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Row(
+                      children: const [
+                        // "Top up" text
+                        Text(
+                          'Top up',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        // Double forward icon
+                        Icon(
+                          Icons.fast_forward,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
 
           // "Track your waybill" section
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 2,
+                  spreadRadius: 0.1,
+                ),
+              ],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // "Track your waybill" text
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 15),
+                  child: Text(
+                    'Track your waybill',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+
+                // TextField container
+                Container(
+                  height: 37,
+                  margin: const EdgeInsets.fromLTRB(37, 0, 37, 30),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.cyan,
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Row(
+                    children: [
+                      // search icon
+                      const Padding(
+                        padding: EdgeInsets.only(left: 4),
+                        child: Icon(Icons.search),
+                      ),
+                      // "Waybill Number" TextField
+                      const Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Waybill Number',
+                            hintStyle: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                        ),
+                      ),
+                      // "Track" button
+                      Container(
+                        width: 70,
+                        margin: const EdgeInsets.all(2),
+                        child: MaterialButton(
+                          onPressed: () {},
+                          color: Colors.cyan,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: const Text(
+                            'Track',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
 
           // "Send a package" Header
-          const Text(
-            'Send a Package',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w500,
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: Text(
+              'Send a Package',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
 
@@ -67,7 +232,7 @@ class HomeScreen extends StatelessWidget {
           Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   SendAPackageCard(
                     title: 'Same State',
@@ -84,6 +249,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   SendAPackageCard(
                     title: 'Charter',
@@ -95,6 +261,7 @@ class HomeScreen extends StatelessWidget {
                     title: 'International',
                     description: 'Send packages to other countries',
                     overlayImage: 'images/ic-aeroplane.png',
+                    activated: false,
                   ),
                 ],
               ),
@@ -102,15 +269,31 @@ class HomeScreen extends StatelessWidget {
           ),
 
           // "Other actions" text
-          const Text(
-            'Other Actions',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w500,
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: Text(
+              'Other Actions',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
 
-          // "other actions" section
+          // "Other Actions" section
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              OtherActionCard(
+                title: 'Waybill History',
+                description: 'Records of all your waybills',
+              ),
+              OtherActionCard(
+                title: 'Get Help',
+                description: 'Get help & support from our team',
+              ),
+            ],
+          ),
         ],
       ),
     );

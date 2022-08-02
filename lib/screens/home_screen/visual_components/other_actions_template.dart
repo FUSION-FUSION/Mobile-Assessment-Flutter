@@ -12,46 +12,52 @@ class OtherActionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        height: 100,
-        width: 100,
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(8)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Header
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+    return Container(
+      height: 80,
+      width: (MediaQuery.of(context).size.width / 2) - 30,
+      padding: const EdgeInsets.all(5),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 2,
+            spreadRadius: 0.1,
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Header
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
             ),
+          ),
 
-            // Small blue divider
-            Container(
-              width: 20,
-              height: 5,
-              decoration: const BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.all(Radius.circular(3)),
-              ),
+          // Small blue divider
+          Container(
+            width: 20,
+            height: 5,
+            decoration: const BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.all(Radius.circular(3)),
             ),
+          ),
 
-            // Description
-            Text(
-              description,
-              style: const TextStyle(
-                // fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+          // Description
+          Text(
+            description,
+            style: const TextStyle(
+              // fontSize: 16,
+              fontWeight: FontWeight.bold,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

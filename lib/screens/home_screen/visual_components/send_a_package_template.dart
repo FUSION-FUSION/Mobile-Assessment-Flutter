@@ -21,7 +21,8 @@ class SendAPackageCard extends StatelessWidget {
     return Container(
       height: 200,
       width: (MediaQuery.of(context).size.width / 2) - 30,
-      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
+      margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         image: bgImage != null
@@ -32,8 +33,9 @@ class SendAPackageCard extends StatelessWidget {
             : null,
         boxShadow: const [
           BoxShadow(
-            blurRadius: 1,
-            spreadRadius: 0.02,
+            color: Colors.black12,
+            blurRadius: 2,
+            spreadRadius: 0.1,
           ),
         ],
         borderRadius: const BorderRadius.all(Radius.circular(8)),
@@ -71,10 +73,12 @@ class SendAPackageCard extends StatelessWidget {
 
           // Overlay picture, if any
           overlayImage != null
-              ? Image.asset(
-                  overlayImage!,
-                  fit: BoxFit.contain,
-                )
+              ? Expanded(
+                child: Image.asset(
+                    overlayImage!,
+                    fit: BoxFit.contain,
+                  ),
+              )
               : const SizedBox(),
         ],
       ),
