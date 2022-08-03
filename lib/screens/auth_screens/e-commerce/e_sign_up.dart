@@ -8,8 +8,6 @@ import '../../../routes/router.gr.dart';
 import '../../../utilities/constants/constants.dart';
 import '../../../widgets/widgets.dart';
 
-
-
 class SignUpEcommerce extends StatefulWidget {
   const SignUpEcommerce({Key? key}) : super(key: key);
 
@@ -18,7 +16,7 @@ class SignUpEcommerce extends StatefulWidget {
 }
 
 class _SignUpEcommerceState extends State<SignUpEcommerce> {
-   @override
+  @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var textTheme = Theme.of(context).textTheme;
@@ -133,14 +131,12 @@ class _SignUpEcommerceState extends State<SignUpEcommerce> {
                     ),
                     SizedBox(height: 30.h),
                     Padding(
-                      padding: const EdgeInsets.only(left:40,right:40),
+                      padding: const EdgeInsets.only(left: 40, right: 40),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SButton(
-                            onPressed: () 
-                       => AutoRouter.of(context).pop()
-                            ,
+                            onPressed: () => AutoRouter.of(context).pop(),
                             height: 60.h,
                             width: 110.w,
                             color: SColors.buttonColor,
@@ -151,7 +147,7 @@ class _SignUpEcommerceState extends State<SignUpEcommerce> {
                           SButton(
                             onPressed: () {
                               //?to verification
-
+                              AutoRouter.of(context).push(const Verification());
                             },
                             height: 60.h,
                             width: 110.w,
@@ -162,10 +158,8 @@ class _SignUpEcommerceState extends State<SignUpEcommerce> {
                           ),
                         ],
                       ),
-                    ), 
-
+                    ),
                     SizedBox(height: 80.h),
-
                   ],
                 ),
               ))

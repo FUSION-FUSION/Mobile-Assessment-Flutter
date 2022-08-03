@@ -151,6 +151,7 @@ class _SignUpPersonalState extends State<SignUpPersonal> {
                           SButton(
                             onPressed: () {
                               //?to verification
+                               AutoRouter.of(context).push(const Verification());
                             },
                             height: 60.h,
                             width: 110.w,

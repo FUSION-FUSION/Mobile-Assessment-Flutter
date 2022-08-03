@@ -45,6 +45,14 @@ class AppRouter extends _i2.RootStackRouter {
     SignInscreen.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.SignInscreen());
+    },
+    Verification.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.Verification());
+    },
+    Congratulations.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.Congratulations());
     }
   };
 
@@ -55,7 +63,9 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(HomeScreen.name, path: '/home-screen'),
         _i2.RouteConfig(SignUpPersonal.name, path: '/sign-up-personal'),
         _i2.RouteConfig(SignUpEcommerce.name, path: '/sign-up-ecommerce'),
-        _i2.RouteConfig(SignInscreen.name, path: '/sign-inscreen')
+        _i2.RouteConfig(SignInscreen.name, path: '/sign-inscreen'),
+        _i2.RouteConfig(Verification.name, path: '/Verification'),
+        _i2.RouteConfig(Congratulations.name, path: '/Congratulations')
       ];
 }
 
@@ -107,4 +117,21 @@ class SignInscreen extends _i2.PageRouteInfo<void> {
   const SignInscreen() : super(SignInscreen.name, path: '/sign-inscreen');
 
   static const String name = 'SignInscreen';
+}
+
+/// generated route for
+/// [_i1.Verification]
+class Verification extends _i2.PageRouteInfo<void> {
+  const Verification() : super(Verification.name, path: '/Verification');
+
+  static const String name = 'Verification';
+}
+
+/// generated route for
+/// [_i1.Congratulations]
+class Congratulations extends _i2.PageRouteInfo<void> {
+  const Congratulations()
+      : super(Congratulations.name, path: '/Congratulations');
+
+  static const String name = 'Congratulations';
 }

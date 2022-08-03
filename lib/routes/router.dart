@@ -12,6 +12,10 @@ import '../screens/screens.dart';
      AutoRoute(page: SignUpPersonal),
       AutoRoute(page: SignUpEcommerce),
     AutoRoute(page: SignInscreen),
+    AutoRoute(page: Verification),
+    AutoRoute(page: Congratulations),
+
+
 
   ],
 )
