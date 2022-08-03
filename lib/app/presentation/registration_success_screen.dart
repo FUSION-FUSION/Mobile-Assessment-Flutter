@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/app/presentation/home_screen.dart';
 import 'package:mobile_assessment_flutter/app/presentation/log_in_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
@@ -46,10 +47,10 @@ class RegistrationSuccessScreen extends StatelessWidget {
                 child:
                 BuildButton(
                   onPressed: () {
-                    // Navigator.pushReplacement(
-                    // context,
-                    // MaterialPageRoute(
-                    //     builder: (context) => LogInScreen()));
+                    Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => HomeScreen()));
                   },
                   buttonText: 'Continue',
                   containerHeight: 63,

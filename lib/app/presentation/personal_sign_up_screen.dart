@@ -1,6 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/app/presentation/log_in_screen.dart';
 import 'package:mobile_assessment_flutter/app/presentation/verification_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
@@ -103,7 +104,14 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
                 children: [
                   TextSpan(
                     text: 'Log In',
-                    recognizer: TapGestureRecognizer()..onTap = () {},
+                    recognizer: TapGestureRecognizer()..onTap = () {
+                      Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LogInScreen()));
+
+
+                    },
                     style: TextStyle(
                         fontSize: getProportionateScreenWidth(18),
                         fontWeight: FontWeight.w600,
