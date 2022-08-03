@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/app/presentation/registration_success_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
 import 'package:mobile_assessment_flutter/core/screen_size_config.dart';
@@ -122,7 +123,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 decoration: BoxDecoration(
                     color: Palette.primaryColor, shape: BoxShape.circle),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RegistrationSuccessScreen()));
+
+
+                  },
                   icon: Icon(
                     Icons.arrow_forward,
                     color: Palette.whiteColor,
