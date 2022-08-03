@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/views/screens/authentication/ecommerce_registration_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/login_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/registration_successful_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/account_type_screen.dart';
@@ -37,6 +38,8 @@ class App extends StatelessWidget {
       RegistrationSuccessfulScreen.route: (_) =>
           const RegistrationSuccessfulScreen(),
       LoginScreen.route: (_) => const LoginScreen(),
+      EcommerceRegistrationScreen.route: (_) =>
+          const EcommerceRegistrationScreen(),
     };
 
     return MaterialApp(
