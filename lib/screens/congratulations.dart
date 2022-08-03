@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:mobile_assessment_flutter/screens/personal_sign_up/widget/signUpForm.dart';
-
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 
 import '../../widget/appBackground.dart';

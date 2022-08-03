@@ -37,6 +37,8 @@ dependencies:
   provider: ^6.0.3
   google_fonts: ^3.0.1
   country_picker: ^2.0.15
+  intl: ^0.17.0
+  google_maps_flutter: ^2.1.10
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen
   # with background color and splash image.
