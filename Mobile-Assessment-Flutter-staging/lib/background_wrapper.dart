@@ -11,10 +11,10 @@ class BackGroundWrapper extends StatelessWidget {
         child: Column(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * (1 / 2.5),
+          height: MediaQuery.of(context).size.height * (.3),
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.lightBlueAccent.withOpacity(0.17),
+            color: Colors.lightBlueAccent.withOpacity(0.2),
             image: const DecorationImage(
               image: AssetImage('assets/bg-app-cloud.png'),
               fit: BoxFit.fill,
@@ -23,8 +23,8 @@ class BackGroundWrapper extends StatelessWidget {
         ),
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * (3 / 5),
-          color: Colors.lightBlueAccent.withOpacity(0.17),
+          height: MediaQuery.of(context).size.height * (1 - .3),
+          color: Colors.lightBlueAccent.withOpacity(0.2),
         )
       ],
     ));
