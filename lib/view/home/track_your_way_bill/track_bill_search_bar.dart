@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/view/Map/scrollable_draggable_sheet.dart';
 import 'package:mobile_assessment_flutter/view/widgets/custom_button.dart';
 
 import '../../../../constants/assets_constant_name.dart';
@@ -52,11 +53,16 @@ class TrackBillSearchBar extends StatelessWidget {
             ),
           ),
           Spacer(),
-          CustomButton(
-            height: height * 0.045,
-            width: width * 0.2,
-            text: 'Track',
-            fontSize: 17,
+          GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, ScrollableSheet.routeName);
+            },
+            child: CustomButton(
+              height: height * 0.045,
+              width: width * 0.2,
+              text: 'Track',
+              fontSize: 17,
+            ),
           ),
           SizedBox(
             width: 1,

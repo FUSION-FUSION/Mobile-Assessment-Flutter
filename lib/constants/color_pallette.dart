@@ -7,9 +7,16 @@ const kSecBackground = Color(0xfff5f5f5);
 
 final kShadow =  [
   BoxShadow(
-    color: Colors.black.withOpacity(0.9),
-    spreadRadius: -30,
-    blurRadius: 5,
-    offset: Offset(-20, 0), // changes position of shadow
+    color: Colors.black,
+    spreadRadius: 50,
+    blurRadius: -30,
+    offset: Offset(30, 30), // changes position of shadow
   ),
+  BoxShadow(
+    color: Colors.black,
+    spreadRadius: 50,
+    blurRadius: -30,
+    offset: Offset(-30, -30), // changes position of shadow
+  ),
+
 ];
