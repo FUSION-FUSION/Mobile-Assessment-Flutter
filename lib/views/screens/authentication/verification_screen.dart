@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
+import 'package:mobile_assessment_flutter/views/screens/authentication/RegistrationSuccessfulScreen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/base_authentication_screen.dart';
 import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
 import 'package:mobile_assessment_flutter/views/widgets/app_button.dart';
@@ -117,6 +118,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 height: 59,
                 borderRadius: BorderRadius.circular(29.5),
                 padding: EdgeInsets.zero,
+                onPressed: () => Navigator.of(context)
+                    .pushNamed(RegistrationSuccessfulScreen.route),
                 child: const Icon(
                   Icons.arrow_forward_rounded,
                   color: Colors.white,
