@@ -18,8 +18,9 @@ class VerificationPage extends StatefulWidget {
 class _VerificationPageState extends State<VerificationPage> {
   late PinTheme defaultPinTheme;
   late Timer timer;
-  int secondsRemaining = 120;
-  bool enableResend = false;
+  int secondsRemaining = 60;
+  bool codeExpired = false;
+  late PinTheme followingPinTheme;
 
   @override
   void initState() {
@@ -32,14 +33,13 @@ class _VerificationPageState extends State<VerificationPage> {
         });
       } else {
         setState(() {
-          enableResend = true;
+          codeExpired = true;
         });
       }
     });
     defaultPinTheme = PinTheme(
       width: 57,
       height: 66.6,
-      margin: EdgeInsets.only(left: Dimensions.sizeWidthPercent(15)),
       textStyle: TextStyle(
           fontSize: Dimensions.sizeHeightPercent(24),
           color: AppColors.primaryBlack,
@@ -49,6 +49,11 @@ class _VerificationPageState extends State<VerificationPage> {
         color: AppColors.primaryWhite,
         border: Border.all(
             width: Dimensions.sizeWidthPercent(1), color: Colors.grey[300]!),
+      ),
+    );
+    followingPinTheme = defaultPinTheme.copyWith(
+      margin: EdgeInsets.only(
+        right: Dimensions.sizeHeightPercent(15),
       ),
     );
   }
@@ -67,8 +72,8 @@ class _VerificationPageState extends State<VerificationPage> {
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.only(
-                left: Dimensions.sizeHeightPercent(26.33),
-                right: Dimensions.sizeHeightPercent(26.33),
+                left: Dimensions.sizeHeightPercent(26),
+                right: Dimensions.sizeHeightPercent(26),
                 top: Dimensions.sizeHeightPercent(130)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,19 +122,57 @@ class _VerificationPageState extends State<VerificationPage> {
                 SizedBox(height: Dimensions.sizeHeightPercent(22.44)),
                 Pinput(
                   defaultPinTheme: defaultPinTheme,
+                  followingPinTheme: followingPinTheme,
                   keyboardType: TextInputType.number,
                   length: 5,
                 ),
                 SizedBox(height: Dimensions.sizeHeightPercent(14.34)),
-                Align(
-                  alignment: Alignment.centerRight,
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: Dimensions.sizeWidthPercent(
+                          codeExpired ? 250 : 280.0)),
                   child: AppText(
-                    text: '$secondsRemaining seconds',
+                    text: codeExpired
+                        ? 'Code Expired'
+                        : durationString(secondsRemaining),
                     size: 16,
-                    bold: true,
-                    color: AppColors.primaryBlue,
+                    color: AppColors.timeText,
                   ),
                 ),
+                SizedBox(height: Dimensions.sizeHeightPercent(22)),
+                Center(
+                  child: AppText(
+                    text: 'Resend Code',
+                    size: 18,
+                    bold: true,
+                    color: AppColors.primaryBlack,
+                  ),
+                ),
+                SizedBox(height: Dimensions.sizeHeightPercent(30)),
+                Center(
+                  child: GestureDetector(
+                    onTap: () {
+                      if (!codeExpired) {
+                        setState(() {
+                          secondsRemaining = 0;
+                          codeExpired = true;
+                        });
+                      }
+                    },
+                    child: Container(
+                      height: Dimensions.sizeHeightPercent(59),
+                      width: Dimensions.sizeWidthPercent(59),
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColors.primaryBlue,
+                      ),
+                      child: const Icon(
+                        Icons.arrow_forward,
+                        color: AppColors.primaryWhite,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
@@ -137,4 +180,11 @@ class _VerificationPageState extends State<VerificationPage> {
       ),
     );
   }
+}
+
+String durationString(int duration) {
+  var minutes = duration ~/ 60;
+  var seconds = duration % 60;
+
+  return '$minutes:${seconds < 10 ? '0$seconds' : seconds}';
 }
