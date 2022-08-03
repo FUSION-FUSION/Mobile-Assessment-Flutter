@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constants.dart';
 import 'register_3_congratulations.dart';
 
 class Registration2 extends StatelessWidget {
@@ -7,11 +8,11 @@ class Registration2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFe7EBEF),
+      backgroundColor: kIntroScreensBGColor,
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 0,
-        backgroundColor: const Color(0xFFe7EBEF),
+        backgroundColor: kIntroScreensBGColor,
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -53,7 +54,7 @@ class Registration2 extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
-                          color: Color(0xFF46A5BA),
+                          color: kCyanishColor,
                         ),
                       ),
                       TextSpan(text: 'code on number '),
@@ -62,7 +63,7 @@ class Registration2 extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
-                          color: Color(0xFF46A5BA),
+                          color: kCyanishColor,
                         ),
                       ),
                     ]),
@@ -127,7 +128,7 @@ class Registration2 extends StatelessWidget {
                   color: Colors.white,
                 ),
                 shape: const CircleBorder(),
-                color: const Color(0xFF46A5BA),
+                color: kCyanishColor,
                 onPressed: () {
                   // go to register 3
                   Navigator.of(context).push(

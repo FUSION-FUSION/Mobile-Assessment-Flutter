@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constants.dart';
 
 // visual components
 import 'visual_components/send_a_package_template.dart';
@@ -102,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 18),
                   child: MaterialButton(
                     onPressed: () {},
-                    color: const Color(0xFF46A5BA),
+                    color: kCyanishColor,
                     padding: const EdgeInsets.all(0),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
@@ -165,7 +166,7 @@ class HomeScreen extends StatelessWidget {
                   margin: const EdgeInsets.fromLTRB(34, 0, 34, 30),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: const Color(0xFF46A5BA),
+                      color: kCyanishColor,
                     ),
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -199,7 +200,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(2),
                         child: MaterialButton(
                           onPressed: () {},
-                          color: const Color(0xFF46A5BA),
+                          color: kCyanishColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),

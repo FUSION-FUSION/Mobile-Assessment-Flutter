@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constants.dart';
 import 'package:mobile_assessment_flutter/screens/home_screen/home_screen.dart';
 
 class Registration3 extends StatelessWidget {
@@ -7,11 +8,11 @@ class Registration3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFe7EBEF),
+      backgroundColor: kIntroScreensBGColor,
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 0,
-        backgroundColor: const Color(0xFFe7EBEF),
+        backgroundColor: kIntroScreensBGColor,
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -76,7 +77,7 @@ class Registration3 extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => HomeScreen()),
                   );
                 },
-                color: const Color(0xFF46A5BA),
+                color: kCyanishColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),

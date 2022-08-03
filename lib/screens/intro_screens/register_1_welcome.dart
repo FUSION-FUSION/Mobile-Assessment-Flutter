@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import '../../constants.dart';
+
+// components
+import 'visual_components/general_form_item.dart';
+import 'visual_components/phone_number_form_item.dart';
+
+// screens
 import 'register_2_verification.dart';
+import 'sign_in_screen.dart';
 
 class Registration1 extends StatelessWidget {
   const Registration1({Key? key}) : super(key: key);
@@ -7,11 +15,11 @@ class Registration1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFe7EBEF),
+      backgroundColor: kIntroScreensBGColor,
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 0,
-        backgroundColor: const Color(0xFFe7EBEF),
+        backgroundColor: kIntroScreensBGColor,
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -53,13 +61,13 @@ class Registration1 extends StatelessWidget {
                 const SizedBox(height: 15),
 
                 // "Full name" field
-                FormItem(
+                GeneralFormItem(
                   headerText: 'Full Name',
                   onEditingComplete: () {},
                 ),
 
                 // "Your E-mail" field
-                FormItem(
+                GeneralFormItem(
                   headerText: 'Your E-mail',
                   onEditingComplete: () {},
                 ),
@@ -71,13 +79,13 @@ class Registration1 extends StatelessWidget {
                 ),
 
                 // Password
-                FormItem(
+                GeneralFormItem(
                   headerText: 'Password',
                   onEditingComplete: () {},
                 ),
 
                 // Confirm Password
-                FormItem(
+                GeneralFormItem(
                   headerText: 'Confirm Password',
                   onEditingComplete: () {},
                 ),
@@ -94,13 +102,19 @@ class Registration1 extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignInScreen()),
+                        );
+                      },
                       child: const Text(
                         'Log in',
                         style: TextStyle(
                           fontSize: 16.5,
                           fontWeight: FontWeight.bold,
-                          color: const Color(0xFF46A5BA),
+                          color: kCyanishColor,
                         ),
                       ),
                     ),
@@ -126,7 +140,7 @@ class Registration1 extends StatelessWidget {
 
                       // Next Button
                       CustomButton2(
-                        color: const Color(0xFF46A5BA),
+                        color: kCyanishColor,
                         text: 'Next',
                         textColor: Colors.white,
                         onPressed: () {
@@ -145,149 +159,6 @@ class Registration1 extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class FormItem extends StatelessWidget {
-  final String headerText;
-  final Function onEditingComplete;
-
-  const FormItem({
-    Key? key,
-    required this.headerText,
-    required this.onEditingComplete,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-          child: Text(
-            headerText,
-            style: const TextStyle(
-              fontSize: 14,
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 12),
-          child: SizedBox(
-            height: 42,
-            child: TextFormField(
-              onEditingComplete: () {
-                onEditingComplete();
-              },
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(Radius.circular(17)),
-                ),
-                fillColor: Colors.white,
-                filled: true,
-              ),
-              textAlignVertical: const TextAlignVertical(y: -0.8),
-              style: const TextStyle(
-                fontSize: 17,
-                height: 1.5,
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class PhoneNumberFormItem extends StatelessWidget {
-  final String headerText;
-  final Function onEditingComplete;
-
-  const PhoneNumberFormItem({
-    Key? key,
-    required this.headerText,
-    required this.onEditingComplete,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // header text
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            headerText,
-            style: const TextStyle(
-              fontSize: 14,
-            ),
-          ),
-        ),
-        // Textfield container
-        Container(
-          height: 42,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(17)),
-          ),
-          child: Row(
-            children: [
-              Container(
-                height: 42,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
-                    width: 1.0,
-                    color: Colors.grey[200]!,
-                  ),
-                  borderRadius: const BorderRadius.all(Radius.circular(17)),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 14),
-                  child: Row(
-                    children: const [
-                      Text(
-                        '+234',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                      // SizedBox(width: 2),
-                      Icon(
-                        Icons.arrow_drop_down,
-                        size: 24,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextFormField(
-                  onEditingComplete: () {
-                    onEditingComplete();
-                  },
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
-                  textAlignVertical: const TextAlignVertical(y: -0.8),
-                  style: const TextStyle(
-                    fontSize: 17,
-                    height: 1.5,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 10),
-      ],
     );
   }
 }
