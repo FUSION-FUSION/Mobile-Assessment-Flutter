@@ -57,6 +57,7 @@ class OtherActionCard extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.black,
+                      boxShadow: kShadow
                     ),
                     child: const Center(
                       child: Icon(

@@ -42,6 +42,7 @@ class CustomButton extends StatelessWidget {
           border: isLightBackground
               ? Border.all(color: Colors.white)
               : Border.all(color: kPrimary),
+          boxShadow: kShadow
         ),
         child: Center(
             child: isIcon
