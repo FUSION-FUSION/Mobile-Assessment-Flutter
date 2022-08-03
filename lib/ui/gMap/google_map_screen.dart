@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:im_stepper/stepper.dart';
 import 'package:mobile_assessment_flutter/ui/_shared/utils/app_colors.dart';
 import 'package:mobile_assessment_flutter/ui/_shared/utils/text_styles.dart';
+import 'package:mobile_assessment_flutter/ui/gMap/widgets/track_circle.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class GoogleMapScreen extends StatefulWidget {
@@ -170,13 +170,13 @@ class PanelWidget extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 8.0),
                       child: Row(
                         children: [
-                        TrackCircleWidget(),
+                        RowTrackCircleWidget(),
                           Container(height:3.0, color: Colors.white,width: 95.0,),
-                        TrackCircleWidget(),
+                        RowTrackCircleWidget(),
                           DottedLine(dashColor: Colors.white,lineLength: 95.0,),
-                        TrackCircleWidget(),
+                        RowTrackCircleWidget(),
                         DottedLine(dashColor: Colors.white,lineLength: 95.0,),
-                        TrackCircleWidget(),
+                        RowTrackCircleWidget(),
                         ],
                       ),
                     ),
@@ -199,23 +199,91 @@ class PanelWidget extends StatelessWidget {
               padding:  EdgeInsets.only(left: 10.0),
               child: Text("Route Details",style: AppTextStyle.kSemiBoldWhiteTextStyle.copyWith(color: Colors.black, fontSize: 20.0),),
             ),
-
             Row(
               children: [
-                Container(height:20,
-                  decoration:BoxDecoration(
-                    color:  AppColors.primaryGreen,
-                    shape: BoxShape.circle,
-                    border: Border.all(color: AppColors.black,width: 3.0)
-                  )
-                 ),
-                Text("Delivered Successfully"),
-                Checkbox(value: true, 
-                    onChanged: (bool? value){},
-                  fillColor: MaterialStateProperty.all(Colors.white),
-                  checkColor: AppColors.primaryGreen,
-                  activeColor: AppColors.primaryGreen,
-                  focusColor: AppColors.primaryGreen,
+                Column(
+                  children: [
+                     CircleAvatar(
+                       radius: 10,
+                     ),
+                    DottedLine(
+                      direction: Axis.vertical,
+                      dashColor: AppColors.primaryGreen,
+                     lineLength: 50.0,
+                    ),
+                    CircleAvatar(
+                      radius: 10,
+                    ),
+                    DottedLine(
+                      direction: Axis.vertical,
+                      dashColor: AppColors.primaryGreen,
+                      lineLength: 50.0,
+                    ),
+                    CircleAvatar(
+                      radius: 10,
+                    ),
+                    DottedLine(
+                      direction: Axis.vertical,
+                      dashColor: AppColors.primaryGreen,
+                      lineLength: 50.0,
+                    ),
+                    CircleAvatar(
+                      radius: 10,
+                    ),
+                  ],
+                ),
+                SizedBox(width: 20.0,),
+                Column(
+                  children: [
+                            Text("Delivered Successfully"),
+                            Text("Bishop's court owerri."),
+                            SizedBox(height: 38.0,),
+                            Text("Delivered Successfully"),
+                            Text("Bishop's court owerri."),
+                    SizedBox(height: 38.0,),
+                    Text("Delivered Successfully"),
+                    Text("Bishop's court owerri."),
+                    SizedBox(height: 38.0,),
+                    Text("Delivered Successfully"),
+                    Text("Bishop's court owerri."),
+                  ],
+                ),
+                SizedBox(width: 110.0,),
+                Column(
+                  children: [
+                        Checkbox(value: true,
+                            onChanged: (bool? value){},
+                          fillColor: MaterialStateProperty.all(Colors.white),
+                          checkColor: AppColors.primaryGreen,
+                          activeColor: AppColors.primaryGreen,
+                          focusColor: AppColors.primaryGreen,
+                        ),
+                        SizedBox(height: 32.0,),
+                        Checkbox(value: true,
+                            onChanged: (bool? value){},
+                          fillColor: MaterialStateProperty.all(Colors.white),
+                          checkColor: AppColors.primaryGreen,
+                          activeColor: AppColors.primaryGreen,
+                          focusColor: AppColors.primaryGreen,
+                        ),
+                    SizedBox(height: 32.0,),
+                        Checkbox(value: true,
+                            onChanged: (bool? value){},
+                          fillColor: MaterialStateProperty.all(Colors.white),
+                          checkColor: AppColors.primaryGreen,
+                          activeColor: AppColors.primaryGreen,
+                          focusColor: AppColors.primaryGreen,
+                        ),
+                    SizedBox(height: 32.0,),
+                        Checkbox(value: true,
+                            onChanged: (bool? value){},
+                          fillColor: MaterialStateProperty.all(Colors.white),
+                          checkColor: AppColors.primaryGreen,
+                          activeColor: AppColors.primaryGreen,
+                          focusColor: AppColors.primaryGreen,
+                        ),
+
+                  ],
                 )
               ],
             )
@@ -226,13 +294,3 @@ class PanelWidget extends StatelessWidget {
   }
 }
 
-class TrackCircleWidget extends StatelessWidget {
-  const TrackCircleWidget({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return CircleAvatar(backgroundColor: Colors.white, radius: 5.0,);
-  }
-}
