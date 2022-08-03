@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mobile_assessment_flutter/screens/registration/user_type.dart';
-import 'package:mobile_assessment_flutter/screens/splash/splash_screen.dart';
+import 'package:mobile_assessment_flutter/screens/registration/personal_registration.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const UserType(),
+      home: const PersonalRegistration(),
     );
   }
 }

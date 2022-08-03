@@ -19,7 +19,7 @@ class UserType extends StatelessWidget {
             Positioned(
                 left: Dimensions.sizeWidthPercent(26.33),
                 right: Dimensions.sizeWidthPercent(26.33),
-                top: Dimensions.sizeHeightPercent(130.46),
+                top: Dimensions.sizeHeightPercent(130.56),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
