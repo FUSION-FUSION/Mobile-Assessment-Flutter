@@ -1,15 +1,16 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
+import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/widgets/app_text.dart';
 import 'package:mobile_assessment_flutter/widgets/gradient_background.dart';
 import 'package:mobile_assessment_flutter/widgets/register_field.dart';
 import 'package:mobile_assessment_flutter/widgets/text_container.dart';
 
-import '../../utils/dimensions.dart';
-
-class PersonalRegistration extends StatelessWidget {
-  const PersonalRegistration({Key? key}) : super(key: key);
+class Registration extends StatelessWidget {
+  bool isPersonal;
+  Registration({Key? key, required this.isPersonal}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +42,74 @@ class PersonalRegistration extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     RegisterField(
-                      name: 'Fullname',
+                      name: isPersonal ? 'Fullname' : 'Company Name',
                     ),
                     SizedBox(height: Dimensions.sizeHeightPercent(20)),
                     RegisterField(
-                      name: 'Your E-mail',
+                      name: isPersonal ? 'Your E-mail' : 'Official Email',
+                    ),
+                    SizedBox(height: Dimensions.sizeHeightPercent(20)),
+                    AppText(
+                      text: isPersonal ? 'Phone Number' : 'Contact Number',
+                      size: 16,
+                      color: AppColors.primaryBlack,
+                    ),
+                    SizedBox(height: Dimensions.sizeHeightPercent(6)),
+                    Container(
+                      width: Dimensions.sizeWidthPercent(390),
+                      height: Dimensions.sizeHeightPercent(44),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(17),
+                        color: const Color(0xffFDFEFF),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: Dimensions.sizeWidthPercent(102),
+                            height: Dimensions.sizeHeightPercent(44),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(17),
+                              border: Border.all(
+                                color: Colors.grey[100]!,
+                                width: 1,
+                              ),
+                              color: const Color(0xffFDFEFF),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Text('+234'),
+                                SizedBox(
+                                  width: Dimensions.sizeWidthPercent(8),
+                                ),
+                                const Icon(
+                                  Icons.arrow_drop_down,
+                                  color: AppColors.primaryBlack,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: Dimensions.sizeWidthPercent(270),
+                            padding: EdgeInsets.only(
+                              left: Dimensions.sizeWidthPercent(10),
+                              right: Dimensions.sizeWidthPercent(10),
+                              top: Dimensions.sizeHeightPercent(5),
+                              bottom: Dimensions.sizeHeightPercent(5),
+                            ),
+                            child: TextFormField(
+                                textInputAction: TextInputAction.next,
+                                keyboardType: TextInputType.number,
+                                inputFormatters: [
+                                  // WhitelistingTextInputFormatter.digitsOnly,
+                                  LengthLimitingTextInputFormatter(11),
+                                ],
+                                decoration: const InputDecoration(
+                                  border: InputBorder.none,
+                                )),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: Dimensions.sizeHeightPercent(20)),
                     RegisterField(

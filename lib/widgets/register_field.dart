@@ -22,19 +22,20 @@ class RegisterField extends StatelessWidget {
           width: Dimensions.sizeWidthPercent(390),
           height: Dimensions.sizeHeightPercent(44),
           padding: EdgeInsets.only(
-            left: Dimensions.sizeWidthPercent(12),
-            right: Dimensions.sizeWidthPercent(12),
-            top: Dimensions.sizeHeightPercent(6),
-            bottom: Dimensions.sizeHeightPercent(6),
+            left: Dimensions.sizeWidthPercent(20),
+            right: Dimensions.sizeWidthPercent(20),
+            top: Dimensions.sizeHeightPercent(10),
+            bottom: Dimensions.sizeHeightPercent(10),
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(17),
             color: const Color(0xffFDFEFF),
           ),
           child: TextFormField(
+              textInputAction: TextInputAction.next,
               decoration: const InputDecoration(
-            border: InputBorder.none,
-          )),
+                border: InputBorder.none,
+              )),
         ),
       ],
     );
