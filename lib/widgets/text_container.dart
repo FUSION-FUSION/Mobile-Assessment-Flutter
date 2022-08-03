@@ -34,7 +34,7 @@ class TextContainer extends StatelessWidget {
       child: Center(
         child: AppText(
           text: text,
-          size: size,
+          size: Dimensions.sizeHeightPercent(size),
           color: textColor,
           bold: true,
         ),
