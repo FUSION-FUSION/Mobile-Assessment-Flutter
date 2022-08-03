@@ -10,8 +10,8 @@ class customAppBar extends StatelessWidget {
     required this.subtitle,
   }) : super(key: key);
 
-  final String title;
-  final String subtitle;
+  final Text title;
+  final Text subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -25,17 +25,20 @@ class customAppBar extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              // 'What kind of user are you?',
-              title,
-              style: kBigBlackTextStyle,
-            ),
+            // 'What kind of user are you?',
+            title,
+            // Text(
+            // 'What kind of user are you?',
+            //   title,
+            //   style: kBigBlackTextStyle,
+            // ),
+
             verticalSpaceSmall,
-            Text(
-              // 'We will adapt the app to suit your needs',
-              subtitle,
-              style: kSmallTextStyle,
-            )
+            // Text(
+            // 'We will adapt the app to suit your needs',
+            subtitle,
+            //   style: kSmallTextStyle,
+            // )
           ],
         ),
         padding: EdgeInsets.only(top: 130.56.h, left: 26.33.w, right: 82.4.w),

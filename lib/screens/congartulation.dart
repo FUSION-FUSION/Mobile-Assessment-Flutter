@@ -18,8 +18,15 @@ class _CongratsState extends State<Congrats> {
             child: SingleChildScrollView(
                 child: Column(children: [
           customAppBar(
-              title: 'Congratulations!',
-              subtitle: 'Your account has been successfully created '),
+            title: Text(
+              'Congratulations!',
+              style: kBigBlackTextStyle,
+            ),
+            subtitle: Text(
+              'Your account has been successfully created ',
+              style: kSmallTextStyle,
+            ),
+          ),
           verticalSpaceTiny,
           Image.asset(
             'assets/images/ic-congratulations.png',

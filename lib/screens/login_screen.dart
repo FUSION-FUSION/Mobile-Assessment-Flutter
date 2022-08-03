@@ -31,9 +31,12 @@ class _LoginState extends State<Login> {
         body: SingleChildScrollView(
           child: SafeArea(
               child: Column(children: [
-            const customAppBar(
-                title: 'Sign In',
-                subtitle: 'Sign in to continue to Cargo Express'),
+            customAppBar(
+                title: Text('Sign In', style: kSmallTextStyle),
+                subtitle: Text(
+                  'Sign in to continue to Cargo Express',
+                  style: kSmallTextStyle,
+                )),
             Form(
               key: _formKey,
               autovalidateMode: AutovalidateMode.always,

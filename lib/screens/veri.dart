@@ -1,19 +1,17 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../utilities/ui_helpers.dart';
 
-class Verification extends StatefulWidget {
-  const Verification({Key? key}) : super(key: key);
+class Veri extends StatefulWidget {
+  const Veri({Key? key}) : super(key: key);
 
   @override
-  State<Verification> createState() => _VerificationState();
+  State<Veri> createState() => _VeriState();
 }
 
-class _VerificationState extends State<Verification> {
+class _VeriState extends State<Veri> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -116,18 +114,18 @@ class _VerificationState extends State<Verification> {
                     Align(
                       alignment: Alignment.topRight,
                       child: Text(
-                        '00:52',
+                        'Code Expired',
                         style: TextStyle(color: Colors.red, fontSize: 16),
                       ),
                     ),
-                    verticalSpaceCustom(22.h),
+                    verticalSpaceCustom(53.h),
                     Center(
                       child: Text(
                         'Resend Code',
                         style: knormalTextStyle,
                       ),
                     ),
-                    verticalSpaceCustom(53.h),
+                    verticalSpaceCustom(36.h),
                     CircleAvatar(
                       radius: 30.h,
                       backgroundColor: Color(0xff46a5ba),

@@ -39,9 +39,15 @@ class _CommerceState extends State<Commerce> {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            const customAppBar(
-              title: 'Welcome!',
-              subtitle: 'Create an account to get started with Cargo Express',
+            customAppBar(
+              title: Text(
+                'Welcome!',
+                style: kBigBlackTextStyle,
+              ),
+              subtitle: Text(
+                'Create an account to get started with Cargo Express',
+                style: kSmallTextStyle,
+              ),
             ),
             Form(
                 key: _formKey,

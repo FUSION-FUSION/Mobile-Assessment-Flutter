@@ -20,9 +20,15 @@ class _LaunchState extends State<Launch> {
       body: SafeArea(
           child: Column(
         children: [
-          const customAppBar(
-            title: 'What kind of user are you?',
-            subtitle: 'We will adapt the app to suit your needs.',
+          customAppBar(
+            title: Text(
+              'What kind of user are you?',
+              style: kBigBlackTextStyle,
+            ),
+            subtitle: Text(
+              'We will adapt the app to suit your needs.',
+              style: kSmallTextStyle,
+            ),
           ),
           verticalSpaceCustom(8.h),
           Custom_but(

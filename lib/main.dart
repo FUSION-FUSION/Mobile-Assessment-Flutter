@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobile_assessment_flutter/screens/begin.dart';
 import 'package:mobile_assessment_flutter/screens/congartulation.dart';
 import 'package:mobile_assessment_flutter/screens/e-commerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/launch_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
+import 'package:mobile_assessment_flutter/screens/veri.dart';
 
 import 'screens/login_screen.dart';
 import 'screens/verification_screen.dart';
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(428, 926),
       builder: (BuildContext context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Launch(),
+        home: Begin(),
         routes: {
           '/intro': (context) => const Launch(),
           '/personal': (context) => const Personal(),
@@ -35,24 +37,9 @@ class MyApp extends StatelessWidget {
           '/login': (context) => const Login(),
           '/commerce': (context) => const Commerce(),
           '/congrats': (context) => const Congrats(),
+          '/very': (context) => const Veri(),
         },
       ),
     );
   }
 }
-
-// initialRoute: '/main',
-//             routes: {
-//               'intro': (context) => const LoadScreen(),
-//               '/login': (context) => const SignIn(),
-//               '/signup': (context) => const SignUp(),
-//               '/home': (context) => const MyHomePage(),
-//               '/user': (context) => const Userdd(),
-//               '/menu': (context) => const Menu(),
-//               '/personal': (context) => const Personal(),
-//               '/business': (context) => const Buisness(),
-//               '/main': (context) => const MainPage(),
-//               '/account': (context) => const Account(),
-//               '/verify': (context) => const VerifyEmail(),
-//               '/reset': (context) => const PasswordReset(),
-//             },

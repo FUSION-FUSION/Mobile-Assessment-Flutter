@@ -41,9 +41,15 @@ class _PersonalState extends State<Personal> {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            const customAppBar(
-              title: 'Welcome!',
-              subtitle: 'Create an account to get started with Cargo Express',
+            customAppBar(
+              title: Text(
+                'Welcome!',
+                style: kBigBlackTextStyle,
+              ),
+              subtitle: Text(
+                'Create an account to get started with Cargo Express',
+                style: kSmallTextStyle,
+              ),
             ),
             Form(
                 key: _formKey,
@@ -161,7 +167,7 @@ class _PersonalState extends State<Personal> {
                           ),
                           GestureDetector(
                             onTap: () =>
-                                Navigator.pushNamed(context, '/congrats'),
+                                Navigator.pushNamed(context, '/verify'),
                             child: Container(
                               height: 60,
                               width: 150,
