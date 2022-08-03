@@ -26,10 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Padding(
               padding: EdgeInsets.fromLTRB(
                   getScreenWidth(20),
-                 getScreenHeight(37),
-                 getScreenWidth(20),
-                 getScreenHeight(163)
-              ),
+                  getScreenHeight(37),
+                  getScreenWidth(20),
+                  getScreenHeight(163)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -252,7 +251,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             bottom: getScreenHeight(11.34)),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
-                            color: const Color(0xffF3F4F5),
+                            color: const Color(0xffFDFEFF),
                             image: DecorationImage(
                                 image: AssetImage(
                                     '${imagePath}ic-road-same-state.png'),
@@ -346,7 +345,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             bottom: getScreenHeight(6.34)),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
-                            color: const Color(0xffF3F4F5),
+                            color: const Color(0xffFDFEFF),
                             image: DecorationImage(
                                 image: AssetImage(
                                     '${imagePath}ic-road-interstate.png'),
@@ -426,8 +425,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Padding(
                                 padding: EdgeInsets.only(
                                     bottom: getScreenHeight(10),
-                                  right: getScreenWidth(9.41)
-                                ),
+                                    right: getScreenWidth(9.41)),
                                 child: Container(
                                   height: getScreenHeight(23.18),
                                   width: getScreenWidth(23.18),
@@ -462,7 +460,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             bottom: getScreenHeight(6.34)),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
-                            color: const Color(0xffF3F4F5),
+                            color: const Color(0xffFDFEFF),
                             image: DecorationImage(
                                 image: AssetImage(
                                     '${imagePath}ic-road-charter.png'),
@@ -540,8 +538,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               alignment: AlignmentDirectional.bottomEnd,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                right: getScreenWidth(9.41),
-                                    bottom: getScreenHeight(10),
+                                  right: getScreenWidth(9.41),
+                                  bottom: getScreenHeight(10),
                                 ),
                                 child: Container(
                                   height: getScreenHeight(23.18),
@@ -560,100 +558,131 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                      Container(
-                        height: getScreenHeight(242),
-                        width: getScreenWidth(186),
-                        alignment: AlignmentDirectional.centerStart,
-                        padding: EdgeInsets.only(
-                            top: getScreenHeight(42),
-                            right: getScreenWidth(9.41),
-                            bottom: getScreenHeight(11.34)),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(11.09),
-                            color: const Color(0x38F3F4F5),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    '${imagePath}ic-road-same-state.png'),
-                                alignment: Alignment.bottomCenter)),
-                        child: Stack(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                      left: getScreenWidth(9.41)),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'International',
-                                        style: TextStyle(
-                                            color: Palette.kBlackColor,
-                                            fontSize: getScreenWidth(18.14),
-                                            fontFamily:
-                                                FontFamily.kSemiBoldFamily,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      SizedBox(
-                                        height: getScreenHeight(5.64),
-                                      ),
-                                      Container(
-                                        width: getScreenWidth(18.75),
-                                        height: getScreenHeight(3.13),
-                                        decoration: BoxDecoration(
-                                            color: Palette.kPrimaryColor,
-                                            borderRadius:
-                                                BorderRadius.circular(2)),
-                                      ),
-                                      SizedBox(
-                                        height: getScreenHeight(7.38),
-                                      ),
-                                      Text(
-                                        'Send packages to\nother countries',
-                                        style: TextStyle(
-                                            color: Palette.kBlackColor,
-                                            fontSize: getScreenWidth(15.12),
-                                            fontFamily: FontFamily.kLightFamily,
-                                            fontWeight: FontWeight.w300),
-                                      ),
-                                    ],
+                      Stack(children: [
+                        Container(
+                          height: getScreenHeight(242),
+                          width: getScreenWidth(186),
+                          alignment: AlignmentDirectional.centerStart,
+                          padding: EdgeInsets.only(
+                              top: getScreenHeight(42),
+                              right: getScreenWidth(9.41),
+                              bottom: getScreenHeight(11.34)),
+                          foregroundDecoration: BoxDecoration(
+                            backgroundBlendMode: BlendMode.lighten,
+                            color: Color(0x38F3F4F5),
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(11.09),
+                            //backgroundBlendMode: BlendMode.lighten,
+                              color: Color(0xffF3F4F5),
+                          ),
+                          child: Stack(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        left: getScreenWidth(9.41)),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'International',
+                                          style: TextStyle(
+                                              color: Palette.kBlackColor,
+                                              fontSize: getScreenWidth(18.14),
+                                              fontFamily:
+                                                  FontFamily.kSemiBoldFamily,
+                                              fontWeight: FontWeight.w600),
+                                        ),
+                                        SizedBox(
+                                          height: getScreenHeight(5.64),
+                                        ),
+                                        Container(
+                                          width: getScreenWidth(18.75),
+                                          height: getScreenHeight(3.13),
+                                          decoration: BoxDecoration(
+                                              color: Palette.kPrimaryColor,
+                                              borderRadius:
+                                                  BorderRadius.circular(2)),
+                                        ),
+                                        SizedBox(
+                                          height: getScreenHeight(7.38),
+                                        ),
+                                        Text(
+                                          'Send packages to\nother countries',
+                                          style: TextStyle(
+                                              color: Palette.kBlackColor,
+                                              fontSize: getScreenWidth(15.12),
+                                              fontFamily:
+                                                  FontFamily.kLightFamily,
+                                              fontWeight: FontWeight.w300),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: getScreenHeight(4.98),
-                                ),
-                                SizedBox(
-                                    height: getScreenHeight(104.07),
-                                    width: getScreenWidth(114.45),
-                                    child: Image.asset(
-                                      '${imagePath}ic-aeroplane.png',
-                                      fit: BoxFit.fill,
-                                    )),
-                              ],
-                            ),
-                            Align(
+                                  SizedBox(
+                                    height: getScreenHeight(4.98),
+                                  ),
+                                  SizedBox(
+                                      height: getScreenHeight(104.07),
+                                      width: getScreenWidth(114.45),
+                                      child: Image.asset(
+                                        '${imagePath}ic-aeroplane.png',
+                                        fit: BoxFit.fill,
+                                      )),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: getScreenHeight(242),
+                          width: getScreenWidth(186),
+                          alignment: AlignmentDirectional.centerStart,
+                          padding: EdgeInsets.only(
+                              top: getScreenHeight(42),
+                              right: getScreenWidth(9.41),
+                              bottom: getScreenHeight(11.34)),
+                          foregroundDecoration: BoxDecoration(
+                            backgroundBlendMode: BlendMode.saturation,
+                            color: Color(0x38F3F4F5),
+                          ),
+                          decoration: BoxDecoration(
+                              backgroundBlendMode: BlendMode.srcATop,
+                              borderRadius: BorderRadius.circular(11.09),
+                            color: Color(0x98F3F4F5)
+                          ),
+                          child: Align(
                               alignment: AlignmentDirectional.bottomEnd,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                    bottom: getScreenHeight(10)),
+                                    bottom: getScreenHeight(21.86)),
                                 child: Container(
-                                  height: getScreenHeight(23.18),
-                                  width: getScreenWidth(23.18),
-                                  decoration: BoxDecoration(
-                                      color: Color(0xffFBFCFD),
-                                      shape: BoxShape.circle),
-                                  child: Icon(
-                                    Icons.arrow_forward,
-                                    size: getScreenWidth(7.14),
-                                    color: Palette.kBlackColor,
-                                  ),
-                                ),
+                                    height: getScreenHeight(18.14),
+                                    width: getScreenWidth(75.58),
+                                    decoration: BoxDecoration(
+                                        color: Color(0xffFDFEFF),
+                                      borderRadius: BorderRadius.circular(9.18)
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        'Coming Soon',
+                                        style: TextStyle(
+                                          fontSize: getScreenWidth(9.07),
+                                          color: Palette.kBlackColor,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily: FontFamily.kMediumFamily
+                                          
+                                        ),
+                                      ),
+                                    )),
                               ),
                             ),
-                          ],
-                        ),
+                        )
+                      ]
                       )
                     ],
                   ),
@@ -685,7 +714,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             bottom: getScreenHeight(11.34)),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
-                          color: const Color(0xffF3F4F5),
+                          color: const Color(0xffFDFEFF),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -757,7 +786,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             bottom: getScreenHeight(11.34)),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
-                          color: const Color(0xffF3F4F5),
+                          color: const Color(0xffFDFEFF),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
