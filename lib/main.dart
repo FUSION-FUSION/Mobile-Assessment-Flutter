@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mobile_assessment_flutter/screens/auth/login.dart';
-import 'package:mobile_assessment_flutter/screens/auth/registration.dart';
+import 'package:mobile_assessment_flutter/screens/auth/user_type.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Login(),
+      home: const UserType(),
     );
   }
 }
