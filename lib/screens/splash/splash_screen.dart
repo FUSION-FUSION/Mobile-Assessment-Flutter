@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mobile_assessment_flutter/routes/route_helper.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 
@@ -24,16 +26,17 @@ class _SplashScreenState extends State<SplashScreen>
           ..forward();
     animation = CurvedAnimation(parent: controller, curve: Curves.linear);
 
-    Timer(const Duration(seconds: 3), () {
-      controller.reverse();
+    Timer(const Duration(seconds: 3), () async {
+      await controller.reverse().then((value) {
+        Get.offAllNamed(RouteHelper.getUserType());
+      });
     });
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
-    super.dispose();
     controller.dispose();
+    super.dispose();
   }
 
   @override
