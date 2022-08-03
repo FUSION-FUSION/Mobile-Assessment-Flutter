@@ -5,8 +5,8 @@ class GradientBackground extends StatelessWidget {
   final Widget child;
   GradientBackground({Key? key, required this.child}) : super(key: key);
 
-  double width = Dimensions.screenWidth;
-  double height = Dimensions.screenHeight;
+  double width = Dimensions.designHeight;
+  double height = Dimensions.designWidth;
   @override
   Widget build(BuildContext context) {
     return Container(

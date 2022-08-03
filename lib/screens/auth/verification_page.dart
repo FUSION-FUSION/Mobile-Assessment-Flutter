@@ -127,10 +127,8 @@ class _VerificationPageState extends State<VerificationPage> {
                   length: 5,
                 ),
                 SizedBox(height: Dimensions.sizeHeightPercent(14.34)),
-                Padding(
-                  padding: EdgeInsets.only(
-                      left: Dimensions.sizeWidthPercent(
-                          codeExpired ? 250 : 280.0)),
+                Align(
+                  alignment: Alignment.centerRight,
                   child: AppText(
                     text: codeExpired
                         ? 'Code Expired'
