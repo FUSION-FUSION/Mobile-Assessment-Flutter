@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mobile_assessment_flutter/screens/ecommerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/get_started_screen.dart';
+import 'package:mobile_assessment_flutter/screens/home_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 import 'package:mobile_assessment_flutter/screens/sign_in_screen.dart';
 import 'package:mobile_assessment_flutter/screens/splash_screen.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
        GetPage(name: '/verificationScreen', page: ()=> const VerificationScreen()),
        GetPage(name: '/successScreen', page: ()=> const SuccessScreen()),
        GetPage(name: '/signInScreen', page: ()=> const SignInScreen()),
+       GetPage(name: '/homeScreen', page: ()=> const HomeScreen()),
      ],
     );
   }

@@ -51,7 +51,7 @@ class SuccessScreen extends StatelessWidget {
                     primary: Palette.kPrimaryColor,
                     sideColor: Palette.kPrimaryColor,
                     onPressed: () {
-                      Get.offAndToNamed('/signInScreen');
+                      Get.offAndToNamed('/homeScreen');
                     }),
               )
             ],

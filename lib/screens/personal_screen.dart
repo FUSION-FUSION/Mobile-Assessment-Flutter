@@ -128,7 +128,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                       height: 63.5,
                       width: 141.77,
                       onPressed: () {
-                        Get.toNamed('verificationScreen');
+                        Get.offAndToNamed('verificationScreen');
                       },
                       primary: Palette.kPrimaryColor,
                       sideColor: Palette.kPrimaryColor,

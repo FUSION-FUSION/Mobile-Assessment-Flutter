@@ -128,7 +128,7 @@ class _EcommerceScreenState extends State<EcommerceScreen> {
                       height: 63.5,
                       width: 141.77,
                       onPressed: () {
-                        Get.toNamed('verificationScreen');
+                        Get.offAndToNamed('verificationScreen');
                       },
                       primary: Palette.kPrimaryColor,
                       sideColor: Palette.kPrimaryColor,

@@ -138,7 +138,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 alignment: Alignment.center,
                 child: GestureDetector(
                   onTap: (){
-                    Get.toNamed('/successScreen');
+                    Get.offAndToNamed('/successScreen');
                   },
                   child: Container(
                     height: getScreenHeight(59),
