@@ -30,7 +30,7 @@ class _LaunchState extends State<Launch> {
           verticalSpaceCustom(4),
           Custom_but(
             text: 'E-commerce',
-            onTap: () => Navigator.pushNamed(context, '/personal'),
+            onTap: () => Navigator.pushNamed(context, '/commerce'),
           )
         ],
       )),

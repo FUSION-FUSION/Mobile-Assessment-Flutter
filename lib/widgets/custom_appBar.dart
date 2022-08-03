@@ -38,7 +38,7 @@ class customAppBar extends StatelessWidget {
             )
           ],
         ),
-        padding: EdgeInsets.only(top: 80, left: 20, right: 17),
+        padding: EdgeInsets.only(top: 90, left: 20, right: 17),
       )
     ]);
   }

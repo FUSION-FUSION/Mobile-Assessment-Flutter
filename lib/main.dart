@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobile_assessment_flutter/screens/e-commerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/launch_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         '/intro': (context) => const Launch(),
         '/personal': (context) => const Personal(),
         '/verify': (context) => const Verification(),
-        '/login': (context) => const Login()
+        '/login': (context) => const Login(),
+        '/commerce': (context) => const Commerce()
       },
     );
   }

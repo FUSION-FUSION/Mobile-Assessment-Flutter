@@ -28,6 +28,9 @@ class _PersonalState extends State<Personal> {
     super.dispose();
     fullnamecontroller.dispose();
     emailcontroller.dispose();
+    phonecontroller.dispose();
+    passwordcontroller.dispose();
+    cpasswordcontroller.dispose();
   }
 
   @override
