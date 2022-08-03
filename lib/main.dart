@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './landing_page.dart';
+import './screens/auth_screens/signin_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context){
     return MaterialApp(
       title: 'Welcome to Fusion',
-      home: LandingPage(),
+      home: SignInPage(),
     );
   }
 }

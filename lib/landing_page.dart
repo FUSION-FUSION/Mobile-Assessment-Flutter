@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './screens/auth_screens/personal_account_signup_page.dart';
+import './screens/auth_screens/ecommerce_account_signup_page.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -53,7 +55,12 @@ class LandingPage extends StatelessWidget {
                         primary: Color(0xFF46A5B9),
                         onPrimary: Colors.white,
                       ),
-                      onPressed: () => '',
+                      onPressed: () {
+                        Navigator.of(context)
+                            .push(
+                          MaterialPageRoute(builder: (context) => PersonalAccountSignUpPage())
+                        );
+                      },
                       child: Text('Personal'),
                     ),
                   ),
@@ -67,7 +74,12 @@ class LandingPage extends StatelessWidget {
                         primary: Color(0xFF46A5B9),
                         onPrimary: Colors.white,
                       ),
-                      onPressed: () => '',
+                      onPressed: () {
+                        Navigator.of(context)
+                            .push(
+                            MaterialPageRoute(builder: (context) => EcommerceAccountSignUpPage())
+                        );
+                      },
                       child: Text('E-commerce',
                           ),
                     ),
