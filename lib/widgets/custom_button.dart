@@ -12,7 +12,7 @@ class SButton extends StatefulWidget {
   final Color? sideColor;
   final double? width;
   final double? height;
-    final TextStyle? style;
+  final TextStyle? style;
 
   const SButton({
     Key? key,
@@ -42,17 +42,20 @@ class _SButtonState extends State<SButton> {
       color: widget.color ?? const Color(0xFFFFFFFF),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
-        side: BorderSide(color: widget.sideColor ?? Colors.transparent),
+        side: BorderSide(  
+          width: 2.0,
+          color: widget.sideColor ?? Colors.transparent),
       ),
       minWidth: widget.width,
-      padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+      padding: widget.padding,
       onPressed: widget.onPressed!,
-      child: Text(widget.buttontext ?? 'buttontext',
-          style: widget.style
+      //  const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+
+      child: Text(widget.buttontext ?? 'buttontext', style: widget.style
           // Theme.of(context).textTheme.button?.copyWith(
 
-          //     color: widget.buttonTextCor ?? Colors.white) 
-              // ??
+          //     color: widget.buttonTextCor ?? Colors.white)
+          // ??
           // TextStyle(
           //     fontWeight: FontWeight.bold,
           //     color: widget.buttonTextCor ?? Colors.white),

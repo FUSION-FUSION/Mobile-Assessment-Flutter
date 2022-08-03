@@ -5,7 +5,9 @@ class SColors {
   static Color primaryColor = const Color(0xFF46A5BA);
   static Color textsColor = const Color.fromARGB(253, 0, 0, 0);
   static Color hintTextColor = const Color.fromARGB(0, 75, 75, 75);
- 
+ static Color buttonColor = const Color(0xFFF5F5F5);
+ static Color buttonsideColor = const Color(0xFFFFFFFF);
+
   static Color subtextColor = const Color.fromARGB(153, 53, 53, 53);
   static Color variantButtonColor = const Color(0xFFFFFFFF);
   static Color lineargradientColor1 = const Color(0xFFDBE4E9);
