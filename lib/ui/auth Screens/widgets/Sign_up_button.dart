@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobile_assessment_flutter/ui/home_screen/home.dart';
 
 class AuthButton extends StatelessWidget {
 
@@ -9,9 +8,10 @@ class AuthButton extends StatelessWidget {
   Color? textColor;
   double? height;
   double? width;
+  var onTap;
 
   AuthButton({
-    Key? key, required this.label,  this.buttonColor, this.textColor, this.width, this.height
+    Key? key, required this.label,  this.buttonColor, this.textColor, this.width, this.height, this.onTap
   }) : super(key: key);
 
   @override
@@ -23,11 +23,7 @@ class AuthButton extends StatelessWidget {
           color: buttonColor ?? Colors.white,
           borderRadius: BorderRadius.circular(20.0.r)),
       child: TextButton(
-        onPressed: (){
-          Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
-            return HomeScreen();
-          }));
-        },
+        onPressed: onTap,
         child: Center(
             child: Text(
               label,
