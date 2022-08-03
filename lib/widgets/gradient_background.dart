@@ -21,6 +21,10 @@ class GradientBackground extends StatelessWidget {
             Color(0XFFF0F0F3),
           ],
         ),
+        image: DecorationImage(
+          image: AssetImage('assets/images/bg-app-cloud.png'),
+          alignment: Alignment.topCenter,
+        ),
       ),
       child: child,
     );
