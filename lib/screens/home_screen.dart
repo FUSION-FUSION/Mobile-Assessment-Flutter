@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     SizeLayout.init(context);
     return Scaffold(
+      backgroundColor: Color(0xffF8F8FA),
       body: SafeArea(
         child: SizedBox(
           height: MediaQuery.of(context).size.height,
@@ -572,9 +573,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Color(0x38F3F4F5),
                           ),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(11.09),
+                            borderRadius: BorderRadius.circular(11.09),
                             //backgroundBlendMode: BlendMode.lighten,
-                              color: Color(0xffF3F4F5),
+                            color: Color(0xffF3F4F5),
                           ),
                           child: Stack(
                             children: [
@@ -653,37 +654,33 @@ class _HomeScreenState extends State<HomeScreen> {
                           decoration: BoxDecoration(
                               backgroundBlendMode: BlendMode.srcATop,
                               borderRadius: BorderRadius.circular(11.09),
-                            color: Color(0x98F3F4F5)
-                          ),
+                              color: Color(0x98F3F4F5)),
                           child: Align(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              child: Padding(
-                                padding: EdgeInsets.only(
-                                    bottom: getScreenHeight(21.86)),
-                                child: Container(
-                                    height: getScreenHeight(18.14),
-                                    width: getScreenWidth(75.58),
-                                    decoration: BoxDecoration(
-                                        color: Color(0xffFDFEFF),
-                                      borderRadius: BorderRadius.circular(9.18)
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        'Coming Soon',
-                                        style: TextStyle(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                  bottom: getScreenHeight(21.86)),
+                              child: Container(
+                                  height: getScreenHeight(18.14),
+                                  width: getScreenWidth(75.58),
+                                  decoration: BoxDecoration(
+                                      color: Color(0xffFDFEFF),
+                                      borderRadius:
+                                          BorderRadius.circular(9.18)),
+                                  child: Center(
+                                    child: Text(
+                                      'Coming Soon',
+                                      style: TextStyle(
                                           fontSize: getScreenWidth(9.07),
                                           color: Palette.kBlackColor,
                                           fontWeight: FontWeight.w500,
-                                          fontFamily: FontFamily.kMediumFamily
-                                          
-                                        ),
-                                      ),
-                                    )),
-                              ),
+                                          fontFamily: FontFamily.kMediumFamily),
+                                    ),
+                                  )),
                             ),
+                          ),
                         )
-                      ]
-                      )
+                      ])
                     ],
                   ),
                   SizedBox(
