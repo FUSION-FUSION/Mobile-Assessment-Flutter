@@ -5,6 +5,9 @@ abstract class AppTheme {
   final Color primaryTextColor;
   final Color darkBackgroundColor;
   final Color grayTextColor;
+  final Color textfieldBackgroundColor;
+  final Color borderColor;
+  final Color lightButtonColor;
 
   final Gradient backgroundGradient;
 
@@ -14,6 +17,9 @@ abstract class AppTheme {
     required this.darkBackgroundColor,
     required this.backgroundGradient,
     required this.grayTextColor,
+    required this.textfieldBackgroundColor,
+    required this.borderColor,
+    required this.lightButtonColor,
   });
 
   Text text(

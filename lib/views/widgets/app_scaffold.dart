@@ -14,7 +14,9 @@ class AppScaffold extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: ThemeProvider.current(context).backgroundGradient,
         ),
-        child: child,
+        child: SingleChildScrollView(
+          child: Expanded(child: child,),
+        ),
       ),
     );
   }

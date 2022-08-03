@@ -27,11 +27,12 @@ class BaseAuthenticationScreen extends StatelessWidget {
     return AppScaffold(
       child: Stack(
         children: [
-          Image.asset('assets/bg-app-cloud.png'),
+          Hero(child: Image.asset('assets/bg-app-cloud.png'), tag: 'bg',),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.only(top: 100, left: 20, right: 20),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   theme.text(
                     title,

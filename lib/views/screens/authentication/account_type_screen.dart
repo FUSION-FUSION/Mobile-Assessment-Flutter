@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/base_authentication_screen.dart';
+import 'package:mobile_assessment_flutter/views/screens/authentication/personal_registration_screen.dart';
 import 'package:mobile_assessment_flutter/views/widgets/app_button.dart';
 
 class AccountTypeScreen extends StatelessWidget {
   static const route = BaseAuthenticationScreen.route + "/account_type";
 
   const AccountTypeScreen({Key? key}) : super(key: key);
+
+  void openToRegistrationScreen(BuildContext context) {
+    Navigator.of(context).pushNamed(PersonalRegistrationScreen.route);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +26,7 @@ class AccountTypeScreen extends StatelessWidget {
               text: 'Personal',
               fontSize: 38,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-              onPressed: () {},
+              onPressed: () => openToRegistrationScreen(context),
             ),
           ),
           Padding(
@@ -30,7 +35,7 @@ class AccountTypeScreen extends StatelessWidget {
               text: 'E-commerce',
               fontSize: 38,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-              onPressed: () {},
+              onPressed: () => openToRegistrationScreen(context),
             ),
           ),
         ],
