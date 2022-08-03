@@ -12,7 +12,7 @@ class OtherActionGrid extends StatelessWidget {
     double width = size.width;
     return SizedBox(
       height: height * 0.19,
-      width: width,
+      width: width * 0.9,
       child: Row(
         children: const [
           OtherActionCard(

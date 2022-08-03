@@ -6,7 +6,6 @@ import 'package:mobile_assessment_flutter/view/sign_in/sign_in_screen.dart';
 import 'package:mobile_assessment_flutter/view/user_kind/user_kind_screen.dart';
 import 'package:mobile_assessment_flutter/view/verification/verification_screen.dart';
 import 'package:mobile_assessment_flutter/view/welcome/welcome_screen_e_commerce.dart';
-
 import '../view/welcome/welcome_screen_personal.dart';
 
 final Map<String, WidgetBuilder> routes = {

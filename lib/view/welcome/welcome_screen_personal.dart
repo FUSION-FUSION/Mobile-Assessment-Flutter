@@ -145,7 +145,7 @@ class _WelcomeScreenPersonalState extends State<WelcomeScreenPersonal> {
                           height: height * 0.065,
                           width: width * 0.3,
                           fontSize: 22,
-                          isLightbackground: true,
+                          isLightBackground: true,
                           press: (){
                             Navigator.pushNamed(context, UserKindScreen.routeName);
                           },

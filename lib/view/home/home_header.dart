@@ -9,22 +9,25 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Icon(Icons.menu),
-        const Text(
-          'Hello, John.',
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900),
-        ),
-        Container(
-          height: 30,
-          width: 30,
-          child: Image.asset(
-            icNotification,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Icon(Icons.menu),
+          const Text(
+            'Hello, John.',
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900),
           ),
-        )
-      ],
+          Container(
+            height: 30,
+            width: 30,
+            child: Image.asset(
+              icNotification,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

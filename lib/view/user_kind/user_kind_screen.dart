@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/constants/assets_constant_name.dart';
 import 'package:mobile_assessment_flutter/constants/color_pallette.dart';
 import 'package:mobile_assessment_flutter/view/welcome/welcome_screen_e_commerce.dart';
-
-
 import '../welcome/welcome_screen_personal.dart';
 import '../widgets/custom_button.dart';
 
@@ -62,9 +60,10 @@ class UserKindScreen extends StatelessWidget {
                     child: Text(
                       'We will adapt the app to suit your \n needs.',
                       style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w200,
-                          color: Colors.black.withOpacity(0.6)),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w200,
+                        color: Colors.black.withOpacity(0.6),
+                      ),
                     ),
                   ),
                 ),
@@ -76,8 +75,9 @@ class UserKindScreen extends StatelessWidget {
                   height: height * 0.15,
                   width: width * 0.8,
                   fontSize: 44,
-                  press: (){
-                    Navigator.pushNamed(context, WelcomeScreenPersonal.routeName);
+                  press: () {
+                    Navigator.pushNamed(
+                        context, WelcomeScreenPersonal.routeName);
                   },
                 ),
                 SizedBox(
@@ -88,8 +88,9 @@ class UserKindScreen extends StatelessWidget {
                   height: height * 0.15,
                   width: width * 0.8,
                   fontSize: 44,
-                  press: (){
-                    Navigator.pushNamed(context, WelcomeScreenECommerce.routeName);
+                  press: () {
+                    Navigator.pushNamed(
+                        context, WelcomeScreenECommerce.routeName);
                   },
                 ),
               ],

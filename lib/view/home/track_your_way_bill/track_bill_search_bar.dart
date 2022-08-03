@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/view/Map/scrollable_draggable_sheet.dart';
 import 'package:mobile_assessment_flutter/view/widgets/custom_button.dart';
-
 import '../../../../constants/assets_constant_name.dart';
 import '../../../../constants/color_pallette.dart';
 

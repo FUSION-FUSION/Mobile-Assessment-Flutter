@@ -17,7 +17,7 @@ class MoneyDashboardCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: height * 0.09,
-      width: width,
+      width: width * 0.9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.white,

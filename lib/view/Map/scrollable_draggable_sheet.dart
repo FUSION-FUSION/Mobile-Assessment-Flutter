@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/constants/color_pallette.dart';
+import 'package:mobile_assessment_flutter/view/home/home_screen.dart';
 
+import '../../constants/assets_constant_name.dart';
 import 'list_tile_card.dart';
 
 class ScrollableSheet extends StatefulWidget {
@@ -27,7 +29,12 @@ class _ScrollableSheetState extends State<ScrollableSheet> {
           return Stack(
             children: [
               Container(
-                color: kPrimary,
+                height: height,
+                width: width,
+                child: Image.asset(
+                   map,
+                  fit: BoxFit.cover,
+                ),
               ),
               Positioned(
                 top: 50,
@@ -38,15 +45,20 @@ class _ScrollableSheetState extends State<ScrollableSheet> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Spacer(),
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12)
-                        ),
-                        child: Icon(
-                          Icons.arrow_back
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, HomeScreen.routeName);
+                        },
+                        child: Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12)
+                          ),
+                          child: Icon(
+                            Icons.arrow_back
+                          ),
                         ),
                       ),
                       Spacer(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_assessment_flutter/constants/color_pallette.dart';
 
 class UserFormField extends StatelessWidget {
   final String title;
@@ -17,16 +16,28 @@ class UserFormField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * 0.06, vertical: 3),
+          padding: EdgeInsets.symmetric(
+            horizontal: width * 0.06,
+            vertical: 3,
+          ),
           child: Text(
             title,
-            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+            ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * 0.06, vertical: 5),
+          padding: EdgeInsets.symmetric(
+            horizontal: width * 0.06,
+            vertical: 5,
+          ),
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            padding: EdgeInsets.symmetric(
+              vertical: 10,
+              horizontal: 20,
+            ),
             height: height * 0.05,
             width: width,
             decoration: BoxDecoration(
@@ -34,7 +45,9 @@ class UserFormField extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
             ),
             child: const TextField(
-              decoration: InputDecoration(border: InputBorder.none),
+              decoration: InputDecoration(
+                border: InputBorder.none,
+              ),
             ),
           ),
         ),
@@ -42,12 +55,3 @@ class UserFormField extends StatelessWidget {
     );
   }
 }
-
-// TextFormField(
-// keyboardType: TextInputType.emailAddress,
-// enableSuggestions: true,
-//
-// //controller: textController,
-// decoration: InputDecoration(
-// fillColor: Colors.red, border: InputBorder.none),
-// ),

@@ -14,7 +14,7 @@ class TrackBillCard extends StatelessWidget {
     double width = size.width;
     return Container(
       height: height * 0.14,
-      width: width,
+      width: width * 0.9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.white,

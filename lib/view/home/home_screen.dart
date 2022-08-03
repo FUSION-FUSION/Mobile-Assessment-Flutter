@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
       body: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -37,11 +37,14 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: height * 0.05,
                 ),
-                const Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Send a Package',
-                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      'Send a Package',
+                      style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700),
+                    ),
                   ),
                 ),
                 SizedBox(height: height * 0.01),
@@ -49,11 +52,14 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: height * 0.02,
                 ),
-                const Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Other Actions',
-                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: const Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      'Other Actions',
+                      style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700),
+                    ),
                   ),
                 ),
                 SizedBox(

@@ -14,6 +14,5 @@ const icRoadSameState = 'assets/images/ic-road-same-state.png';
 const icSearch = 'assets/images/ic-search.png';
 const icTruck = 'assets/images/ic-truck.png';
 const splashLogo = 'assets/images/splash_logo.png';
-
-
+const map = 'assets/images/map.png';
 const kShadowColor = Color(0xFFE6E6E6);

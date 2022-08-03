@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/constants/assets_constant_name.dart';
 import '../../../constants/color_pallette.dart';
+
 class PackageCard extends StatelessWidget {
   final String title, description;
   final List<String> images;
@@ -11,7 +12,8 @@ class PackageCard extends StatelessWidget {
     required this.description,
     required this.images,
     this.isLight = false,
-    this.isComingSoon = false, this.isHavingCurve = false,
+    this.isComingSoon = false,
+    this.isHavingCurve = false,
   }) : super(key: key);
 
   @override
@@ -19,16 +21,19 @@ class PackageCard extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double height = size.height;
     double width = size.width;
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(15),
-      child: Container(
-        height: height * 0.29,
-        width: width * 0.43,
-        decoration: BoxDecoration(
-            color:
-                isLight ?? false ? Colors.white : Colors.white.withOpacity(1),
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: kShadow),
+    return Container(
+      height: height * 0.29,
+      width: width * 0.43,
+      decoration: BoxDecoration(
+        color: isLight ?? false ? Colors.white : Colors.white.withOpacity(1),
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: kShadow
+      ),
+      foregroundDecoration: isLight??false ?  BoxDecoration(): BoxDecoration(
+          color: Colors.white.withOpacity(0.6)
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
         child: Stack(
           children: [
             Positioned(
@@ -59,9 +64,9 @@ class PackageCard extends StatelessWidget {
                 child: isComingSoon ?? false
                     ? Container(
                         decoration: BoxDecoration(
-                            color: kSecBackground,
-                            borderRadius: BorderRadius.circular(10),
-                            //boxShadow: kShadow
+                          color: kSecBackground,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: kShadow
                         ),
                         width: width * 0.18,
                         child: const Center(
@@ -92,16 +97,13 @@ class PackageCard extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 15,
-              child: Container(
-                height: 30,
-                width: width * 0.46,
-                child: isHavingCurve ?? false ?Image.asset(
-                    icCurve)
-                    : const Text('')
-                )
-              ),
-
+                top: 15,
+                child: Container(
+                    height: 30,
+                    width: width * 0.46,
+                    child: isHavingCurve ?? false
+                        ? Image.asset(icCurve)
+                        : const Text(''))),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: Column(
@@ -112,7 +114,8 @@ class PackageCard extends StatelessWidget {
                   ),
                   Text(
                     title,
-                    style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w700, fontSize: 20),
                   ),
                   const SizedBox(
                     height: 6,

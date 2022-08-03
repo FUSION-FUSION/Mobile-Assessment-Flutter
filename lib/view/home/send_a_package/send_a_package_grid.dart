@@ -11,9 +11,10 @@ class SendAPackageGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     double height = size.height;
+    double width = size.width;
     return SizedBox(
-      width: double.infinity,
-      height: height * 0.6,
+      width: width * 0.9,
+      height: height * 0.7,
       child: Column(
         children: [
           const Spacer(),

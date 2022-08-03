@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/view/home/home_screen.dart';
-
 import '../../constants/assets_constant_name.dart';
 import '../../constants/color_pallette.dart';
 import '../welcome/welcome_screen_personal.dart';
@@ -116,7 +115,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       height: height * 0.075,
                       width: width * 0.45,
                       fontSize: 24,
-                      isLightbackground: false,
+                      isLightBackground: false,
                       press: () {
                         Navigator.pushNamed(context, HomeScreen.routeName);
                       },
