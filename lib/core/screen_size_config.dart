@@ -24,3 +24,4 @@ double getProportionateScreenWidth(double inputWidth) {
   double screenWidth = ScreenSizeConfig.screenWidth;
   return (inputWidth / 428.0) * screenWidth;
 }
+
