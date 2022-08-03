@@ -9,6 +9,9 @@ abstract class AppTheme {
   final Color borderColor;
   final Color lightButtonColor;
   final Color textDangerColor;
+  final Color backgroundColor;
+  final Color dropShadowColor1;
+  final Color dropShadowColor2;
 
   final Gradient backgroundGradient;
 
@@ -22,6 +25,9 @@ abstract class AppTheme {
     required this.borderColor,
     required this.lightButtonColor,
     required this.textDangerColor,
+    required this.backgroundColor,
+    required this.dropShadowColor1,
+    required this.dropShadowColor2,
   });
 
   Text text(

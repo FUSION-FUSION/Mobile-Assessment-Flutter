@@ -8,6 +8,7 @@ import 'package:mobile_assessment_flutter/views/screens/authentication/registrat
 import 'package:mobile_assessment_flutter/views/screens/authentication/account_type_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/personal_registration_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/verification_screen.dart';
+import 'package:mobile_assessment_flutter/views/screens/dashboard_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/splash_screen.dart';
 import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -40,6 +41,7 @@ class App extends StatelessWidget {
       LoginScreen.route: (_) => const LoginScreen(),
       EcommerceRegistrationScreen.route: (_) =>
           const EcommerceRegistrationScreen(),
+      DashboardScreen.route: (_) => const DashboardScreen(),
     };
 
     return MaterialApp(

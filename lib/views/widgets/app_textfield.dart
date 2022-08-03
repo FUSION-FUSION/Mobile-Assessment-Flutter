@@ -20,7 +20,7 @@ class AppTextField extends StatefulWidget {
   final String? errorText;
   final Function(String)? onChanged;
   final int maxLines;
-  final Color? borderColor, background;
+  final Color? borderColor, focusedBorderColor, background;
 
   const AppTextField({
     Key? key,
@@ -44,7 +44,7 @@ class AppTextField extends StatefulWidget {
     this.maxLines = 1,
     this.borderColor,
     this.background,
-    this.title,
+    this.title, this.focusedBorderColor,
   }) : super(key: key);
 
   @override
@@ -97,13 +97,7 @@ class _AppTextFieldState extends State<AppTextField> {
             filled: true,
             fillColor: widget.background ?? theme.textfieldBackgroundColor,
             suffixIcon: widget.suffixIcon,
-            label: theme.text(
-              widget.labelText,
-              color: borderColor,
-              fontWeight: FontWeight.w400,
-              fontSize: widget.fontSize ?? 16,
-            ),
-            alignLabelWithHint: true,
+            labelText: widget.labelText,
             enabledBorder: OutlineInputBorder(
               borderRadius: borderRadius,
               borderSide: BorderSide(
@@ -121,7 +115,7 @@ class _AppTextFieldState extends State<AppTextField> {
             focusedBorder: OutlineInputBorder(
               borderRadius: borderRadius,
               borderSide: BorderSide(
-                color: theme.borderColor,
+                color: widget.focusedBorderColor ?? theme.primaryColor.withOpacity(0.6),
                 width: borderWidth,
               ),
             ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/account_type_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/base_authentication_screen.dart';
+import 'package:mobile_assessment_flutter/views/screens/dashboard_screen.dart';
 import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
 import 'package:mobile_assessment_flutter/views/widgets/app_button.dart';
 import 'package:mobile_assessment_flutter/views/widgets/app_textfield.dart';
@@ -50,12 +51,13 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 20),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
             child: UnconstrainedBox(
               child: AppButton(
                 text: 'Sign In',
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                onPressed: () => Navigator.of(context).pushNamed(DashboardScreen.route),
               ),
             ),
           )
