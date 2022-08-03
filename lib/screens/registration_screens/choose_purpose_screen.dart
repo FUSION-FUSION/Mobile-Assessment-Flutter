@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-// screens
 import 'register_1.dart';
 
 class ChoosePurposeScreen extends StatelessWidget {

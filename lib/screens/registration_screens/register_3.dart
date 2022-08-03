@@ -8,29 +8,85 @@ class Registration3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      backgroundColor: Colors.grey[300],
+      appBar: AppBar(
+        elevation: 0,
+        toolbarHeight: 0,
+        backgroundColor: Colors.grey[300],
+      ),
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/bg-app-cloud.png'),
+            fit: BoxFit.contain,
+            alignment: Alignment.topCenter,
+          ),
+        ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('register 3 screen'),
+            // "Congratulations!" text
+            const Text(
+              'Congratulations!',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(height: 10),
 
-            MaterialButton(
-              child: Text('Go forward'),
-              onPressed: () {
-                // go to home screen
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
-                );
-              },
+            // "Your account has been..." text
+            const Padding(
+              padding: EdgeInsets.only(right: 50, bottom: 30),
+              child: Text(
+                'Your account has been successfully created.',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black87,
+                ),
+              ),
             ),
 
-            MaterialButton(
-              child: Text('Go backward'),
-              onPressed: () {
-                // go to back to register 2
-                Navigator.pop(context);
-              },
-            )
+            // image
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 40),
+              child: Image.asset(
+                'images/ic-congratulations.png',
+              ),
+            ),
+
+            // "Continue" button
+            Align(
+              alignment: Alignment.center,
+              child: SizedBox(
+                width: 180,
+                height: 55,
+                child: Expanded(
+                  child: MaterialButton(
+                    child: const Text(
+                      'Continue',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.white,
+                      ),
+                    ),
+                    onPressed: () {
+                      // go to home screen
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                      );
+                    },
+                    color: Colors.cyan,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
