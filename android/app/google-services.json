@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "146981013124",
+    "project_id": "mobile-shipify",
+    "storage_bucket": "mobile-shipify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146981013124:android:ed910d9d6389c714dae4d1",
+        "android_client_info": {
+          "package_name": "com.example.mobile_assessment_flutter_hassan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146981013124-o9ojjqau5fkeu59m6rd2svdr09vaoute.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJDy27cBd2w_9cE3ol3-kLuKf9yTP60Os"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146981013124-o9ojjqau5fkeu59m6rd2svdr09vaoute.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

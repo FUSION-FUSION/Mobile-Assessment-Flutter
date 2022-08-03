@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_assessment_flutter/screens/registration/sign_up_screen.dart';
 import 'package:mobile_assessment_flutter/util/constants/colors.dart';
-import 'package:mobile_assessment_flutter/util/constants/strings.dart';
 import 'package:mobile_assessment_flutter/util/navigators.dart';
 import 'package:mobile_assessment_flutter/widgets/auth_page.dart';
 import 'package:mobile_assessment_flutter/widgets/button_widget.dart';
+import 'package:provider/provider.dart';
 
+import '../../provider/auth_provider.dart';
 import '../../util/constants/styles.dart';
 
 class ChooseUserScreen extends StatelessWidget {
@@ -46,6 +46,7 @@ class ChooseUserScreen extends StatelessWidget {
                 textcolor: Colors.white,
                 buttonText: "Personal",
                 onPressed: () {
+                  Provider.of<AuthProvider>(context,listen: false).chooseUser =true;
                   changeScreen(context, const AuthPage());
                 },
                 buttonHieght: size.height * 0.15,
@@ -59,6 +60,7 @@ class ChooseUserScreen extends StatelessWidget {
                 textcolor: Colors.white,
                 buttonText: "E-commerce",
                 onPressed: () {
+                  Provider.of<AuthProvider>(context,listen: false).user();
                   changeScreen(context, const AuthPage());
                 },
                 buttonHieght: size.height * 0.15,

@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                         buttoncolor: primaryColor,
                         textcolor: Colors.white,
                         buttonText: "Continue",
-                        onPressed: () {changeScreenReplacement(context, const HomeScreen());},
+                        onPressed: () {changeScreenReplacement(context,  HomeScreen());},
                         buttonHieght: size.height * .08,
                         buttonWidth: size.width * .4,
                         fontsize: 20,

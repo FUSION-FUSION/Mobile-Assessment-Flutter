@@ -2,7 +2,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/screens/registration/verification_screen.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:provider/provider.dart';
 
+import '../../firebase_service/auth_services.dart';
+import '../../main.dart';
+import '../../provider/auth_provider.dart';
 import '../../util/constants/colors.dart';
 import '../../util/constants/styles.dart';
 import '../../util/navigators.dart';
@@ -27,20 +31,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController passwordcontroller = TextEditingController();
   TextEditingController confirmcontroller = TextEditingController();
 
-  bool conpass = false;
 
-  bool confirmPassword() {
-    setState(() {
-      if (passwordcontroller.text == confirmcontroller.text) {
-        conpass = true;
-      }
-    });
-    return conpass;
-  }
+
+
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    bool checkuser =Provider.of<AuthProvider>(context,listen: false).chooseUser;
     return Scaffold(
         backgroundColor: Colors.white,
         body: Container(
@@ -77,19 +75,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          titleTags("username"),
+                          titleTags(checkuser?"Full Name":"business Name"),
                           EditText(
-                            hint: "username",
+                            hint: checkuser?"Full Name":"business Name",
                             inputType: TextInputType.name,
                             controller: _userNamecontroller,
+                            validator: (username) =>
+                                Validator().usernameValidator(username),
                             autofillhints: const [AutofillHints.name],
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          titleTags("Email"),
+                          titleTags(checkuser?"Your E-mail":"Official E-mail"),
                           EditText(
-                            hint: "Email",
+                            hint: checkuser?"Your E-mail":"Official E-mail",
                             inputType: TextInputType.emailAddress,
                             controller: emailcontroller,
                             validator: (email) =>
@@ -99,13 +99,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           const SizedBox(
                             height: 20,
                           ),
-                          titleTags("phone Number"),
+                          titleTags(checkuser?"Phone Number":"Contact Number"),
                           IntlPhoneField(
                             decoration:
-                            kEditTextDecoration.copyWith(hintText: "Phone Number", ),
+                            kEditTextDecoration.copyWith(hintText: checkuser?"Phone Number":"Contact Number", ),
                             onChanged: (phone) {
                               // setState((){_phonecontroller.text=phone.completeNumber;});
                               _phonecontroller.text = phone.completeNumber;
+
+
                               print(
                                   "${phone.completeNumber}\n${_phonecontroller.text}");
                             },
@@ -192,7 +194,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               fontsize: 24,
                               fontWeight: FontWeight.w500,
                               onPressed: () {
-                                changeScreen(context, const OtpVerificationScreen());
+                                final isValid = formKey.currentState!.validate();
+                              if(!isValid)return;
+
+                                AuthService().signup(
+                                    context,
+                                    emailcontroller.text.trim(),
+                                    passwordcontroller.text.trim(),
+                                    _userNamecontroller.text.trim(),
+                                    formKey);
+                                Provider.of<AuthProvider>(context, listen: false)
+                                    .createUserWithPhone(_phonecontroller.text);
+                                navigatorKey.currentState!
+                                    .pushReplacement(MaterialPageRoute(
+                                    builder: (context) => OtpVerificationScreen(
+                                      phoneNumber:
+                                      _phonecontroller.text.trim(),
+                                    )));
+
                               },
                               buttonHieght: size.height*.08,
                               buttonWidth: size.width*.3,

@@ -10,4 +10,8 @@ class Validator{
   passwordValidator(value) =>value != null && value.length < 6
   ? "Enter min. 6 characters"
       :  null;
+
+  usernameValidator(value) =>value != null && value.isEmpty
+      ? "Enter userName characters"
+      :  null;
 }

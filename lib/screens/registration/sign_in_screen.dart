@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/screens/home/home_screen.dart';
 
+import '../../firebase_service/auth_services.dart';
 import '../../util/constants/colors.dart';
 import '../../util/constants/styles.dart';
 import '../../util/navigators.dart';
@@ -115,7 +116,11 @@ class _SignInScreenState extends State<SignInScreen> {
                               fontsize: 24,
                               fontWeight: FontWeight.w500,
                               onPressed: () {
-                                changeScreen(context, const HomeScreen());
+                                AuthService().signin(
+                                    emailcontroller.text.trim(),
+                                    passwordcontroller.text.trim(),
+                                    context,
+                                    formKey);
                               },
                               buttonHieght: size.height*.08,
                               buttonWidth: size.width*.4,
