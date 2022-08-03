@@ -15,10 +15,8 @@ class SuccessScreen extends StatelessWidget {
     return Scaffold(
       body: CustomBackground(
         child: Padding(
-          padding:  EdgeInsets.only(
-              left: getScreenWidth(22),
-              right: getScreenWidth(61.05)
-          ),
+          padding: EdgeInsets.only(
+              left: getScreenWidth(22), right: getScreenWidth(61.05)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -37,7 +35,7 @@ class SuccessScreen extends StatelessWidget {
                 height: getScreenHeight(37.44),
               ),
               Padding(
-                padding:  EdgeInsets.only(left: getScreenWidth(36)),
+                padding: EdgeInsets.only(left: getScreenWidth(36)),
                 child: Image.asset('${imagePath}ic-congratulations.png'),
               ),
               SizedBox(
@@ -52,11 +50,9 @@ class SuccessScreen extends StatelessWidget {
                     textColor: Palette.kWhiteColor,
                     primary: Palette.kPrimaryColor,
                     sideColor: Palette.kPrimaryColor,
-                    onPressed: (){
+                    onPressed: () {
                       Get.offAndToNamed('/signInScreen');
-
-                    }
-                ),
+                    }),
               )
             ],
           ),
