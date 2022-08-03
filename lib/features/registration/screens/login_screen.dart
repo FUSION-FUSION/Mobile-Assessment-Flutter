@@ -53,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                   child: SizedBox(
                       width: 182,
                       child: BorderButton(label: 'Sign In', onTap: () {})),
-                )
+                ),
               ],
             ),
           ),
