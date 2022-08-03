@@ -161,7 +161,7 @@ class _PersonalState extends State<Personal> {
                           ),
                           GestureDetector(
                             onTap: () =>
-                                Navigator.pushNamed(context, '/verify'),
+                                Navigator.pushNamed(context, '/congrats'),
                             child: Container(
                               height: 60,
                               width: 150,

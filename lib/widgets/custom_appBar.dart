@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utilities/ui_helpers.dart';
 
@@ -17,7 +18,6 @@ class customAppBar extends StatelessWidget {
     return Stack(children: [
       Container(
         color: Color(0xffdce4e9),
-        height: 240,
         child: Image.asset('assets/images/bg-app-cloud.png'),
         width: double.infinity,
       ),
@@ -38,7 +38,7 @@ class customAppBar extends StatelessWidget {
             )
           ],
         ),
-        padding: EdgeInsets.only(top: 90, left: 20, right: 17),
+        padding: EdgeInsets.only(top: 130.56.h, left: 26.33.w, right: 82.4.w),
       )
     ]);
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobile_assessment_flutter/screens/congartulation.dart';
 import 'package:mobile_assessment_flutter/screens/e-commerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/launch_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
@@ -19,16 +21,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Launch(),
-      routes: {
-        '/intro': (context) => const Launch(),
-        '/personal': (context) => const Personal(),
-        '/verify': (context) => const Verification(),
-        '/login': (context) => const Login(),
-        '/commerce': (context) => const Commerce()
-      },
+    return ScreenUtilInit(
+      splitScreenMode: false,
+      minTextAdapt: true,
+      designSize: const Size(428, 926),
+      builder: (BuildContext context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Launch(),
+        routes: {
+          '/intro': (context) => const Launch(),
+          '/personal': (context) => const Personal(),
+          '/verify': (context) => const Verification(),
+          '/login': (context) => const Login(),
+          '/commerce': (context) => const Commerce(),
+          '/congrats': (context) => const Congrats(),
+        },
+      ),
     );
   }
 }
