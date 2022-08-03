@@ -6,6 +6,8 @@ import 'package:mobile_assessment_flutter/screens/splash/splash_screen.dart';
 
 import '../screens/auth/account_success.dart';
 import '../screens/auth/user_type.dart';
+import '../screens/dashboard/dashboard.dart';
+import '../waybill/waybill.dart';
 
 class RouteHelper {
   static const String initial = '/';
@@ -14,6 +16,8 @@ class RouteHelper {
   static const String register = '/register';
   static const String verification = '/verification';
   static const String accountSuccess = '/account-success';
+  static const String dashboard = '/dashboard';
+  static const String waybill = '/waybill';
 
   static String getInitial() => initial;
   static String getUserType() => userType;
@@ -22,6 +26,8 @@ class RouteHelper {
       '$register?isPersonal=$isPersonal';
   static String getVerification() => verification;
   static String getAccountSuccess() => accountSuccess;
+  static String getDashboard() => dashboard;
+  static String getWaybill() => waybill;
 
   static List<GetPage> routes = [
     GetPage(
@@ -62,5 +68,18 @@ class RouteHelper {
           return const AccountSuccess();
         },
         transition: Transition.fadeIn),
-  ];
+    GetPage(
+        name: dashboard,
+        page: () {
+          return const Dashboard();
+        },
+        transition: Transition.fadeIn),
+    GetPage(
+        name: waybill,
+        page: () {
+          return const WaybillPage();
+        },
+        transition: Transition.fadeIn),
+  ]
+  ;
 }
