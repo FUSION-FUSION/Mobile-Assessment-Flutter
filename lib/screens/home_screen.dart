@@ -404,9 +404,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
-                                  height: getScreenHeight(4.98),
-                                ),
                                 Container(
                                   height: getScreenHeight(104.07),
                                   width: getScreenWidth(125.45),

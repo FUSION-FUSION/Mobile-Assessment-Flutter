@@ -29,7 +29,9 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: getScreenWidth(108)),
         child: Center(
-          child: Image.asset('${imagePath}splash_logo.png'),
+          child: Hero(
+              tag: '',
+              child: Image.asset('${imagePath}splash_logo.png')),
         ),
       ),
     );
