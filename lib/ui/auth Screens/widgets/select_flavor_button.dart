@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/ui/_shared/utils/app_colors.dart';
 
 import '../sign_up_screen.dart';
 
@@ -28,7 +29,8 @@ class select_flavor_button extends StatelessWidget {
         // padding:
         // MaterialStateProperty.all(EdgeInsets.all(50)),
         backgroundColor: MaterialStateProperty.all(
-            Colors.teal), // <-- Button color
+          AppColors.primaryGreen
+           ), // <-- Button color
         overlayColor:
         MaterialStateProperty.resolveWith<Color>(
                 (states) {

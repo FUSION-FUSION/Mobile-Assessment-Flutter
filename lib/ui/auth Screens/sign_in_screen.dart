@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobile_assessment_flutter/ui/_shared/utils/app_colors.dart';
-import 'package:mobile_assessment_flutter/ui/auth%20Screens/auth_welcome_screen.dart';
 import 'package:mobile_assessment_flutter/ui/auth%20Screens/widgets/Sign_up_button.dart';
+import 'package:mobile_assessment_flutter/ui/auth%20Screens/widgets/cloud_widget.dart';
 import 'package:mobile_assessment_flutter/ui/auth%20Screens/widgets/form_widgets.dart';
 
 
