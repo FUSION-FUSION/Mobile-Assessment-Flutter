@@ -50,7 +50,7 @@ class HomePageScreen extends StatelessWidget {
                 children: [
                   Column(
                     mainAxisSize: MainAxisSize.min,
-                    children: [
+                    children: const [
                       Text(
                         'Total Balance',
                         style: TextStyle(fontWeight: FontWeight.w400),
@@ -155,10 +155,76 @@ class HomePageScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: 200,
+              width: 160,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                image: const DecorationImage(
+                  alignment: Alignment.bottomCenter,
+                  image: AssetImage('assets/ic-road-same-state.png'),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 10, top: 30),
+                    height: 95,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          'Same State',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17),
+                        ),
+                        Container(
+                          height: 2.5,
+                          width: 20,
+                          color: kThemeColor,
+                        ),
+                        const Text('Deliveries within the'),
+                        const Text('same state'),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    child: Image.asset(
+                      'assets/ic-bike.png',
+                      height: 90,
+                      width: 100,
+                    ),
+                    bottom: 10,
+                    right: 65,
+                  ),
+                  Positioned(
+                    bottom: 10,
+                    right: 10,
+                    child: Container(
+                      height: 22,
+                      width: 22,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(11),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          Icons.arrow_forward,
+                          size: 10,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
