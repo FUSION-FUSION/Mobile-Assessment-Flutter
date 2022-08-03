@@ -18,7 +18,7 @@ class VerificationPage extends StatefulWidget {
 class _VerificationPageState extends State<VerificationPage> {
   late PinTheme defaultPinTheme;
   late Timer timer;
-  int secondsRemaining = 120; 
+  int secondsRemaining = 120;
   bool enableResend = false;
 
   @override
@@ -53,12 +53,12 @@ class _VerificationPageState extends State<VerificationPage> {
     );
   }
 
-
- @override
+  @override
   dispose() {
     timer.cancel();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return GradientBackground(
@@ -116,8 +116,7 @@ class _VerificationPageState extends State<VerificationPage> {
                 ),
                 SizedBox(height: Dimensions.sizeHeightPercent(22.44)),
                 Pinput(
-                 defaultPinTheme: defaultPinTheme,
-                
+                  defaultPinTheme: defaultPinTheme,
                 )
               ],
             ),
