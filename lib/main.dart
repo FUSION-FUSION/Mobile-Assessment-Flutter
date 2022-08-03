@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mobile_assessment_flutter/screens/ecommerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/get_started_screen.dart';
+import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 import 'package:mobile_assessment_flutter/screens/splash_screen.dart';
 
 
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
      getPages: [
        GetPage(name: '/splashScreen', page: ()=> SplashScreen()),
        GetPage(name: '/getStartedScreen', page: ()=> const GetStartedScreen()),
+       GetPage(name: '/personalScreen', page: ()=> const PersonalScreen()),
+       GetPage(name: '/eCommerceScreen', page: ()=> const EcommerceScreen()),
      ],
     );
   }
