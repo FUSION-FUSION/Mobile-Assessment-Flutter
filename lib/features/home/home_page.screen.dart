@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mobile_assessment_flutter/constants/app_constants.dart';
+import 'package:mobile_assessment_flutter/features/routing/app_router.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({Key? key}) : super(key: key);
@@ -141,17 +143,20 @@ class HomePageScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Container(
-                            width: 75,
-                            decoration: BoxDecoration(
-                              color: kThemeColor,
-                              borderRadius: BorderRadius.circular(17),
-                            ),
-                            child: const Center(
-                              child: Text(
-                                'Track',
-                                style: TextStyle(
-                                  color: Colors.white,
+                          GestureDetector(
+                            onTap: () => context.goNamed(AppRoute.track.name),
+                            child: Container(
+                              width: 75,
+                              decoration: BoxDecoration(
+                                color: kThemeColor,
+                                borderRadius: BorderRadius.circular(17),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  'Track',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),
