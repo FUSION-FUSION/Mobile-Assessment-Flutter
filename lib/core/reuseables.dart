@@ -11,8 +11,8 @@ class buildRegistrationScreenBackground extends StatelessWidget {
     ScreenSizeConfig.init(context);
     return Scaffold(
       body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        // height: MediaQuery.of(context).size.height,
+        // width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           // color: Colors.black
           gradient: LinearGradient(
@@ -75,18 +75,19 @@ class buildRegistrationScreenHeader extends StatelessWidget {
 }
 
 class BuildButton extends StatelessWidget {
-  BuildButton(
-      {required this.onPressed,
-      required this.buttonText,
-      required this.containerHeight,
-      required this.containerWidth,
-      required this.borderRadiusSize,
-      required this.buttonTextSize,
-      required this.buttonTextColor,
-      required this.buttonColor,
-      required this.buttonTextWeight,
-      required this.buttonTextFamily,
-       });
+  BuildButton({
+    required this.onPressed,
+    required this.buttonText,
+    required this.containerHeight,
+    required this.containerWidth,
+    required this.borderRadiusSize,
+    required this.buttonTextSize,
+    required this.buttonTextColor,
+    required this.buttonColor,
+    required this.borderColor,
+    required this.buttonTextWeight,
+    required this.buttonTextFamily,
+  });
 
   void Function()? onPressed;
   String buttonText;
@@ -96,6 +97,7 @@ class BuildButton extends StatelessWidget {
   double buttonTextSize;
   Color buttonTextColor;
   Color buttonColor;
+  Color borderColor;
   FontWeight buttonTextWeight;
   String buttonTextFamily;
 
@@ -119,8 +121,56 @@ class BuildButton extends StatelessWidget {
             primary: buttonColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadiusSize),
+              side: BorderSide(
+                    color: borderColor
+                )
             )),
       ),
+    );
+  }
+}
+
+class BuildTextInputField extends StatelessWidget {
+  String text;
+  Widget? prefix;
+  TextInputType keyboardType;
+
+  BuildTextInputField(
+      {required this.text, this.prefix, required this.keyboardType});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: getProportionateScreenWidth(7)),
+          child: Text(
+            text,
+            style: TextStyle(
+                color: Palette.textColor,
+                fontSize: getProportionateScreenWidth(16),
+                fontWeight: FontWeight.w400,
+                fontFamily: FontFamily.regular),
+          ),
+        ),
+        SizedBox(height: getProportionateScreenHeight(6)),
+        Container(
+          height: getProportionateScreenHeight(44),
+          width: getProportionateScreenWidth(390),
+          child: TextField(
+              cursorColor: Palette.textColor,
+              keyboardType: keyboardType,
+              decoration: InputDecoration(
+                prefixIcon: prefix,
+                filled: true,
+                fillColor: Palette.textFieldColor,
+                border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(17)),
+              )),
+        )
+      ],
     );
   }
 }

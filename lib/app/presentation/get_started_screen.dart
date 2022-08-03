@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/app/presentation/ecommerce_sign_up_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
 
@@ -39,12 +40,18 @@ class GetStartedScreen extends StatelessWidget {
               buttonTextSize: 39.5,
               buttonTextColor: Palette.whiteColor,
               buttonColor: Palette.primaryColor,
+              borderColor: Palette.primaryColor,
               buttonTextWeight: FontWeight.w700,
               buttonTextFamily: FontFamily.bold,
             ),
             SizedBox(height: getProportionateScreenHeight(40.96)),
             BuildButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => EcommerceSignUpScreen()));
+              },
               buttonText: 'E-commerce',
               containerHeight: 136.78,
               containerWidth: 373.03,
@@ -52,10 +59,10 @@ class GetStartedScreen extends StatelessWidget {
               buttonTextSize: 39.5,
               buttonTextColor: Palette.whiteColor,
               buttonColor: Palette.primaryColor,
+              borderColor: Palette.primaryColor,
               buttonTextWeight: FontWeight.w700,
               buttonTextFamily: FontFamily.bold,
             ),
-            
           ],
         ),
       ),
