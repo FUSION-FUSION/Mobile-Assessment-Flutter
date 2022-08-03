@@ -36,7 +36,6 @@ dependencies:
   flutter_native_splash: ^2.2.7
   provider: ^6.0.3
   google_fonts: ^3.0.1
-  pin_input_text_field: ^4.1.2
   country_picker: ^2.0.15
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen
