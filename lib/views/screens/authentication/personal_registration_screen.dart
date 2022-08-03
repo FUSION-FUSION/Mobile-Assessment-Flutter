@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/base_authentication_screen.dart';
+import 'package:mobile_assessment_flutter/views/screens/authentication/verification_screen.dart';
 import 'package:mobile_assessment_flutter/views/themes/app_theme.dart';
 import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
 import 'package:mobile_assessment_flutter/views/widgets/app_button.dart';
 import 'package:mobile_assessment_flutter/views/widgets/app_textfield.dart';
 
 class PersonalRegistrationScreen extends StatelessWidget {
-  static const route = BaseAuthenticationScreen.route + "/registration/personal";
+  static const route =
+      BaseAuthenticationScreen.route + "/registration/personal";
 
   const PersonalRegistrationScreen({Key? key}) : super(key: key);
 
@@ -47,9 +49,11 @@ class PersonalRegistrationScreen extends StatelessWidget {
                       color: theme.borderColor,
                     ),
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
                       decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(Radius.circular(17)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(17)),
                         color: theme.textfieldBackgroundColor,
                       ),
                       child: Row(
@@ -134,7 +138,8 @@ class PersonalRegistrationScreen extends StatelessWidget {
           AppButton(
             text: 'Next',
             padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () =>
+                Navigator.of(context).pushNamed(VerificationScreen.route),
           ),
         ],
       ),

@@ -10,6 +10,7 @@ class AppButton extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final double fontSize;
   final double? elevation;
+  final double? width, height;
 
   const AppButton({
     Key? key,
@@ -20,7 +21,7 @@ class AppButton extends StatelessWidget {
     this.backgroundColor,
     this.textColor,
     this.padding = const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-    this.fontSize = 25, this.elevation,
+    this.fontSize = 25, this.elevation, this.width, this.height,
   }) : super(key: key);
 
   @override
@@ -39,6 +40,8 @@ class AppButton extends StatelessWidget {
         elevation: elevation,
       ),
       child: Container(
+        width: width,
+        height: height,
         decoration: BoxDecoration(borderRadius: radius, color: background),
         padding:
             padding,
