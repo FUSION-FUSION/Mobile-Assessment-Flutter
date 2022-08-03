@@ -21,14 +21,7 @@ class MoneyDashboardCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 30,
-            offset: Offset(0, 0), // changes position of shadow
-          ),
-        ],
+        boxShadow: kShadow
     ),
       child: Stack(
         children: [

@@ -12,6 +12,7 @@ class CustomButton extends StatelessWidget {
   final Color? color;
   final String? icon;
   final double? fontSize;
+  final bool? isCircle;
   const CustomButton({
     Key? key,
     this.text,
@@ -23,6 +24,7 @@ class CustomButton extends StatelessWidget {
     required this.width,
     this.color = kBackground,
     this.isLightbackground = false,
+    this.isCircle = false,
   }) : super(key: key);
 
   @override
@@ -33,20 +35,25 @@ class CustomButton extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-          color: isLightbackground ? kSecBackground : kPrimary,
-          borderRadius: BorderRadius.circular(15),
-          border: isLightbackground?Border.all(color: Colors.white): Border.all(color: kPrimary)
-        ),
+            color: isLightbackground ? kSecBackground : kPrimary,
+            borderRadius: isCircle ??true ?  BorderRadius.circular(25): BorderRadius.circular(15),
+            border: isLightbackground
+                ? Border.all(color: Colors.white)
+                : Border.all(color: kPrimary)),
         child: Center(
-          child: isIcon ? Text(
-            text??'null',
-            style: TextStyle(
-              color: isLightbackground ? Colors.black : Colors.white,
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-            ),
-          ) : Icon(Icons.arrow_forward, color: kSecBackground,)
-        ),
+            child: isIcon
+                ? Text(
+                    text ?? 'null',
+                    style: TextStyle(
+                      color: isLightbackground ? Colors.black : Colors.white,
+                      fontSize: fontSize,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                : Icon(
+                    Icons.arrow_forward,
+                    color: kSecBackground,
+                  )),
         //padding: EdgeInsets.symmetric(vertical: 20,horizontal: 100),
       ),
     );

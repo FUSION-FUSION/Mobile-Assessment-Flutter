@@ -29,8 +29,8 @@ class VerificationScreen extends StatelessWidget {
                     height: height * 0.3,
                     width: double.infinity,
                     decoration: const BoxDecoration(
-                      image: const DecorationImage(
-                        image: const AssetImage(backgroundAppCloud),
+                      image: DecorationImage(
+                        image: AssetImage(backgroundAppCloud),
                       ),
                     ),
                   ),
@@ -114,6 +114,7 @@ class VerificationScreen extends StatelessWidget {
                       Navigator.pushNamed(
                           context, CongratulationScreen.routeName);
                     },
+                    isCircle: true
                   )
                 ],
               )

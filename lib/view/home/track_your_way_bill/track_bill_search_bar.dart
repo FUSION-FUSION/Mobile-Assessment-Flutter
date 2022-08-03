@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/view/widgets/custom_button.dart';
 
-import '../../constants/assets_constant_name.dart';
-import '../../constants/color_pallette.dart';
+import '../../../../constants/assets_constant_name.dart';
+import '../../../../constants/color_pallette.dart';
 
 class TrackBillSearchBar extends StatelessWidget {
   const TrackBillSearchBar({
     Key? key,
-    required this.height,
-    required this.width,
   }) : super(key: key);
-
-  final double height;
-  final double width;
-
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double height = size.height;
+    double width = size.width;
     return Container(
       height: height * 0.05,
       width: width * 0.7,
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(16),
           border: Border.all(color: kPrimary)),
       child: Row(
         children: [
