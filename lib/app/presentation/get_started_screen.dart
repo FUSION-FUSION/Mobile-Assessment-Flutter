@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/app/presentation/ecommerce_sign_up_screen.dart';
+import 'package:mobile_assessment_flutter/app/presentation/personal_sign_up_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
 
@@ -32,7 +33,12 @@ class GetStartedScreen extends StatelessWidget {
             ),
             SizedBox(height: getProportionateScreenHeight(48.04)),
             BuildButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PersonalSignUpScreen()));
+              },
               buttonText: 'Personal',
               containerHeight: 136.78,
               containerWidth: 373.03,
