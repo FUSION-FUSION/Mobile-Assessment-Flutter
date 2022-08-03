@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mobile_assessment_flutter/routes/route_helper.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/widgets/app_text.dart';
@@ -63,7 +64,9 @@ class Login extends StatelessWidget {
                   SizedBox(height: Dimensions.sizeHeightPercent(75.33)),
                   Center(
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.offAllNamed(RouteHelper.getDashboard());
+                      },
                       child: TextContainer(
                         text: 'Sign In',
                         width: 182.45,
