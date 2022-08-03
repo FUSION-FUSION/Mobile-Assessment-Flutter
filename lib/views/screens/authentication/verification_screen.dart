@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
-import 'package:mobile_assessment_flutter/views/screens/authentication/RegistrationSuccessfulScreen.dart';
+import 'package:mobile_assessment_flutter/views/screens/authentication/registration_successful_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/base_authentication_screen.dart';
 import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
 import 'package:mobile_assessment_flutter/views/widgets/app_button.dart';

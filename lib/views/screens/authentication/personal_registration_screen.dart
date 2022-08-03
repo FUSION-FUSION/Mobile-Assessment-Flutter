@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/base_authentication_screen.dart';
+import 'package:mobile_assessment_flutter/views/screens/authentication/login_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/authentication/verification_screen.dart';
 import 'package:mobile_assessment_flutter/views/themes/app_theme.dart';
 import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
@@ -85,14 +86,14 @@ class PersonalRegistrationScreen extends StatelessWidget {
             title: 'Confirm Password',
             isPasswordField: true,
           ),
-          buildSection2(theme),
+          buildSection2(context, theme),
           buildSection3(context, theme),
         ],
       ),
     );
   }
 
-  Widget buildSection2(AppTheme theme) {
+  Widget buildSection2(BuildContext context, AppTheme theme) {
     const fontSize = 18.0;
     const weight = FontWeight.w300;
 
@@ -109,7 +110,7 @@ class PersonalRegistrationScreen extends StatelessWidget {
           ),
           const Padding(padding: EdgeInsets.only(left: 2)),
           TextButton(
-            onPressed: () {},
+            onPressed: () => Navigator.of(context).pushNamed(LoginScreen.route),
             child: theme.text(
               'Log In',
               color: theme.primaryColor,
