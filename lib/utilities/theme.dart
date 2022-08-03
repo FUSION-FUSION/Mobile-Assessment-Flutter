@@ -28,7 +28,7 @@ class AppTheme {
             color: const Color.fromARGB(255, 0, 0, 0),
             fontWeight: FontWeight.w600),
         headline2: GoogleFonts.poppins(
-            fontSize: fontSize + 6.0,
+            fontSize: fontSize + 8.0,
             color: const Color.fromARGB(255, 0, 0, 0),
             fontWeight: FontWeight.w600),
         subtitle1: GoogleFonts.poppins(
