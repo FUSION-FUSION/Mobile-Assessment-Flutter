@@ -1,5 +1,5 @@
-import 'dart:ui';
-
+import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/utils/constants/re_usable.dart';
 import 'package:mobile_assessment_flutter/utils/size_layout.dart';
@@ -26,8 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
           child: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.fromLTRB(
-                  getScreenWidth(20),
-                  getScreenHeight(37),
+                  getScreenWidth(8),
+                  getScreenHeight(57),
                   getScreenWidth(20),
                   getScreenHeight(163)),
               child: Column(
@@ -57,12 +57,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Container(
                     alignment: AlignmentDirectional.centerStart,
-                    height: getScreenHeight(85),
-                    padding: EdgeInsets.fromLTRB(
-                        getScreenWidth(28),
-                        getScreenHeight(14),
-                        getScreenWidth(18),
-                        getScreenHeight(12)),
+                    height: getScreenHeight(80),
+                    padding: EdgeInsets.only(
+                       left: getScreenWidth(28),
+                       top: getScreenHeight(14),
+                       right: getScreenWidth(18),
+                        ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
@@ -99,17 +99,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             GestureDetector(
                               onTap: () {},
                               child: Container(
-                                padding: EdgeInsets.fromLTRB(
-                                    getScreenWidth(14),
-                                    getScreenHeight(7),
-                                    getScreenWidth(14.08),
-                                    getScreenHeight(6.96)),
                                 height: getScreenHeight(34),
                                 width: getScreenWidth(94),
                                 decoration: BoxDecoration(
                                     color: Palette.kPrimaryColor,
                                     borderRadius: BorderRadius.circular(17.47)),
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
                                       'Top up ',
@@ -138,11 +134,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Container(
                     height: getScreenHeight(136),
-                    padding: EdgeInsets.fromLTRB(
-                        getScreenWidth(39),
-                        getScreenHeight(23),
-                        getScreenWidth(29),
-                        getScreenHeight(26)),
+                    padding: EdgeInsets.only(
+                        left: getScreenWidth(39),
+                       top: getScreenHeight(23),
+                       right: getScreenWidth(29),),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(26),
                         color: Palette.kTextFieldColor),
@@ -183,40 +178,45 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 height: getScreenHeight(44),
                                 width: getScreenWidth(150),
-                                child: TextField(
-                                  cursorColor: Palette.kTextColor,
-                                  decoration: InputDecoration(
-                                      // contentPadding: EdgeInsets.all(),
-                                      hintText: 'Waybill Number',
-                                      hintStyle: TextStyle(
-                                          color: Palette.kSearchColor,
-                                          fontSize: getScreenWidth(15.21),
-                                          fontFamily: FontFamily.kLightFamily,
-                                          fontWeight: FontWeight.w300),
-                                      border: UnderlineInputBorder(
-                                          borderSide: BorderSide.none)),
+                                child: Padding(
+                                  padding: EdgeInsets.only(bottom: getScreenHeight(2)),
+                                  child: TextField(
+                                    cursorColor: Palette.kTextColor,
+                                    decoration: InputDecoration(
+                                        // contentPadding: EdgeInsets.all(),
+                                        hintText: 'Waybill Number',
+                                        hintStyle: TextStyle(
+                                            color: Palette.kSearchColor,
+                                            fontSize: getScreenWidth(15.21),
+                                            fontFamily: FontFamily.kLightFamily,
+                                            fontWeight: FontWeight.w300),
+                                        border: UnderlineInputBorder(
+                                            borderSide: BorderSide.none)),
+                                  ),
                                 ),
                               ),
                               const Spacer(),
-                              SizedBox(
-                                height: getScreenHeight(38),
-                                width: getScreenWidth(81),
-                                child: ElevatedButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    'Track',
-                                    style: TextStyle(
-                                        fontSize: getScreenWidth(16),
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.white,
-                                        fontFamily: FontFamily.kRegularFamily),
+                              GestureDetector(
+                                onTap: (){
+                                  Get.toNamed('/trackScreen');
+                                },
+                                child: Container(
+                                  height: getScreenHeight(38),
+                                  width: getScreenWidth(81),
+                                 decoration: BoxDecoration(
+                                   color: Palette.kPrimaryColor,
+                                   borderRadius: BorderRadius.circular(14),
+                                 ),
+                                  child: Center(
+                                    child: Text(
+                                      'Track',
+                                      style: TextStyle(
+                                          fontSize: getScreenWidth(16),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.white,
+                                          fontFamily: FontFamily.kRegularFamily),
+                                    ),
                                   ),
-                                  style: ElevatedButton.styleFrom(
-                                      elevation: 0,
-                                      primary: Palette.kPrimaryColor,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(14),
-                                      )),
                                 ),
                               )
                             ],
@@ -249,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: EdgeInsets.only(
                             top: getScreenHeight(42),
                             right: getScreenWidth(9.41),
-                            bottom: getScreenHeight(11.34)),
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
@@ -319,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               alignment: AlignmentDirectional.bottomEnd,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                    bottom: getScreenHeight(10)),
+                                    bottom: getScreenHeight(21.34)),
                                 child: Container(
                                   height: getScreenHeight(23.18),
                                   width: getScreenWidth(23.18),
@@ -343,7 +343,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
                             top: getScreenHeight(18.14),
-                            bottom: getScreenHeight(6.34)),
+                            ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
@@ -425,7 +425,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               alignment: AlignmentDirectional.bottomEnd,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                    bottom: getScreenHeight(10),
+                                    bottom: getScreenHeight(16.34),
                                     right: getScreenWidth(9.41)),
                                 child: Container(
                                   height: getScreenHeight(23.18),
@@ -458,7 +458,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
                             top: getScreenHeight(18.14),
-                            bottom: getScreenHeight(6.34)),
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
@@ -540,7 +540,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Padding(
                                 padding: EdgeInsets.only(
                                   right: getScreenWidth(9.41),
-                                  bottom: getScreenHeight(10),
+                                  bottom: getScreenHeight(16.34),
                                 ),
                                 child: Container(
                                   height: getScreenHeight(23.18),
@@ -567,14 +567,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: EdgeInsets.only(
                               top: getScreenHeight(42),
                               right: getScreenWidth(9.41),
-                              bottom: getScreenHeight(11.34)),
+                              ),
                           foregroundDecoration: BoxDecoration(
                             backgroundBlendMode: BlendMode.lighten,
                             color: Color(0x38F3F4F5),
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
-                            //backgroundBlendMode: BlendMode.lighten,
                             color: Color(0xffF3F4F5),
                           ),
                           child: Stack(
@@ -708,7 +707,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             top: getScreenHeight(26),
                             right: getScreenWidth(9.41),
                             left: getScreenWidth(13.1),
-                            bottom: getScreenHeight(11.34)),
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
                           color: const Color(0xffFDFEFF),
@@ -780,7 +779,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             top: getScreenHeight(26),
                             right: getScreenWidth(9.41),
                             left: getScreenWidth(13.1),
-                            bottom: getScreenHeight(11.34)),
+                            ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
                           color: const Color(0xffFDFEFF),

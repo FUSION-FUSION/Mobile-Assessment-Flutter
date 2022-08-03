@@ -7,6 +7,7 @@ import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 import 'package:mobile_assessment_flutter/screens/sign_in_screen.dart';
 import 'package:mobile_assessment_flutter/screens/splash_screen.dart';
 import 'package:mobile_assessment_flutter/screens/success_screen.dart';
+import 'package:mobile_assessment_flutter/screens/track_screen.dart';
 import 'package:mobile_assessment_flutter/screens/verification_screen.dart';
 
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
        GetPage(name: '/successScreen', page: ()=> const SuccessScreen()),
        GetPage(name: '/signInScreen', page: ()=> const SignInScreen()),
        GetPage(name: '/homeScreen', page: ()=> const HomeScreen()),
+       GetPage(name: '/trackScreen', page: ()=> const TrackScreen()),
      ],
     );
   }
