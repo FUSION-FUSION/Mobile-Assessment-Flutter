@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/widgets/custom_appBar.dart';
+import 'package:mobile_assessment_flutter/widgets/paddedLabel.dart';
 
 import '../utilities/ui_helpers.dart';
 import '../widgets/textformfield.dart';
@@ -27,82 +30,97 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xffecedf1),
-        body: SingleChildScrollView(
-          child: SafeArea(
-              child: Column(children: [
-            customAppBar(
-                title: Text('Sign In', style: kSmallTextStyle),
-                subtitle: Text(
-                  'Sign in to continue to Cargo Express',
-                  style: kSmallTextStyle,
-                )),
-            Form(
-              key: _formKey,
-              autovalidateMode: AutovalidateMode.always,
-              child: Padding(
-                  padding: k16pxPadding,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Phone number / Email',
-                        style: knormalTextStyle,
-                      ),
-                      verticalSpaceTiny,
-                      CustomTextField(
-                        obscure: false,
-                        textfieldcontroller: emphcontroller,
-                        type: TextInputType.text,
-                      ),
-                      verticalSpaceSmall,
-                      Text(
-                        'Password',
-                        style: knormalTextStyle,
-                      ),
-                      verticalSpaceTiny,
-                      CustomTextField(
-                        obscure: true,
-                        textfieldcontroller: passwordcontroller,
-                        type: TextInputType.text,
-                      ),
-                      verticalSpaceMedium,
-                      Center(
-                        child: TextButton(
-                            onPressed: (() =>
-                                Navigator.pushNamed(context, '/intro')),
-                            child: const Text(
-                              'Create an Account',
-                              style: TextStyle(
-                                fontSize: 21,
-                                color: Color(0xff46a5ba),
-                              ),
+        backgroundColor: const Color(0xffdce4e9),
+        body: SafeArea(
+            child: SingleChildScrollView(
+                child: Stack(children: [
+          Container(
+            child: Image.asset('assets/images/bg-app-cloud.png'),
+            width: double.infinity,
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 130.56.h, left: 22.0.w),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Padding(
+                padding: EdgeInsets.only(right: 86.73.w),
+                child: Text(
+                  'Sign In',
+                  // title,
+                  style: kappBarTitlestyle,
+                ),
+              ),
+              verticalSpaceCustom(4.h),
+              Padding(
+                padding: EdgeInsets.only(right: 80.06.w),
+                child: Text(
+                  'Sign in to Cargo Express',
+                  // subtitle,
+                  style: kappBarsubTitlestyle,
+                ),
+              ),
+              Form(
+                key: _formKey,
+                autovalidateMode: AutovalidateMode.always,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    paddedLabel(label: 'Phone number / Email'),
+                    CustomTextField(
+                      obscure: false,
+                      textfieldcontroller: emphcontroller,
+                      type: TextInputType.text,
+                    ),
+                    paddedLabel(label: 'Password'),
+                    CustomTextField(
+                      obscure: true,
+                      textfieldcontroller: passwordcontroller,
+                      type: TextInputType.text,
+                    ),
+                    verticalSpaceCustom(41.h),
+                    Center(
+                      child: TextButton(
+                          onPressed: (() =>
+                              Navigator.pushNamed(context, '/intro')),
+                          child: Text(
+                            'Create an Account',
+                            style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                              color: Color(0xff46a5ba),
+                              fontSize: 18.13.sp,
+                              fontWeight: FontWeight.w600,
                             )),
-                      ),
-                      verticalSpaceLarge,
-                      Center(
-                        child: GestureDetector(
-                          onTap: () =>
-                              Navigator.pushNamed(context, '/congrats'),
-                          child: Container(
-                            height: 70,
-                            width: 200,
-                            child: Center(
-                                child: Text(
-                              'Sign In',
-                              style: kBigWhiteTextStyle,
+                          )),
+                    ),
+                    verticalSpaceCustom(75.33.h),
+                    Center(
+                      child: GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/congrats'),
+                        child: Container(
+                          height: 71,
+                          width: 182,
+                          child: Center(
+                              child: Text(
+                            'Sign In',
+                            style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 27.sp,
+                              fontWeight: FontWeight.w500,
                             )),
-                            decoration: BoxDecoration(
-                              color: const Color(0xff46a5ba),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                          )),
+                          decoration: BoxDecoration(
+                            color: const Color(0xff46a5ba),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
-                      )
-                    ],
-                  )),
-            )
-          ])),
-        ));
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ]),
+          ),
+        ]))));
   }
 }

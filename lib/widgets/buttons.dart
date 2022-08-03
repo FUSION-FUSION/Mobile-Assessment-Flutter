@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utilities/ui_helpers.dart';
 
@@ -17,11 +18,11 @@ class Custom_but extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 120,
-        margin: EdgeInsets.symmetric(vertical: 20, horizontal: 17),
+        margin: EdgeInsets.only(right: 26.33.sp, top: 40.sp),
         child: Center(
             child: Text(
           text,
-          style: kBigWhiteTextStyle,
+          style: kbigHomestyle,
         )),
         decoration: BoxDecoration(
             color: Color(0xff46a5ba), borderRadius: BorderRadius.circular(25)),

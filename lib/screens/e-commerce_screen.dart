@@ -1,5 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/widgets/paddedLabel.dart';
 
 import '../utilities/ui_helpers.dart';
 import '../widgets/custom_appBar.dart';
@@ -34,161 +37,160 @@ class _CommerceState extends State<Commerce> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffecedf1),
-      body: SafeArea(
+        backgroundColor: const Color(0xffdce4e9),
+        body: SafeArea(
           child: SingleChildScrollView(
-        child: Column(
-          children: [
-            customAppBar(
-              title: Text(
-                'Welcome!',
-                style: kBigBlackTextStyle,
-              ),
-              subtitle: Text(
-                'Create an account to get started with Cargo Express',
-                style: kSmallTextStyle,
-              ),
+              child: Stack(children: [
+            Container(
+              child: Image.asset('assets/images/bg-app-cloud.png'),
+              width: double.infinity,
             ),
-            Form(
-                key: _formKey,
-                autovalidateMode: AutovalidateMode.always,
-                child: Padding(
-                  padding: k16pxPadding,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Business Name',
-                        style: knormalTextStyle,
-                      ),
-                      verticalSpaceTiny,
-                      CustomTextField(
-                        obscure: false,
-                        textfieldcontroller: busnamecontroller,
-                        type: TextInputType.text,
-                      ),
-                      verticalSpaceSmall,
-                      Text(
-                        'Official E-mail',
-                        style: knormalTextStyle,
-                      ),
-                      verticalSpaceTiny,
-                      CustomTextField(
-                        obscure: false,
-                        textfieldcontroller: emailcontroller,
-                        type: TextInputType.emailAddress,
-                      ),
-                      verticalSpaceSmall,
-                      Text(
-                        'Contact number',
-                        style: knormalTextStyle,
-                      ),
-                      verticalSpaceTiny,
-                      CustomTextField(
-                        prefix: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
-                          children: const [
-                            Text(
-                              '+234',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            Icon(Icons.arrow_drop_down)
-                          ],
-                        ),
-                        obscure: false,
-                        textfieldcontroller: phonecontroller,
-                        type: TextInputType.phone,
-                      ),
-                      verticalSpaceSmall,
-                      Text(
-                        'Password',
-                        style: knormalTextStyle,
-                      ),
-                      verticalSpaceTiny,
-                      CustomTextField(
-                        obscure: true,
-                        textfieldcontroller: passwordcontroller,
-                        type: TextInputType.text,
-                      ),
-                      verticalSpaceSmall,
-                      Text(
-                        'Confirm Password',
-                        style: knormalTextStyle,
-                      ),
-                      verticalSpaceTiny,
-                      CustomTextField(
-                        obscure: true,
-                        textfieldcontroller: cpasswordcontroller,
-                        type: TextInputType.text,
-                      ),
-                      verticalSpaceMedium,
-                      Center(
-                        child: RichText(
-                          text: TextSpan(
-                              text: 'Already have an account?',
-                              style: const TextStyle(
-                                  color: Colors.black, fontSize: 18),
-                              children: <TextSpan>[
-                                TextSpan(
-                                    text: ' Log In',
-                                    style: const TextStyle(
-                                        color: const Color(0xff46a5ba),
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600),
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {
-                                        Navigator.pushNamed(context, '/login');
-                                      })
-                              ]),
-                        ),
-                      ),
-                      verticalSpaceMedium,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Padding(
+              padding: EdgeInsets.only(top: 130.56.h, left: 22.0.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 86.73.w),
+                    child: Text(
+                      'Welcome!',
+                      // title,
+                      style: kappBarTitlestyle,
+                    ),
+                  ),
+                  verticalSpaceCustom(4.h),
+                  Padding(
+                    padding: EdgeInsets.only(right: 80.06.w),
+                    child: Text(
+                      'Create an account to get started with Cargo Express',
+                      // subtitle,
+                      style: kappBarsubTitlestyle,
+                    ),
+                  ),
+                  Form(
+                      key: _formKey,
+                      autovalidateMode: AutovalidateMode.always,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          GestureDetector(
-                            onTap: (() => Navigator.pop(context)),
-                            child: Container(
-                              height: 60,
-                              width: 150,
-                              child: Center(
-                                  child: Text(
-                                'Back',
-                                style: knormalTextStyle,
-                              )),
-                              decoration: BoxDecoration(
-                                  color: const Color(0xffecedf1),
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: Border.all(color: Colors.white)),
+                          const paddedLabel(label: 'Business Name'),
+                          CustomTextField(
+                            obscure: false,
+                            textfieldcontroller: busnamecontroller,
+                            type: TextInputType.text,
+                          ),
+                          const paddedLabel(label: 'Official E-mail'),
+                          CustomTextField(
+                            obscure: false,
+                            textfieldcontroller: emailcontroller,
+                            type: TextInputType.emailAddress,
+                          ),
+                          const paddedLabel(label: 'Contact Number'),
+                          CustomTextField(
+                            prefix: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: const [
+                                Text(
+                                  '+234',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                                Icon(Icons.arrow_drop_down)
+                              ],
+                            ),
+                            obscure: false,
+                            textfieldcontroller: phonecontroller,
+                            type: TextInputType.phone,
+                          ),
+                          const paddedLabel(label: 'Password'),
+                          verticalSpaceTiny,
+                          CustomTextField(
+                            obscure: true,
+                            textfieldcontroller: passwordcontroller,
+                            type: TextInputType.text,
+                          ),
+                          const paddedLabel(label: 'Confirm Password'),
+                          CustomTextField(
+                            obscure: true,
+                            textfieldcontroller: cpasswordcontroller,
+                            type: TextInputType.text,
+                          ),
+                          verticalSpaceCustom(27.h),
+                          Center(
+                            child: RichText(
+                              text: TextSpan(
+                                  text: 'Already have an account?',
+                                  style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.w300),
+                                  ),
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                        text: ' Log In',
+                                        style: GoogleFonts.poppins(
+                                          textStyle: TextStyle(
+                                              color: const Color(0xff46a5ba),
+                                              fontSize: 18.sp,
+                                              fontWeight: FontWeight.w600),
+                                        ),
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            Navigator.pushNamed(
+                                                context, '/login');
+                                          })
+                                  ]),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () =>
-                                Navigator.pushNamed(context, '/verify'),
-                            child: Container(
-                              height: 60,
-                              width: 150,
-                              child: Center(
-                                  child: Text(
-                                'Next',
-                                style: knormalTextStyle,
-                              )),
-                              decoration: BoxDecoration(
-                                color: const Color(0xff46a5ba),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(vertical: 37.h),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                GestureDetector(
+                                  onTap: (() => Navigator.pop(context)),
+                                  child: Container(
+                                    height: 60,
+                                    width: 150,
+                                    child: Center(
+                                        child: Text(
+                                      'Back',
+                                      style: kblacksmallbutttonstyle,
+                                    )),
+                                    decoration: BoxDecoration(
+                                        color: const Color(0xffecedf1),
+                                        borderRadius: BorderRadius.circular(20),
+                                        border:
+                                            Border.all(color: Colors.white)),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () =>
+                                      Navigator.pushNamed(context, '/verify'),
+                                  child: Container(
+                                    height: 60,
+                                    width: 150,
+                                    child: Center(
+                                        child: Text(
+                                      'Next',
+                                      style: kwhitesmallbutttonstyle,
+                                    )),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xff46a5ba),
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
-                          )
+                          ),
                         ],
-                      ),
-                      verticalSpaceSmall
-                    ],
-                  ),
-                ))
-          ],
-        ),
-      )),
-    );
+                      ))
+                ],
+              ),
+            )
+          ])),
+        ));
   }
 }

@@ -16,32 +16,50 @@ class _LaunchState extends State<Launch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffecedf1),
-      body: SafeArea(
-          child: Column(
-        children: [
-          customAppBar(
-            title: Text(
-              'What kind of user are you?',
-              style: kBigBlackTextStyle,
-            ),
-            subtitle: Text(
-              'We will adapt the app to suit your needs.',
-              style: kSmallTextStyle,
-            ),
+        backgroundColor: const Color(0xffdce4e9),
+        body: SafeArea(
+            child: Stack(children: [
+          Container(
+            child: Image.asset('assets/images/bg-app-cloud.png'),
+            width: double.infinity,
           ),
-          verticalSpaceCustom(8.h),
-          Custom_but(
-            text: 'Personal',
-            onTap: () => Navigator.pushNamed(context, '/personal'),
-          ),
-          verticalSpaceCustom(40.h),
-          Custom_but(
-            text: 'E-commerce',
-            onTap: () => Navigator.pushNamed(context, '/commerce'),
-          )
-        ],
-      )),
-    );
+          Padding(
+              padding: EdgeInsets.only(top: 130.56.h, left: 26.3.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // 'What kind of user are you?',
+                  // title,
+
+                  Padding(
+                    padding: const EdgeInsets.only(right: 82.4),
+                    child: Text(
+                      'What kind of user are you?',
+                      // title,
+                      style: kappBarTitlestyle,
+                    ),
+                  ),
+
+                  verticalSpaceCustom(4.h),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 75.72),
+                    child: Text(
+                      'We will adapt the app to suit your needs.',
+                      // subtitle,
+                      style: kappBarsubTitlestyle,
+                    ),
+                  ),
+                  Custom_but(
+                    text: 'Personal',
+                    onTap: () => Navigator.pushNamed(context, '/personal'),
+                  ),
+
+                  Custom_but(
+                    text: 'E-commerce',
+                    onTap: () => Navigator.pushNamed(context, '/commerce'),
+                  )
+                ],
+              )),
+        ])));
   }
 }

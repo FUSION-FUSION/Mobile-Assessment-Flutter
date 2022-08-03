@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //custom RoundedTextField
 class CustomTextField extends StatelessWidget {
@@ -19,22 +20,25 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-        validator: textfieldValidator,
-        // cursorColor: Color.fromRGBO(0, 0, 0, 1),
-        style: TextStyle(fontSize: 19),
-        cursorHeight: 25,
-        obscureText: obscure,
-        keyboardType: type,
-        autofocus: true,
-        controller: textfieldcontroller,
-        decoration: InputDecoration(
-          prefix: prefix,
-          fillColor: Colors.white,
-          filled: true,
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide.none),
-        ));
+    return Padding(
+      padding: EdgeInsets.only(right: 23.w, top: 6.h),
+      child: TextFormField(
+          validator: textfieldValidator,
+          // cursorColor: Color.fromRGBO(0, 0, 0, 1),
+          style: TextStyle(fontSize: 17),
+          cursorHeight: 25,
+          obscureText: obscure,
+          keyboardType: type,
+          autofocus: true,
+          controller: textfieldcontroller,
+          decoration: InputDecoration(
+            prefix: prefix,
+            fillColor: Colors.white,
+            filled: true,
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(17),
+                borderSide: BorderSide.none),
+          )),
+    );
   }
 }

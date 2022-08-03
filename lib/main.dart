@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobile_assessment_flutter/screens/begin.dart';
 import 'package:mobile_assessment_flutter/screens/congartulation.dart';
 import 'package:mobile_assessment_flutter/screens/e-commerce_screen.dart';
+import 'package:mobile_assessment_flutter/screens/home_screen.dart';
 import 'package:mobile_assessment_flutter/screens/launch_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 import 'package:mobile_assessment_flutter/screens/veri.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(428, 926),
       builder: (BuildContext context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Begin(),
+        home: Home(),
         routes: {
           '/intro': (context) => const Launch(),
           '/personal': (context) => const Personal(),
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
           '/commerce': (context) => const Commerce(),
           '/congrats': (context) => const Congrats(),
           '/very': (context) => const Veri(),
+          '/home': (context) => const Home(),
         },
       ),
     );
