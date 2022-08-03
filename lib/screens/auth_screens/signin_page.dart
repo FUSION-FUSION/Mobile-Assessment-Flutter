@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../landing_page.dart';
-import './personal_account_signup_page.dart';
+import '../account_type.dart';
+
 
 class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -91,7 +93,7 @@ class SignInPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context)
                         .push(
-                        MaterialPageRoute(builder: (context) => LandingPage())
+                        MaterialPageRoute(builder: (context) => AccountTypePage())
                     );
                   },
                   child: Padding(

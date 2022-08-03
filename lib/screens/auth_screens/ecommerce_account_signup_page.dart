@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './signin_page.dart';
-import '../../landing_page.dart';
+import '../account_type.dart';
 
 class EcommerceAccountSignUpPage extends StatelessWidget {
+  const EcommerceAccountSignUpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -208,7 +209,7 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                 ),
 
                 Container(
-                    margin: EdgeInsets.only(top: 20),
+                    margin: EdgeInsets.only(top: 20, bottom: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -224,7 +225,7 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.of(context)
                                 .push(
-                                MaterialPageRoute(builder: (context) => LandingPage())
+                                MaterialPageRoute(builder: (context) => AccountTypePage())
                             );
                           },
                           child: Padding(
@@ -245,7 +246,7 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.of(context)
                                 .push(
-                                MaterialPageRoute(builder: (context) => LandingPage())
+                                MaterialPageRoute(builder: (context) => AccountTypePage())
                             );
                           },
                           child: Padding(

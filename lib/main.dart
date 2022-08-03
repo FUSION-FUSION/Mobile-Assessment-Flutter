@@ -4,10 +4,12 @@ import './screens/auth_screens/signin_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      title: 'Welcome to Fusion',
+      title: 'Fusion Intelligence',
       home: SignInPage(),
     );
   }

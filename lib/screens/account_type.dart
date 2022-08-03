@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import './screens/auth_screens/personal_account_signup_page.dart';
-import './screens/auth_screens/ecommerce_account_signup_page.dart';
+import 'auth_screens/personal_account_signup_page.dart';
+import 'auth_screens/ecommerce_account_signup_page.dart';
 
-class LandingPage extends StatelessWidget {
+class AccountTypePage extends StatelessWidget {
+  const AccountTypePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
