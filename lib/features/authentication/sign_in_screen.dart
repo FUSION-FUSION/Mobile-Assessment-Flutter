@@ -74,9 +74,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 60),
                       GestureDetector(
-                        onTap: () {
-                          //TODO: Go to home page.
-                        },
+                        onTap: () => context.pushNamed(AppRoute.home.name),
                         child: Container(
                           height: 60,
                           width: 180,

@@ -5,6 +5,7 @@ import 'package:mobile_assessment_flutter/features/authentication/sign_in_screen
 import 'package:mobile_assessment_flutter/features/authentication/signup_screen.dart';
 import 'package:mobile_assessment_flutter/features/authentication/user_type/user_type_screen.dart';
 import 'package:mobile_assessment_flutter/features/authentication/verification_screen.dart';
+import 'package:mobile_assessment_flutter/features/home/home_page.screen.dart';
 
 enum AppRoute {
   userType,
@@ -46,10 +47,16 @@ final goRouter = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'signin',
-          name: AppRoute.signIn.name,
-          builder: (context, state) => const SignInScreen(),
-        )
+            path: 'signin',
+            name: AppRoute.signIn.name,
+            builder: (context, state) => const SignInScreen(),
+            routes: [
+              GoRoute(
+                path: 'home',
+                name: AppRoute.home.name,
+                builder: (context, state) => const HomePageScreen(),
+              ),
+            ]),
       ],
     )
   ],
