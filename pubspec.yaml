@@ -37,7 +37,6 @@ dependencies:
   get: ^4.6.5
   country_code_picker: ^2.0.2
   pin_code_fields: ^7.3.0
-  flutter_svg: ^1.0.3
 
 
 
