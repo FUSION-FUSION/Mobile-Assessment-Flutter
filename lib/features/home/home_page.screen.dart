@@ -5,16 +5,29 @@ class HomePageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
           elevation: 0,
           centerTitle: true,
-          title: Text('Hello, John.'),
-          leading: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.menu),
+          title: const Text(
+            'Hello, John.',
+            style: TextStyle(color: Colors.black),
           ),
-          actions: const [ImageIcon(AssetImage('assets/ic-notification.png'))]),
+          leading: IconButton(
+            color: Colors.black,
+            onPressed: () {},
+            icon: const Icon(Icons.menu),
+          ),
+          actions: const [
+            ImageIcon(
+              AssetImage('assets/ic-notification.png'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
