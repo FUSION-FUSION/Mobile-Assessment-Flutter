@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/widgets/app_text.dart';
 import 'package:mobile_assessment_flutter/widgets/gradient_background.dart';
 import 'package:mobile_assessment_flutter/widgets/text_container.dart';
+
+import '../../routes/route_helper.dart';
 
 class UserType extends StatelessWidget {
   const UserType({Key? key}) : super(key: key);
@@ -32,16 +35,26 @@ class UserType extends StatelessWidget {
                     size: 17.55,
                   ),
                   SizedBox(height: Dimensions.sizeHeightPercent(48)),
-                  TextContainer(
-                    text: 'Personal',
-                    width: 373,
-                    height: 136.78,
+                  GestureDetector(
+                    onTap: () {
+                      Get.toNamed(RouteHelper.getRegister(1));
+                    },
+                    child: TextContainer(
+                      text: 'Personal',
+                      width: 373,
+                      height: 136.78,
+                    ),
                   ),
                   SizedBox(height: Dimensions.sizeHeightPercent(40.96)),
-                  TextContainer(
-                    text: 'E-commerce',
-                    width: 373,
-                    height: 136.78,
+                  GestureDetector(
+                    onTap: () {
+                      Get.toNamed(RouteHelper.getRegister(0));
+                    },
+                    child: TextContainer(
+                      text: 'E-commerce',
+                      width: 373,
+                      height: 136.78,
+                    ),
                   ),
                 ],
               ),
