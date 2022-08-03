@@ -104,7 +104,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
               Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  completed ? '00:52' : 'Code Expired',
+                  completed ?  'Code Expired' :  '00:52',
                   style: TextStyle(
                       color: Palette.kRedColor,
                       fontSize: getScreenWidth(16),
@@ -117,7 +117,11 @@ class _VerificationScreenState extends State<VerificationScreen> {
               Align(
                 alignment: Alignment.center,
                 child: TextButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    setState(() {
+                      completed = !completed;
+                    });
+                  },
                   child: Text(
                     'Resend Code',
                     style: TextStyle(
