@@ -96,7 +96,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             style: AppTextStyles.kSubHeaderStyle,
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () =>
+                                context.pushNamed(AppRoute.signIn.name),
                             child: const Text(
                               'Log In',
                               style: TextStyle(

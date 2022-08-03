@@ -13,3 +13,5 @@ class AppTextStyles {
     color: Color.fromARGB(255, 110, 109, 109),
   );
 }
+
+const kThemeColor = Color.fromARGB(255, 75, 177, 197);
