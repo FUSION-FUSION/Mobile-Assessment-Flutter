@@ -14,6 +14,7 @@ class Registration1 extends StatelessWidget {
         backgroundColor: Colors.grey[300],
       ),
       body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/bg-app-cloud.png'),
@@ -21,7 +22,6 @@ class Registration1 extends StatelessWidget {
             alignment: Alignment.topCenter,
           ),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
           children: [
             Column(
