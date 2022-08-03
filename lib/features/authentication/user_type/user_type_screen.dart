@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobile_assessment_flutter/constants/app_constants.dart';
 import 'package:mobile_assessment_flutter/features/routing/app_router.dart';
@@ -8,6 +9,8 @@ class UserType extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 231, 237, 246),
       body: Container(
