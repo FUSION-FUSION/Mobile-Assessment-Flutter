@@ -1,6 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
@@ -8,6 +8,8 @@ import 'package:mobile_assessment_flutter/widgets/app_text.dart';
 import 'package:mobile_assessment_flutter/widgets/gradient_background.dart';
 import 'package:mobile_assessment_flutter/widgets/register_field.dart';
 import 'package:mobile_assessment_flutter/widgets/text_container.dart';
+
+import '../../routes/route_helper.dart';
 
 class Registration extends StatelessWidget {
   bool isPersonal;
@@ -122,24 +124,27 @@ class Registration extends StatelessWidget {
                     ),
                     SizedBox(height: Dimensions.sizeHeightPercent(27)),
                     Center(
-                      child: RichText(
-                        text: TextSpan(
-                          text: 'Already have an account?',
-                          style: GoogleFonts.poppins(
-                              fontSize: Dimensions.sizeHeightPercent(18),
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.primaryTextColor),
-                          children: <TextSpan>[
-                            TextSpan(
-                                text: ' Log In',
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {},
-                                style: GoogleFonts.poppins(
-                                  color: AppColors.primaryBlue,
-                                  fontSize: Dimensions.sizeHeightPercent(18),
-                                  fontWeight: FontWeight.w500,
-                                )),
-                          ],
+                      child: GestureDetector(
+                        onTap: () {
+                          Get.toNamed(RouteHelper.getLogin());
+                        },
+                        child: RichText(
+                          text: TextSpan(
+                            text: 'Already have an account?',
+                            style: GoogleFonts.poppins(
+                                fontSize: Dimensions.sizeHeightPercent(18),
+                                fontWeight: FontWeight.w500,
+                                color: AppColors.primaryTextColor),
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: ' Log In',
+                                  style: GoogleFonts.poppins(
+                                    color: AppColors.primaryBlue,
+                                    fontSize: Dimensions.sizeHeightPercent(18),
+                                    fontWeight: FontWeight.w500,
+                                  )),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -149,20 +154,30 @@ class Registration extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextContainer(
-                          text: 'Back',
-                          width: 141.77,
-                          textColor: AppColors.primaryBlack,
-                          height: 63.46,
-                          backgroundColor: AppColors.primaryWhite,
+                        GestureDetector(
+                          onTap: () {
+                            Get.offAllNamed(RouteHelper.getUserType());
+                          },
+                          child: TextContainer(
+                            text: 'Back',
+                            width: 141.77,
+                            textColor: AppColors.primaryBlack,
+                            height: 63.46,
+                            backgroundColor: AppColors.primaryWhite,
+                          ),
                         ),
                         SizedBox(
                           width: Dimensions.sizeWidthPercent(62.66),
                         ),
-                        TextContainer(
-                          text: 'Next',
-                          width: 141.77,
-                          height: 63.46,
+                        GestureDetector(
+                          onTap: () {
+                            Get.offAllNamed(RouteHelper.getVerification());
+                          },
+                          child: TextContainer(
+                            text: 'Next',
+                            width: 141.77,
+                            height: 63.46,
+                          ),
                         ),
                       ],
                     )
