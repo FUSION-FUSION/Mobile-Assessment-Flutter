@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'register_1.dart';
+import 'register_1_welcome.dart';
 
 class ChoosePurposeScreen extends StatelessWidget {
   const ChoosePurposeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    pushToRegister2() {
+    pushToRegister1() {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const Registration1()),
@@ -66,22 +66,22 @@ class ChoosePurposeScreen extends StatelessWidget {
               children: [
                 // "Personal" Button
                 CustomButton1(
-                  color: Colors.cyan,
+                  color: const Color(0xFF46A5BA),
                   height: 110,
                   text: 'Personal',
                   onPressed: () {
-                    pushToRegister2();
+                    pushToRegister1();
                   },
                 ),
                 const SizedBox(height: 30),
 
                 // "E-commerce" button
                 CustomButton1(
-                  color: Colors.cyan,
+                  color: const Color(0xFF46A5BA),
                   height: 110,
                   text: 'E-commerce',
                   onPressed: () {
-                    pushToRegister2();
+                    pushToRegister1();
                   },
                 ),
               ],

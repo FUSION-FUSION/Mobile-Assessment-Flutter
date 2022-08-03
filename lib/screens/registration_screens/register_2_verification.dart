@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'register_3.dart';
+import 'register_3_congratulations.dart';
 
 class Registration2 extends StatelessWidget {
   const Registration2({Key? key}) : super(key: key);
@@ -7,11 +7,11 @@ class Registration2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: const Color(0xFFe7EBEF),
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 0,
-        backgroundColor: Colors.grey[300],
+        backgroundColor: const Color(0xFFe7EBEF),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -38,11 +38,11 @@ class Registration2 extends StatelessWidget {
 
             // "We sent you as SMS ..." text
             Padding(
-              padding: const EdgeInsets.only(right: 50, bottom: 30),
+              padding: const EdgeInsets.only(right: 100, bottom: 30),
               child: RichText(
                 text: const TextSpan(
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 16,
                       fontWeight: FontWeight.w300,
                       color: Colors.black87,
                     ),
@@ -53,7 +53,7 @@ class Registration2 extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
-                          color: Colors.cyan,
+                          color: Color(0xFF46A5BA),
                         ),
                       ),
                       TextSpan(text: 'code on number '),
@@ -62,7 +62,7 @@ class Registration2 extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
-                          color: Colors.cyan,
+                          color: Color(0xFF46A5BA),
                         ),
                       ),
                     ]),
@@ -127,7 +127,7 @@ class Registration2 extends StatelessWidget {
                   color: Colors.white,
                 ),
                 shape: const CircleBorder(),
-                color: Colors.cyan,
+                color: const Color(0xFF46A5BA),
                 onPressed: () {
                   // go to register 3
                   Navigator.of(context).push(

@@ -102,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 18),
                   child: MaterialButton(
                     onPressed: () {},
-                    color: Colors.cyan,
+                    color: const Color(0xFF46A5BA),
                     padding: const EdgeInsets.all(0),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
@@ -147,7 +147,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // "Track your waybill" text
+                // "Track your waybill" Header text
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 15),
                   child: Text(
@@ -165,7 +165,7 @@ class HomeScreen extends StatelessWidget {
                   margin: const EdgeInsets.fromLTRB(34, 0, 34, 30),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.cyan,
+                      color: const Color(0xFF46A5BA),
                     ),
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -199,7 +199,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(2),
                         child: MaterialButton(
                           onPressed: () {},
-                          color: Colors.cyan,
+                          color: const Color(0xFF46A5BA),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),

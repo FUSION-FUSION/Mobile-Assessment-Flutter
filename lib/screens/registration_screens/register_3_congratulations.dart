@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'register_2.dart';
 import 'package:mobile_assessment_flutter/screens/home_screen/home_screen.dart';
 
 class Registration3 extends StatelessWidget {
@@ -8,11 +7,11 @@ class Registration3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: const Color(0xFFe7EBEF),
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 0,
-        backgroundColor: Colors.grey[300],
+        backgroundColor: const Color(0xFFe7EBEF),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -61,29 +60,25 @@ class Registration3 extends StatelessWidget {
             // "Continue" button
             Align(
               alignment: Alignment.center,
-              child: SizedBox(
-                width: 180,
+              child: MaterialButton(
+                minWidth: 180,
                 height: 55,
-                child: Expanded(
-                  child: MaterialButton(
-                    child: const Text(
-                      'Continue',
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.white,
-                      ),
-                    ),
-                    onPressed: () {
-                      // go to home screen
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                      );
-                    },
-                    color: Colors.cyan,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
+                child: const Text(
+                  'Continue',
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.white,
                   ),
+                ),
+                onPressed: () {
+                  // go to home screen
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                },
+                color: const Color(0xFF46A5BA),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
                 ),
               ),
             ),

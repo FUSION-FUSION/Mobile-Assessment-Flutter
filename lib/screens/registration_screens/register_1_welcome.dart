@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'register_2.dart';
+import 'register_2_verification.dart';
 
 class Registration1 extends StatelessWidget {
   const Registration1({Key? key}) : super(key: key);
@@ -7,11 +7,11 @@ class Registration1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: const Color(0xFFe7EBEF),
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 0,
-        backgroundColor: Colors.grey[300],
+        backgroundColor: const Color(0xFFe7EBEF),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -100,7 +100,7 @@ class Registration1 extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16.5,
                           fontWeight: FontWeight.bold,
-                          color: Colors.cyan,
+                          color: const Color(0xFF46A5BA),
                         ),
                       ),
                     ),
@@ -126,7 +126,7 @@ class Registration1 extends StatelessWidget {
 
                       // Next Button
                       CustomButton2(
-                        color: Colors.cyan,
+                        color: const Color(0xFF46A5BA),
                         text: 'Next',
                         textColor: Colors.white,
                         onPressed: () {
@@ -184,7 +184,7 @@ class FormItem extends StatelessWidget {
               decoration: const InputDecoration(
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  borderRadius: BorderRadius.all(Radius.circular(17)),
                 ),
                 fillColor: Colors.white,
                 filled: true,
@@ -217,6 +217,7 @@ class PhoneNumberFormItem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // header text
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
@@ -226,23 +227,27 @@ class PhoneNumberFormItem extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 10),
-          child: Container(
-            height: 42,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.black54,
-                    ),
-                    borderRadius: const BorderRadius.all(Radius.circular(20)),
+        // Textfield container
+        Container(
+          height: 42,
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(17)),
+          ),
+          child: Row(
+            children: [
+              Container(
+                height: 42,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(
+                    width: 1.0,
+                    color: Colors.grey[200]!,
                   ),
+                  borderRadius: const BorderRadius.all(Radius.circular(17)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
                   child: Row(
                     children: const [
                       Text(
@@ -252,6 +257,7 @@ class PhoneNumberFormItem extends StatelessWidget {
                           fontWeight: FontWeight.w300,
                         ),
                       ),
+                      // SizedBox(width: 2),
                       Icon(
                         Icons.arrow_drop_down,
                         size: 24,
@@ -259,29 +265,28 @@ class PhoneNumberFormItem extends StatelessWidget {
                     ],
                   ),
                 ),
-                Expanded(
-                  child: TextFormField(
-                    onEditingComplete: () {
-                      onEditingComplete();
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                      ),
-                      fillColor: Colors.white,
-                      filled: true,
-                    ),
-                    textAlignVertical: const TextAlignVertical(y: -0.8),
-                    style: const TextStyle(
-                      fontSize: 17,
-                      height: 1.5,
+              ),
+              Expanded(
+                child: TextFormField(
+                  onEditingComplete: () {
+                    onEditingComplete();
+                  },
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
                     ),
                   ),
+                  textAlignVertical: const TextAlignVertical(y: -0.8),
+                  style: const TextStyle(
+                    fontSize: 17,
+                    height: 1.5,
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
+        const SizedBox(height: 10),
       ],
     );
   }
