@@ -126,6 +126,8 @@ class Registration extends StatelessWidget {
                         text: TextSpan(
                           text: 'Already have an account?',
                           style: GoogleFonts.poppins(
+                              fontSize: Dimensions.sizeHeightPercent(18),
+                              fontWeight: FontWeight.w500,
                               color: AppColors.primaryTextColor),
                           children: <TextSpan>[
                             TextSpan(
@@ -134,7 +136,8 @@ class Registration extends StatelessWidget {
                                   ..onTap = () {},
                                 style: GoogleFonts.poppins(
                                   color: AppColors.primaryBlue,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: Dimensions.sizeHeightPercent(18),
+                                  fontWeight: FontWeight.w500,
                                 )),
                           ],
                         ),

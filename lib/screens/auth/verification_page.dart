@@ -37,18 +37,18 @@ class _VerificationPageState extends State<VerificationPage> {
       }
     });
     defaultPinTheme = PinTheme(
-      width: 52,
-      height: 52,
-      margin: EdgeInsets.only(left: Dimensions.sizeWidthPercent(27)),
+      width: 57,
+      height: 66.6,
+      margin: EdgeInsets.only(left: Dimensions.sizeWidthPercent(15)),
       textStyle: TextStyle(
           fontSize: Dimensions.sizeHeightPercent(24),
           color: AppColors.primaryBlack,
           fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-              width: Dimensions.sizeWidthPercent(1), color: Colors.grey[300]!),
-        ),
+        borderRadius: BorderRadius.circular(Dimensions.sizeHeightPercent(17)),
+        color: AppColors.primaryWhite,
+        border: Border.all(
+            width: Dimensions.sizeWidthPercent(1), color: Colors.grey[300]!),
       ),
     );
   }
@@ -83,7 +83,7 @@ class _VerificationPageState extends State<VerificationPage> {
                   text: TextSpan(
                       text: "We sent you an",
                       style: GoogleFonts.poppins(
-                        fontSize: 16,
+                        fontSize: Dimensions.sizeHeightPercent(16),
                         fontWeight: FontWeight.w500,
                         color: AppColors.primaryTextColor,
                       ),
@@ -91,7 +91,7 @@ class _VerificationPageState extends State<VerificationPage> {
                         TextSpan(
                           text: " SMS",
                           style: GoogleFonts.poppins(
-                            fontSize: 16,
+                            fontSize: Dimensions.sizeHeightPercent(16),
                             fontWeight: FontWeight.w500,
                             color: AppColors.primaryBlue,
                           ),
@@ -99,7 +99,7 @@ class _VerificationPageState extends State<VerificationPage> {
                         TextSpan(
                           text: " code on number",
                           style: GoogleFonts.poppins(
-                            fontSize: 16,
+                            fontSize: Dimensions.sizeHeightPercent(16),
                             fontWeight: FontWeight.w500,
                             color: AppColors.primaryTextColor,
                           ),
@@ -107,7 +107,7 @@ class _VerificationPageState extends State<VerificationPage> {
                         TextSpan(
                           text: " +2348108960610",
                           style: GoogleFonts.poppins(
-                            fontSize: 16,
+                            fontSize: Dimensions.sizeHeightPercent(16),
                             fontWeight: FontWeight.w500,
                             color: AppColors.primaryBlue,
                           ),
@@ -117,7 +117,19 @@ class _VerificationPageState extends State<VerificationPage> {
                 SizedBox(height: Dimensions.sizeHeightPercent(22.44)),
                 Pinput(
                   defaultPinTheme: defaultPinTheme,
-                )
+                  keyboardType: TextInputType.number,
+                  length: 5,
+                ),
+                SizedBox(height: Dimensions.sizeHeightPercent(14.34)),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: AppText(
+                    text: '$secondsRemaining seconds',
+                    size: 16,
+                    bold: true,
+                    color: AppColors.primaryBlue,
+                  ),
+                ),
               ],
             ),
           ),
