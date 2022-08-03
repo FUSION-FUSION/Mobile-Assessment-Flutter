@@ -1,9 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/view/home/home_screen.dart';
-import 'package:mobile_assessment_flutter/view/welcome/welcome_screen.dart';
+
 import '../../constants/assets_constant_name.dart';
 import '../../constants/color_pallette.dart';
+import '../welcome/welcome_screen_personal.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/form_field.dart';
 
@@ -103,7 +104,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             Navigator.pushNamed(
-                                context, WelcomeScreen.routeName);
+                                context, WelcomeScreenPersonal.routeName);
                           },
                       ),
                     ),

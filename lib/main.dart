@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/view/user_kind/user_kind_screen.dart';
-import 'package:mobile_assessment_flutter/view/welcome/welcome_screen.dart';
+
 
 import 'constants/routes.dart';
 

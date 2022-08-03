@@ -8,17 +8,17 @@ import '../../constants/assets_constant_name.dart';
 import '../../constants/color_pallette.dart';
 import '../sign_in/sign_in_screen.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  static String routeName = '/welcome_screen';
-  const WelcomeScreen({
+class WelcomeScreenECommerce extends StatefulWidget {
+  static String routeName = '/welcome_screen_e_commerce';
+  const WelcomeScreenECommerce({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<WelcomeScreenECommerce> createState() => _WelcomeScreenECommerceState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenECommerceState extends State<WelcomeScreenECommerce> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -83,19 +83,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       height: height * 0.015,
                     ),
                     const UserFormField(
-                      title: 'Full Name',
+                      title: 'Business Name',
                     ),
                     SizedBox(
                       height: height * 0.01,
                     ),
                     const UserFormField(
-                      title: 'Your E-mail',
+                      title: 'Official E-mail',
                     ),
                     SizedBox(
                       height: height * 0.01,
                     ),
                     const UserFormField(
-                      title: 'Phone Number',
+                      title: 'Conatact Number',
                     ),
                     SizedBox(
                       height: height * 0.01,
@@ -117,7 +117,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         TextSpan(
                           text: 'Already have an account? ',
                           style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 16,
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w200,
                             color: Colors.black.withOpacity(0.6),
@@ -126,6 +126,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         TextSpan(
                           text: 'Log In',
                           style: const TextStyle(
+                              fontSize: 16,
                               color: kPrimary, fontWeight: FontWeight.w600),
                           recognizer: TapGestureRecognizer()..onTap = () {
                             Navigator.pushNamed(context, SignInScreen.routeName);

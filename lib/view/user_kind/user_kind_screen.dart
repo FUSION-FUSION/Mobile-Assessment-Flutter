@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/constants/assets_constant_name.dart';
 import 'package:mobile_assessment_flutter/constants/color_pallette.dart';
-import 'package:mobile_assessment_flutter/view/welcome/welcome_screen.dart';
+import 'package:mobile_assessment_flutter/view/welcome/welcome_screen_e_commerce.dart';
 
+
+import '../welcome/welcome_screen_personal.dart';
 import '../widgets/custom_button.dart';
 
 class UserKindScreen extends StatelessWidget {
@@ -75,7 +77,7 @@ class UserKindScreen extends StatelessWidget {
                   width: width * 0.8,
                   fontSize: 44,
                   press: (){
-                    Navigator.pushNamed(context, WelcomeScreen.routeName);
+                    Navigator.pushNamed(context, WelcomeScreenPersonal.routeName);
                   },
                 ),
                 SizedBox(
@@ -87,7 +89,7 @@ class UserKindScreen extends StatelessWidget {
                   width: width * 0.8,
                   fontSize: 44,
                   press: (){
-                    Navigator.pushNamed(context, WelcomeScreen.routeName);
+                    Navigator.pushNamed(context, WelcomeScreenECommerce.routeName);
                   },
                 ),
               ],
