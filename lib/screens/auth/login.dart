@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/widgets/app_text.dart';
@@ -49,18 +50,26 @@ class Login extends StatelessWidget {
                     ],
                   )),
                   Center(
-                      child: AppText(
-                    text: 'Create an Account',
-                    size: 18,
-                    color: AppColors.primaryBlue,
+                      child: GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: AppText(
+                      text: 'Create an Account',
+                      size: 18,
+                      color: AppColors.primaryBlue,
+                    ),
                   )),
                   SizedBox(height: Dimensions.sizeHeightPercent(75.33)),
                   Center(
-                    child: TextContainer(
-                      text: 'Sign In',
-                      width: 182.45,
-                      height: 71.15,
-                      size: 27.13,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: TextContainer(
+                        text: 'Sign In',
+                        width: 182.45,
+                        height: 71.15,
+                        size: 27.13,
+                      ),
                     ),
                   )
                 ],
