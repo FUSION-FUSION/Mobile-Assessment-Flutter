@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/routes/route_helper.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/widgets/app_text.dart';
@@ -155,6 +157,8 @@ class _VerificationPageState extends State<VerificationPage> {
                           secondsRemaining = 0;
                           codeExpired = true;
                         });
+                      } else {
+                        Get.offAllNamed(RouteHelper.getAccountSuccess());
                       }
                     },
                     child: Container(
