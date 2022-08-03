@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mobile_assessment_flutter/routes/route_helper.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/widgets/app_text.dart';
 import 'package:mobile_assessment_flutter/widgets/gradient_background.dart';
@@ -40,7 +42,12 @@ class AccountSuccess extends StatelessWidget {
                 child: Image.asset('assets/images/ic-congratulations.png'),
               ),
               SizedBox(height: Dimensions.sizeHeightPercent(66.59)),
-              TextContainer(text: 'Continue', width: 194, height: 64),
+              GestureDetector(
+                  onTap: () {
+                    Get.offAllNamed(RouteHelper.getDashboard());
+                  },
+                  child:
+                      TextContainer(text: 'Continue', width: 194, height: 64)),
             ],
           ),
         ),
