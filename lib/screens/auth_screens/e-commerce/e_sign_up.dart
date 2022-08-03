@@ -43,7 +43,7 @@ class _SignUpEcommerceState extends State<SignUpEcommerce> {
                 width: size.width,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/Cloud illustration.png'),
+                    image: AssetImage('assets/images/bg-app-cloud.png'),
                     fit: BoxFit.contain,
                   ),
                 ),
