@@ -9,7 +9,7 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
-  delayThenPushToRegistration() async {
+  delayThenPushReplacementToRegistration() async {
     await Future.delayed(const Duration(seconds: 2));
     Navigator.pushReplacement(
       context,
@@ -20,7 +20,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   void initState() {
     super.initState();
-    delayThenPushToRegistration();
+    delayThenPushReplacementToRegistration();
   }
 
   @override
