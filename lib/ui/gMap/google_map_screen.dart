@@ -5,6 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:mobile_assessment_flutter/ui/_shared/utils/app_colors.dart';
 import 'package:mobile_assessment_flutter/ui/_shared/utils/text_styles.dart';
+import 'package:mobile_assessment_flutter/ui/gMap/widgets/column_check_box.dart';
+import 'package:mobile_assessment_flutter/ui/gMap/widgets/column_dotted_line.dart';
+import 'package:mobile_assessment_flutter/ui/gMap/widgets/column_track_circle.dart';
+import 'package:mobile_assessment_flutter/ui/gMap/widgets/column_track_text.dart';
 import 'package:mobile_assessment_flutter/ui/gMap/widgets/track_circle.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -28,7 +32,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
         backdropColor: Colors.transparent,
         body:
         Stack(
-          children:[ GoogleMap(
+          children:[ const GoogleMap(
             initialCameraPosition: _initialCamPos,
             zoomControlsEnabled: false,
           ),
@@ -50,25 +54,29 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.2),
                                 spreadRadius: 0.01,
-                                offset: Offset(0.5, 0.5),
+                                offset: const Offset(0.5, 0.5),
                                 blurRadius: 0.05
                               ),
                               BoxShadow(
                                   color: Colors.black.withOpacity(0.2),
                                   spreadRadius: 0.01,
-                                  offset: Offset(-0.5, -0.5),
+                                  offset: const Offset(-0.5, -0.5),
                                   blurRadius: 0.05
                               ),
                             ],
 
                           ),
-                          child: const Center(
-                            child: Icon(
-                              Icons.arrow_back
+                          child: InkWell(
+                            onTap: Navigator.of(context).pop,
+                            child: const
+                            Center(
+                              child: Icon(
+                                Icons.arrow_back
+                              ),
                             ),
                           ),
                         ),
-                        SizedBox(width: 16.0,),
+                        const SizedBox(width: 16.0,),
                         Container(
                           height: 40.0.h,
                           width: 250.0.w,
@@ -79,13 +87,13 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
                               BoxShadow(
                                   color: Colors.black.withOpacity(0.2),
                                   spreadRadius: 0.01,
-                                  offset: Offset(0.5, 0.5),
+                                  offset: const Offset(0.5, 0.5),
                                   blurRadius: 0.05
                               ),
                               BoxShadow(
                                   color: Colors.black.withOpacity(0.2),
                                   spreadRadius: 0.01,
-                                  offset: Offset(-0.5, -0.5),
+                                  offset: const Offset(-0.5, -0.5),
                                   blurRadius: 0.05
                               ),
                             ],
@@ -95,7 +103,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
                           TextFormField(
                             initialValue: "HH-INT-D9FD00-JBW-ORI",
                             decoration: InputDecoration(
-                              contentPadding: EdgeInsets.only(left: 40.0),
+                              contentPadding: const EdgeInsets.only(left: 40.0),
                              hintText: "HH-INT-D9FD00-JBW-ORI",
                               border: InputBorder.none,
                               hintStyle:GoogleFonts.inter(color: Colors.black54,),
@@ -134,9 +142,9 @@ class PanelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.only(topRight: Radius.circular(40.0,), topLeft: Radius.circular(40.0))
+        borderRadius: BorderRadius.only(topRight: Radius.circular(40.0,), topLeft:  Radius.circular(40.0))
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0.w, vertical: 10.0.h),
@@ -150,12 +158,13 @@ class PanelWidget extends StatelessWidget {
                 color: AppColors.primaryGreen,
               ),
               child: Padding(
-                padding:  EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
+                padding:  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -166,22 +175,23 @@ class PanelWidget extends StatelessWidget {
                         ],
                       ),
                     ),
+
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Row(
                         children: [
-                        RowTrackCircleWidget(),
+                        const RowTrackCircleWidget(),
                           Container(height:3.0, color: Colors.white,width: 95.0,),
-                        RowTrackCircleWidget(),
-                          DottedLine(dashColor: Colors.white,lineLength: 95.0,),
-                        RowTrackCircleWidget(),
-                        DottedLine(dashColor: Colors.white,lineLength: 95.0,),
-                        RowTrackCircleWidget(),
+                        const RowTrackCircleWidget(),
+                          const DottedLine(dashColor: Colors.white,lineLength: 95.0,),
+                        const RowTrackCircleWidget(),
+                        const DottedLine(dashColor: Colors.white,lineLength: 95.0,),
+                        const RowTrackCircleWidget(),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -194,103 +204,71 @@ class PanelWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20.0,),
+            const SizedBox(height: 20.0,),
+
             Padding(
-              padding:  EdgeInsets.only(left: 10.0),
+              padding:  const EdgeInsets.only(left: 10.0),
               child: Text("Route Details",style: AppTextStyle.kSemiBoldWhiteTextStyle.copyWith(color: Colors.black, fontSize: 20.0),),
             ),
-            Row(
-              children: [
-                Column(
-                  children: [
-                     CircleAvatar(
-                       radius: 10,
-                     ),
-                    DottedLine(
-                      direction: Axis.vertical,
-                      dashColor: AppColors.primaryGreen,
-                     lineLength: 50.0,
-                    ),
-                    CircleAvatar(
-                      radius: 10,
-                    ),
-                    DottedLine(
-                      direction: Axis.vertical,
-                      dashColor: AppColors.primaryGreen,
-                      lineLength: 50.0,
-                    ),
-                    CircleAvatar(
-                      radius: 10,
-                    ),
-                    DottedLine(
-                      direction: Axis.vertical,
-                      dashColor: AppColors.primaryGreen,
-                      lineLength: 50.0,
-                    ),
-                    CircleAvatar(
-                      radius: 10,
-                    ),
-                  ],
-                ),
-                SizedBox(width: 20.0,),
-                Column(
-                  children: [
-                            Text("Delivered Successfully"),
-                            Text("Bishop's court owerri."),
-                            SizedBox(height: 38.0,),
-                            Text("Delivered Successfully"),
-                            Text("Bishop's court owerri."),
-                    SizedBox(height: 38.0,),
-                    Text("Delivered Successfully"),
-                    Text("Bishop's court owerri."),
-                    SizedBox(height: 38.0,),
-                    Text("Delivered Successfully"),
-                    Text("Bishop's court owerri."),
-                  ],
-                ),
-                SizedBox(width: 110.0,),
-                Column(
-                  children: [
-                        Checkbox(value: true,
-                            onChanged: (bool? value){},
-                          fillColor: MaterialStateProperty.all(Colors.white),
-                          checkColor: AppColors.primaryGreen,
-                          activeColor: AppColors.primaryGreen,
-                          focusColor: AppColors.primaryGreen,
-                        ),
-                        SizedBox(height: 32.0,),
-                        Checkbox(value: true,
-                            onChanged: (bool? value){},
-                          fillColor: MaterialStateProperty.all(Colors.white),
-                          checkColor: AppColors.primaryGreen,
-                          activeColor: AppColors.primaryGreen,
-                          focusColor: AppColors.primaryGreen,
-                        ),
-                    SizedBox(height: 32.0,),
-                        Checkbox(value: true,
-                            onChanged: (bool? value){},
-                          fillColor: MaterialStateProperty.all(Colors.white),
-                          checkColor: AppColors.primaryGreen,
-                          activeColor: AppColors.primaryGreen,
-                          focusColor: AppColors.primaryGreen,
-                        ),
-                    SizedBox(height: 32.0,),
-                        Checkbox(value: true,
-                            onChanged: (bool? value){},
-                          fillColor: MaterialStateProperty.all(Colors.white),
-                          checkColor: AppColors.primaryGreen,
-                          activeColor: AppColors.primaryGreen,
-                          focusColor: AppColors.primaryGreen,
-                        ),
-
-                  ],
-                )
-              ],
-            )
+            const ColumnTrackWidget()
           ],
         ),
       ),
     );
   }
 }
+
+class ColumnTrackWidget extends StatelessWidget {
+  const ColumnTrackWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Column(
+          children: const [
+            ColumnTrackCircle(),
+             ColumnDottedLines(),
+             ColumnTrackCircle(),
+             ColumnDottedLines(),
+             ColumnTrackCircle(),
+             ColumnDottedLines(),
+             ColumnTrackCircle(),
+          ],
+        ),
+        const SizedBox(width: 20.0,),
+        Column(
+          children: const[
+             ColumnTrackText(),
+             SizedBox(height: 38.0,),
+             ColumnTrackText(),
+             SizedBox(height: 38.0,),
+             ColumnTrackText(),
+             SizedBox(height: 38.0,),
+             ColumnTrackText(),
+          ],
+        ),
+
+        const SizedBox(width: 110.0,),
+        Column(
+          children: const [
+            ColumnCheckBox(),
+            SizedBox(height: 32.0,),
+            ColumnCheckBox(),
+             SizedBox(height: 32.0,),
+            ColumnCheckBox(),
+             SizedBox(height: 32.0,),
+            ColumnCheckBox(),
+          ],
+        )
+      ],
+    );
+  }
+}
+
+
+
+
 
