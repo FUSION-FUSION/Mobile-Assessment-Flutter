@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mobile_assessment_flutter/screens/auth/login.dart';
 import 'package:mobile_assessment_flutter/screens/auth/registration.dart';
 
 void main() {
@@ -26,9 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Registration(
-        isPersonal: true,
-      ),
+      home: const Login(),
     );
   }
 }

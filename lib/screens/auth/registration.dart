@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/widgets/app_text.dart';
@@ -124,16 +125,14 @@ class Registration extends StatelessWidget {
                       child: RichText(
                         text: TextSpan(
                           text: 'Already have an account?',
-                          style: const TextStyle(
+                          style: GoogleFonts.poppins(
                               color: AppColors.primaryTextColor),
                           children: <TextSpan>[
                             TextSpan(
                                 text: ' Log In',
                                 recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    print('Tap');
-                                  },
-                                style: const TextStyle(
+                                  ..onTap = () {},
+                                style: GoogleFonts.poppins(
                                   color: AppColors.primaryBlue,
                                   fontWeight: FontWeight.bold,
                                 )),
