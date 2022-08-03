@@ -10,7 +10,12 @@ Widget buidFirstNameFormFeild() {
       filled: true,
       fillColor: Colors.white,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0.r),
+          borderRadius: BorderRadius.circular(20.0.r),
+          borderSide: BorderSide(color: Colors.white)
+      ),
+      enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0.r),
+          borderSide: BorderSide(color: Colors.white)
       ),
       contentPadding: EdgeInsets.symmetric(
         horizontal: 19.w,
@@ -26,8 +31,12 @@ Widget buidLastNameFormFeild() {
         filled: true,
         fillColor: Colors.white,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20.0.r),
-          borderSide: BorderSide(color: Colors.white)
+            borderRadius: BorderRadius.circular(20.0.r),
+            borderSide: BorderSide(color: Colors.white)
+        ),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20.0.r),
+            borderSide: BorderSide(color: Colors.white)
         ),
         contentPadding: EdgeInsets.symmetric(
           horizontal: 19.w,
@@ -46,6 +55,11 @@ Widget buidEmailAddressFormFeild() {
       fillColor: Colors.white,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20.0.r),
+          borderSide: BorderSide(color: Colors.white)
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20.0.r),
+          borderSide: BorderSide(color: Colors.white)
       ),
       contentPadding: EdgeInsets.symmetric(
         horizontal: 19.w,
@@ -63,7 +77,12 @@ Widget buidPhoneNumberFormFeild() {
         filled: true,
         fillColor: Colors.white,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20.0.r),
+            borderRadius: BorderRadius.circular(20.0.r),
+            borderSide: BorderSide(color: Colors.white)
+        ),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20.0.r),
+            borderSide: BorderSide(color: Colors.white)
         ),
         contentPadding: EdgeInsets.symmetric(
           horizontal: 19.w,
@@ -81,7 +100,12 @@ Widget buidAddressFormFeild() {
       filled: true,
       fillColor: Colors.white,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0.r),
+          borderRadius: BorderRadius.circular(20.0.r),
+          borderSide: BorderSide(color: Colors.white)
+      ),
+      enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0.r),
+          borderSide: BorderSide(color: Colors.white)
       ),
       contentPadding: EdgeInsets.symmetric(
         horizontal: 19.w,

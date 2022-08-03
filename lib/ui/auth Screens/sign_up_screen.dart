@@ -5,7 +5,7 @@ import 'package:mobile_assessment_flutter/ui/_shared/utils/app_colors.dart';
 import 'package:mobile_assessment_flutter/ui/auth%20Screens/auth_welcome_screen.dart';
 import 'package:mobile_assessment_flutter/ui/auth%20Screens/sign_in_screen.dart';
 import 'package:mobile_assessment_flutter/ui/auth%20Screens/widgets/Sign_up_button.dart';
-import 'package:mobile_assessment_flutter/ui/auth%20Screens/widgets/sigUp_widget.dart';
+import 'package:mobile_assessment_flutter/ui/auth%20Screens/widgets/form_widgets.dart';
 
 
 class SignUpScreen extends StatefulWidget {
