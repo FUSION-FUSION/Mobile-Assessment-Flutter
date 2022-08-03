@@ -44,3 +44,10 @@ TextStyle kSmallTextStyle = const TextStyle(
   fontSize: 22,
   fontWeight: FontWeight.w300,
 );
+
+TextStyle knormalTextStyle = const TextStyle(
+  // fontFamily: 'OpenSauceOne',
+  // color: kTextColor,
+  fontSize: 20,
+  fontWeight: FontWeight.w500,
+);

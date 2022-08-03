@@ -3,6 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:mobile_assessment_flutter/screens/launch_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 
+import 'screens/login_screen.dart';
+import 'screens/verification_screen.dart';
+
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
@@ -21,6 +24,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/intro': (context) => const Launch(),
         '/personal': (context) => const Personal(),
+        '/verify': (context) => const Verification(),
+        '/login': (context) => const Login()
       },
     );
   }

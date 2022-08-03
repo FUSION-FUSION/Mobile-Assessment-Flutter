@@ -17,6 +17,7 @@ class customAppBar extends StatelessWidget {
     return Stack(children: [
       Container(
         color: Color(0xffdce4e9),
+        height: 240,
         child: Image.asset('assets/images/bg-app-cloud.png'),
         width: double.infinity,
       ),
@@ -37,7 +38,7 @@ class customAppBar extends StatelessWidget {
             )
           ],
         ),
-        padding: EdgeInsets.only(top: 110, left: 20, right: 17),
+        padding: EdgeInsets.only(top: 80, left: 20, right: 17),
       )
     ]);
   }
