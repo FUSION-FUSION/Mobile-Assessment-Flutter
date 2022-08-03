@@ -41,6 +41,10 @@ class AppRouter extends _i2.RootStackRouter {
     SignUpEcommerce.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.SignUpEcommerce());
+    },
+    SignInscreen.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.SignInscreen());
     }
   };
 
@@ -50,7 +54,8 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(Usertype.name, path: '/Usertype'),
         _i2.RouteConfig(HomeScreen.name, path: '/home-screen'),
         _i2.RouteConfig(SignUpPersonal.name, path: '/sign-up-personal'),
-        _i2.RouteConfig(SignUpEcommerce.name, path: '/sign-up-ecommerce')
+        _i2.RouteConfig(SignUpEcommerce.name, path: '/sign-up-ecommerce'),
+        _i2.RouteConfig(SignInscreen.name, path: '/sign-inscreen')
       ];
 }
 
@@ -94,4 +99,12 @@ class SignUpEcommerce extends _i2.PageRouteInfo<void> {
       : super(SignUpEcommerce.name, path: '/sign-up-ecommerce');
 
   static const String name = 'SignUpEcommerce';
+}
+
+/// generated route for
+/// [_i1.SignInscreen]
+class SignInscreen extends _i2.PageRouteInfo<void> {
+  const SignInscreen() : super(SignInscreen.name, path: '/sign-inscreen');
+
+  static const String name = 'SignInscreen';
 }

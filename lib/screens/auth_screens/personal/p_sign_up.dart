@@ -4,8 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../../../providers/providers.dart';
+import '../../../routes/router.gr.dart';
 import '../../../utilities/constants/constants.dart';
 import '../../../widgets/widgets.dart';
+
+
 
 class SignUpPersonal extends StatefulWidget {
   const SignUpPersonal({Key? key}) : super(key: key);
@@ -111,8 +114,8 @@ class _SignUpPersonalState extends State<SignUpPersonal> {
                     SizedBox(height: 30.h),
                     Center(
                       child: GestureDetector(
-                        // onTap: () =>
-                        //     AutoRouter.of(context).push(const SignInscreen()),
+                        onTap: () =>
+                            AutoRouter.of(context).push(const SignInscreen()),
                         child: RichText(
                           text: TextSpan(
                               text: 'Already have an account?',
@@ -146,7 +149,9 @@ class _SignUpPersonalState extends State<SignUpPersonal> {
                             style: textTheme.subtitle1?.copyWith(),
                           ),
                           SButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              //?to verification
+                            },
                             height: 60.h,
                             width: 110.w,
                             color: SColors.primaryColor,

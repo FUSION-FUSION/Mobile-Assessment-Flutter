@@ -11,6 +11,8 @@ import '../screens/screens.dart';
     AutoRoute(page: HomeScreen),
      AutoRoute(page: SignUpPersonal),
       AutoRoute(page: SignUpEcommerce),
+    AutoRoute(page: SignInscreen),
+
   ],
 )
 class $AppRouter {}
