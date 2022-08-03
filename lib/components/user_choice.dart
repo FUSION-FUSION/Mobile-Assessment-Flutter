@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/screens/ecommerce_screen.dart';
+import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 import 'package:mobile_assessment_flutter/themes/theme_styles.dart';
 
 class UserChoice extends StatefulWidget {
@@ -17,7 +19,7 @@ class _UserChoiceState extends State<UserChoice> {
           height: 150,
           width: 500,
           child: ElevatedButton(
-              onPressed: onPressed,
+              onPressed: _onPersonalPressed,
               child: Text('Personal',
               style: ThemeStyles.buttonText,),
             style: ButtonStyle(
@@ -34,7 +36,7 @@ class _UserChoiceState extends State<UserChoice> {
         SizedBox(
           height: 150,
           width: 500,
-          child: ElevatedButton(onPressed: onPressed,
+          child: ElevatedButton(onPressed: _onEcommercePressed,
               child: Text('E-commerce',
               style: ThemeStyles.buttonText,),
             style: ButtonStyle(
@@ -49,6 +51,11 @@ class _UserChoiceState extends State<UserChoice> {
     );
   }
 
-  void onPressed() {
+  void _onPersonalPressed() {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalScreen()));
+  }
+
+  void _onEcommercePressed() {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>EcommerceScreen()));
   }
 }

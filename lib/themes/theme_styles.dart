@@ -19,4 +19,9 @@ static TextStyle buttonText = TextStyle(
   fontWeight: FontWeight.w600,
   color: ThemeColors.white,
 );
-}
+
+static TextStyle details = TextStyle(
+  fontSize: 18.0,
+  fontWeight: FontWeight.w100,
+  color: ThemeColors.black,
+);}
