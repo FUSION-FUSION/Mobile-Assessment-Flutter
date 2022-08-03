@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/views/screens/authentication/account_type_screen.dart';
 import 'package:mobile_assessment_flutter/views/screens/splash_screen.dart';
 import 'package:mobile_assessment_flutter/views/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +25,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final routes = {
-      '/': (context) => const SplashScreen(),
+      '/': (_) => const SplashScreen(),
+      AccountTypeScreen.route: (_) => const AccountTypeScreen(),
     };
 
     return MaterialApp(
