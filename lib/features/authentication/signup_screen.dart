@@ -26,6 +26,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
+              alignment: Alignment.topCenter,
               image: AssetImage('assets/bg-app-cloud.png'),
             ),
           ),
