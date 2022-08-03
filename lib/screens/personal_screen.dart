@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/screens/verification_screen.dart';
 import 'package:mobile_assessment_flutter/themes/theme_styles.dart';
 
+
 class PersonalScreen extends StatefulWidget {
   const PersonalScreen({Key? key}) : super(key: key);
 

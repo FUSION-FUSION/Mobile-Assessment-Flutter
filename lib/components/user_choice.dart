@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_assessment_flutter/screens/ecommerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
 import 'package:mobile_assessment_flutter/themes/theme_styles.dart';
 
@@ -56,6 +55,6 @@ class _UserChoiceState extends State<UserChoice> {
   }
 
   void _onEcommercePressed() {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>EcommerceScreen()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalScreen()));
   }
 }
