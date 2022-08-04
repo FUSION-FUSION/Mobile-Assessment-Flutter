@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './homepage.dart';
 
 class CongratsPage extends StatelessWidget {
   const CongratsPage({Key? key}) : super(key: key);
@@ -26,13 +27,15 @@ class CongratsPage extends StatelessWidget {
                   margin: EdgeInsets.all(0),
                   child: Text('Congratulations!',
                       style:
-                          TextStyle(fontSize: 35, fontWeight: FontWeight.w400)),
+                          TextStyle(fontFamily: 'JosefinSans',
+                              fontSize: 35, fontWeight: FontWeight.w400)),
                 ),
                 Container(
                   padding: EdgeInsets.only(top: 10),
                   child: Text('Your account has been successfully created.',
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w300)),
+                          TextStyle(fontFamily: 'JosefinSans',
+                              fontSize: 27, fontWeight: FontWeight.w200)),
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 10),
@@ -56,14 +59,18 @@ class CongratsPage extends StatelessWidget {
                       minimumSize: Size(100, 70),
                     ),
                     onPressed: () {
-                      // Navigator.of(context)
-                      //     .push(
-                      //     MaterialPageRoute(builder: (context) => HomePage())
-                      // );
+                      Navigator.of(context)
+                          .push(
+                          MaterialPageRoute(builder: (context) => HomePage())
+                      );
                     },
                     child: Padding(
                         padding: EdgeInsets.only(right: 30, left: 30),
-                        child: Text('Continue')),
+                        child: Text('Continue',
+                        style: TextStyle(
+                          fontFamily: 'JosefinSans',
+                          fontSize: 30,
+                        ),)),
                   ),
                 ),
               ],

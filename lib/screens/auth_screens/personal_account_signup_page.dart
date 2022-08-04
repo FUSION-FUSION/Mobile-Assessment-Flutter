@@ -31,20 +31,20 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                   margin: EdgeInsets.all(0),
                   child: Text('Welcome!',
                       style:
-                          TextStyle(fontSize: 35, fontWeight: FontWeight.w400)),
+                          TextStyle(fontSize: 35, fontFamily: 'JosefinSans')),
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 10),
                   child: Text(
                       'Create an account to get started with Cargo Express',
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w300)),
+                          TextStyle(fontSize: 27, fontFamily: 'JosefinSans', fontWeight: FontWeight.w300)),
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
                   child: Text(
                     'First Name',
-                    style: TextStyle(fontSize: 19),
+                    style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans'),
                   ),
                 ),
                 Container(
@@ -66,7 +66,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
                   child: Text(
                     'Your E-mail',
-                    style: TextStyle(fontSize: 19),
+                    style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans'),
                   ),
                 ),
                 Container(
@@ -88,7 +88,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
                   child: Text(
                     'Phone Number',
-                    style: TextStyle(fontSize: 19),
+                    style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans'),
                   ),
                 ),
                 Stack(
@@ -121,7 +121,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                           children: [
                             Text(
                               '+234',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans'),
                             ),
                             Icon(Icons.keyboard_arrow_down)
                           ],
@@ -130,7 +130,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
-                  child: Text('Password', style: TextStyle(fontSize: 19)),
+                  child: Text('Password', style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
                 ),
                 Container(
                     margin: EdgeInsets.all(0),
@@ -151,7 +151,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
                   child:
-                      Text('Confirm Password', style: TextStyle(fontSize: 19)),
+                      Text('Confirm Password', style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
                 ),
                 Container(
                     margin: EdgeInsets.all(0),
@@ -159,7 +159,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                       cursorHeight: 20,
                       autofocus: false,
                       obscureText: true,
-                      style: TextStyle(fontSize: 23.0),
+                      style: TextStyle(fontSize: 23, fontFamily: 'JosefinSans'),
                       decoration: InputDecoration(
                           filled: true,
                           fillColor: Color(0xFFFCFDFF),
@@ -175,7 +175,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                   child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
                           shape: StadiumBorder(),
-                          textStyle: TextStyle(fontWeight: FontWeight.bold),
+                          textStyle: TextStyle( fontFamily: 'JosefinSans', fontWeight: FontWeight.bold),
                           primary: Color(0xFF46A5B9),
                           side: BorderSide.none),
                       onPressed: () {
@@ -187,17 +187,19 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                           child: RichText(
                             text: TextSpan(
                                 style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 20,
+                                    fontFamily: 'JosefinSans',
                                     decoration: TextDecoration.none),
                                 children: <TextSpan>[
                                   TextSpan(
                                       text: 'Already have an account? ',
                                       style: TextStyle(
                                           color: Colors.grey[700],
-                                          fontWeight: FontWeight.w300)),
+                                          )),
                                   TextSpan(
                                       text: 'Log In',
                                       style: TextStyle(
+                                          fontFamily: 'JosefinSans',
                                           color: Color(0xFF46A5B9),
                                           fontWeight: FontWeight.bold))
                                 ]),
@@ -212,6 +214,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             shape: StadiumBorder(),
                             textStyle: TextStyle(
+                                fontFamily: 'JosefinSans',
                                 fontSize: 30, fontWeight: FontWeight.w400),
                             primary: Color(0xFFF5F5F5),
                             onPrimary: Colors.white,
@@ -227,6 +230,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                                 'Back',
                                 style: TextStyle(
                                   color: Colors.black,
+                                    fontFamily: 'JosefinSans'
                                 ),
                               )),
                         ),
@@ -234,6 +238,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             shape: StadiumBorder(),
                             textStyle: TextStyle(
+                                fontFamily: 'JosefinSans',
                                 fontSize: 30, fontWeight: FontWeight.w400),
                             primary: Color(0xFF46A5B9),
                             onPrimary: Colors.white,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../account_type.dart';
+import '../homepage.dart';
 
 
 class SignInPage extends StatelessWidget {
@@ -25,24 +26,24 @@ class SignInPage extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(0),
                 child: Text('Sign In',
-                style: TextStyle(fontSize: 35, fontWeight: FontWeight.w400)),
+                style: TextStyle(fontSize: 35, fontFamily: 'JosefinSans', fontWeight: FontWeight.bold)),
               ),
               Container(
                 margin: EdgeInsets.only(top: 10),
                 child: Text('Sign in to continue to Cargo Express',
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300)),
+                    style: TextStyle(fontSize: 26, fontFamily: 'JosefinSans', fontWeight: FontWeight.w300)),
               ),
               Container(
                 margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
                 child: Text('Phone Number / E-mail',
-                style: TextStyle(fontSize: 19),),
+                style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
               ),
               Container(
                   margin: EdgeInsets.all(0),
                   child: TextField(
                     cursorHeight: 20,
                     autofocus: false,
-                    style: TextStyle(fontSize: 20.0),
+                    style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans'),
                     decoration: InputDecoration(
                       filled: true,
                         fillColor: Color(0xFFFCFDFF),
@@ -57,7 +58,7 @@ class SignInPage extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
                 child: Text('Password',
-                style: TextStyle(fontSize: 19)),
+                style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
               ),
               Container(
                   margin: EdgeInsets.all(0),
@@ -65,7 +66,7 @@ class SignInPage extends StatelessWidget {
                     cursorHeight: 20,
                     autofocus: false,
                     obscureText: true,
-                    style: TextStyle(fontSize: 23.0),
+                    style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans'),
                     decoration: InputDecoration(
                         filled: true,
                         fillColor: Color(0xFFFCFDFF),
@@ -83,7 +84,7 @@ class SignInPage extends StatelessWidget {
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     shape: StadiumBorder(),
-                    textStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    textStyle: TextStyle(fontSize: 25, fontFamily: 'JosefinSans', fontWeight: FontWeight.bold),
                     primary: Color(0xFF46A5B9),
                     side: BorderSide.none
                   ),
@@ -106,17 +107,17 @@ class SignInPage extends StatelessWidget {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: StadiumBorder(),
-                    textStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    textStyle: TextStyle(fontSize: 32, fontFamily: 'JosefinSans'),
                     primary: Color(0xFF46A5B9),
                     onPrimary: Colors.white,
                     minimumSize: Size(100, 70),
 
                   ),
                   onPressed: () {
-                    // Navigator.of(context)
-                    //     .push(
-                    //     MaterialPageRoute(builder: (context) => HomePage())
-                    // );
+                    Navigator.of(context)
+                        .push(
+                        MaterialPageRoute(builder: (context) => HomePage())
+                    );
                   },
                   child: Padding(
                       padding: EdgeInsets.only(right: 30, left: 30),

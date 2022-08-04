@@ -31,7 +31,7 @@ class OtpVerificationPage extends StatelessWidget {
                   margin: EdgeInsets.all(0),
                   child: Text('Verification!',
                       style:
-                          TextStyle(fontSize: 35, fontWeight: FontWeight.w400)),
+                          TextStyle(fontSize: 35, fontWeight: FontWeight.w400, fontFamily: 'JosefinSans')),
                 ),
                 Container(
                     margin: EdgeInsets.only(top: 10, bottom: 30),
@@ -44,22 +44,30 @@ class OtpVerificationPage extends StatelessWidget {
                             TextSpan(
                                 text: 'We sent you an ',
                                 style: TextStyle(
+                                    fontFamily: 'JosefinSans',
+                                    fontSize: 21,
                                     color: Colors.grey[700],
                                     fontWeight: FontWeight.w300)),
                             TextSpan(
                                 text: 'SMS ',
                                 style: TextStyle(
                                     color: Color(0xFF46A5B9),
+                                    fontFamily: 'JosefinSans',
+                                    fontSize: 21,
                                     fontWeight: FontWeight.w400)),
                             TextSpan(
                                 text: 'code on \nnumber ',
                                 style: TextStyle(
                                     color: Colors.grey[700],
+                                    fontFamily: 'JosefinSans',
+                                    fontSize: 21,
                                     fontWeight: FontWeight.w300)),
                             TextSpan(
                                 text: '+2348108960610',
                                 style: TextStyle(
                                     color: Color(0xFF46A5B9),
+                                    fontFamily: 'JosefinSans',
+                                    fontSize: 21,
                                     fontWeight: FontWeight.w400))
                           ]),
                     )),
@@ -194,17 +202,19 @@ class OtpVerificationPage extends StatelessWidget {
                   margin: EdgeInsets.only(top: 10),
                   child: Text('Code Expired',
                       style: TextStyle(
+                          fontFamily: 'JosefinSans',
+                          fontSize: 21,
                           color: Colors.red,
-                          fontSize: 18,
                           fontWeight: FontWeight.w400),
                       textAlign: TextAlign.right),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 30),
+                  margin: EdgeInsets.only(top: 40),
                   child: Text('Resend Code',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 25,
+                          fontSize: 27,
+                          fontFamily: 'JosefinSans',
                           fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center),
                 ),
