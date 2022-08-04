@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 
 class AppText extends StatelessWidget {
   String text;
@@ -18,7 +19,7 @@ class AppText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text,
         style: GoogleFonts.poppins(
-            fontSize: size,
+            fontSize: Dimensions.sizeHeightPercent(size),
             color: color,
             fontWeight: bold ? FontWeight.w500 : FontWeight.w300));
   }
