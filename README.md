@@ -12,9 +12,9 @@
 
 <table>
   <tr>
-    <td><img src="./assets/screenshots/screenshot3.png" width=270 height=480></td>
-    <td><img src="./assets/screenshots/screenshot5.png" width=270 height=480></td>
-    <td><img src="./assets/screenshots/screenshot7.png" width=270 height=480></td>
+    <td><img src="./assets/screenshots/Screenshot3.png" width=270 height=480></td>
+    <td><img src="./assets/screenshots/Screenshot5.png" width=270 height=480></td>
+    <td><img src="./assets/screenshots/Screenshot7.png" width=270 height=480></td>
   </tr>
  </table>
 
