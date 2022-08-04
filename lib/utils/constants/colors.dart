@@ -10,5 +10,8 @@ class Palette{
   static Color get kBlackColor => const Color(0xff040405);
   static Color get kWhiteColor => const Color(0xffeceef1);
   static Color get kTextFieldColor => const Color(0xffFDFEFF);
-
+  static Color get kHoverColor => const Color(0xff8FF0EA);
+  static Color get kPendingColor => const Color(0xff808080);
+  static Color get kDashColor => const Color(0xffA3CAB3);
 }
+

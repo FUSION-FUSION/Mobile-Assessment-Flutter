@@ -195,3 +195,32 @@ class CustomAuthButton extends StatelessWidget {
     );
   }
 }
+
+
+class RouteTracker extends StatelessWidget {
+
+  RouteTracker({required this.fill, required this.hover});
+  Color fill;
+  Color hover;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(3.37),
+      height: getScreenHeight(19),
+      width: getScreenWidth(19),
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: fill
+      ),
+      child: Container(
+        height: getScreenHeight(12),
+        width: getScreenWidth(12),
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: hover
+        ),
+      ),
+    );
+  }
+}

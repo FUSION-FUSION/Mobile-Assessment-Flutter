@@ -16,9 +16,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   late AnimationController _animationController;
   late Animation _animation;
+  bool loaded = false;
 
   @override
-  void initState() {
+  void initState(){
     // TODO: implement initState
     super.initState();
 
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       duration: Duration(seconds: 5)
     );
 
-    _animation = CurvedAnimation(parent: _animationController, curve: Curves.bounceOut);
+    _animation = CurvedAnimation(parent: _animationController, curve: Curves.easeOut);
 
     _animationController.forward();
 
@@ -38,7 +39,14 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     });
 
 
-    Timer(const Duration(seconds: 5), ()=> Get.offAndToNamed('/getStartedScreen'));
+    Timer(const Duration(seconds: 6), (){
+      loaded = true;
+      Timer(const Duration(milliseconds: 200), ()=> Get.offAndToNamed('/getStartedScreen'));
+    }
+
+    );
+
+
   }
 
   @override
@@ -60,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
         child: Center(
           child: SizedBox(
             height: _animation.value * 200,
-              child: Image.asset('${imagePath}splash_logo.png')),
+              child: loaded ? null : Image.asset('${imagePath}splash_logo.png')) ,
         ),
       ),
     );
