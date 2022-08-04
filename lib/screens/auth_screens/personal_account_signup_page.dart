@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './signin_page.dart';
 import '../account_type.dart';
+import './otp_verification_page.dart';
 
 class PersonalAccountSignUpPage extends StatelessWidget {
   const PersonalAccountSignUpPage({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
           margin: EdgeInsets.only( left: 20, right: 20),
           padding: EdgeInsets.only(top: 30),
           decoration: const BoxDecoration(
-            image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png')),
+            image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png'), repeat: ImageRepeat.repeatY),
           ),
           child: Container(
             child: ListView(
@@ -209,7 +210,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                 ),
 
                 Container(
-                  margin: EdgeInsets.only(top: 20, bottom: 20),
+                  margin: EdgeInsets.only(top: 20, bottom: 40),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -246,7 +247,7 @@ class PersonalAccountSignUpPage extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context)
                               .push(
-                              MaterialPageRoute(builder: (context) => AccountTypePage())
+                              MaterialPageRoute(builder: (context) => OtpVerificationPage())
                           );
                         },
                         child: Padding(

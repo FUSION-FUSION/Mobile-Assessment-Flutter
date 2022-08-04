@@ -38,7 +38,7 @@ class AccountTypePage extends StatelessWidget {
             ),
             ),
             decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png'))
+              image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png'), repeat: ImageRepeat.repeatY)
             ),
           ),
           Container(

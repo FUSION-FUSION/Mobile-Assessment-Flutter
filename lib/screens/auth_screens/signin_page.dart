@@ -17,12 +17,9 @@ class SignInPage extends StatelessWidget {
         width: screenWidth,
         margin: EdgeInsets.only(top: screenHeight * 0.18, left: 20, right: 20),
         decoration: const BoxDecoration(
-            image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png')),
+            image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png'), repeat: ImageRepeat.repeatY),
         ),
         child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(image: AssetImage('assetName'))
-          ),
           child: ListView(
             children: [
               Container(
