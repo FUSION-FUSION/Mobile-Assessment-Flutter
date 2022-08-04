@@ -19,7 +19,7 @@ class WelcomeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (() => onTap),
+      onTap: (() => onTap()),
       child: Container(
         decoration: BoxDecoration(
             border: Border.all(width: 1.8, color: borderColor),

@@ -22,7 +22,7 @@ class InputWidget extends StatelessWidget {
               ),
               Text(
                 title,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
               const SizedBox(
                 height: 8.0,

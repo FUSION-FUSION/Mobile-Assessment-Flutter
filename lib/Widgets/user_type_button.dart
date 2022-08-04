@@ -16,7 +16,7 @@ class UserTypeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return GestureDetector(
-      onTap: onTap(),
+      onTap: ()=>onTap(),
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(vertical: 45.0),

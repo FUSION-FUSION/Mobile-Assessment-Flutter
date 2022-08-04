@@ -6,8 +6,7 @@ import '../Util/colors.dart';
 class UserTopSection extends StatelessWidget {
   final String header;
   final String subHeader;
-  const UserTopSection(
-      {Key? key, required this.header, required this.subHeader})
+  const UserTopSection({Key? key, required this.header, this.subHeader = ''})
       : super(key: key);
 
   @override
@@ -23,14 +22,16 @@ class UserTopSection extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Text(
-          subHeader,
-          style: TextStyle(
-            color: kGreyColor,
-            fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
-            letterSpacing: 1.3,
-          ),
-        ),
+        subHeader != ''
+            ? Text(
+                subHeader,
+                style: TextStyle(
+                  color: kGreyColor,
+                  fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
+                  letterSpacing: 1.3,
+                ),
+              )
+            : const SizedBox.shrink()
       ],
     );
   }

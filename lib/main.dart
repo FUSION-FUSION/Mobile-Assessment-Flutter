@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/Screens/ecommerce_user_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/personal_user_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/user_type_screen.dart';
+import 'package:mobile_assessment_flutter/Screens/verification_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const UserTypeScreen(),
-      // home: const PersonalUserScreen(),
-      home: const PersonalUserScreen(),
+      initialRoute: UserTypeScreen.id,
+      routes: {
+        UserTypeScreen.id: (context) => const UserTypeScreen(),
+        EcommerceUserScreen.id: (context) => const EcommerceUserScreen(),
+        PersonalUserScreen.id: (context) => const PersonalUserScreen(),
+        VerificationScreen.id: (context) => const VerificationScreen()
+      },
     );
   }
 }
