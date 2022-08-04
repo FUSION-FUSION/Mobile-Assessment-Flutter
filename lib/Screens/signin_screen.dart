@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/Screens/home_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/verification_screen.dart';
 import 'package:mobile_assessment_flutter/Util/colors.dart';
 import 'package:mobile_assessment_flutter/Util/utils.dart';
+import 'package:mobile_assessment_flutter/Widgets/background_image.dart';
 import 'package:mobile_assessment_flutter/Widgets/input_widgets.dart';
 import 'package:mobile_assessment_flutter/Widgets/user_topsection.dart';
 import 'package:mobile_assessment_flutter/Widgets/welcome_button.dart';
 
-import '../Widgets/background_image.dart';
-
-class PersonalUserScreen extends StatelessWidget {
-  static const id = '/personal';
-  const PersonalUserScreen({Key? key}) : super(key: key);
+class SignInScreen extends StatelessWidget {
+  static const id = '/sign-in';
+  const SignInScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,20 +26,16 @@ class PersonalUserScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const UserTopSection(
-                    header: 'Welcome!',
-                    subHeader:
-                        'Create an account to get started \nwith Cargo Express',
+                    header: 'Sign In',
+                    subHeader: 'Sign in to countinue to Cargo Express',
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  const InputWidget(title: 'Full Name'),
-                  const InputWidget(title: 'Your E-mail'),
+                  const InputWidget(title: 'Phone Number / E-mail'),
                   const InputWidget(title: 'Password'),
-                  const InputWidget(title: 'Password'),
-                  const InputWidget(title: 'Confirm Password'),
                   const SizedBox(
-                    height: 25,
+                    height: 40,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -48,15 +44,7 @@ class PersonalUserScreen extends StatelessWidget {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: 'Already have an account? ',
-                              style: TextStyle(
-                                color: kGreyColor,
-                                fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
-                                letterSpacing: 1.3,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'Log In ',
+                              text: 'Create an Account ',
                               style: TextStyle(
                                 color: kPrimaryColor,
                                 fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
@@ -70,26 +58,17 @@ class PersonalUserScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 30.0,
+                    height: 60,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       WelcomeButton(
-                        text: 'Back',
-                        bgcolor: klightButtonColor,
-                        textcolor: Colors.black87,
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        borderColor: kWhiteColor,
-                      ),
-                      WelcomeButton(
-                        text: 'Next',
+                        text: 'Sign In',
                         bgcolor: kPrimaryColor,
                         textcolor: kWhiteColor,
                         onTap: () {
-                          Navigator.pushNamed(context, VerificationScreen.id);
+                          Navigator.pushNamed(context, HomeScreen.id);
                         },
                         borderColor: kPrimaryColor,
                       )
