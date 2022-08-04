@@ -62,13 +62,31 @@ class _PersonalScreenState extends State<PersonalScreen> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(17),
                         side: BorderSide(color: Colors.grey.shade100)),
-                    child: CountryCodePicker(
-                      initialSelection: 'NG',
-                      showFlagDialog: true,
-                      showFlag: false,
-                      showDropDownButton: true,
-                      showFlagMain: false,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '+234',
+                          style: TextStyle(
+                            fontFamily: FontFamily.kLightFamily,
+                            fontSize: getScreenWidth(16),
+                            fontWeight: FontWeight.w300,
+                            color: Palette.kHeaderTextColor
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          color: Palette.kHeaderTextColor,
+                        )
+                      ],
                     ),
+                    // child: CountryCodePicker(
+                    //   initialSelection: 'NG',
+                    //   showFlagDialog: true,
+                    //   showFlag: false,
+                    //   showDropDownButton: true,
+                    //   showFlagMain: false,
+                    // ),
                   ),
                 ),
                 keyboardType: TextInputType.number,
