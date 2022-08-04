@@ -9,14 +9,14 @@ class HomePageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 219, 217, 217),
+      backgroundColor: const Color.fromRGBO(248, 248, 250, 1),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 219, 217, 217),
+        backgroundColor: const Color.fromRGBO(248, 248, 250, 1),
         elevation: 0,
         centerTitle: true,
         title: const Text(
           'Hello, John.',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
           color: Colors.black,
@@ -26,8 +26,9 @@ class HomePageScreen extends StatelessWidget {
         actions: const [
           ImageIcon(
             AssetImage('assets/ic-notification.png'),
-            // color: Colors.black,
+            color: Colors.black,
           ),
+          SizedBox(width: 15)
         ],
       ),
       body: SingleChildScrollView(
@@ -56,7 +57,8 @@ class HomePageScreen extends StatelessWidget {
                       children: const [
                         Text(
                           'Total Balance',
-                          style: TextStyle(fontWeight: FontWeight.w400),
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.w400),
                         ),
                         Text('₦50,000',
                             style: TextStyle(
@@ -111,7 +113,7 @@ class HomePageScreen extends StatelessWidget {
                     const Text(
                       'Track your waybill',
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                     ),
                     Container(
                       height: 42,
@@ -173,8 +175,8 @@ class HomePageScreen extends StatelessWidget {
                 child: Text(
                   'Send a Package',
                   style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
@@ -260,6 +262,14 @@ class HomePageScreen extends StatelessWidget {
                     ),
                     child: Stack(
                       children: [
+                        Positioned(
+                          top: 15,
+                          right: 0,
+                          left: 0,
+                          child: Image.asset(
+                            'assets/ic-curve.png',
+                          ),
+                        ),
                         Container(
                           padding: EdgeInsets.only(left: 10, top: 30),
                           height: 95,
@@ -331,6 +341,14 @@ class HomePageScreen extends StatelessWidget {
                     ),
                     child: Stack(
                       children: [
+                        Positioned(
+                          top: 15,
+                          right: 0,
+                          left: 0,
+                          child: Image.asset(
+                            'assets/ic-curve.png',
+                          ),
+                        ),
                         Container(
                           padding: const EdgeInsets.only(left: 10, top: 30),
                           height: 95,
@@ -587,6 +605,7 @@ class HomePageScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 100)
             ],
           ),
         ),

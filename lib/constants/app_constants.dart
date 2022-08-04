@@ -14,5 +14,5 @@ class AppTextStyles {
   );
 }
 
-const kThemeColor = Color.fromARGB(255, 75, 177, 197);
+const kThemeColor = Color.fromRGBO(70, 165, 186, 1);
 const String googleKey = 'AIzaSyCD8T1EbqGNNQzvpdk7EWoTDcidC8LXpQQ';

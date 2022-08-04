@@ -20,7 +20,7 @@ class _TrackScreenState extends State<TrackScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final panelMinHeight = MediaQuery.of(context).size.height * 0.28;
+    const panelMinHeight = 180.0;
     final panelMaxHeight = MediaQuery.of(context).size.height * 0.90;
     return Scaffold(
       body: SlidingUpPanel(
@@ -30,13 +30,25 @@ class _TrackScreenState extends State<TrackScreen> {
         borderRadius: const BorderRadius.vertical(
           top: Radius.circular(30),
         ),
-        body: GoogleMap(
-          initialCameraPosition:
-              const CameraPosition(target: sourceLocation, zoom: 14.5),
-          markers: {
-            const Marker(
-                markerId: MarkerId('source'), position: sourceLocation),
-          },
+        body: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          child: Stack(
+            children: [
+              Container(
+                color: Colors.black,
+                height: 50,
+                child: Text('Hello'),
+              ),
+              GoogleMap(
+                initialCameraPosition:
+                    const CameraPosition(target: sourceLocation, zoom: 14.5),
+                markers: {
+                  const Marker(
+                      markerId: MarkerId('source'), position: sourceLocation),
+                },
+              ),
+            ],
+          ),
         ),
         panelBuilder: (controller) {
           return PanelWidget(
@@ -79,12 +91,198 @@ class PanelWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        Container(
-          height: 100,
-          decoration: BoxDecoration(
-            color: kThemeColor,
-            borderRadius: BorderRadius.circular(10),
-          ),
+        Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(
+                  left: 10, right: 10, top: 20, bottom: 20),
+              height: 120,
+              decoration: BoxDecoration(
+                color: kThemeColor,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Pickup',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'Jibowo Terminal',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'Abuja Terminal',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'Completed',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        height: 10,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white,
+                        ),
+                      ),
+                      Container(
+                        height: 2.2,
+                        width: 97,
+                        color: Colors.white,
+                      ),
+                      Container(
+                        height: 10,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white,
+                        ),
+                      ),
+                      Container(
+                        height: 2.2,
+                        width: 97,
+                        color: Colors.grey[400],
+                      ),
+                      Container(
+                        height: 10,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.grey[400],
+                        ),
+                      ),
+                      Container(
+                        height: 2.2,
+                        width: 97,
+                        color: Colors.grey[400],
+                      ),
+                      Container(
+                        height: 10,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.grey[400],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        '04 Mar, 2022',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        '05 Mar, 2022',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 20),
+        Row(
+          children: const [
+            SizedBox(width: 20),
+            Text(
+              'Route Details',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            ),
+          ],
+        ),
+        ListView(
+          padding: const EdgeInsets.only(top: 0),
+          shrinkWrap: true,
+          children: const [
+            SizedBox(
+              height: 65,
+              child: ListTile(
+                leading: Icon(
+                  Icons.radio_button_checked_sharp,
+                  color: kThemeColor,
+                ),
+                trailing: Icon(
+                  Icons.check_box_outlined,
+                  color: kThemeColor,
+                ),
+                title: Text('Delivered Successfully'),
+                subtitle: Text('Bishop\'s Court, Owerri'),
+              ),
+            ),
+            SizedBox(
+              height: 65,
+              child: ListTile(
+                leading: Icon(
+                  Icons.radio_button_checked_sharp,
+                  color: kThemeColor,
+                ),
+                trailing: Icon(
+                  Icons.check_box_outlined,
+                  color: kThemeColor,
+                ),
+                title: Text('Delivered Successfully'),
+                subtitle: Text('Bishop\'s Court, Owerri'),
+              ),
+            ),
+            SizedBox(
+              height: 65,
+              child: ListTile(
+                leading: Icon(
+                  Icons.radio_button_off,
+                ),
+                trailing: Icon(
+                  Icons.check_box_outline_blank,
+                ),
+                title: Text('Delivered Successfully'),
+                subtitle: Text('Bishop\'s Court, Owerri'),
+              ),
+            ),
+            SizedBox(
+              height: 65,
+              child: ListTile(
+                leading: Icon(
+                  Icons.radio_button_off,
+                ),
+                trailing: Icon(
+                  Icons.check_box_outline_blank,
+                ),
+                title: Text('Delivered Successfully'),
+                subtitle: Text('Bishop\'s Court, Owerri'),
+              ),
+            ),
+          ],
         )
       ],
     );
