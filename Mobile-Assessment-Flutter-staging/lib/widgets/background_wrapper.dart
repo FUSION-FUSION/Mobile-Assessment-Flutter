@@ -18,7 +18,6 @@ class BackGroundWrapper extends StatelessWidget {
               height: height * (1 / 3),
               width: double.infinity,
               decoration: const BoxDecoration(
-                // color: Color.fromARGB(255, 199, 222, 231),
                 image: DecorationImage(
                   image: AssetImage('assets/bg-app-cloud.png'),
                   fit: BoxFit.fill,
@@ -29,8 +28,8 @@ class BackGroundWrapper extends StatelessWidget {
         ),
         decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
-            Color(0xffDEE9EA),
-            Colors.white,
+            Color.fromARGB(255, 201, 247, 248),
+            Colors.white70,
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_assessment_flutter/screens/home_screen.dart';
+import 'package:mobile_assessment_flutter/home/home_screen.dart';
 import 'package:mobile_assessment_flutter/widgets/background_wrapper.dart';
 import 'package:mobile_assessment_flutter/widgets/custom_button.dart';
 import 'package:mobile_assessment_flutter/widgets/header_text.dart';
