@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../congrats_page.dart';
 
 
 class OtpVerificationPage extends StatelessWidget {
@@ -16,7 +17,7 @@ class OtpVerificationPage extends StatelessWidget {
         body: Container(
 
           width: screenWidth,
-          margin: EdgeInsets.only(top: screenHeight * 0.18, left: 20, right: 20),
+          padding: EdgeInsets.only(top: screenHeight * 0.18, left: 20, right: 20),
           decoration: const BoxDecoration(
             image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png'), repeat: ImageRepeat.repeatY),
           ),
@@ -216,10 +217,10 @@ class OtpVerificationPage extends StatelessWidget {
 
                     ),
                     onPressed: () {
-                      // Navigator.of(context)
-                      //     .push(
-                      //     MaterialPageRoute(builder: (context) => HomePage())
-                      // );
+                      Navigator.of(context)
+                          .push(
+                          MaterialPageRoute(builder: (context) => CongratsPage())
+                      );
                     },
                     child: Container(
                         child: Icon(Icons.arrow_forward_sharp, size: 30,)
