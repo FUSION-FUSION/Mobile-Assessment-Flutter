@@ -36,7 +36,7 @@ class PackageScreen extends StatelessWidget {
                       Stack(
                         children: [
                           Container(
-                            height: 200,
+                            height: 100,
                             width: 100,
                             padding: EdgeInsets.all(15.0),
                             alignment: Alignment.topRight,
