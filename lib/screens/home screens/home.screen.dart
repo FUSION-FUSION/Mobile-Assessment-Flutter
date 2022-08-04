@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../__lib.dart';
 
@@ -85,18 +84,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: assetsImage(AppAssets.searchIcon, both: 14.26),
                 ),
                 suffixIcon: Padding(
-                  padding: pad(horiz: 3, vert: 2),
+                  padding: const EdgeInsets.only(right: 3),
                   child: InkWell(
-                    onTap: () => pushScreen(const TrackingScreen()),
-                    child: Container(
-                        padding: pad(horiz: 20, vert: 9),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
-                          color: AppColors.brandBlue,
-                        ),
+                    onTap: () {},
+                    child: button(
+                        onPressed: () => pushScreen(const TrackingScreen()),
+                        borderRadius: 14,
+                        padding: pad(vert: 9, horiz: 20),
                         child: text('Track', color: AppColors.white)),
                   ),
                 ),
+                suffixIconConstraints:
+                    BoxConstraints(minHeight: eqH(48), minWidth: eqW(91)),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(17),
                   borderSide:
