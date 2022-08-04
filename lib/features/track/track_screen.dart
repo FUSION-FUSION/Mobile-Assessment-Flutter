@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
@@ -21,41 +22,85 @@ class _TrackScreenState extends State<TrackScreen> {
   @override
   Widget build(BuildContext context) {
     const panelMinHeight = 180.0;
-    final panelMaxHeight = MediaQuery.of(context).size.height * 0.90;
+    final panelMaxHeight = MediaQuery.of(context).size.height * 0.892;
     return Scaffold(
-      body: SlidingUpPanel(
-        controller: panelController,
-        minHeight: panelMinHeight,
-        maxHeight: panelMaxHeight,
-        borderRadius: const BorderRadius.vertical(
-          top: Radius.circular(30),
-        ),
-        body: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          child: Stack(
-            children: [
-              Container(
-                color: Colors.black,
-                height: 50,
-                child: Text('Hello'),
-              ),
-              GoogleMap(
-                initialCameraPosition:
-                    const CameraPosition(target: sourceLocation, zoom: 14.5),
-                markers: {
-                  const Marker(
-                      markerId: MarkerId('source'), position: sourceLocation),
-                },
-              ),
-            ],
+      body: Stack(
+        children: [
+          SlidingUpPanel(
+            controller: panelController,
+            minHeight: panelMinHeight,
+            maxHeight: panelMaxHeight,
+            borderRadius: const BorderRadius.vertical(
+              top: Radius.circular(30),
+            ),
+            body: GoogleMap(
+              initialCameraPosition:
+                  const CameraPosition(target: sourceLocation, zoom: 14.5),
+              markers: {
+                const Marker(
+                    markerId: MarkerId('source'), position: sourceLocation),
+              },
+            ),
+            panelBuilder: (controller) {
+              return PanelWidget(
+                controller: controller,
+                panelController: panelController,
+              );
+            },
           ),
-        ),
-        panelBuilder: (controller) {
-          return PanelWidget(
-            controller: controller,
-            panelController: panelController,
-          );
-        },
+          Positioned(
+            top: 50,
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                const SizedBox(width: 20),
+                GestureDetector(
+                  onTap: () => context.pop(),
+                  child: Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: const [
+                        BoxShadow(
+                          offset: Offset(0, 3),
+                          blurRadius: 1,
+                          color: Color.fromARGB(255, 197, 195, 195),
+                        )
+                      ],
+                    ),
+                    child: const Center(
+                      child: Icon(Icons.arrow_back),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 25),
+                Container(
+                  height: 40,
+                  width: 270,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(
+                        offset: Offset(0, 3),
+                        blurRadius: 1,
+                        color: Color.fromARGB(255, 197, 195, 195),
+                      )
+                    ],
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'HH-INT-D9FD00-JBW-ORI',
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
