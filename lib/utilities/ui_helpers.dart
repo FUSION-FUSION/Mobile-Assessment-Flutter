@@ -67,6 +67,46 @@ TextStyle kwhitesmallbutttonstyle = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
 ));
 
+TextStyle kgreetingstyle = GoogleFonts.poppins(
+    textStyle: TextStyle(
+  color: const Color(0xff1F1F1F),
+  fontSize: 24.sp,
+  fontWeight: FontWeight.w600,
+));
+
+TextStyle ktotalstyle = GoogleFonts.poppins(
+    textStyle: TextStyle(
+  color: const Color(0xff1F1F1F),
+  fontSize: 15.6.sp,
+  fontWeight: FontWeight.w400,
+));
+
+TextStyle kTopupstyle = GoogleFonts.poppins(
+    textStyle: TextStyle(
+  color: Colors.white,
+  fontSize: 15.6.sp,
+  fontWeight: FontWeight.w500,
+));
+TextStyle kwaybillstyle = GoogleFonts.poppins(
+    textStyle: TextStyle(
+  color: const Color(0xff1F1F1F),
+  fontSize: 20.sp,
+  fontWeight: FontWeight.w600,
+));
+
+TextStyle kthinWaybillstyle = GoogleFonts.poppins(
+    textStyle: TextStyle(
+  color: const Color(0xff606060),
+  fontSize: 17.55.sp,
+  fontWeight: FontWeight.w300,
+));
+
+TextStyle kboxTitlestyle = GoogleFonts.poppins(
+    textStyle: TextStyle(
+  color: const Color(0xff1F1F1F),
+  fontSize: 18.sp,
+  fontWeight: FontWeight.w600,
+));
 TextStyle kBigWhiteTextStyle = const TextStyle(
   color: Colors.white,
   fontSize: 36,
@@ -87,6 +127,6 @@ TextStyle kSmallTextStyle = const TextStyle(
 TextStyle knormalTextStyle = const TextStyle(
   // fontFamily: 'OpenSauceOne',
   // color: kTextColor,
-  fontSize: 20,
+  fontSize: 24,
   fontWeight: FontWeight.w500,
 );

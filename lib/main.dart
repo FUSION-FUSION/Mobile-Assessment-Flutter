@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobile_assessment_flutter/screens/begin.dart';
 import 'package:mobile_assessment_flutter/screens/congartulation.dart';
 import 'package:mobile_assessment_flutter/screens/e-commerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/home_screen.dart';
@@ -29,8 +28,12 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       designSize: const Size(428, 926),
       builder: (BuildContext context, child) => MaterialApp(
+        theme: ThemeData(
+          primaryColor: Colors
+              .black, //here it goes try changing this to your preferred colour
+        ),
         debugShowCheckedModeBanner: false,
-        home: Home(),
+        home: const Home(),
         routes: {
           '/intro': (context) => const Launch(),
           '/personal': (context) => const Personal(),
