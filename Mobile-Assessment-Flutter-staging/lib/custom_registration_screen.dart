@@ -2,9 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/background_wrapper.dart';
+import 'package:mobile_assessment_flutter/sign_in.dart';
+import 'package:mobile_assessment_flutter/verification_screen.dart';
 import 'package:mobile_assessment_flutter/welcome_screen.dart';
 
 class RegistrationScreen extends StatelessWidget {
+  static const String id = 'Registration_screen';
   RegistrationScreen({Key? key, this.isPersonal = true}) : super(key: key);
   final TextEditingController controller1 = TextEditingController();
   final TextEditingController controller2 = TextEditingController();
@@ -21,7 +24,7 @@ class RegistrationScreen extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-              padding: const EdgeInsets.only(top: 60, right: 15, left: 15),
+              padding: const EdgeInsets.only(top: 110, right: 15, left: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -37,8 +40,20 @@ class RegistrationScreen extends StatelessWidget {
                       text: isPersonal ? 'Your E-mail' : 'Official E-mail',
                       controller: controller2),
                   TextAndContainers(
-                      text: isPersonal ? 'Phone Number' : 'Contact Number',
-                      controller: controller3),
+                    text: isPersonal ? 'Phone Number' : 'Contact Number',
+                    controller: controller3,
+                    icon: Row(
+                      children: [
+                        Text('+234',
+                            style:
+                                TextStyle(fontSize: 15, color: Colors.black45)),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          color: Colors.black54,
+                        )
+                      ],
+                    ),
+                  ),
                   TextAndContainers(text: 'Password', controller: controller4),
                   TextAndContainers(
                       text: 'Confirm Password', controller: controller5),
@@ -57,7 +72,9 @@ class RegistrationScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
                             child: SizedBox(
                               width: size.width * .3,
                               height: size.height * .08,
@@ -73,8 +90,11 @@ class RegistrationScreen extends StatelessWidget {
                           ),
                           CustomButton(
                             text: 'Next',
-                            onPressed: () {},
-                            size: Size(size.width * .3, size.height * .08),
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, VerificationScreen.id);
+                            },
+                            size: Size(size.width * .3, size.height * .065),
                           ),
                         ],
                       ),
@@ -93,8 +113,13 @@ class TextHeader extends StatelessWidget {
     Key? key,
     required this.header,
     required this.subheader,
+    this.norm = true,
+    this.textWidget,
   }) : super(key: key);
   final String header, subheader;
+  //added this two variables because of the peculiar verification Screen
+  final bool norm;
+  final Widget? textWidget;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -103,13 +128,17 @@ class TextHeader extends StatelessWidget {
       children: [
         Text(header,
             style: TextStyle(
-                fontSize: 20,
+                fontSize: 25,
                 fontWeight: FontWeight.w500,
-                color: Colors.black)),
+                color: Colors.black,
+                letterSpacing: 2)),
         SizedBox(height: size.height * 0.01),
-        Text(
-          subheader,
-        ),
+        norm
+            ? Text(
+                subheader,
+                style: TextStyle(fontSize: 16, wordSpacing: 3),
+              )
+            : textWidget!,
       ],
     );
   }
@@ -123,7 +152,9 @@ class SignInText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, SignInScreen.id);
+      },
       child: RichText(
         text: TextSpan(
           text: 'Already have an account?',
@@ -142,10 +173,11 @@ class SignInText extends StatelessWidget {
 
 class TextAndContainers extends StatelessWidget {
   const TextAndContainers(
-      {Key? key, required this.text, required this.controller})
+      {Key? key, required this.text, required this.controller, this.icon})
       : super(key: key);
   final String text;
   final TextEditingController controller;
+  final Widget? icon;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -154,10 +186,19 @@ class TextAndContainers extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            text,
-            style: TextStyle(),
+            " $text",
+            style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: Color.fromARGB(255, 110, 109, 109)),
           ),
-          TextInputField(controller: controller)
+          SizedBox(
+            height: 3,
+          ),
+          TextInputField(
+            controller: controller,
+            icon: icon,
+          )
         ],
       ),
     );
@@ -194,10 +235,12 @@ class TextFieldContainer extends StatelessWidget {
 class TextInputField extends StatelessWidget {
   final TextEditingController controller;
   final String? hintText;
+  final Widget? icon;
   const TextInputField({
     Key? key,
     this.hintText,
     required this.controller,
+    this.icon,
   }) : super(key: key);
 
   @override
@@ -213,6 +256,7 @@ class TextInputField extends StatelessWidget {
           child: TextFormField(
             controller: controller,
             decoration: InputDecoration(
+              prefixIcon: icon,
               hintText: hintText ?? '',
               hintStyle: const TextStyle(
                 fontSize: 15,

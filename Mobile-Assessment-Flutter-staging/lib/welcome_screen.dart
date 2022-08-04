@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/background_wrapper.dart';
+import 'package:mobile_assessment_flutter/custom_registration_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  static const String id = 'Welcome_screen';
   const WelcomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -13,32 +15,36 @@ class WelcomeScreen extends StatelessWidget {
       Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 60),
+            padding: const EdgeInsets.only(left: 15, right: 15, top: 110),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // SizedBox(
-                //   height: size.height * .1,
-                // ),
-                const Text('What kind of user are you?',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black)),
-                const Text(
-                  'We will adapt the app to suit your needs.',
-                ),
+                TextHeader(
+                    header: 'What kind of user are you?',
+                    subheader: 'We will adapt the app to suit your \nneeds.'),
+                SizedBox(height: size.height * .085),
                 CustomButton(
-                    text: 'text',
-                    onPressed: () {},
-                    size: Size(double.infinity, 50)),
+                    text: 'Personal',
+                    onPressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        RegistrationScreen.id,
+                      );
+                    },
+                    size: Size(double.infinity, size.height * .15)),
                 SizedBox(
                   height: 30,
                 ),
                 CustomButton(
-                    text: 'text2',
-                    onPressed: () {},
-                    size: Size(double.infinity, 50)),
+                    text: 'E-commerce',
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  RegistrationScreen(isPersonal: false)));
+                    },
+                    size: Size(double.infinity, size.height * .15)),
               ],
             ),
           )),
@@ -62,16 +68,15 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
+        // primary: Colors.white,
         minimumSize: size,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(15),
         ),
       ),
       child: Text(
         text,
-        style: const TextStyle(
-          fontSize: 17,
-        ),
+        style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
       ),
     );
   }
