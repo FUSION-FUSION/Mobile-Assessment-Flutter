@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/utils/constant.dart';
-import 'package:pinput/pinput.dart';
+
 
 class VerifyScreen1 extends StatelessWidget {
   const VerifyScreen1({Key? key}) : super(key: key);
