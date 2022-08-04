@@ -47,7 +47,7 @@ class ListViewContainer extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 11.95,
+                        fontSize: 10,
                         color: Colors.white,
                       ),
                     ),
@@ -78,7 +78,7 @@ class ListViewContainer extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
                           fontWeight: FontWeight.w500,
-                          fontSize: 11.95,
+                          fontSize: 11,
                           color: Colors.white),
                     ),
                   ),
