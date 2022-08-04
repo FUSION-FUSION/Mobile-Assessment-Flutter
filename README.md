@@ -1,16 +1,24 @@
-# mobile_assessment_flutter
+# ScreenShot Image
+![](screenshots/choose%20user.png)
 
-A new Flutter project.
+![](screenshots/signin.png)
 
-## Getting Started
+![](screenshots/bussiness%20sign%20up.png)
 
-This project is a starting point for a Flutter application.
+![](screenshots/sign%20up.png)
 
-A few resources to get you started if this is your first Flutter project:
+![](screenshots/otp.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![](screenshots/home%201.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](screenshots/home%202.png)
+
+![](screenshots/navigator%201.png)
+
+![](screenshots/navigator%202.png)
+
+![](screenshots/navigator%203.png)
+
+
+
+
