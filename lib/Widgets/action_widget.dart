@@ -59,7 +59,7 @@ class ActionsWidget extends StatelessWidget {
               ],
             ),
           ),
-          Positioned(
+          const Positioned(
             bottom: 8,
             right: 8,
             child: CircleAvatar(

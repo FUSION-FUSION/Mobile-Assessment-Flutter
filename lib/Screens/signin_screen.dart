@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/Screens/home_screen.dart';
-import 'package:mobile_assessment_flutter/Screens/verification_screen.dart';
 import 'package:mobile_assessment_flutter/Util/colors.dart';
 import 'package:mobile_assessment_flutter/Util/utils.dart';
 import 'package:mobile_assessment_flutter/Widgets/background_image.dart';

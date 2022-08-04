@@ -12,8 +12,9 @@ class Widgets {
           iconSize: 15,
           onPressed: (() {}),
           icon: const Icon(
-            Icons.menu,
+            FontAwesomeIcons.chartBar,
             color: kBlackColor,
+            size: 20,
           )),
       centerTitle: true,
       title: Text(

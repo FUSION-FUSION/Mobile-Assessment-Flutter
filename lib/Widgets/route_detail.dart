@@ -17,7 +17,7 @@ class _RouteDetailState extends State<RouteDetail> {
     return ListTile(
       leading: Radio(
           value: isChecked,
-          groupValue: {},
+          groupValue: const {},
           onChanged: (value) {
             setState(() {});
           }),
@@ -28,8 +28,8 @@ class _RouteDetailState extends State<RouteDetail> {
               isChecked = value!;
             });
           }),
-      title: Text('Delivered Successfully'),
-      subtitle: Text('Bishop\'s Counrt, Owerri.'),
+      title: const Text('Delivered Successfully'),
+      subtitle: const Text('Bishop\'s Counrt, Owerri.'),
     );
   }
 }

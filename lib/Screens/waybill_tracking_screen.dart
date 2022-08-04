@@ -111,7 +111,7 @@ class WaybillTrackingScreen extends StatelessWidget {
                         width: 50,
                         decoration: BoxDecoration(color: kGreyColor),
                       ),
-                      Icon(Icons.keyboard_arrow_up_sharp)
+                      const Icon(Icons.keyboard_arrow_up_sharp)
                     ],
                   ),
                 ),
@@ -140,11 +140,11 @@ class WaybillTrackingScreen extends StatelessWidget {
                             children: [
                               Text(
                                 '04 Mar, 2022',
-                                style: DateStyle(),
+                                style: dateStyle(),
                               ),
                               Text(
                                 '05 Mar, 2022',
-                                style: DateStyle(),
+                                style: dateStyle(),
                               ),
                             ],
                           )
@@ -188,8 +188,8 @@ class WaybillTrackingScreen extends StatelessWidget {
     );
   }
 
-  TextStyle DateStyle() {
-    return TextStyle(
+  TextStyle dateStyle() {
+    return const TextStyle(
       color: kWhiteColor,
       fontSize: 12,
     );

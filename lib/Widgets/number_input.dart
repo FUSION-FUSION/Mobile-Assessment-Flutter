@@ -23,12 +23,14 @@ class NumberInput extends StatelessWidget {
           style: const TextStyle(fontSize: 16),
         ),
         Container(
-            padding: const EdgeInsets.all( 10),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-            color: kWhiteColor,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    bottomRight: Radius.circular(10))),
+              color: kWhiteColor,
+              borderRadius: const BorderRadius.only(
+                topRight: Radius.circular(10),
+                bottomRight: Radius.circular(10),
+              ),
+            ),
             child: InternationalPhoneNumberInput(
               onInputChanged: (phoneNumber) {},
               hintText: '',

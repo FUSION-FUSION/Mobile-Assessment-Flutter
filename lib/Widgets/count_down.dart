@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Countdown extends AnimatedWidget {
-  Countdown({required this.animation}) : super(listenable: animation);
+  Countdown({Key? key, required this.animation}) : super(key: key, listenable: animation);
   Animation<int> animation;
 
   @override
@@ -13,7 +13,7 @@ class Countdown extends AnimatedWidget {
 
     return Text(
       timerText == '0:00' ? 'Code Expired' : timerText,
-      style: TextStyle(color: Colors.red, fontWeight: FontWeight.w600),
+      style: const TextStyle(color: Colors.red, fontWeight: FontWeight.w600),
     );
   }
 }
