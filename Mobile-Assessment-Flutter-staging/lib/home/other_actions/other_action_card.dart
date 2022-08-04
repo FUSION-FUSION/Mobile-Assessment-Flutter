@@ -16,7 +16,7 @@ class OtherActionCard extends StatelessWidget {
     double width = size.width;
     return Container(
       width: width * 0.43,
-      height: height * 0.16,
+      height: height * 0.3,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
@@ -28,7 +28,7 @@ class OtherActionCard extends StatelessWidget {
           children: [
             Text(
               title,
-              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
             ),
             const SizedBox(
               height: 6,

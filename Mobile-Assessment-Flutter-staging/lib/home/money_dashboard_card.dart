@@ -61,12 +61,12 @@ class MoneyDashboardCard extends StatelessWidget {
                     Text(
                       'Total Balance',
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                     ),
                     Text(
-                      '# 50,000',
+                      '₦50,000',
                       style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w900),
+                          TextStyle(fontSize: 21, fontWeight: FontWeight.w900),
                     )
                   ],
                 ),

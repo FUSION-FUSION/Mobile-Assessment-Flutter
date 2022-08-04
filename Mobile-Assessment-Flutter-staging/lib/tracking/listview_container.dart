@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:timelines/timelines.dart';
 
 class ListViewContainer extends StatelessWidget {
   const ListViewContainer({
@@ -51,7 +53,7 @@ class ListViewContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                node: TimelineNode(
+                node: const TimelineNode(
                   overlap: true,
                   indicator: DotIndicator(
                     color: Colors.white,
@@ -81,7 +83,7 @@ class ListViewContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                node: TimelineNode(
+                node: const TimelineNode(
                   overlap: true,
                   indicator: DotIndicator(
                     color: Colors.white,
@@ -92,7 +94,7 @@ class ListViewContainer extends StatelessWidget {
                     thickness: 3,
                   ),
                   endConnector: DashedLineConnector(
-                    color: const Color(0xffD6D6D6),
+                    color: Color(0xffD6D6D6),
                     thickness: 3,
                     direction: Axis.horizontal,
                     gap: 2,
@@ -117,18 +119,18 @@ class ListViewContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                node: TimelineNode(
+                node: const TimelineNode(
                   overlap: true,
                   indicator: DotIndicator(
-                    color: const Color(0xffD6D6D6),
+                    color: Color(0xffD6D6D6),
                     size: 20,
                   ),
                   startConnector: DashedLineConnector(
-                    color: const Color(0xffD6D6D6),
+                    color: Color(0xffD6D6D6),
                     thickness: 3,
                   ),
                   endConnector: DashedLineConnector(
-                    color: const Color(0xffD6D6D6),
+                    color: Color(0xffD6D6D6),
                     thickness: 3,
                     direction: Axis.horizontal,
                     gap: 1,
@@ -167,14 +169,14 @@ class ListViewContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                node: TimelineNode(
+                node: const TimelineNode(
                   overlap: true,
                   indicator: DotIndicator(
-                    color: const Color(0xffD6D6D6),
+                    color: Color(0xffD6D6D6),
                     size: 20,
                   ),
                   startConnector: DashedLineConnector(
-                    color: const Color(0xffD6D6D6),
+                    color: Color(0xffD6D6D6),
                     thickness: 3,
                     gap: 1,
                   ),

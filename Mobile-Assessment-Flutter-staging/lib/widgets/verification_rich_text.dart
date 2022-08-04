@@ -9,44 +9,44 @@ class VerificationRichText extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       maxLines: 2,
-      text: const TextSpan(
+      text: TextSpan(
         text: 'We sent you an',
         style: TextStyle(
-          color: Colors.grey,
-          fontSize: 16,
-          letterSpacing: 2,
+          fontSize: 20,
+          fontWeight: FontWeight.w300,
+          color: Colors.black.withOpacity(0.5),
         ),
         children: <TextSpan>[
-          TextSpan(
+          const TextSpan(
             text: ' SMS',
             style: TextStyle(
-              color: Colors.lightGreenAccent,
-              fontSize: 16,
-              letterSpacing: 2,
+              color: Color(0xff46a5ba),
+              fontSize: 20,
+              fontWeight: FontWeight.w300,
             ),
           ),
           TextSpan(
             text: ' code on',
             style: TextStyle(
-              color: Colors.grey,
-              fontSize: 16,
-              letterSpacing: 1.5,
+              fontSize: 20,
+              fontWeight: FontWeight.w300,
+              color: Colors.black.withOpacity(0.5),
             ),
           ),
           TextSpan(
             text: ' \nnumber',
             style: TextStyle(
-              color: Colors.grey,
-              fontSize: 16,
-              letterSpacing: 2,
+              fontSize: 20,
+              fontWeight: FontWeight.w300,
+              color: Colors.black.withOpacity(0.5),
             ),
           ),
-          TextSpan(
+          const TextSpan(
             text: ' +2348108960610',
             style: TextStyle(
-              color: Colors.lightGreenAccent,
-              fontSize: 16,
-              letterSpacing: 2,
+              color: Color(0xff46a5ba),
+              fontSize: 20,
+              fontWeight: FontWeight.w300,
             ),
           ),
         ],

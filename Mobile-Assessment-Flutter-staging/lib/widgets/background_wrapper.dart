@@ -29,7 +29,7 @@ class BackGroundWrapper extends StatelessWidget {
         decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
             Color.fromARGB(255, 201, 247, 248),
-            Colors.white70,
+            Colors.white,
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
       ),

@@ -19,7 +19,7 @@ class SignInText extends StatelessWidget {
           children: <TextSpan>[
             TextSpan(
               text: ' Log in',
-              style: TextStyle(color: Colors.lightGreenAccent),
+              style: TextStyle(color: Color(0xff46a5ba)),
             ),
           ],
         ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:timelines/timelines.dart';
 
 class RouteDetails extends StatelessWidget {
   const RouteDetails({
@@ -59,15 +61,15 @@ class RouteDetails extends StatelessWidget {
                 color: Color(0xff46A5BA),
               ),
             ),
-            node: TimelineNode(
+            node: const TimelineNode(
               indicator: OutlinedDotIndicator(
-                backgroundColor: const Color.fromARGB(255, 3, 237, 225),
+                backgroundColor: Color.fromARGB(255, 3, 237, 225),
                 borderWidth: 5,
-                color: const Color(0xff46A5BA),
+                color: Color(0xff46A5BA),
                 size: 25,
               ),
               endConnector: DashedLineConnector(
-                color: const Color(0xffD6D6D6),
+                color: Color(0xffD6D6D6),
                 thickness: 2,
                 dash: 5,
                 gapColor: Colors.white,
@@ -105,23 +107,23 @@ class RouteDetails extends StatelessWidget {
                 color: Color(0xff46A5BA),
               ),
             ),
-            node: TimelineNode(
+            node: const TimelineNode(
               overlap: true,
               indicator: OutlinedDotIndicator(
                 borderWidth: 5,
-                color: const Color(0xff46A5BA),
+                color: Color(0xff46A5BA),
                 size: 25,
-                backgroundColor: const Color.fromARGB(255, 3, 237, 225),
+                backgroundColor: Color.fromARGB(255, 3, 237, 225),
               ),
               startConnector: DashedLineConnector(
-                color: const Color(0xffD6D6D6),
+                color: Color(0xffD6D6D6),
                 thickness: 2,
                 dash: 5,
                 gapColor: Colors.white,
                 gap: 2,
               ),
               endConnector: DashedLineConnector(
-                color: const Color(0xffD6D6D6),
+                color: Color(0xffD6D6D6),
                 thickness: 2,
                 dash: 5,
                 gapColor: Colors.white,
@@ -159,21 +161,21 @@ class RouteDetails extends StatelessWidget {
                 color: Color(0xffD6D6D6),
               ),
             ),
-            node: TimelineNode(
+            node: const TimelineNode(
               indicator: OutlinedDotIndicator(
                 color: Colors.grey,
                 size: 25,
                 borderWidth: 5,
               ),
               startConnector: DashedLineConnector(
-                color: const Color(0xffD6D6D6),
+                color: Color(0xffD6D6D6),
                 thickness: 2,
                 dash: 5,
                 gapColor: Colors.white,
                 gap: 2,
               ),
               endConnector: DashedLineConnector(
-                color: const Color(0xffD6D6D6),
+                color: Color(0xffD6D6D6),
                 thickness: 2,
                 dash: 5,
                 gapColor: Colors.white,
@@ -211,14 +213,14 @@ class RouteDetails extends StatelessWidget {
                 color: Color(0xffD6D6D6),
               ),
             ),
-            node: TimelineNode(
+            node: const TimelineNode(
               indicator: OutlinedDotIndicator(
                 color: Colors.grey,
                 size: 25,
                 borderWidth: 5,
               ),
               startConnector: DashedLineConnector(
-                color: const Color(0xffD6D6D6),
+                color: Color(0xffD6D6D6),
                 thickness: 2,
                 dash: 5,
                 gapColor: Colors.white,

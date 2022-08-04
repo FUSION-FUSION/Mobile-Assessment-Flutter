@@ -20,15 +20,19 @@ class TextHeader extends StatelessWidget {
       children: [
         Text(header!,
             style: const TextStyle(
-                fontSize: 25,
+                fontSize: 30,
                 fontWeight: FontWeight.w500,
                 color: Colors.black,
-                letterSpacing: 3)),
+                letterSpacing: 1.5)),
         SizedBox(height: size.height * 0.01),
         norm
             ? Text(
                 subheader!,
-                style: const TextStyle(fontSize: 16, wordSpacing: 3),
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black.withOpacity(0.5),
+                ),
               )
             : textWidget!,
       ],

@@ -31,8 +31,8 @@ class WelcomeScreen extends StatelessWidget {
                   text: Text(
                     'Personal',
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w600,
                       color: Colors.white.withOpacity(0.85),
                     ),
                   ),
@@ -47,15 +47,15 @@ class WelcomeScreen extends StatelessWidget {
                     size.height * .15,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomButton(
                   text: Text(
                     'E-commerce',
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w600,
                       color: Colors.white.withOpacity(0.85),
                     ),
                   ),

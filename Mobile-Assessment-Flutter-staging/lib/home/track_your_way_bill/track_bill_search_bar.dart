@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/tracking/map_screen.dart';
+import 'package:mobile_assessment_flutter/widgets/custom_button2.dart';
 
 class TrackBillSearchBar extends StatelessWidget {
   const TrackBillSearchBar({
@@ -14,7 +16,7 @@ class TrackBillSearchBar extends StatelessWidget {
       width: width * 0.7,
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(12),
           border: Border.all(color: const Color(0xff46a5ba))),
       child: Row(
         children: [
@@ -32,10 +34,10 @@ class TrackBillSearchBar extends StatelessWidget {
             width: 5,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 15),
+            padding: const EdgeInsets.only(top: 10),
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 4),
-              height: height * 0.05,
+              height: height * 0.06,
               width: width * 0.4,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -47,17 +49,17 @@ class TrackBillSearchBar extends StatelessWidget {
               ),
             ),
           ),
-          const Spacer(),
+          // const Spacer(),
           GestureDetector(
             onTap: () {
-              // Navigator.pushNamed(context, ScrollableSheet.routeName);
+              Navigator.pushNamed(context, MapScreen.id);
             },
-            // child: CustomButton(
-            //   height: height * 0.045,
-            //   width: width * 0.2,
-            //   text: 'Track',
-            //   fontSize: 17,
-            // ),
+            child: CustomButton2(
+              height: height * 0.04,
+              width: width * 0.2,
+              text: 'Track',
+              fontSize: 17,
+            ),
           ),
           const SizedBox(
             width: 1,

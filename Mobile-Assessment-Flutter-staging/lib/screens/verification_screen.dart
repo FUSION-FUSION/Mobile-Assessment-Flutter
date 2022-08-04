@@ -113,6 +113,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
+                      primary: const Color(0xff46a5ba),
                       minimumSize: const Size(45, 45),
                       shape: const CircleBorder(),
                     ),

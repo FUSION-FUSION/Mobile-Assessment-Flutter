@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/home/send_a_package/send_a_package_grid.dart';
-import 'package:mobile_assessment_flutter/home/track_your_way_bill/track_bill_card.dart';
+import 'package:mobile_assessment_flutter/home/track_your_way_bill/track_bill_search_bar.dart';
 import 'home_header.dart';
 import 'money_dashboard_card.dart';
 import 'other_actions/other_action_grid.dart';
@@ -33,7 +33,19 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: height * 0.03,
                 ),
-                const TrackBillCard(),
+                const Text(
+                  'Track your waybill',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  height: height * 0.02,
+                ),
+                const TrackBillSearchBar(),
                 SizedBox(
                   height: height * 0.05,
                 ),

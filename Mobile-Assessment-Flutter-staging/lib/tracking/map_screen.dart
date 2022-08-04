@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/tracking/custom_sheet.dart';
 
 class MapScreen extends StatelessWidget {
@@ -8,7 +9,6 @@ class MapScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -55,8 +55,7 @@ class MapScreen extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/images/Rectangle.png'),
-                  fit: BoxFit.cover),
+                  image: AssetImage('assets/Rectangle.png'), fit: BoxFit.cover),
             ),
           ),
           CustomSheet(h: h),
