@@ -9,4 +9,5 @@ class AppColors {
   static const Color primaryWhite = Color(0xFFFFFFFF);
 
   static const Color timeText = Color(0xFFFF0000);
+  static const Color primaryGray = Color(0xffD6D6D6);
 }

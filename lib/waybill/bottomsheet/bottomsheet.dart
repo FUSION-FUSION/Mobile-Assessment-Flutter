@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
+import 'package:mobile_assessment_flutter/waybill/bottomsheet/bottomsheet_timeline.dart';
 
 class WaybillBottomsheet extends StatefulWidget {
   const WaybillBottomsheet({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _WaybillBottomsheetState extends State<WaybillBottomsheet> {
   double minHeight = 234 / Dimensions.designHeight;
   bool reverse = false;
 
-  WayBillBottomHeight _height = WayBillBottomHeight.max;
+  WayBillBottomHeight _height = WayBillBottomHeight.mid;
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
@@ -115,15 +115,7 @@ class _WaybillBottomsheetState extends State<WaybillBottomsheet> {
                   left: Dimensions.sizeWidthPercent(13.5),
                   right: Dimensions.sizeWidthPercent(13.5),
                   child: Column(
-                    children: [
-                      Container(
-                        height: 126,
-                        width: 401,
-                        decoration: BoxDecoration(
-                            color: AppColors.primaryBlue,
-                            borderRadius: BorderRadius.circular(21.73)),
-                      )
-                    ],
+                    children: const [BottomTimeline()],
                   ),
                 )
               ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
-import 'package:mobile_assessment_flutter/waybill/bottomsheet.dart';
+import 'package:mobile_assessment_flutter/waybill/bottomsheet/bottomsheet.dart';
 
 import '../widgets/app_text.dart';
 
