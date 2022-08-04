@@ -1,6 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/screens/login/login.dart';
 
 import 'package:mobile_assessment_flutter/screens/personal_sign_up/widget/signUpForm.dart';
+import 'package:mobile_assessment_flutter/screens/user_type_screen.dart';
+import 'package:mobile_assessment_flutter/screens/verificiation_screen/verification_screen.dart';
 
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 
@@ -50,6 +54,9 @@ class PersonalSignUp extends StatelessWidget {
                     style: Theme.of(context).textTheme.subtitle2),
                 TextSpan(
                     text: 'Login',
+                    recognizer: TapGestureRecognizer()
+                      ..onTap =
+                          () => Navigator.pushNamed(context, Login.routeName),
                     style: Theme.of(context).textTheme.subtitle2!.copyWith(
                         fontSize: 16,
                         color: primaryBlue,
@@ -75,22 +82,29 @@ class PersonalSignUp extends StatelessWidget {
                         color: normalWhite,
                         radius: 20.25,
                         width: 141.77,
-                        height: 63.46),
-                    AppButton(
+                        height: 63.46,
                         onTap: () {
-                          _formKey.currentState!.validate();
-                        },
-                        child: Text(
-                          'Next',
-                          style: Theme.of(context).textTheme.button!.copyWith(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 24.3,
-                              color: normalWhite),
-                        ),
-                        color: primaryBlue,
-                        radius: 20.25,
-                        width: 141.77,
-                        height: 63.46)
+                          Navigator.pushNamed(context, UserType.routeName);
+                        }),
+                    AppButton(
+                      onTap: () {
+                        if (_formKey.currentState!.validate()) {
+                          Navigator.pushNamedAndRemoveUntil(context,
+                              Verification.routeName, (route) => false);
+                        }
+                      },
+                      child: Text(
+                        'Next',
+                        style: Theme.of(context).textTheme.button!.copyWith(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 24.3,
+                            color: normalWhite),
+                      ),
+                      color: primaryBlue,
+                      radius: 20.25,
+                      width: 141.77,
+                      height: 63.46,
+                    )
                   ]),
             )
           ],

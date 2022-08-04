@@ -59,6 +59,9 @@ class HomePage extends StatelessWidget {
                 color: formTextColor),
           ),
         ),
+        const SizedBox(
+          height: 10,
+        ),
         Container(
             height: 100,
             width: MediaQuery.of(context).size.width,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/screens/homeScreen/homeScreen.dart';
+import 'package:mobile_assessment_flutter/screens/login/login.dart';
 import 'package:mobile_assessment_flutter/screens/verificiation_screen/widgets/customTimer.dart';
 import 'package:mobile_assessment_flutter/screens/verificiation_screen/widgets/verificationPin.dart';
 
@@ -89,8 +91,8 @@ class Verification extends StatelessWidget {
                 height: 60,
                 onTap: () {
                   if (verificationProvider.pin.length == 5) {
-                    // print('Yes');
-                    //Execute Navigation
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                        HomePage.routeName, (route) => false);
                   } else {
                     verificationProvider.setIsValid(false);
                   }

@@ -18,15 +18,19 @@ class TrackAppBar extends StatelessWidget implements PreferredSizeWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           AppButton(
-              child: Icon(
-                Icons.arrow_back,
-                color: formTextColor,
-                size: 20,
-              ),
-              color: normalWhite,
-              radius: 17,
-              width: 46,
-              height: 44),
+            child: Icon(
+              Icons.arrow_back,
+              color: formTextColor,
+              size: 20,
+            ),
+            color: normalWhite,
+            radius: 17,
+            width: 46,
+            height: 44,
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
           Container(
             width: 288,
             height: 37,

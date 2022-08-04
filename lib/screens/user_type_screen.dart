@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/screens/ecommerce_sign_up/ecommerce_sign_up.dart';
+import 'package:mobile_assessment_flutter/screens/personal_sign_up/personal_signUp_screen.dart';
 
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 
@@ -43,20 +45,25 @@ class UserType extends StatelessWidget {
             radius: 24.87,
             width: double.infinity,
             height: 136.78,
+            onTap: () {
+              Navigator.pushNamed(context, PersonalSignUp.routeName);
+            },
           ),
           const SizedBox(
             height: 40.96,
           ),
           AppButton(
-            child: Text(
-              'E-commerce',
-              style: Theme.of(context).textTheme.button,
-            ),
-            color: primaryBlue,
-            radius: 24.87,
-            width: double.infinity,
-            height: 136.78,
-          )
+              child: Text(
+                'E-commerce',
+                style: Theme.of(context).textTheme.button,
+              ),
+              color: primaryBlue,
+              radius: 24.87,
+              width: double.infinity,
+              height: 136.78,
+              onTap: () {
+                Navigator.pushNamed(context, EcommerceSignUp.routeName);
+              })
         ],
       ),
     ));

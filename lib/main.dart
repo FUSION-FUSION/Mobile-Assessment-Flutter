@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/providers/verificationProvider.dart';
 import 'package:mobile_assessment_flutter/screens/congratulations.dart';
@@ -14,7 +15,10 @@ import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+      .then((_) => runApp(const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

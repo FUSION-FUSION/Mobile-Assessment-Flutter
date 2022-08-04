@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:mobile_assessment_flutter/screens/trackWayBillScreen/trackwaybill.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/widget/appButton.dart';
 
@@ -72,7 +73,10 @@ class WayBill extends StatelessWidget {
                       radius: 14,
                       width: 81,
                       height: 38,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, TrackWayBill.routeName,
+                            arguments: _textController.text);
+                      },
                     )
                   ],
                 ))

@@ -1,6 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/screens/homeScreen/homeScreen.dart';
 
 import 'package:mobile_assessment_flutter/screens/login/widget/loginForm.dart';
+import 'package:mobile_assessment_flutter/screens/user_type_screen.dart';
+import 'package:mobile_assessment_flutter/screens/verificiation_screen/verification_screen.dart';
 
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 
@@ -49,6 +53,9 @@ class Login extends StatelessWidget {
                     text: TextSpan(children: [
                   TextSpan(
                       text: 'Create an Account',
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () =>
+                            Navigator.pushNamed(context, UserType.routeName),
                       style: Theme.of(context).textTheme.subtitle2!.copyWith(
                           fontSize: 18,
                           color: primaryBlue,
@@ -61,7 +68,10 @@ class Login extends StatelessWidget {
               Center(
                 child: AppButton(
                     onTap: () {
-                      _formKey.currentState!.validate();
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, Verification.routeName, (route) => false);
+                      }
                     },
                     child: Text(
                       'Sign In',

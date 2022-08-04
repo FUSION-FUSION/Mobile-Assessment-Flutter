@@ -23,9 +23,9 @@ class TrackWayBillState extends State<TrackWayBill> {
 
   @override
   Widget build(BuildContext context) {
-    final text = ModalRoute.of(context)!.settings.arguments;
+    final text = (ModalRoute.of(context)!.settings.arguments) as String;
     return Scaffold(
-      appBar: TrackAppBar(context: context, text: 'text'),
+      appBar: TrackAppBar(context: context, text: text),
       body: SlidingUpPanel(
         controller: panelController,
         parallaxEnabled: true,
