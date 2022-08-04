@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/screens/dashboard/balance_container.dart';
+import 'package:mobile_assessment_flutter/screens/dashboard/tracking_container.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 
 import '../../utils/dimensions.dart';
@@ -76,7 +77,9 @@ class Dashboard extends StatelessWidget {
                 ],
               ),
               SizedBox(height: Dimensions.sizeHeightPercent(30)),
-              const BalanceContainer()
+              const BalanceContainer(),
+              SizedBox(height: Dimensions.sizeHeightPercent(30)),
+              const TrackingContainer()
             ],
           ),
         ),
