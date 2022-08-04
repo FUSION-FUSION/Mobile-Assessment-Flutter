@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:mobile_assessment_flutter/utils/dimensions.dart';
 import 'package:mobile_assessment_flutter/waybill/bottomsheet/bottomsheet_timeline.dart';
+import 'package:mobile_assessment_flutter/waybill/bottomsheet/vertical_timeline.dart';
+import 'package:mobile_assessment_flutter/widgets/app_text.dart';
+import 'package:timelines/timelines.dart';
 
 class WaybillBottomsheet extends StatefulWidget {
   const WaybillBottomsheet({Key? key}) : super(key: key);
@@ -115,7 +120,16 @@ class _WaybillBottomsheetState extends State<WaybillBottomsheet> {
                   left: Dimensions.sizeWidthPercent(13.5),
                   right: Dimensions.sizeWidthPercent(13.5),
                   child: Column(
-                    children: const [BottomTimeline()],
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const BottomTimeline(),
+                      SizedBox(height: Dimensions.sizeHeightPercent(27.79)),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            left: Dimensions.sizeWidthPercent(18.5),
+                            right: Dimensions.sizeWidthPercent(18.5)),
+                        child: VerticalTimeline() )
+                    ],
                   ),
                 )
               ],
