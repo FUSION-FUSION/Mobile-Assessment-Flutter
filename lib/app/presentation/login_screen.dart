@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/app/presentation/user_type_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
 import 'package:mobile_assessment_flutter/core/size_config.dart';
@@ -51,10 +52,10 @@ class _LogInScreenState extends State<LogInScreen> {
             alignment: Alignment.center,
             child: TextButton(
                 onPressed: () {
-                  // Navigator.pushReplacement(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => GetStartedScreen()));
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => UserTypeScreen()));
                 },
                 child: Text(
                   'Create an Account',

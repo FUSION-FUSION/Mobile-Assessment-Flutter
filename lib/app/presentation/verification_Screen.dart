@@ -126,10 +126,10 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     color: Palette.primaryColor, shape: BoxShape.circle),
                 child: IconButton(
                   onPressed: () {
-                    // Navigator.pushReplacement(
-                    // context,
-                    // MaterialPageRoute(
-                    //     builder: (context) => RegistrationSuccessScreen()));
+                    Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RegistrationSuccessScreen()));
 
 
                   },

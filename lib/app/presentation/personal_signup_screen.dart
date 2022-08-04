@@ -2,6 +2,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/app/presentation/login_screen.dart';
+import 'package:mobile_assessment_flutter/app/presentation/verification_Screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
 import 'package:mobile_assessment_flutter/core/size_config.dart';
@@ -148,10 +149,10 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
                 ),
                 BuildButton(
                   onPressed: () {
-                    // Navigator.push(
-                    // context,
-                    // MaterialPageRoute(
-                    //     builder: (context) => VerificationScreen()));
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => VerificationScreen()));
                   },
                   buttonText: 'Next',
                   containerHeight: 63.64,
