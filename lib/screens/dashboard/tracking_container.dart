@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/routes/route_helper.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 
 import '../../utils/dimensions.dart';
@@ -76,25 +78,30 @@ class TrackingContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  height: Dimensions.sizeHeightPercent(38),
-                  width: Dimensions.sizeWidthPercent(81),
-                  margin: EdgeInsets.symmetric(
-                      horizontal: Dimensions.sizeHeightPercent(3),
-                      vertical: Dimensions.sizeHeightPercent(3)),
-                  decoration: BoxDecoration(
-                    color: AppColors.primaryBlue,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Track',
-                      textAlign: TextAlign.start,
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: Dimensions.sizeHeightPercent(16),
-                          color: AppColors.primaryWhite,
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed(RouteHelper.getWaybill());
+                  },
+                  child: Container(
+                    height: Dimensions.sizeHeightPercent(38),
+                    width: Dimensions.sizeWidthPercent(81),
+                    margin: EdgeInsets.symmetric(
+                        horizontal: Dimensions.sizeHeightPercent(3),
+                        vertical: Dimensions.sizeHeightPercent(3)),
+                    decoration: BoxDecoration(
+                      color: AppColors.primaryBlue,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Track',
+                        textAlign: TextAlign.start,
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: Dimensions.sizeHeightPercent(16),
+                            color: AppColors.primaryWhite,
+                          ),
                         ),
                       ),
                     ),
