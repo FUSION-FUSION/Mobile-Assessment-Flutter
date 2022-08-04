@@ -4,7 +4,7 @@ class SendAPackageCard extends StatelessWidget {
   final String title;
   final String description;
   final String? bgImage;
-  final String? overlayImage;
+  final String? bottomImage;
   final bool activated;
 
   const SendAPackageCard({
@@ -12,15 +12,18 @@ class SendAPackageCard extends StatelessWidget {
     required this.title,
     required this.description,
     this.bgImage,
-    this.overlayImage,
+    this.bottomImage,
     this.activated = true,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    double height = 190;
+    double width = (MediaQuery.of(context).size.width / 2) - 30;
+
     return Container(
-      height: 190,
-      width: (MediaQuery.of(context).size.width / 2) - 30,
+      height: height,
+      width: width,
       margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -42,6 +45,7 @@ class SendAPackageCard extends StatelessWidget {
       ),
       child: Stack(
         children: [
+          // main body
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -80,12 +84,12 @@ class SendAPackageCard extends StatelessWidget {
               ),
 
               // Overlay picture, if any
-              overlayImage != null
+              bottomImage != null
                   ? Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 2),
                         child: Image.asset(
-                          overlayImage!,
+                          bottomImage!,
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -94,23 +98,59 @@ class SendAPackageCard extends StatelessWidget {
             ],
           ),
 
+          // White-out layer
+          activated == false
+              ? Container(
+            height: height,
+            width: width,
+            color: Colors.white54,
+          )
+              : const SizedBox(),
+
           // overlaying bottom icon
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              width: 20,
-              height: 20,
-              margin: const EdgeInsets.only(bottom: 20, right: 10),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(
-                Icons.arrow_forward,
-                size: 12,
-              ),
-            ),
-          ),
+          activated == true
+              ? Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    margin: const EdgeInsets.only(bottom: 20, right: 10),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.arrow_forward,
+                      size: 12,
+                    ),
+                  ),
+                )
+              : Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 2.0),
+                    margin: const EdgeInsets.only(bottom: 30, right: 10),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        offset: Offset(3, 2),
+                        blurRadius: 1,
+                        spreadRadius: 0.1,
+                      ),],
+                    ),
+                    child: const Text(
+                      'coming soon',
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+
         ],
       ),
     );

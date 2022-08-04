@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
+import '../../utils/constants.dart';
 import 'register_3_congratulations.dart';
 
 class Registration2 extends StatelessWidget {

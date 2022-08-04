@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
+import '../../utils/constants.dart';
 import 'package:mobile_assessment_flutter/screens/home_screen/home_screen.dart';
 
 class Registration3 extends StatelessWidget {

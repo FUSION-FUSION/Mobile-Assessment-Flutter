@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
-
+import '../../utils/constants.dart';
 // visual components
 import 'visual_components/send_a_package_template.dart';
 import 'visual_components/other_actions_template.dart';
@@ -243,13 +242,13 @@ class HomeScreen extends StatelessWidget {
                     title: 'Same State',
                     description: 'Deliveries within the same state',
                     bgImage: 'images/ic-road-same-state.png',
-                    overlayImage: 'images/ic-bike.png',
+                    bottomImage: 'images/ic-bike.png',
                   ),
                   SendAPackageCard(
                     title: 'Interstate',
                     description: 'Deliveries outside your current state',
                     bgImage: 'images/ic-road-interstate.png',
-                    overlayImage: 'images/delivery_van.png',
+                    bottomImage: 'images/delivery_van.png',
                   ),
                 ],
               ),
@@ -260,12 +259,12 @@ class HomeScreen extends StatelessWidget {
                     title: 'Charter',
                     description: 'Request a vehicle',
                     bgImage: 'images/ic-road-charter.png',
-                    overlayImage: 'images/ic-truck.png',
+                    bottomImage: 'images/ic-truck.png',
                   ),
                   SendAPackageCard(
                     title: 'International',
                     description: 'Send packages to other countries',
-                    overlayImage: 'images/ic-aeroplane.png',
+                    bottomImage: 'images/ic-aeroplane.png',
                     activated: false,
                   ),
                 ],

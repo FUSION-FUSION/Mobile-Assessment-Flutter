@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
+import '../../utils/constants.dart';
 import 'visual_components/general_form_item.dart';
 
 // screens

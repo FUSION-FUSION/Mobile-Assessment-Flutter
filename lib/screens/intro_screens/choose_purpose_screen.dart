@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/constants.dart';
 import 'register_1_welcome.dart';
 
 class ChoosePurposeScreen extends StatelessWidget {
@@ -66,7 +67,7 @@ class ChoosePurposeScreen extends StatelessWidget {
               children: [
                 // "Personal" Button
                 CustomButton1(
-                  color: const Color(0xFF46A5BA),
+                  color: kCyanishColor,
                   height: 110,
                   text: 'Personal',
                   onPressed: () {
@@ -77,7 +78,7 @@ class ChoosePurposeScreen extends StatelessWidget {
 
                 // "E-commerce" button
                 CustomButton1(
-                  color: const Color(0xFF46A5BA),
+                  color: kCyanishColor,
                   height: 110,
                   text: 'E-commerce',
                   onPressed: () {
