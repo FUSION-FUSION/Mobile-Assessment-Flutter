@@ -18,12 +18,24 @@ class ComingsoonTile extends StatelessWidget {
             height: 242,
             width: (context.width * 0.5) - (kmediumspace),
             padding: const EdgeInsets.only(top: kmediumspace),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: AppColor.white,
-              image: DecorationImage(
+              image: const DecorationImage(
                 alignment: Alignment.topCenter,
                 image: AssetImage('assets/images/gridboxes.png'),
               ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  offset: const Offset(0, -2),
+                  blurRadius: 8,
+                ),
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  offset: const Offset(0, 2),
+                  blurRadius: 8,
+                ),
+              ],
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,6 +93,18 @@ class ComingsoonTile extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: AppColor.white,
                   borderRadius: BorderRadius.circular(9),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      offset: const Offset(0, -2),
+                      blurRadius: 4,
+                    ),
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      offset: const Offset(0, 2),
+                      blurRadius: 4,
+                    ),
+                  ],
                 ),
                 alignment: Alignment.center,
                 child: const Text(

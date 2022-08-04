@@ -16,12 +16,24 @@ class SameStateTile extends StatelessWidget {
         height: 242,
         width: (context.width * 0.5) - (kmediumspace),
         padding: const EdgeInsets.only(top: kmediumspace),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: AppColor.white,
-          image: DecorationImage(
+          image: const DecorationImage(
             alignment: Alignment.topCenter,
             image: AssetImage('assets/images/gridboxes.png'),
           ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              offset: const Offset(0, -2),
+              blurRadius: 8,
+            ),
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              offset: const Offset(0, 2),
+              blurRadius: 8,
+            ),
+          ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,6 +95,18 @@ class SameStateTile extends StatelessWidget {
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: AppColor.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromRGBO(72, 72, 72, 0.74),
+                              offset: Offset(0, -2),
+                              blurRadius: 4,
+                            ),
+                            BoxShadow(
+                              color: Color.fromRGBO(72, 72, 72, 0.74),
+                              offset: Offset(0, 2),
+                              blurRadius: 4,
+                            ),
+                          ],
                         ),
                         alignment: Alignment.center,
                         child: const Icon(

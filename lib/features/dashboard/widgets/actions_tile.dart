@@ -25,6 +25,18 @@ class ActionsTile extends StatelessWidget {
           alignment: Alignment.topCenter,
           image: AssetImage('assets/images/gridboxes.png'),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            offset: const Offset(0, -1),
+            blurRadius: 4,
+          ),
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            offset: const Offset(0, 2),
+            blurRadius: 4,
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

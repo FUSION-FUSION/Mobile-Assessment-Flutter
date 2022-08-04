@@ -36,6 +36,18 @@ class TrackingScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: AppColor.white,
                           borderRadius: BorderRadius.circular(ksmallradius),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              offset: const Offset(0, -2),
+                              blurRadius: 4,
+                            ),
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              offset: const Offset(0, 2),
+                              blurRadius: 4,
+                            ),
+                          ],
                         ),
                         child: const Icon(Icons.arrow_back),
                       ),
@@ -46,8 +58,21 @@ class TrackingScreen extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(
                           kmediumspace, ksmallspace, kmediumspace, ksmallspace),
                       decoration: BoxDecoration(
-                          color: AppColor.white,
-                          borderRadius: BorderRadius.circular(ktinyradius)),
+                        color: AppColor.white,
+                        borderRadius: BorderRadius.circular(ktinyradius),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            offset: const Offset(0, -2),
+                            blurRadius: 4,
+                          ),
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            offset: const Offset(0, 2),
+                            blurRadius: 4,
+                          ),
+                        ],
+                      ),
                       alignment: Alignment.center,
                       child: const Text(
                         'HH-INT-D9FD00-JBW-ORI',

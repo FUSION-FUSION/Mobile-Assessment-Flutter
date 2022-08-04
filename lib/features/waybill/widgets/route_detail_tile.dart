@@ -34,7 +34,7 @@ class RouteDetailTile extends StatelessWidget {
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  color: delivered ? Color(0XFF8FF0EA) : AppColor.white,
+                  color: delivered ? const Color(0XFF8FF0EA) : AppColor.white,
                   shape: BoxShape.circle,
                 ),
               ),
@@ -46,9 +46,9 @@ class RouteDetailTile extends StatelessWidget {
                       width: 2,
                       height: 2,
                       margin: const EdgeInsets.only(bottom: 2),
-                      decoration: BoxDecoration(
-                        border: Border.all(style: BorderStyle.solid),
-                      ),
+                      color: delivered
+                          ? const Color(0XFFA3CAB3)
+                          : AppColor.basetext,
                     )),
               ),
           ],
@@ -85,9 +85,14 @@ class RouteDetailTile extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  checkColor: AppColor.white,
+                  checkColor: AppColor.primary,
+
                   //hoverColor: AppColor.primary,
-                  fillColor: MaterialStateProperty.all<Color>(AppColor.primary),
+                  side: MaterialStateBorderSide.resolveWith(
+                    (states) =>
+                        const BorderSide(width: 1.0, color: AppColor.primary),
+                  ),
+                  fillColor: MaterialStateProperty.all<Color>(AppColor.white),
                   // overlayColor:
                   //     MaterialStateProperty.all<Color>(
                   //         AppColor.warning),
