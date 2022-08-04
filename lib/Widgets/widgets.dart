@@ -12,7 +12,7 @@ class Widgets {
           iconSize: 15,
           onPressed: (() {}),
           icon: const Icon(
-            FontAwesomeIcons,
+            Icons.menu,
             color: kBlackColor,
           )),
       centerTitle: true,
