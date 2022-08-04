@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:mobile_assessment_flutter/provider/auth_provider.dart';
 import 'package:mobile_assessment_flutter/screens/home/home_screen.dart';
 import 'package:mobile_assessment_flutter/screens/onboarding/splash_screen.dart';
@@ -14,6 +15,7 @@ Future main() async{
   await Firebase.initializeApp(
     // options: DefaultFirebaseOptions.currentPlatform,
   );
+  FlutterNativeSplash.removeAfter(initialization);
   runApp(MultiProvider(
       providers: [
         ChangeNotifierProvider<AuthProvider>(
@@ -21,6 +23,10 @@ Future main() async{
         ),
       ],
       child: const MyApp()));
+}
+Future initialization(BuildContext? context)async{
+  //load resources
+  await Future.delayed(Duration(seconds: 3));
 }
 
 final navigatorKey =GlobalKey<NavigatorState >();
@@ -39,7 +45,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Poppins",
       ),
-      home:  const SplashScreen(),
+      home:  const AuthCheck(),
       routes: {
         HomeScreen.routeName :(context)=>const HomeScreen(),
         AuthCheck.routeName :(context)=>const AuthCheck(),

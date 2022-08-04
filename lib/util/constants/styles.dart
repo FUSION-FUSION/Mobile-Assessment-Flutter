@@ -31,7 +31,7 @@ const kEditTextDecoration = InputDecoration(
   ),
   focusedBorder: OutlineInputBorder(
     borderSide:
-    BorderSide(color: Colors.lightBlueAccent, width: 2.0),
+    BorderSide(color: primaryColor, width: 2.0),
     borderRadius: BorderRadius.all(Radius.circular(20.0)),
   ),
 );

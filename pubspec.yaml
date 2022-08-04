@@ -41,6 +41,12 @@ dependencies:
   firebase_core: ^1.16.0
   firebase_auth: ^3.3.17
   cloud_firestore:
+  flutter_native_splash: ^2.2.7
+  sliding_up_panel: ^2.0.0+1
+  sliding_up_panel2:
+  im_stepper:
+  dotted_line:
+
 
 
 dev_dependencies:
@@ -49,7 +55,7 @@ dev_dependencies:
 
 
   flutter_lints: ^1.0.0
-  flutter_native_splash: ^2.2.7
+
 
 flutter_native_splash:
   color: "#000000"

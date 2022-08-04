@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mobile_assessment_flutter/screens/home/home_screen.dart';
 
 import '../../firebase_service/auth_services.dart';
@@ -87,7 +88,11 @@ class _SignInScreenState extends State<SignInScreen> {
                               controller: passwordcontroller,
                               autofillhints: const [AutofillHints.password],
                               validator: (password) =>
-                                  Validator().passwordValidator(password)),
+                                  Validator().passwordValidator(password),
+                            onEditComplete: () => TextInput.finishAutofillContext(),
+                            showText: true,
+                          ),
+
                           const SizedBox(height: 40),
                           // confirmPassword() ?
 

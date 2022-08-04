@@ -11,6 +11,7 @@ class AuthService {
   final user = FirebaseAuth.instance.currentUser;
 
 
+
   bool isLogin = true;
 
   Future signup(context, email, password,name,formKey) async {
@@ -55,7 +56,7 @@ class AuthService {
       var newUser = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
       if (newUser != null) {
-        navigatorKey.currentState!.popUntil((route) => route.isFirst);////pushReplacementNamed(HomeScreen.routeName);
+        navigatorKey.currentState!.popAndPushNamed(HomeScreen.routeName);//popUntil((route) => route.isActive);////pushReplacementNamed(HomeScreen.routeName);
       }
     }on FirebaseAuthException catch (e) {
       print(e);
