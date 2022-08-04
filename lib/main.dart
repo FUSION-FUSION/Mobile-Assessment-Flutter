@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/screens/splash_screens.dart';
+import 'package:mobile_assessment_flutter/screens/tracking/map_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:mobile_assessment_flutter/screens/tracking/listview_container.dart';
 import 'package:mobile_assessment_flutter/screens/tracking/route_details.dart';
@@ -20,31 +21,39 @@ class CustomSheet extends StatelessWidget {
         minChildSize: 0.2,
         builder: (context, scrollController) {
           return Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: kPrimaryWhite,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(40),
                 topLeft: Radius.circular(40),
               ),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 6),
-              child: ListView(controller: scrollController, children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Divider(
-                    thickness: 5,
-                    height: 3,
-                    endIndent: 160,
-                    indent: 160,
-                    color: Color(0xffD6D6D6),
+              padding: const EdgeInsets.symmetric(horizontal: 6),
+              child: SingleChildScrollView(
+                controller: scrollController,
+                child: Column(children: [
+                  const Padding(
+                    padding: const EdgeInsets.only(top: 30.0),
+                    child: const Divider(
+                      thickness: 5,
+                      height: 3,
+                      endIndent: 180,
+                      indent: 170,
+                      color: const Color(0xffD6D6D6),
+                    ),
                   ),
-                ),
-                SizedBox(height: h * 0.01),
-                ListViewContainer(),
-                SizedBox(height: h * 0.03),
-                RouteDetails(h: h),
-              ]),
+                  // const Icon(
+                  //   FontAwesomeIcons.sort,
+                  //   size: 15,
+                  //   color: Color(0xffD6D6D6),
+                  // ),
+                  SizedBox(height: h * 0.05),
+                  const ListViewContainer(),
+                  SizedBox(height: h * 0.03),
+                  RouteDetails(h: h),
+                ]),
+              ),
             ),
           );
         });

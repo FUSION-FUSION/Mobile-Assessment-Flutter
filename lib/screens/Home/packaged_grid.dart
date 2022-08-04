@@ -43,21 +43,70 @@ class PackageCard4 extends StatelessWidget {
       decoration: BoxDecoration(
         color: kPrimaryWhite,
         borderRadius: BorderRadius.circular(11.09),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Color.fromARGB(255, 200, 202, 205),
-        //     blurRadius: 26,
-        //     offset: Offset(2, 4),
-        //   )
-        // ]
       ),
       child: Stack(
         children: [
-          // Container(
-          //   height: 300,
-          //   width: 175,
-          //   color: kPrimaryRed.withOpacity(0.3),
-          // ),
+          Container(
+            color: kPrimaryWhite,
+            child: Stack(
+              children: [
+                Positioned(
+                  top: 130,
+                  child: Image.asset(
+                    'assets/images/ic-aeroplane.png',
+                    scale: 4,
+                    filterQuality: FilterQuality.medium,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.41),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: h * 0.03),
+                      Text(
+                        'International',
+                        textAlign: TextAlign.start,
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18.14,
+                            color: kPrimaryBlack,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: h * 0.01),
+                      Padding(
+                        padding: EdgeInsets.only(right: 140),
+                        child: Divider(
+                          height: 3,
+                          color: kPrimaryBlue,
+                          thickness: 4,
+                        ),
+                      ),
+                      SizedBox(height: h * 0.01),
+                      Text(
+                        'Send packages to other countries',
+                        textAlign: TextAlign.start,
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 15.12,
+                            color: kPrimaryBlack,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 300,
+            width: 175,
+            color: kPrimaryWhite.withOpacity(0.6),
+          ),
           Positioned(
             bottom: 22,
             left: 100,
@@ -66,7 +115,14 @@ class PackageCard4 extends StatelessWidget {
               width: 75.85,
               decoration: BoxDecoration(
                   color: kPrimaryWhite,
-                  borderRadius: BorderRadius.circular(9.18)),
+                  borderRadius: BorderRadius.circular(9.18),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(255, 200, 202, 205),
+                      blurRadius: 15,
+                      offset: Offset(1, 1),
+                    )
+                  ]),
               child: Text(
                 'Coming Soon',
                 textAlign: TextAlign.start,
@@ -78,55 +134,6 @@ class PackageCard4 extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-          ),
-          Positioned(
-            top: 130,
-            child: Image.asset(
-              'assets/images/ic-aeroplane.png',
-              scale: 4,
-              filterQuality: FilterQuality.medium,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10.41),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: h * 0.03),
-                Text(
-                  'International',
-                  textAlign: TextAlign.start,
-                  style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18.14,
-                      color: kPrimaryBlack,
-                    ),
-                  ),
-                ),
-                SizedBox(height: h * 0.01),
-                Padding(
-                  padding: EdgeInsets.only(right: 140),
-                  child: Divider(
-                    height: 3,
-                    color: kPrimaryBlue,
-                    thickness: 4,
-                  ),
-                ),
-                SizedBox(height: h * 0.01),
-                Text(
-                  'Send packages to other countries',
-                  textAlign: TextAlign.start,
-                  style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.w300,
-                      fontSize: 15.12,
-                      color: kPrimaryBlack,
-                    ),
-                  ),
-                ),
-              ],
             ),
           ),
         ],

@@ -82,33 +82,61 @@ class SiginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: h * 0.02),
                 Text(
-                  'Create an account',
+                  'Password',
                   textAlign: TextAlign.start,
                   style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: kPrimaryBlue,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 17.55,
+                      color: kPrimaryBlack,
                     ),
                   ),
                 ),
-                SizedBox(height: h * 0.04),
                 Container(
-                  width: 182.45,
-                  height: 71.15,
+                  width: 390,
+                  height: 44,
                   decoration: BoxDecoration(
-                    color: kPrimaryWhite,
-                    borderRadius: BorderRadius.circular(20.25),
+                    borderRadius: BorderRadius.circular(17),
+                    color: Color(0xffFDFEFF),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Sign in',
-                      textAlign: TextAlign.start,
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 24.3,
-                          color: kPrimaryBlack,
+                  child: TextField(
+                      decoration: InputDecoration(
+                    border: InputBorder.none,
+                  )),
+                ),
+                SizedBox(height: h * 0.02),
+                Center(
+                  child: Text(
+                    'Create an account',
+                    textAlign: TextAlign.start,
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                        color: kPrimaryBlue,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: h * 0.07),
+                Center(
+                  child: Container(
+                    width: 182.45,
+                    height: 71.15,
+                    decoration: BoxDecoration(
+                      color: kPrimaryBlue,
+                      borderRadius: BorderRadius.circular(20.25),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Sign in',
+                        textAlign: TextAlign.start,
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 24.3,
+                            color: kPrimaryWhite,
+                          ),
                         ),
                       ),
                     ),

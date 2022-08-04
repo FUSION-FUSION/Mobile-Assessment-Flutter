@@ -74,101 +74,143 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  height: 143,
-                  width: 170,
-                  decoration: BoxDecoration(
-                    color: kPrimaryWhite,
-                    borderRadius: BorderRadius.circular(11),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10.41),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: h * 0.03),
-                        Text(
-                          'Waybill History',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18.14,
-                              color: kPrimaryBlack,
-                            ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 143,
+                        width: 170,
+                        decoration: BoxDecoration(
+                          color: kPrimaryWhite,
+                          borderRadius: BorderRadius.circular(11),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.41),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: h * 0.03),
+                              Text(
+                                'Waybill History',
+                                textAlign: TextAlign.start,
+                                style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 18.14,
+                                    color: kPrimaryBlack,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: h * 0.01),
+                              Padding(
+                                padding: EdgeInsets.only(right: 140),
+                                child: Divider(
+                                  height: 3,
+                                  color: kPrimaryBlue,
+                                  thickness: 4,
+                                ),
+                              ),
+                              SizedBox(height: h * 0.01),
+                              Text(
+                                'Records of all your waybill',
+                                textAlign: TextAlign.start,
+                                style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 15.12,
+                                    color: kPrimaryBlack,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(height: h * 0.01),
-                        Padding(
-                          padding: EdgeInsets.only(right: 140),
-                          child: Divider(
-                            height: 3,
-                            color: kPrimaryBlue,
-                            thickness: 4,
+                      ),
+                      Positioned(
+                        bottom: 5,
+                        left: 137,
+                        child: Container(
+                          height: 23.18,
+                          width: 23.28,
+                          decoration: BoxDecoration(
+                              color: kPrimaryBlack, shape: BoxShape.circle),
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: kPrimaryWhite,
+                            size: 15,
                           ),
                         ),
-                        SizedBox(height: h * 0.01),
-                        Text(
-                          'Records of all your waybill',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.w300,
-                              fontSize: 15.12,
-                              color: kPrimaryBlack,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 Container(
-                  height: 143,
-                  width: 170,
-                  decoration: BoxDecoration(
-                    color: kPrimaryWhite,
-                    borderRadius: BorderRadius.circular(11),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10.41),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: h * 0.03),
-                        Text(
-                          'Get Help',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18.14,
-                              color: kPrimaryBlack,
-                            ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 143,
+                        width: 170,
+                        decoration: BoxDecoration(
+                          color: kPrimaryWhite,
+                          borderRadius: BorderRadius.circular(11),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.41),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: h * 0.03),
+                              Text(
+                                'Get Help',
+                                textAlign: TextAlign.start,
+                                style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 18.14,
+                                    color: kPrimaryBlack,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: h * 0.01),
+                              Padding(
+                                padding: EdgeInsets.only(right: 140),
+                                child: Divider(
+                                  height: 3,
+                                  color: kPrimaryBlue,
+                                  thickness: 4,
+                                ),
+                              ),
+                              SizedBox(height: h * 0.01),
+                              Text(
+                                'Get help and support from our team',
+                                textAlign: TextAlign.start,
+                                style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 15.12,
+                                    color: kPrimaryBlack,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(height: h * 0.01),
-                        Padding(
-                          padding: EdgeInsets.only(right: 140),
-                          child: Divider(
-                            height: 3,
-                            color: kPrimaryBlue,
-                            thickness: 4,
+                      ),
+                      Positioned(
+                        bottom: 5,
+                        left: 137,
+                        child: Container(
+                          height: 23.18,
+                          width: 23.28,
+                          decoration: BoxDecoration(
+                              color: kPrimaryBlack, shape: BoxShape.circle),
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: kPrimaryWhite,
+                            size: 15,
                           ),
                         ),
-                        SizedBox(height: h * 0.01),
-                        Text(
-                          'Get help and support from our team',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.w300,
-                              fontSize: 15.12,
-                              color: kPrimaryBlack,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ],
