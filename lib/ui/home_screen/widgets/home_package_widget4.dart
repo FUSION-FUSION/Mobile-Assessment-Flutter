@@ -28,22 +28,6 @@ class HomePackageWidget4 extends StatelessWidget {
       ),
       child: Stack(
           children:[
-            Expanded(child: Container(
-              color: Colors.white.withOpacity(0.5),
-              child:
-              Expanded(
-                child: Container(
-                  //height: 20,
-                  width: 80,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(12.0)
-                  ),
-                  child: Text("coming soon", style: AppTextStyle.kNormalObWhiteTextStyle.copyWith(fontSize: 10, color: Colors.black),),
-                ),
-              ),
-            ),
-            ),
             Column(
               children: [
 
@@ -80,6 +64,27 @@ class HomePackageWidget4 extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            Container(
+              height: 250.0,
+              width: 175,
+              color: Colors.white.withOpacity(0.5),
+              child: Center(
+                child: Padding(
+                  padding:  EdgeInsets.only(top:170.0.h,left: 60.0.w),
+                  child: Container(
+                      height: 20,
+                      width: 80,
+                      decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(12.0)
+                      ),
+                    child: Center(
+                      child: Text("coming soon.", style: AppTextStyle.kSemiBoldObWhiteTextStyle.copyWith(fontSize: 10, color: Colors.black),),
+                    ),
+                  ),
+                ),
+              ),
             ),
 
           ]
