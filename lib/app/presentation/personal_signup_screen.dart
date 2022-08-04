@@ -1,11 +1,9 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-// import 'package:mobile_assessment_flutter/app/presentation/log_in_screen.dart';
-// import 'package:mobile_assessment_flutter/app/presentation/verification_screen.dart';
+import 'package:mobile_assessment_flutter/app/presentation/login_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
-
 import 'package:mobile_assessment_flutter/core/size_config.dart';
 
 class PersonalSignUpScreen extends StatefulWidget {
@@ -61,22 +59,25 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
                 width: getProportionateScreenWidth(102),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
-                    border: Border.all(color: const Color.fromARGB(255, 230, 223, 223))),
+                    border: Border.all(
+                        color: const Color.fromARGB(255, 230, 223, 223))),
                 child: Row(
                   children: [
                     Text(
                       '+234',
                       style: TextStyle(
-                        fontSize: getProportionateScreenWidth(16),
-                        fontFamily: FontFamily.light,
-                        color: Palette.textColor,
-                        fontWeight: FontWeight.w300
-                      ),
+                          fontSize: getProportionateScreenWidth(16),
+                          fontFamily: FontFamily.light,
+                          color: Palette.textColor,
+                          fontWeight: FontWeight.w300),
                     ),
                     SizedBox(
                       width: getProportionateScreenWidth(9.65),
                     ),
-                    const Icon(Icons.arrow_drop_down, color: Palette.textColor,)
+                    const Icon(
+                      Icons.arrow_drop_down,
+                      color: Palette.textColor,
+                    )
                   ],
                 )),
             keyboardType: TextInputType.number,
@@ -105,14 +106,13 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
                 children: [
                   TextSpan(
                     text: 'Log In',
-                    recognizer: TapGestureRecognizer()..onTap = () {
-                    //   Navigator.push(
-                    // context,
-                    // MaterialPageRoute(
-                    //     builder: (context) => const LogInScreen()));
-
-
-                    },
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LogInScreen()));
+                      },
                     style: TextStyle(
                         fontSize: getProportionateScreenWidth(18),
                         fontWeight: FontWeight.w600,

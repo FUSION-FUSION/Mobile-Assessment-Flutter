@@ -2,7 +2,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/app/presentation/verification_Screen.dart';
-// import 'package:mobile_assessment_flutter/app/presentation/verification_screen.dart';
+
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
 
@@ -61,22 +61,25 @@ class _EcommerceSignUpScreenState extends State<EcommerceSignUpScreen> {
                 width: getProportionateScreenWidth(102),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
-                    border: Border.all(color: const Color.fromARGB(255, 230, 223, 223))),
+                    border: Border.all(
+                        color: const Color.fromARGB(255, 230, 223, 223))),
                 child: Row(
                   children: [
                     Text(
                       '+234',
                       style: TextStyle(
-                        fontSize: getProportionateScreenWidth(16),
-                        fontFamily: FontFamily.light,
-                        color: Palette.textColor,
-                        fontWeight: FontWeight.w300
-                      ),
+                          fontSize: getProportionateScreenWidth(16),
+                          fontFamily: FontFamily.light,
+                          color: Palette.textColor,
+                          fontWeight: FontWeight.w300),
                     ),
                     SizedBox(
                       width: getProportionateScreenWidth(9.65),
                     ),
-                    const Icon(Icons.arrow_drop_down, color: Palette.textColor,)
+                    const Icon(
+                      Icons.arrow_drop_down,
+                      color: Palette.textColor,
+                    )
                   ],
                 )),
             keyboardType: TextInputType.number,
@@ -142,9 +145,9 @@ class _EcommerceSignUpScreenState extends State<EcommerceSignUpScreen> {
                 BuildButton(
                   onPressed: () {
                     Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const VerificationScreen()));
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const VerificationScreen()));
                   },
                   buttonText: 'Next',
                   containerHeight: 63.64,
