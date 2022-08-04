@@ -19,8 +19,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        primaryColor: Colors.white,
-        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Colors.grey[300],
+        scaffoldBackgroundColor: Colors.grey[300],
       ),
       title: 'Shipify',
       home: SplashScreen(),

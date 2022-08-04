@@ -15,7 +15,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.white,
           body: Stack(
             children: [
               Hero(child: Image.asset('assets/bg-app-cloud.png'), tag: 'bg',),

@@ -60,6 +60,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -76,6 +77,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -86,25 +88,52 @@ class _PersonalScreenState extends State<PersonalScreen> {
                   style: ThemeStyles.details,
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(17)),
-                    color: Colors.white,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
-                  child: TextField(
-                    keyboardType: TextInputType.phone,
-                    controller: _detailsController3,
-                    decoration: InputDecoration(
-                      label: Text(
-                        '+234',
-                      ),
-                      filled: true,
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 35,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                          ),
+                          borderRadius: const BorderRadius.all(Radius.circular(17)),
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          children: [
+                              Center(
+                                child: Text(
+                                  '+234',
+                                  style: ThemeStyles.details,
+                                ),
+                              ),
+                              Icon(
+                                Icons.arrow_drop_down,
+                                size: 24,
+                              ),
+                            ],
+                        ),
+
+
+                ),
+                  Expanded(
+                    child: TextField(
+                      keyboardType: TextInputType.phone,
+                      controller: _detailsController3,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
                       ),
                     ),
-                  ),
-                ),
+                  ),],),),
                 SizedBox(height: 20),
                 Text(
                   'Password',
@@ -116,6 +145,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -131,6 +161,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
