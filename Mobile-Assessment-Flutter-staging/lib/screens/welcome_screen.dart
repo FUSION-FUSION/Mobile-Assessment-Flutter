@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/widgets/background_wrapper.dart';
 import 'package:mobile_assessment_flutter/screens/custom_registration_screen.dart';
@@ -22,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextHeader(
+                const TextHeader(
                   header: 'What kind of user are you?',
                   subheader: 'We will adapt the app to suit your \nneeds.',
                 ),

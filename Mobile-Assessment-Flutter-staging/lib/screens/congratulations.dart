@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/screens/home_screen.dart';
 import 'package:mobile_assessment_flutter/widgets/background_wrapper.dart';
 import 'package:mobile_assessment_flutter/widgets/custom_button.dart';
 import 'package:mobile_assessment_flutter/widgets/header_text.dart';
@@ -49,7 +50,7 @@ class CongratulationScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      // Navigator.pushNamed(context, .id);
+                      Navigator.pushNamed(context, HomeScreen.id);
                     },
                     size: Size(
                       size.width * .5,
