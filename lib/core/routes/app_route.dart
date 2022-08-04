@@ -3,6 +3,7 @@ import 'package:mobile_assessment_flutter/core/utils/enums.dart';
 import 'package:mobile_assessment_flutter/features/dashboard/screens/home_screen.dart';
 import 'package:mobile_assessment_flutter/features/registration/screens/choose_user_type_screen.dart';
 import 'package:mobile_assessment_flutter/features/registration/screens/login_screen.dart';
+import 'package:mobile_assessment_flutter/features/registration/screens/registration_success_screen.dart';
 import 'package:mobile_assessment_flutter/features/registration/screens/sign_up_screen.dart';
 import 'package:mobile_assessment_flutter/features/registration/screens/verification_screen.dart';
 import 'package:mobile_assessment_flutter/features/waybill/screens/tracking_screen.dart';
@@ -35,7 +36,7 @@ class AppRoute {
         });
       case regsuccessroute:
         return MaterialPageRoute(builder: (_) {
-          return const VerificationScreen();
+          return const RegistrationSuccessScreen();
         });
       case homeroute:
         return MaterialPageRoute(builder: (_) {
