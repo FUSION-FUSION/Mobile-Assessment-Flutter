@@ -4,12 +4,16 @@ class PackageModel {
   String? mainImage;
   String? bgImage;
   String? topSectionImage;
-  PackageModel(
-      {this.title,
-      this.description,
-      this.mainImage,
-      this.bgImage,
-      this.topSectionImage});
+  double? opacity;
+
+  PackageModel({
+    this.title,
+    this.description,
+    this.mainImage,
+    this.bgImage,
+    this.topSectionImage,
+    this.opacity,
+  });
 }
 
 List<PackageModel> packages = [
@@ -19,6 +23,7 @@ List<PackageModel> packages = [
     mainImage: 'assets/images/ic-bike.png',
     bgImage: 'assets/images/ic-road-same-state.png',
     topSectionImage: 'assets/images/ic-curve.png',
+    opacity: 1,
   ),
   PackageModel(
     title: 'Interstate',
@@ -26,6 +31,7 @@ List<PackageModel> packages = [
     mainImage: 'assets/images/Delivery-Van.png',
     bgImage: 'assets/images/ic-road-interstate.png',
     topSectionImage: 'assets/images/ic-curve.png',
+    opacity: 1,
   ),
   PackageModel(
     title: 'Charter',
@@ -33,6 +39,7 @@ List<PackageModel> packages = [
     mainImage: 'assets/images/ic-truck.png',
     bgImage: 'assets/images/ic-road-charter.png',
     topSectionImage: 'assets/images/ic-curve.png',
+    opacity: 1,
   ),
   PackageModel(
     title: 'International',
@@ -40,5 +47,6 @@ List<PackageModel> packages = [
     mainImage: 'assets/images/ic-aeroplane.png',
     bgImage: 'assets/images/ic-road-charter.png',
     topSectionImage: 'assets/images/ic-curve.png',
+    opacity: 0.5,
   ),
 ];

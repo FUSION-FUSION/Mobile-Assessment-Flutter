@@ -74,6 +74,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  font_awesome_flutter:
+    dependency: "direct main"
+    description:
+      name: font_awesome_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "10.1.0"
   lints:
     dependency: transitive
     description:
@@ -114,6 +121,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  snapping_sheet:
+    dependency: "direct main"
+    description:
+      name: snapping_sheet
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
   source_span:
     dependency: transitive
     description:
@@ -172,3 +186,4 @@ packages:
     version: "2.1.1"
 sdks:
   dart: ">=2.16.0 <3.0.0"
+  flutter: ">=1.17.0"

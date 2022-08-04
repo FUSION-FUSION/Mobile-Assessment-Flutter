@@ -4,6 +4,7 @@ import 'package:mobile_assessment_flutter/Screens/personal_user_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/signin_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/user_type_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/verification_screen.dart';
+import 'package:mobile_assessment_flutter/Screens/waybill_tracking_screen.dart';
 import 'package:mobile_assessment_flutter/Util/colors.dart';
 
 import 'Screens/congratulation_screen.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(scaffoldBackgroundColor: kscaffoldColor),
       // initialRoute: UserTypeScreen.id,
-      initialRoute: HomeScreen.id,
+      initialRoute: WaybillTrackingScreen.id,
       routes: {
         UserTypeScreen.id: (context) => const UserTypeScreen(),
         EcommerceUserScreen.id: (context) => const EcommerceUserScreen(),
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         SignInScreen.id: (context) => const SignInScreen(),
         CongratulationScreen.id: (context) => const CongratulationScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
+        WaybillTrackingScreen.id: (context) => const WaybillTrackingScreen()
       },
     );
   }
