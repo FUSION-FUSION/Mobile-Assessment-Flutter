@@ -93,13 +93,16 @@ class InterState extends StatelessWidget {
                       // ignore: prefer_const_constructors
                       Padding(
                         padding: const EdgeInsets.only(right: 5.0),
-                        child: const CircleAvatar(
-                          radius: 17,
-                          backgroundColor: Colors.white,
-                          child: Icon(
-                            Icons.arrow_forward,
-                            size: 20,
-                            color: Colors.black,
+                        child: GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, '/track'),
+                          child: const CircleAvatar(
+                            radius: 17,
+                            backgroundColor: Colors.white,
+                            child: Icon(
+                              Icons.arrow_forward,
+                              size: 20,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),

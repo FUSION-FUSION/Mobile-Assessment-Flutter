@@ -95,7 +95,7 @@ class _LoginState extends State<Login> {
                     verticalSpaceCustom(75.33.h),
                     Center(
                       child: GestureDetector(
-                        onTap: () => Navigator.pushNamed(context, '/congrats'),
+                        onTap: () => Navigator.pushNamed(context, '/home'),
                         child: Container(
                           height: 71,
                           width: 182,

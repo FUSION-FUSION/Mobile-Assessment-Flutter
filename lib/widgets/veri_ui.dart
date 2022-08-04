@@ -148,15 +148,19 @@ class Verii extends StatelessWidget {
                             ),
                           ),
                           verticalSpaceCustom(53.h),
-                          Center(
-                            child: CircleAvatar(
-                              radius: 30.h,
-                              backgroundColor: const Color(0xff46a5ba),
-                              child: const Center(
-                                child: const Icon(
-                                  Icons.arrow_forward,
-                                  size: 30,
-                                  color: Colors.white,
+                          GestureDetector(
+                            onTap: () =>
+                                Navigator.pushNamed(context, '/congrats'),
+                            child: Center(
+                              child: CircleAvatar(
+                                radius: 30.h,
+                                backgroundColor: const Color(0xff46a5ba),
+                                child: const Center(
+                                  child: const Icon(
+                                    Icons.arrow_forward,
+                                    size: 30,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),

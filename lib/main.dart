@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobile_assessment_flutter/screens/begin.dart';
 import 'package:mobile_assessment_flutter/screens/congartulation.dart';
 import 'package:mobile_assessment_flutter/screens/e-commerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/home_screen.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
               .black, //here it goes try changing this to your preferred colour
         ),
         debugShowCheckedModeBanner: false,
-        home: const Track(),
+        home: const Begin(),
         routes: {
           '/intro': (context) => const Launch(),
           '/personal': (context) => const Personal(),
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
           '/congrats': (context) => const Congrats(),
           '/very': (context) => const Veri(),
           '/home': (context) => const Home(),
+          '/track': (context) => const Track()
         },
       ),
     );

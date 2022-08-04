@@ -58,7 +58,7 @@ class _CongratsState extends State<Congrats> {
                     ),
                     Center(
                       child: GestureDetector(
-                        onTap: () => Navigator.pushNamed(context, '/congrats'),
+                        onTap: () => Navigator.pushNamed(context, '/home'),
                         child: Container(
                           height: 60,
                           width: 200,

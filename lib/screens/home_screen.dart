@@ -161,16 +161,21 @@ class _HomeState extends State<Home> {
                               Padding(
                                 padding: EdgeInsets.only(
                                     right: 1.5.w, top: 1.5.h, bottom: 1.5.h),
-                                child: Container(
-                                  height: double.infinity,
-                                  width: 79.w,
-                                  decoration: BoxDecoration(
-                                      color: const Color(0xff46A5BA),
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Center(
-                                    child: Text(
-                                      'TRACK',
-                                      style: kTopupstyle,
+                                child: GestureDetector(
+                                  onTap: () =>
+                                      Navigator.pushNamed(context, '/track'),
+                                  child: Container(
+                                    height: double.infinity,
+                                    width: 79.w,
+                                    decoration: BoxDecoration(
+                                        color: const Color(0xff46A5BA),
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Center(
+                                      child: Text(
+                                        'TRACK',
+                                        style: kTopupstyle,
+                                      ),
                                     ),
                                   ),
                                 ),
