@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/background_wrapper.dart';
-import 'package:mobile_assessment_flutter/custom_registration_screen.dart';
-import 'package:mobile_assessment_flutter/welcome_screen.dart';
+import 'package:mobile_assessment_flutter/screens/custom_registration_screen.dart';
+import 'package:mobile_assessment_flutter/screens/welcome_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   static const String id = 'SignIn_screen';
@@ -18,30 +18,36 @@ class SignInScreen extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-              padding: const EdgeInsets.only(top: 60, right: 15, left: 15),
+              padding: const EdgeInsets.only(top: 110, right: 15, left: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const TextHeader(
                       header: 'Sign In',
-                      subheader: 'Sign in to continue to cargo express'),
-                  SizedBox(height: size.height * .02),
+                      subheader: 'Sign in to continue to Cargo Express'),
+                  SizedBox(height: size.height * .04),
                   TextAndContainers(
                       text: 'Phone Number / E-mail', controller: controller1),
                   TextAndContainers(text: 'Password', controller: controller2),
-                  SizedBox(height: size.height * 0.05),
+                  SizedBox(height: size.height * 0.04),
                   Center(
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, WelcomeScreen.id);
+                        },
                         child: const Text('Create an Account',
-                            style: TextStyle())),
+                            style: TextStyle(fontSize: 20))),
                   ),
                   SizedBox(height: size.height * 0.05),
                   Center(
                     child: CustomButton(
-                        text: 'Continue',
+                        text: const Text(
+                          'Sign In',
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.w700),
+                        ),
                         onPressed: () {},
-                        size: Size(size.width * .5, size.height * .1)),
+                        size: Size(size.width * .5, size.height * .08)),
                   )
                 ],
               )),

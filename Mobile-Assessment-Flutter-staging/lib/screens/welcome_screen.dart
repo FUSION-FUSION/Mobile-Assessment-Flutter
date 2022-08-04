@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/background_wrapper.dart';
-import 'package:mobile_assessment_flutter/custom_registration_screen.dart';
+import 'package:mobile_assessment_flutter/screens/custom_registration_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static const String id = 'Welcome_screen';
@@ -24,7 +24,11 @@ class WelcomeScreen extends StatelessWidget {
                     subheader: 'We will adapt the app to suit your \nneeds.'),
                 SizedBox(height: size.height * .085),
                 CustomButton(
-                    text: 'Personal',
+                    text: Text(
+                      'Personal',
+                      style: const TextStyle(
+                          fontSize: 25, fontWeight: FontWeight.w700),
+                    ),
                     onPressed: () {
                       Navigator.pushNamed(
                         context,
@@ -36,7 +40,11 @@ class WelcomeScreen extends StatelessWidget {
                   height: 30,
                 ),
                 CustomButton(
-                    text: 'E-commerce',
+                    text: Text(
+                      'E-commerce',
+                      style: const TextStyle(
+                          fontSize: 25, fontWeight: FontWeight.w700),
+                    ),
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -53,7 +61,7 @@ class WelcomeScreen extends StatelessWidget {
 }
 
 class CustomButton extends StatelessWidget {
-  final String text;
+  final Widget text;
   final VoidCallback onPressed;
   final Size size;
   const CustomButton({
@@ -66,18 +74,14 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        // primary: Colors.white,
-        minimumSize: size,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          // primary: Colors.white,
+          minimumSize: size,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
         ),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
-      ),
-    );
+        child: text);
   }
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_assessment_flutter/congratulations.dart';
-import 'package:mobile_assessment_flutter/custom_registration_screen.dart';
-import 'package:mobile_assessment_flutter/sign_in.dart';
-import 'package:mobile_assessment_flutter/splash_screen.dart';
-import 'package:mobile_assessment_flutter/verification_screen.dart';
-import 'package:mobile_assessment_flutter/welcome_screen.dart';
+import 'package:mobile_assessment_flutter/screens/congratulations.dart';
+import 'package:mobile_assessment_flutter/screens/custom_registration_screen.dart';
+import 'package:mobile_assessment_flutter/screens/sign_in.dart';
+import 'package:mobile_assessment_flutter/screens/splash_screen.dart';
+import 'package:mobile_assessment_flutter/screens/verification_screen.dart';
+import 'package:mobile_assessment_flutter/screens/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());

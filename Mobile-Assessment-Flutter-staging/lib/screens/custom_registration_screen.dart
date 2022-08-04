@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/background_wrapper.dart';
-import 'package:mobile_assessment_flutter/sign_in.dart';
-import 'package:mobile_assessment_flutter/verification_screen.dart';
-import 'package:mobile_assessment_flutter/welcome_screen.dart';
+import 'package:mobile_assessment_flutter/screens/sign_in.dart';
+import 'package:mobile_assessment_flutter/screens/verification_screen.dart';
+import 'package:mobile_assessment_flutter/screens/welcome_screen.dart';
 
 class RegistrationScreen extends StatelessWidget {
   static const String id = 'Registration_screen';
@@ -89,7 +89,11 @@ class RegistrationScreen extends StatelessWidget {
                             ),
                           ),
                           CustomButton(
-                            text: 'Next',
+                            text: Text(
+                              'Next',
+                              style: const TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.w700),
+                            ),
                             onPressed: () {
                               Navigator.pushNamed(
                                   context, VerificationScreen.id);
@@ -112,11 +116,11 @@ class TextHeader extends StatelessWidget {
   const TextHeader({
     Key? key,
     required this.header,
-    required this.subheader,
+    this.subheader,
     this.norm = true,
     this.textWidget,
   }) : super(key: key);
-  final String header, subheader;
+  final String? header, subheader;
   //added this two variables because of the peculiar verification Screen
   final bool norm;
   final Widget? textWidget;
@@ -126,16 +130,16 @@ class TextHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(header,
+        Text(header!,
             style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w500,
                 color: Colors.black,
-                letterSpacing: 2)),
+                letterSpacing: 3)),
         SizedBox(height: size.height * 0.01),
         norm
             ? Text(
-                subheader,
+                subheader!,
                 style: TextStyle(fontSize: 16, wordSpacing: 3),
               )
             : textWidget!,
