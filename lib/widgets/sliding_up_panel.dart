@@ -23,7 +23,7 @@ class PanelWidget extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              panelController.panelPosition = 0.5;
+              panelController.panelPosition = 0.6;
             },
             child: Container(
               width: 60,
