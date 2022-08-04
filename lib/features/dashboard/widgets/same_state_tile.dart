@@ -5,12 +5,13 @@ import 'package:mobile_assessment_flutter/core/utils/extensions.dart';
 import 'package:mobile_assessment_flutter/core/utils/sizing.dart';
 
 class SameStateTile extends StatelessWidget {
-  const SameStateTile({Key? key}) : super(key: key);
+  final VoidCallback? onTap;
+  const SameStateTile({Key? key, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(kmediumradius),
+      borderRadius: BorderRadius.circular(ktinyradius),
       child: Container(
         height: 242,
         width: (context.width * 0.5) - (kmediumspace),
@@ -74,17 +75,20 @@ class SameStateTile extends StatelessWidget {
                   Positioned(
                     right: kspace,
                     bottom: kspace,
-                    child: Container(
-                      height: 23,
-                      width: 23,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColor.white,
-                      ),
-                      alignment: Alignment.center,
-                      child: const Icon(
-                        Icons.arrow_forward,
-                        size: 13,
+                    child: GestureDetector(
+                      onTap: onTap,
+                      child: Container(
+                        height: 23,
+                        width: 23,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.white,
+                        ),
+                        alignment: Alignment.center,
+                        child: const Icon(
+                          Icons.arrow_forward,
+                          size: 13,
+                        ),
                       ),
                     ),
                   )

@@ -1,6 +1,7 @@
 const kborderradius = 24.0;
 const kmediumradius = 20.0;
 const ksmallradius = 17.0;
+const ktinyradius = 11.0;
 
 const ktoppadding = 80.0;
 const ktinyspace = 4.0;

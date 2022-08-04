@@ -4,6 +4,8 @@ import 'package:mobile_assessment_flutter/core/constants/size_constants.dart';
 import 'package:mobile_assessment_flutter/core/theme/app_color.dart';
 import 'package:mobile_assessment_flutter/core/utils/extensions.dart';
 import 'package:mobile_assessment_flutter/core/utils/sizing.dart';
+import 'package:mobile_assessment_flutter/features/dashboard/widgets/actions_tile.dart';
+import 'package:mobile_assessment_flutter/features/dashboard/widgets/comingsoon_tile.dart';
 import 'package:mobile_assessment_flutter/features/dashboard/widgets/interstate_charter_tile.dart';
 import 'package:mobile_assessment_flutter/features/dashboard/widgets/same_state_tile.dart';
 
@@ -197,7 +199,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const YMargin(kspace),
+            const YMargin(kmediumspace),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -206,8 +208,28 @@ class HomeScreen extends StatelessWidget {
                   description: 'Request a vehichle',
                   mobilityimagepath: 'assets/images/ic-truck.png',
                 ),
+                ComingsoonTile(),
               ],
-            )
+            ),
+            const YMargin(kmediumspace),
+            const Text(
+              'Other Actions',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+            ),
+            const YMargin(kspace),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                ActionsTile(
+                  title: 'Waybill History',
+                  description: 'Records of all your waybills.',
+                ),
+                ActionsTile(
+                    title: 'Get Help',
+                    description: 'Get help & support from our team'),
+              ],
+            ),
+            const YMargin(ktoppadding),
           ],
         ),
       ),

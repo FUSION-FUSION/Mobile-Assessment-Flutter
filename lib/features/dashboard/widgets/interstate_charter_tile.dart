@@ -8,17 +8,19 @@ class InterstateCharterTile extends StatelessWidget {
   final String title;
   final String description;
   final String mobilityimagepath;
+  final VoidCallback? onTap;
   const InterstateCharterTile(
       {Key? key,
       required this.title,
       required this.description,
-      required this.mobilityimagepath})
+      required this.mobilityimagepath,
+      this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(kmediumradius),
+      borderRadius: BorderRadius.circular(ktinyradius),
       child: Container(
         height: 242,
         width: (context.width * 0.5) - (kmediumspace),
@@ -70,7 +72,7 @@ class InterstateCharterTile extends StatelessWidget {
                   ),
                   Positioned(
                     left: -2,
-                    bottom: -ksmallspace,
+                    bottom: -2,
                     child: Image.asset(
                       mobilityimagepath,
                       height: 104,
@@ -80,17 +82,20 @@ class InterstateCharterTile extends StatelessWidget {
                   Positioned(
                     right: kspace,
                     bottom: kspace,
-                    child: Container(
-                      height: 23,
-                      width: 23,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColor.white,
-                      ),
-                      alignment: Alignment.center,
-                      child: const Icon(
-                        Icons.arrow_forward,
-                        size: 13,
+                    child: GestureDetector(
+                      onTap: onTap,
+                      child: Container(
+                        height: 23,
+                        width: 23,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.white,
+                        ),
+                        alignment: Alignment.center,
+                        child: const Icon(
+                          Icons.arrow_forward,
+                          size: 13,
+                        ),
                       ),
                     ),
                   )
