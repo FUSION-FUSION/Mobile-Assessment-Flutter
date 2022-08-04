@@ -201,9 +201,9 @@ class SendPackageWidget extends StatelessWidget {
                           color: primaryColor,
                           borderRadius: BorderRadius.circular(20)),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0, bottom: 10),
-                      child: const Text(
+                    const Padding(
+                      padding: EdgeInsets.only(top: 20.0, bottom: 10),
+                      child: Text(
                         " Request a vehicle",
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w500),

@@ -46,6 +46,7 @@ dependencies:
   sliding_up_panel2:
   im_stepper:
   dotted_line:
+  intl_utils:
 
 
 

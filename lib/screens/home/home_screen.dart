@@ -20,6 +20,8 @@ class HomeScreen extends StatelessWidget {
     var size = MediaQuery
         .of(context)
         .size;
+    Locale locale= Localizations.localeOf(context);
+    var format =NumberFormat.simpleCurrency(locale: Platform.localeName,name: 'NGN');
 
     return Scaffold(
       backgroundColor: const Color.fromRGBO(240, 240, 248, 1),
@@ -68,8 +70,8 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          "₦ 50,000",
+                         Text(
+                          "${format.currencySymbol} 50,000",
                           style: TextStyle(
                               fontWeight: FontWeight.w800, fontSize: 20),
                         ),
@@ -186,6 +188,138 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Other Actions",
+                style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 25,
+                    color: textColor1),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+
+
+           Row(
+             children: [
+               Expanded(
+                 child: Container(
+                   padding: EdgeInsets.only(top:20,left: 10,
+                   right: 10),
+                   height: size.height * .2,
+                   width: size.width * .5,
+                   decoration: BoxDecoration(
+                     color: Colors.white,
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+
+                       const Text(
+                         " Waybill History",
+                         textAlign: TextAlign.center,
+                         style:
+                         TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                       ),
+                       Container(
+                         margin: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                         height: 3,
+                         width: 20,
+                         decoration: BoxDecoration(
+                             color: primaryColor,
+                             borderRadius: BorderRadius.circular(20)),
+                       ),
+                       const Text(
+                         " Records of all your\n waybills",
+                         style: TextStyle(
+                             fontSize: 15, fontWeight: FontWeight.w400),
+                       ),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.end,
+                         children: [
+
+                           ElevatedButton(
+                             style: ElevatedButton.styleFrom(
+                               primary: Colors.black,
+                               minimumSize: Size(0, size.height * .03),
+                               shape: const CircleBorder(),
+                             ),
+                             onPressed: () {},
+                             child: const Icon(
+                               Icons.arrow_forward,
+                               color: Colors.white,
+                               size: 15,
+                             ),
+                           )
+                         ],
+                       ),
+                     ],
+                   ),
+                 ),
+               ),
+               const SizedBox(width: 20,),
+
+               Expanded(
+                 child: Container(
+                   padding: const EdgeInsets.only(top:20,left: 10,
+                       right: 10),
+                   height: size.height * .2,
+                   width: size.width * .5,
+                   decoration: BoxDecoration(
+                     color: Colors.white,
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+
+                       const Text(
+                         " Get Help",
+                         textAlign: TextAlign.center,
+                         style:
+                         TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                       ),
+                       Container(
+                         margin: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                         height: 3,
+                         width: 20,
+                         decoration: BoxDecoration(
+                             color: primaryColor,
+                             borderRadius: BorderRadius.circular(20)),
+                       ),
+                       const Text(
+                         " Get help & support\n from our team",
+                         style: TextStyle(
+                             fontSize: 15, fontWeight: FontWeight.w400),
+                       ),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.end,
+                         children: [
+
+                           ElevatedButton(
+                             style: ElevatedButton.styleFrom(
+                               primary: Colors.black,
+                               minimumSize: Size(0, size.height * .03),
+                               shape: const CircleBorder(),
+                             ),
+                             onPressed: () {},
+                             child: const Icon(
+                               Icons.arrow_forward,
+                               color: Colors.white,
+                               size: 15,
+                             ),
+                           )
+                         ],
+                       ),
+                     ],
+                   ),
+                 ),
+               ),
+           ],)
           ],
         ),
       ),
