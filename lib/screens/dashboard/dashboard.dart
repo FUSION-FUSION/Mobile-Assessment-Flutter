@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/screens/dashboard/balance_container.dart';
+import 'package:mobile_assessment_flutter/screens/dashboard/other_actions.dart';
 import 'package:mobile_assessment_flutter/screens/dashboard/package_grid.dart';
 import 'package:mobile_assessment_flutter/screens/dashboard/tracking_container.dart';
 import 'package:mobile_assessment_flutter/utils/colors.dart';
@@ -19,10 +20,12 @@ class Dashboard extends StatelessWidget {
         padding: EdgeInsets.only(
           left: Dimensions.sizeWidthPercent(20),
           right: Dimensions.sizeWidthPercent(20),
-          top: Dimensions.sizeHeightPercent(57),
         ),
         child: ListView(
           children: [
+            SizedBox(
+              height: Dimensions.sizeHeightPercent(57),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -89,7 +92,21 @@ class Dashboard extends StatelessWidget {
               color: AppColors.primaryBlack,
             ),
             SizedBox(height: Dimensions.sizeHeightPercent(13)),
-            const PackageGrid()
+            const PackageGrid(),
+            SizedBox(height: Dimensions.sizeHeightPercent(30)),
+            AppText(
+              text: 'Other Actions',
+              size: 24,
+              bold: true,
+              color: AppColors.primaryBlack,
+            ),
+            SizedBox(
+              height: Dimensions.sizeHeightPercent(7),
+            ),
+            const OtherActions(),
+            SizedBox(
+              height: Dimensions.sizeHeightPercent(165),
+            ),
           ],
         ),
       ),
