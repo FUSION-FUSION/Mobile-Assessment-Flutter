@@ -26,7 +26,9 @@ class CustomSheet extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 6),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 6,
+              ),
               child: ListView(controller: scrollController, children: [
                 const Padding(
                   padding: EdgeInsets.only(bottom: 8.0),
