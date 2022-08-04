@@ -15,3 +15,4 @@ class AppTextStyles {
 }
 
 const kThemeColor = Color.fromARGB(255, 75, 177, 197);
+const String googleKey = 'AIzaSyCD8T1EbqGNNQzvpdk7EWoTDcidC8LXpQQ';
