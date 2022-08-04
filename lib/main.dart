@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_assessment_flutter/ui/auth%20Screens/auth_welcome_screen.dart';
+import 'package:mobile_assessment_flutter/ui/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
            titleTextStyle: GoogleFonts.inter( fontWeight: FontWeight.bold, fontSize: 16.0),
           ),
         ),
-        home: const AuthWelcomeScreen(),
+        home: const SplashScreen(),
+        //home: const AuthWelcomeScreen(),
       ),
       designSize: const Size(360, 690),
     );
