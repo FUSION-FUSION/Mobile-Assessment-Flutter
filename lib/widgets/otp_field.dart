@@ -28,8 +28,8 @@ class _OtpFieldState extends State<OtpField> {
 
     return Container(
         alignment: Alignment.center,
-        height: 60.h,
-        width: 49.w,
+        height: 80.h,
+        width: 48.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
         ),

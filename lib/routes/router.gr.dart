@@ -53,6 +53,10 @@ class AppRouter extends _i2.RootStackRouter {
     Congratulations.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.Congratulations());
+    },
+    TrackingScreen.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.TrackingScreen());
     }
   };
 
@@ -65,7 +69,8 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(SignUpEcommerce.name, path: '/sign-up-ecommerce'),
         _i2.RouteConfig(SignInscreen.name, path: '/sign-inscreen'),
         _i2.RouteConfig(Verification.name, path: '/Verification'),
-        _i2.RouteConfig(Congratulations.name, path: '/Congratulations')
+        _i2.RouteConfig(Congratulations.name, path: '/Congratulations'),
+        _i2.RouteConfig(TrackingScreen.name, path: '/tracking-screen')
       ];
 }
 
@@ -134,4 +139,12 @@ class Congratulations extends _i2.PageRouteInfo<void> {
       : super(Congratulations.name, path: '/Congratulations');
 
   static const String name = 'Congratulations';
+}
+
+/// generated route for
+/// [_i1.TrackingScreen]
+class TrackingScreen extends _i2.PageRouteInfo<void> {
+  const TrackingScreen() : super(TrackingScreen.name, path: '/tracking-screen');
+
+  static const String name = 'TrackingScreen';
 }

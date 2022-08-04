@@ -12,7 +12,7 @@ class International extends StatefulWidget {
 class _InternationalState extends State<International> {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    // var size = MediaQuery.of(context).size;
     var textTheme = Theme.of(context).textTheme;
     return Container(
       height: 262.5.h,

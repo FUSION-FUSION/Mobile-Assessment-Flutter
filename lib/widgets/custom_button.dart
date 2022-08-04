@@ -51,7 +51,7 @@ class _SButtonState extends State<SButton> {
       onPressed: widget.onPressed!,
       //  const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
 
-      child: Text(widget.buttontext ?? 'buttontext', style: widget.style
+      child:widget.child ?? Text(widget.buttontext ?? 'buttontext', style: widget.style
           // Theme.of(context).textTheme.button?.copyWith(
 
           //     color: widget.buttonTextCor ?? Colors.white)

@@ -163,19 +163,26 @@ class _VerificationState extends State<Verification> {
                     Padding(
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: Center(
-                          child: MaterialButton(
-                        padding: EdgeInsets.zero,
-                        onPressed: () {
+                          child: InkWell(
+                        onTap: () {
                           AutoRouter.of(context).push(const Congratulations());
                         },
-                        color: SColors.primaryColor,
-                        height: 55.h,
-                        minWidth: 50.w,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25)),
-                        child: Image.asset(
-                            'assets/images/bi_arrow-right-circle.png',
-                            height: 45.h),
+                        child: Container(
+                          height: 60.h,
+
+                          decoration: BoxDecoration(
+                            color: SColors.primaryColor,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Image.asset(
+                                'assets/images/bi_arrow-right-circle.png',
+                                height: 25.h),
+                          ),
+
+                 
+                        ),
                       )),
                     ),
                     SizedBox(height: 80.h),

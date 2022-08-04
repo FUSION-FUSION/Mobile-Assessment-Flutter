@@ -6,3 +6,4 @@ export 'auth_screens/e-commerce/e_sign_up.dart';
 export 'auth_screens/sign_in.dart';
 export 'auth_screens/verification.dart';
 export 'auth_screens/congratulations.dart';
+export 'tracking/tracking.dart';

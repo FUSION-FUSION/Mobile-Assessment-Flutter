@@ -14,6 +14,7 @@ import '../screens/screens.dart';
     AutoRoute(page: SignInscreen),
     AutoRoute(page: Verification),
     AutoRoute(page: Congratulations),
+    AutoRoute(page: TrackingScreen),
 
 
 

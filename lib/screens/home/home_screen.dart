@@ -1,14 +1,14 @@
 // ignore_for_file: sized_box_for_whitespace
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:mobile_assessment_flutter/utilities/constants/constants.dart';
 import 'package:mobile_assessment_flutter/widgets/widgets.dart';
-import 'package:provider/provider.dart';
 
-import '../../providers/providers.dart';
+import '../../routes/router.gr.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var textTheme = Theme.of(context).textTheme;
-    final authProvider = Provider.of<AuthProvider>(context);
+    // final authProvider = Provider.of<AuthProvider>(context);
 
     return Scaffold(
       backgroundColor: const Color(0xFFF8F8FA),
@@ -35,13 +35,15 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset('assets/images/Hamburger menu.png', height: 25.h),
+                  InkWell(child: Image.asset('assets/images/Hamburger menu.png', height: 25.h)),
                   Text(
                     'Hello, John.',
                     style: textTheme.headline2,
                   ),
-                  Image.asset('assets/images/ic-notification.png',
-                      height: 30.h),
+                  InkWell(
+                    child: Image.asset('assets/images/ic-notification.png',
+                        height: 30.h),
+                  ),
                 ],
               ),
               SizedBox(height: 20.h),
@@ -130,7 +132,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   BoxConstraints(maxHeight: 35.h),
                               suffixIcon: SButton(
                                 width: 40.w,
-                                onPressed: () {},
+                                onPressed: () {
+                                  AutoRouter.of(context)
+                                      .push(const TrackingScreen());
+                                },
                                 buttontext: 'Track',
                                 style: textTheme.caption
                                     ?.copyWith(color: SColors.buttonsideColor),
@@ -252,9 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
-                            
                           )
-
                         ]),
                   ),
                   //?get help
@@ -296,14 +299,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
-                            
                           )
-
                         ]),
                   ),
                 ],
               ),
-              SizedBox(height:130.h),
+              SizedBox(height: 130.h),
             ],
           ),
         ),
