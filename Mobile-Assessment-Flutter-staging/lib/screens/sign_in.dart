@@ -52,9 +52,7 @@ class SignInScreen extends StatelessWidget {
                     },
                     child: const Text(
                       'Create an Account',
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
+                      style: TextStyle(fontSize: 20, color: Color(0xff46a5ba)),
                     ),
                   ),
                 ),
