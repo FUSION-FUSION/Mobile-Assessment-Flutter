@@ -1,9 +1,12 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/screens/sigin/signin_screen.dart';
+import 'package:mobile_assessment_flutter/screens/verification_screens/verify_screen1.dart';
 import 'package:mobile_assessment_flutter/utils/constant.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({Key? key}) : super(key: key);
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -192,6 +195,14 @@ class SignInScreen extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SiginScreen()),
+                              );
+                            },
                           text: 'Log in',
                           style: GoogleFonts.poppins(
                             textStyle: TextStyle(
@@ -209,43 +220,57 @@ class SignInScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      width: 141.77,
-                      height: 63.46,
-                      decoration: BoxDecoration(
-                        color: kPrimaryWhite,
-                        borderRadius: BorderRadius.circular(20.25),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Back',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 24.3,
-                              color: kPrimaryBlack,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        width: 141.77,
+                        height: 63.46,
+                        decoration: BoxDecoration(
+                          color: kPrimaryWhite,
+                          borderRadius: BorderRadius.circular(20.25),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Back',
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 24.3,
+                                color: kPrimaryBlack,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    Container(
-                      width: 141.77,
-                      height: 63.46,
-                      decoration: BoxDecoration(
-                        color: kPrimaryBlue,
-                        borderRadius: BorderRadius.circular(20.25),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Next',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 24.3,
-                              color: kPrimaryWhite,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VerifyScreen1()),
+                        );
+                      },
+                      child: Container(
+                        width: 141.77,
+                        height: 63.46,
+                        decoration: BoxDecoration(
+                          color: kPrimaryBlue,
+                          borderRadius: BorderRadius.circular(20.25),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Next',
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 24.3,
+                                color: kPrimaryWhite,
+                              ),
                             ),
                           ),
                         ),

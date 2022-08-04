@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/screens/verification_screens/verify_screen2.dart';
 import 'package:mobile_assessment_flutter/utils/constant.dart';
 
-class VerifyScreen2 extends StatelessWidget {
-  const VerifyScreen2({Key? key}) : super(key: key);
+class VerifyScreen1 extends StatelessWidget {
+  const VerifyScreen1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -122,9 +123,9 @@ class VerifyScreen2 extends StatelessWidget {
             ),
             SizedBox(height: h * 0.01),
             Padding(
-              padding: const EdgeInsets.only(left: 235),
+              padding: const EdgeInsets.only(left: 300),
               child: Text(
-                'Code Expiried',
+                '00:52',
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.w400,
@@ -149,17 +150,25 @@ class VerifyScreen2 extends StatelessWidget {
             ),
             SizedBox(height: h * 0.04),
             Center(
-              child: Container(
-                height: 59,
-                width: 59,
-                decoration:
-                    BoxDecoration(color: kPrimaryBlue, shape: BoxShape.circle),
-                child: Center(
-                    child: Icon(
-                  Icons.arrow_forward_rounded,
-                  color: kPrimaryWhite,
-                  size: 30,
-                )),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => VerifyScreen2()),
+                  );
+                },
+                child: Container(
+                  height: 59,
+                  width: 59,
+                  decoration: BoxDecoration(
+                      color: kPrimaryBlue, shape: BoxShape.circle),
+                  child: Center(
+                      child: Icon(
+                    Icons.arrow_forward_rounded,
+                    color: kPrimaryWhite,
+                    size: 30,
+                  )),
+                ),
               ),
             ),
           ],

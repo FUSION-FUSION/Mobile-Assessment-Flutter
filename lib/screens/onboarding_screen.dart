@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/screens/sigin/welcome_screen.dart';
 import 'package:mobile_assessment_flutter/utils/constant.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -57,21 +58,31 @@ class OnboardingScreen extends StatelessWidget {
               ),
               SizedBox(height: h * 0.05),
               Center(
-                child: Container(
-                  height: 136.78,
-                  width: 373.03,
-                  decoration: BoxDecoration(
-                    color: kPrimaryBlue,
-                    borderRadius: BorderRadius.circular(24.87),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Personal',
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 39.5,
-                          color: kPrimaryWhite,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => WelcomeScreen(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 136.78,
+                    width: 373.03,
+                    decoration: BoxDecoration(
+                      color: kPrimaryBlue,
+                      borderRadius: BorderRadius.circular(24.87),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Personal',
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 39.5,
+                            color: kPrimaryWhite,
+                          ),
                         ),
                       ),
                     ),

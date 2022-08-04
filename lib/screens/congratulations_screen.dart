@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/screens/Home/home_page.dart';
 import 'package:mobile_assessment_flutter/utils/constant.dart';
 
 class CongratulationsScreen extends StatelessWidget {
@@ -58,22 +59,30 @@ class CongratulationsScreen extends StatelessWidget {
             Image.asset('assets/images/ic-congratulations.png'),
             SizedBox(height: h * 0.05),
             Center(
-              child: Container(
-                height: 63,
-                width: 194.01,
-                decoration: BoxDecoration(
-                  color: kPrimaryBlue,
-                  borderRadius: BorderRadius.circular(20.25),
-                ),
-                child: Center(
-                  child: Text(
-                    'Continue',
-                    textAlign: TextAlign.start,
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 24.3,
-                        color: kPrimaryWhite,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
+                child: Container(
+                  height: 63,
+                  width: 194.01,
+                  decoration: BoxDecoration(
+                    color: kPrimaryBlue,
+                    borderRadius: BorderRadius.circular(20.25),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Continue',
+                      textAlign: TextAlign.start,
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 24.3,
+                          color: kPrimaryWhite,
+                        ),
                       ),
                     ),
                   ),

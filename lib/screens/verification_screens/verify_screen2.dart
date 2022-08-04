@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_assessment_flutter/screens/congratulations_screen.dart';
 import 'package:mobile_assessment_flutter/utils/constant.dart';
 
-
-class VerifyScreen1 extends StatelessWidget {
-  const VerifyScreen1({Key? key}) : super(key: key);
+class VerifyScreen2 extends StatelessWidget {
+  const VerifyScreen2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,17 +44,6 @@ class VerifyScreen1 extends StatelessWidget {
               ),
             ),
             SizedBox(height: h * 0.01),
-            // Text(
-            //   'We sent you an SMS code on',
-            //   textAlign: TextAlign.start,
-            //   style: GoogleFonts.poppins(
-            //     textStyle: TextStyle(
-            //       fontWeight: FontWeight.w300,
-            //       fontSize: 17.55,
-            //       color: kPrimaryBlack,
-            //     ),
-            //   ),
-            // ),
             RichText(
               text: TextSpan(
                 children: [
@@ -134,9 +123,9 @@ class VerifyScreen1 extends StatelessWidget {
             ),
             SizedBox(height: h * 0.01),
             Padding(
-              padding: const EdgeInsets.only(left: 300),
+              padding: const EdgeInsets.only(left: 235),
               child: Text(
-                '00:52',
+                'Code Expiried',
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.w400,
@@ -160,19 +149,27 @@ class VerifyScreen1 extends StatelessWidget {
               ),
             ),
             SizedBox(height: h * 0.04),
-
             Center(
-              child: Container(
-                height: 59,
-                width: 59,
-                decoration:
-                    BoxDecoration(color: kPrimaryBlue, shape: BoxShape.circle),
-                child: Center(
-                    child: Icon(
-                  Icons.arrow_forward_rounded,
-                  color: kPrimaryWhite,
-                  size: 30,
-                )),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CongratulationsScreen()),
+                  );
+                },
+                child: Container(
+                  height: 59,
+                  width: 59,
+                  decoration: BoxDecoration(
+                      color: kPrimaryBlue, shape: BoxShape.circle),
+                  child: Center(
+                      child: Icon(
+                    Icons.arrow_forward_rounded,
+                    color: kPrimaryWhite,
+                    size: 30,
+                  )),
+                ),
               ),
             ),
           ],

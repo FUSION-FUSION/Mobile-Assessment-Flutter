@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_assessment_flutter/screens/Home/dashboard_card.dart';
 import 'package:mobile_assessment_flutter/screens/Home/packaged_grid.dart';
-import 'package:mobile_assessment_flutter/screens/Home/waybill_caed.dart';
+import 'package:mobile_assessment_flutter/screens/Home/waybill_card.dart';
 import 'package:mobile_assessment_flutter/utils/constant.dart';
 
 class HomePage extends StatelessWidget {
