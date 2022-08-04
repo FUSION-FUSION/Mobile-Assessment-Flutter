@@ -6,6 +6,7 @@ import 'package:mobile_assessment_flutter/screens/e-commerce_screen.dart';
 import 'package:mobile_assessment_flutter/screens/home_screen.dart';
 import 'package:mobile_assessment_flutter/screens/launch_screen.dart';
 import 'package:mobile_assessment_flutter/screens/personal_screen.dart';
+import 'package:mobile_assessment_flutter/screens/trackSCreen.dart';
 import 'package:mobile_assessment_flutter/screens/veri.dart';
 
 import 'screens/login_screen.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
               .black, //here it goes try changing this to your preferred colour
         ),
         debugShowCheckedModeBanner: false,
-        home: const Home(),
+        home: const Track(),
         routes: {
           '/intro': (context) => const Launch(),
           '/personal': (context) => const Personal(),
