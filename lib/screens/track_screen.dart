@@ -35,6 +35,63 @@ class _TrackScreenState extends State<TrackScreen> {
     // double height = MediaQuery.of(context).size.height;
     // double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size(double.infinity, 60),
+        child: SafeArea(
+          child: Container(
+            width: double.infinity,
+
+            child: Padding(
+              padding: EdgeInsets.only(left: getScreenWidth(17)),
+              child: Row(
+                children: [
+                  SizedBox(
+                    height: getScreenHeight(44),
+                    width: getScreenWidth(50),
+                    child: GestureDetector(
+                      onTap: (){
+                        Get.offNamed('/homeScreen');
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17)
+                        ),
+                        child: Icon(
+                            Icons.arrow_back,
+                          size: getScreenWidth(16),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: getScreenWidth(21),
+                  ),
+                  SizedBox(
+                    height: getScreenHeight(37),
+                    width: getScreenWidth(288),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17)
+                      ),
+                      child: Center(
+                        child: Text(
+                          'HH-INT-D9FD00-JBW-ORI',
+                          style: TextStyle(
+                            color: Palette.kHeaderTextColor,
+                            fontSize: getScreenWidth(16),
+                            fontWeight: FontWeight.w500,
+                            fontFamily: FontFamily.kMediumFamily
+                          ),
+                        ),
+                      )
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
       body: ExpandableBottomSheet(
         key: controller.key,
         animationCurveExpand: Curves.easeInSine,
@@ -44,6 +101,7 @@ class _TrackScreenState extends State<TrackScreen> {
           onMapCreated: _onMapCreated,
           initialCameraPosition: CameraPosition(
             target: _center,
+            zoom: 20
           ),
         ),
         expandableContent: Container(
