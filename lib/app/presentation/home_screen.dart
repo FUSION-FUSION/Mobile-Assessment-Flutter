@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '₦ 50,000',
+                              'N 50,000',
                               style: TextStyle(
                                   color: Palette.blackColor,
                                   fontSize: getProportionateScreenHeight(24),

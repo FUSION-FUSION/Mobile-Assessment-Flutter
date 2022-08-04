@@ -174,3 +174,31 @@ class BuildTextInputField extends StatelessWidget {
     );
   }
 }
+
+class RouteTrackContainer extends StatelessWidget {
+
+  RouteTrackContainer({required this.fill, required this.hover});
+  Color fill;
+  Color hover;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(3.37),
+      height: getProportionateScreenHeight(19),
+      width: getProportionateScreenWidth(19),
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: fill
+      ),
+      child: Container(
+        height: getProportionateScreenHeight(12),
+        width: getProportionateScreenWidth(12),
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: hover
+        ),
+      ),
+    );
+  }
+}
