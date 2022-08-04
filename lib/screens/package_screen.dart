@@ -50,7 +50,7 @@ class PackageScreen extends StatelessWidget {
                           ),
                           const Gap(18),
                           Container(
-                            width: 200,
+                            width: 100,
                             height: 300,
                             padding: EdgeInsets.all(15.0),
                             alignment: Alignment.bottomCenter,
