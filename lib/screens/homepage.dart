@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 //Widget Imports
 import './home_page_widgets/package_items.widget.dart';
 import './home_page_widgets/total_asset.widget.dart';
 import './home_page_widgets/track_waybill.widget.dart';
 import './home_page_widgets/nav_bar.widget.dart';
 import './home_page_widgets/other_options.widget.dart';
-
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

@@ -30,9 +30,14 @@ class AccountTypePage extends StatelessWidget {
                         padding: EdgeInsets.only(bottom: 10),
                         child: Text('What kind of user are you?',
                             style: TextStyle(
-                                fontSize: 35, fontFamily: 'JosefinSans', fontWeight: FontWeight.bold))),
+                                fontSize: 35,
+                                fontFamily: 'JosefinSans',
+                                fontWeight: FontWeight.bold))),
                     Text('We will adopt the app to suit your needs',
-                        style: TextStyle(fontSize: 27, fontFamily: 'JosefinSans', fontWeight: FontWeight.w200))
+                        style: TextStyle(
+                            fontSize: 27,
+                            fontFamily: 'JosefinSans',
+                            fontWeight: FontWeight.w200))
                   ],
                 ),
               ),

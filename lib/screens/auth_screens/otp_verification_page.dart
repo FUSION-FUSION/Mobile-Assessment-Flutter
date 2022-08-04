@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import '../congrats_page.dart';
 
 class OtpVerificationPage extends StatelessWidget {
@@ -30,8 +31,10 @@ class OtpVerificationPage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.all(0),
                   child: Text('Verification!',
-                      style:
-                          TextStyle(fontSize: 35, fontWeight: FontWeight.w400, fontFamily: 'JosefinSans')),
+                      style: TextStyle(
+                          fontSize: 35,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'JosefinSans')),
                 ),
                 Container(
                     margin: EdgeInsets.only(top: 10, bottom: 30),

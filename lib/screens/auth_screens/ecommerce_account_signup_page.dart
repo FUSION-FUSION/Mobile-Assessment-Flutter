@@ -37,8 +37,10 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                   margin: EdgeInsets.only(top: 10),
                   child: Text(
                       'Create an account to get started with Cargo Express',
-                      style:
-                          TextStyle(fontSize: 27, fontFamily: 'JosefinSans', fontWeight: FontWeight.w300)),
+                      style: TextStyle(
+                          fontSize: 27,
+                          fontFamily: 'JosefinSans',
+                          fontWeight: FontWeight.w300)),
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
@@ -121,7 +123,8 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                           children: [
                             Text(
                               '+234',
-                              style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans'),
+                              style: TextStyle(
+                                  fontSize: 21, fontFamily: 'JosefinSans'),
                             ),
                             Icon(Icons.keyboard_arrow_down)
                           ],
@@ -130,7 +133,9 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
-                  child: Text('Password', style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
+                  child: Text('Password',
+                      style:
+                          TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
                 ),
                 Container(
                     margin: EdgeInsets.all(0),
@@ -150,8 +155,9 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                     )),
                 Container(
                   margin: EdgeInsets.only(top: 30, bottom: 7, left: 8),
-                  child:
-                      Text('Confirm Password', style: TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
+                  child: Text('Confirm Password',
+                      style:
+                          TextStyle(fontSize: 21, fontFamily: 'JosefinSans')),
                 ),
                 Container(
                     margin: EdgeInsets.all(0),
@@ -175,7 +181,9 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                   child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
                           shape: StadiumBorder(),
-                          textStyle: TextStyle(fontFamily: 'JosefinSans', fontWeight: FontWeight.bold),
+                          textStyle: TextStyle(
+                              fontFamily: 'JosefinSans',
+                              fontWeight: FontWeight.bold),
                           primary: Color(0xFF46A5B9),
                           side: BorderSide.none),
                       onPressed: () {
@@ -193,9 +201,9 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                                   TextSpan(
                                       text: 'Already have an account? ',
                                       style: TextStyle(
-                                          fontFamily: 'JosefinSans',
-                                          color: Colors.grey[700],
-                                          )),
+                                        fontFamily: 'JosefinSans',
+                                        color: Colors.grey[700],
+                                      )),
                                   TextSpan(
                                       text: 'Log In',
                                       style: TextStyle(
@@ -237,7 +245,9 @@ class EcommerceAccountSignUpPage extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             shape: StadiumBorder(),
                             textStyle: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w400, fontFamily: 'JosefinSans'),
+                                fontSize: 30,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'JosefinSans'),
                             primary: Color(0xFF46A5B9),
                             onPrimary: Colors.white,
                             minimumSize: Size(100, 70),

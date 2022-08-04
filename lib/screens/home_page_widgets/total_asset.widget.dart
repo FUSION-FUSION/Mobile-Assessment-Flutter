@@ -13,8 +13,7 @@ class TotalAssetWidget_ extends StatelessWidget {
         height: 70,
         width: screenWidth * 0.92,
         decoration: BoxDecoration(
-            color: Color(0xFFFCFDFF),
-            borderRadius: BorderRadius.circular(20)),
+            color: Color(0xFFFCFDFF), borderRadius: BorderRadius.circular(20)),
         child: Row(
           children: [
             Container(
@@ -30,8 +29,7 @@ class TotalAssetWidget_ extends StatelessWidget {
                         child: Text(
                           'Total Asset',
                           style: TextStyle(
-                              fontSize: 23,
-                              fontFamily: 'JosefinSans'),
+                              fontSize: 23, fontFamily: 'JosefinSans'),
                         )),
                     Align(
                         alignment: Alignment.centerLeft,
@@ -50,8 +48,7 @@ class TotalAssetWidget_ extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(
-                        'assets/images/bg-dashboard-balance.png'),
+                    image: AssetImage('assets/images/bg-dashboard-balance.png'),
                     fit: BoxFit.cover),
               ),
               width: 228.5,
@@ -63,8 +60,8 @@ class TotalAssetWidget_ extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         shape: StadiumBorder(),
-                        textStyle: TextStyle(
-                            fontSize: 20, fontFamily: 'JosefinSans'),
+                        textStyle:
+                            TextStyle(fontSize: 20, fontFamily: 'JosefinSans'),
                         primary: Color(0xFF46A5B9),
                         onPrimary: Colors.white,
                         minimumSize: Size(100, 70),
@@ -79,8 +76,7 @@ class TotalAssetWidget_ extends StatelessWidget {
                             children: [
                               Text('Top up'),
                               Icon(
-                                Icons
-                                    .keyboard_double_arrow_right_outlined,
+                                Icons.keyboard_double_arrow_right_outlined,
                                 size: 20,
                                 color: Colors.white,
                               ),

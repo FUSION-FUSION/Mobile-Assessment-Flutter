@@ -56,7 +56,8 @@ class PackageItemsWidget_ extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               width: 20,
                               decoration: BoxDecoration(
-                                border: Border.all(width:1.5, color: Color(0xFF46A5B9)),
+                                border: Border.all(
+                                    width: 1.5, color: Color(0xFF46A5B9)),
                               ),
                             )),
                         Align(
@@ -174,7 +175,8 @@ class PackageItemsWidget_ extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               width: 20,
                               decoration: BoxDecoration(
-                                border: Border.all(width:1.5, color: Color(0xFF46A5B9)),
+                                border: Border.all(
+                                    width: 1.5, color: Color(0xFF46A5B9)),
                               ),
                             )),
                         Align(
@@ -292,7 +294,8 @@ class PackageItemsWidget_ extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               width: 20,
                               decoration: BoxDecoration(
-                                border: Border.all(width:1.5, color: Color(0xFF46A5B9)),
+                                border: Border.all(
+                                    width: 1.5, color: Color(0xFF46A5B9)),
                               ),
                             )),
                         Align(
@@ -326,8 +329,8 @@ class PackageItemsWidget_ extends StatelessWidget {
                           height: 100,
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/images/ic-truck.png'),
+                                  image:
+                                      AssetImage('assets/images/ic-truck.png'),
                                   fit: BoxFit.fill)),
                         ),
                         Container(
@@ -381,7 +384,6 @@ class PackageItemsWidget_ extends StatelessWidget {
                   Container(
                     height: 40,
                     width: double.infinity,
-
                   ),
                   Container(
                     padding: EdgeInsets.all(8),
@@ -395,7 +397,7 @@ class PackageItemsWidget_ extends StatelessWidget {
                           child: Text(
                             'InterState',
                             style: TextStyle(
-                              color: Colors.grey,
+                                color: Colors.grey,
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'JosefinSans'),
@@ -408,7 +410,8 @@ class PackageItemsWidget_ extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               width: 20,
                               decoration: BoxDecoration(
-                                border: Border.all(width:1.5, color: Color(0xFF46A5B9)),
+                                border: Border.all(
+                                    width: 1.5, color: Color(0xFF46A5B9)),
                               ),
                             )),
                         Align(
@@ -448,8 +451,7 @@ class PackageItemsWidget_ extends StatelessWidget {
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   textStyle: TextStyle(
-                                      fontSize: 15,
-                                      fontFamily: 'JosefinSans'),
+                                      fontSize: 15, fontFamily: 'JosefinSans'),
                                   primary: Color(0xFFFCFDFF),
                                   onPrimary: Colors.black,
                                 ),
@@ -457,8 +459,7 @@ class PackageItemsWidget_ extends StatelessWidget {
                                   // Navigator.of(context).push(MaterialPageRoute(
                                   //     builder: (context) => CongratsPage()));
                                 },
-                                child: Container(
-                                    child: Text('coming soon')),
+                                child: Container(child: Text('coming soon')),
                               )),
                         )
                       ],
