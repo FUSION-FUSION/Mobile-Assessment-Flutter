@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/home/home_screen.dart';
 import 'package:mobile_assessment_flutter/screens/congratulations.dart';
 import 'package:mobile_assessment_flutter/screens/custom_registration_screen.dart';
-import 'package:mobile_assessment_flutter/screens/home_screen.dart';
 import 'package:mobile_assessment_flutter/screens/sign_in.dart';
 import 'package:mobile_assessment_flutter/screens/splash_screen.dart';
 import 'package:mobile_assessment_flutter/screens/verification_screen.dart';
 import 'package:mobile_assessment_flutter/screens/welcome_screen.dart';
+import 'package:mobile_assessment_flutter/tracking/map_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
           SignInScreen.id: (context) => SignInScreen(),
           VerificationScreen.id: (context) => const VerificationScreen(),
           HomeScreen.id: (context) => const HomeScreen(),
+          MapScreen.id: (context) => const MapScreen(),
         });
   }
 }
