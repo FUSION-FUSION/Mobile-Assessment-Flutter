@@ -7,6 +7,7 @@ import 'package:mobile_assessment_flutter/screens/homeScreen/widgets/otherAction
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 
 class HomePage extends StatelessWidget {
+  static const routeName = '/home-page';
   const HomePage({Key? key}) : super(key: key);
 
   @override
