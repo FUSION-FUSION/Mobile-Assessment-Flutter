@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(scaffoldBackgroundColor: kscaffoldColor),
       // initialRoute: UserTypeScreen.id,
-      initialRoute: UserTypeScreen.id,
+      initialRoute: HomeScreen.id,
       routes: {
         UserTypeScreen.id: (context) => const UserTypeScreen(),
         EcommerceUserScreen.id: (context) => const EcommerceUserScreen(),

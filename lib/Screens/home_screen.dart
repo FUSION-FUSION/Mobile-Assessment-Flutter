@@ -44,9 +44,116 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                // GridView.builder(gridDelegate: '', itemBuilder: (context, index) {
-
-                // })
+                const SizedBox(
+                  height: 15,
+                ),
+                GridView.builder(
+                    shrinkWrap: true,
+                    gridDelegate:
+                        const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 300,
+                      childAspectRatio: 0.8,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                    ),
+                    itemCount: 2,
+                    itemBuilder: (context, index) {
+                      return ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Stack(
+                          children: [
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: kWhiteColor,
+                              ),
+                              child: Stack(
+                                children: [
+                                  Transform.translate(
+                                    offset: const Offset(0, -100),
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        image: DecorationImage(
+                                          fit: BoxFit.fitWidth,
+                                          image: AssetImage(
+                                              'assets/images/ic-curve.png'),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 30),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Same State',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: SizeConfig
+                                                    .blockSizeHorizontal! *
+                                                3.6,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Container(
+                                          width: 20,
+                                          height: 4,
+                                          decoration: BoxDecoration(
+                                            color: kPrimaryColor,
+                                            borderRadius:
+                                                BorderRadius.circular(5),
+                                          ),
+                                        ),
+                                        Text(
+                                            'Deliveries within the \nsame satate')
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Transform.translate(
+                              offset: const Offset(0, 70),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    fit: BoxFit.fitWidth,
+                                    image: AssetImage(
+                                        'assets/images/ic-road-same-state.png'),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  flex: 2,
+                                  child: Transform.translate(
+                                    offset: const Offset(-10, 20),
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/ic-aeroplane.png'),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Expanded(
+                                    child: CircleAvatar(
+                                  child: Icon(Icons.arrow_forward),
+                                ))
+                              ],
+                            ),
+                          ],
+                        ),
+                      );
+                    })
               ],
             ),
           ),
