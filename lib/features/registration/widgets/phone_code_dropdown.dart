@@ -77,21 +77,27 @@ class __DropdownState extends State<_Dropdown> {
       child: CompositedTransformTarget(
         link: _layerLink,
         child: Container(
-          height: 44,
-          width: 102,
-          padding: const EdgeInsets.symmetric(horizontal: ksmallspace) +
-              const EdgeInsets.only(left: ksmallspace),
+          padding: const EdgeInsets.all(1),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(ksmallradius),
-            color: AppColor.fieldwhite,
-          ),
-          alignment: Alignment.center,
-          child: Row(
-            children: [
-              Text(_selectedItem),
-              const Spacer(),
-              const Icon(Icons.arrow_drop_down),
-            ],
+              color: AppColor.bottomlinear,
+              borderRadius: BorderRadius.circular(ksmallradius)),
+          child: Container(
+            height: 43,
+            width: 102,
+            padding: const EdgeInsets.symmetric(horizontal: ksmallspace) +
+                const EdgeInsets.only(left: ksmallspace),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(ksmallradius),
+              color: AppColor.fieldwhite,
+            ),
+            alignment: Alignment.center,
+            child: Row(
+              children: [
+                Text(_selectedItem),
+                const Spacer(),
+                const Icon(Icons.arrow_drop_down),
+              ],
+            ),
           ),
         ),
       ),

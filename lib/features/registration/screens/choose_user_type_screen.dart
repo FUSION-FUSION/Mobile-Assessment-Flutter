@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/core/constants/size_constants.dart';
+import 'package:mobile_assessment_flutter/core/routes/app_route.dart';
+import 'package:mobile_assessment_flutter/core/utils/enums.dart';
 import 'package:mobile_assessment_flutter/core/utils/sizing.dart';
 import 'package:mobile_assessment_flutter/features/registration/widgets/cloud_background.dart';
 import 'package:mobile_assessment_flutter/features/registration/widgets/user_type_tile.dart';
@@ -24,9 +26,21 @@ class ChooseUserTypeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
             ),
             const YMargin(kLargespace + ktinyspace),
-            UserTypeTile(onTap: () {}, label: 'Personal'),
+            UserTypeTile(
+              onTap: () {
+                Navigator.pushNamed(context, AppRoute.signuproute,
+                    arguments: UserType.personal);
+              },
+              label: 'Personal',
+            ),
             const YMargin(kLargespace),
-            UserTypeTile(onTap: () {}, label: 'E-commerce'),
+            UserTypeTile(
+              onTap: () {
+                Navigator.pushNamed(context, AppRoute.signuproute,
+                    arguments: UserType.ecommerce);
+              },
+              label: 'E-commerce',
+            ),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/core/constants/size_constants.dart';
+import 'package:mobile_assessment_flutter/core/routes/app_route.dart';
 import 'package:mobile_assessment_flutter/core/utils/sizing.dart';
 import 'package:mobile_assessment_flutter/features/registration/widgets/border_button.dart';
 import 'package:mobile_assessment_flutter/features/registration/widgets/cloud_background.dart';
@@ -34,7 +35,10 @@ class RegistrationSuccessScreen extends StatelessWidget {
                 width: 194,
                 child: BorderButton(
                   label: 'Continue',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, AppRoute.homeroute, (route) => false);
+                  },
                 ),
               ),
             )

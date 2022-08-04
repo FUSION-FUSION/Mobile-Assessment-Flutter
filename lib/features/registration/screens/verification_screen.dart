@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/core/constants/size_constants.dart';
+import 'package:mobile_assessment_flutter/core/routes/app_route.dart';
 import 'package:mobile_assessment_flutter/core/theme/app_color.dart';
 import 'package:mobile_assessment_flutter/core/utils/sizing.dart';
 import 'package:mobile_assessment_flutter/features/registration/widgets/cloud_background.dart';
@@ -22,6 +23,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
   @override
   void initState() {
     super.initState();
+    startTimer();
   }
 
   void startTimer() {
@@ -136,7 +138,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
           ),
           const YMargin(kLargespace),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacementNamed(context, AppRoute.regsuccessroute);
+            },
             child: Center(
               child: Container(
                 height: 59,

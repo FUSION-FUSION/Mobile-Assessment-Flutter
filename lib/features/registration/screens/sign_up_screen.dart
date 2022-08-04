@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/core/constants/size_constants.dart';
+import 'package:mobile_assessment_flutter/core/routes/app_route.dart';
 import 'package:mobile_assessment_flutter/core/theme/app_color.dart';
+import 'package:mobile_assessment_flutter/core/utils/enums.dart';
 import 'package:mobile_assessment_flutter/core/utils/extensions.dart';
 import 'package:mobile_assessment_flutter/core/utils/sizing.dart';
 import 'package:mobile_assessment_flutter/features/registration/widgets/border_button.dart';
@@ -9,7 +11,8 @@ import 'package:mobile_assessment_flutter/features/registration/widgets/custom_t
 import 'package:mobile_assessment_flutter/features/registration/widgets/phone_code_dropdown.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  final UserType userType;
+  const SignUpScreen({Key? key, required this.userType}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +34,21 @@ class SignUpScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                 ),
                 const YMargin(kLargespace + ktinyspace),
-                const CustomTextfield(label: 'Full Name'),
+                CustomTextfield(
+                    label: userType == UserType.personal
+                        ? 'Full Name'
+                        : 'Business Name'),
                 const YMargin(kspace),
-                const CustomTextfield(label: 'Your E-mail'),
+                CustomTextfield(
+                    label: userType == UserType.personal
+                        ? 'Your E-mail'
+                        : 'Official E-mail'),
                 const YMargin(kspace),
-                const PhonecodeDropdown(
-                  label: 'Phone Number',
-                  items: ['+234', '+233', '+122', '+123', '+133'],
+                PhonecodeDropdown(
+                  label: userType == UserType.personal
+                      ? 'Phone Number'
+                      : 'Contact Number',
+                  items: const ['+234', '+233', '+122', '+123', '+133', '+144'],
                 ),
                 const YMargin(kspace),
                 const CustomTextfield(label: 'Password'),
@@ -45,7 +56,9 @@ class SignUpScreen extends StatelessWidget {
                 const CustomTextfield(label: 'Confirm Password'),
                 const YMargin(kmediumspace),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, AppRoute.loginroute);
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
@@ -71,7 +84,9 @@ class SignUpScreen extends StatelessWidget {
                     Expanded(
                       child: BorderButton(
                         label: 'Back',
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
                         backgroundColor: AppColor.bottomlinear,
                         foregroundColor: AppColor.fieldwhite,
                         labelColor: AppColor.basetext,
@@ -79,7 +94,13 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     const XMargin(kLargespace),
                     Expanded(
-                      child: BorderButton(label: 'Next', onTap: () {}),
+                      child: BorderButton(
+                        label: 'Next',
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, AppRoute.verificationroute);
+                        },
+                      ),
                     ),
                   ],
                 ),

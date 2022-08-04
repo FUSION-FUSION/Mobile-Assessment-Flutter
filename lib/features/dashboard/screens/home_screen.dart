@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile_assessment_flutter/core/constants/size_constants.dart';
+import 'package:mobile_assessment_flutter/core/routes/app_route.dart';
 import 'package:mobile_assessment_flutter/core/theme/app_color.dart';
 import 'package:mobile_assessment_flutter/core/utils/extensions.dart';
 import 'package:mobile_assessment_flutter/core/utils/sizing.dart';
@@ -159,21 +160,27 @@ class HomeScreen extends StatelessWidget {
                                 hintStyle: TextStyle(fontSize: 15)),
                           ),
                         ),
-                        Container(
-                          height: 38,
-                          width: 81,
-                          margin: const EdgeInsets.only(
-                              left: ksmallradius, right: 2),
-                          decoration: BoxDecoration(
-                              color: AppColor.primary,
-                              borderRadius: BorderRadius.circular(14)),
-                          alignment: Alignment.center,
-                          child: const Text(
-                            'Track',
-                            style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: AppColor.white),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, AppRoute.trackingroute);
+                          },
+                          child: Container(
+                            height: 38,
+                            width: 81,
+                            margin: const EdgeInsets.only(
+                                left: ksmallradius, right: 2),
+                            decoration: BoxDecoration(
+                                color: AppColor.primary,
+                                borderRadius: BorderRadius.circular(14)),
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Track',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: AppColor.white),
+                            ),
                           ),
                         )
                       ],
