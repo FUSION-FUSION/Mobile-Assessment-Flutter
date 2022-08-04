@@ -35,7 +35,7 @@ class _GlobalRegisterScreenState extends State<GlobalRegisterScreen> {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 130.h,
+            height: 100.h,
           ),
           Text(
             "Welcome!",
