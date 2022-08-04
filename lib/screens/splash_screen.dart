@@ -12,13 +12,42 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+
+  late AnimationController _animationController;
+  late Animation _animation;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+
+    _animationController = AnimationController(
+        vsync: this,
+      duration: Duration(seconds: 5)
+    );
+
+    _animation = CurvedAnimation(parent: _animationController, curve: Curves.bounceOut);
+
+    _animationController.forward();
+
+    _animation.addListener(() {
+      setState(() {
+
+      });
+    });
+
+
     Timer(const Duration(seconds: 5), ()=> Get.offAndToNamed('/getStartedScreen'));
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _animationController.dispose();
+    _animation.removeListener(() { });
+    super.dispose();
+
   }
 
   @override
@@ -29,8 +58,8 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: getScreenWidth(108)),
         child: Center(
-          child: Hero(
-              tag: '',
+          child: SizedBox(
+            height: _animation.value * 200,
               child: Image.asset('${imagePath}splash_logo.png')),
         ),
       ),

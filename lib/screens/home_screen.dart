@@ -178,21 +178,18 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 height: getScreenHeight(44),
                                 width: getScreenWidth(150),
-                                child: Padding(
-                                  padding: EdgeInsets.only(bottom: getScreenHeight(2)),
-                                  child: TextField(
-                                    cursorColor: Palette.kTextColor,
-                                    decoration: InputDecoration(
-                                        // contentPadding: EdgeInsets.all(),
-                                        hintText: 'Waybill Number',
-                                        hintStyle: TextStyle(
-                                            color: Palette.kSearchColor,
-                                            fontSize: getScreenWidth(15.21),
-                                            fontFamily: FontFamily.kLightFamily,
-                                            fontWeight: FontWeight.w300),
-                                        border: UnderlineInputBorder(
-                                            borderSide: BorderSide.none)),
-                                  ),
+                                child: TextField(
+                                  cursorColor: Palette.kTextColor,
+                                  decoration: InputDecoration(
+                                      // contentPadding: EdgeInsets.all(),
+                                      hintText: 'Waybill Number',
+                                      hintStyle: TextStyle(
+                                          color: Palette.kSearchColor,
+                                          fontSize: getScreenWidth(15.21),
+                                          fontFamily: FontFamily.kLightFamily,
+                                          fontWeight: FontWeight.w300),
+                                      border: UnderlineInputBorder(
+                                          borderSide: BorderSide.none)),
                                 ),
                               ),
                               const Spacer(),
@@ -516,9 +513,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
-                                  height: getScreenHeight(4.98),
-                                ),
+
                                 Container(
                                   height: getScreenHeight(124.56),
                                   width: getScreenWidth(130.81),
