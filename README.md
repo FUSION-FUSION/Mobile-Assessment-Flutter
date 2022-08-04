@@ -1,16 +1,38 @@
 # mobile_assessment_flutter
 
-A new Flutter project.
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-## Getting Started
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Contact](#contact)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+#### Mobile App Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<table>
+  <tr>
+    <td><img src="./assets/screenshots/Screenshot3.png" width=270 height=480></td>
+    <td><img src="./assets/screenshots/Screenshot5.png" width=270 height=480></td>
+    <td><img src="./assets/screenshots/Screenshot7.png" width=270 height=480></td>
+  </tr>
+ </table>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ More screen shots are available in the assets folder
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+The Shipify app is a simple delivery mobile application that simulates basic delivery and tracking operations. This project is part of an assessment for the role of mobile developer at [Fusion Intelligence Technologies](hr@fusionintl.io).
+
+### Built With
+
+* [Flutter](https://flutter.dev/)
+
+
+<!-- CONTACT -->
+## Contact
+
+Oluwatoni Oreoluwa - [LinkedIn](https://www.linkedin.com/in/oreoluwado) - dannyore001@gmail.com
+
