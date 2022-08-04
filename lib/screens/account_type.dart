@@ -21,25 +21,26 @@ class AccountTypePage extends StatelessWidget {
             child: Align(
               alignment: Alignment.topLeft,
               child: Container(
-              width: screenWidth * 0.8,
-              margin: EdgeInsets.only(top: 160),
-              child: ListView(
-                padding: EdgeInsets.all(15),
-                children: [
-                  Padding(
-                      padding: EdgeInsets.only(bottom: 10),
-                      child: Text('What kind of user are you?',
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)))
-              ,
-                  Text('We will adopt the app to suit your needs', style: TextStyle(fontSize: 23 ))
-                ],
+                width: screenWidth * 0.8,
+                margin: EdgeInsets.only(top: 160),
+                child: ListView(
+                  padding: EdgeInsets.all(15),
+                  children: [
+                    Padding(
+                        padding: EdgeInsets.only(bottom: 10),
+                        child: Text('What kind of user are you?',
+                            style: TextStyle(
+                                fontSize: 35, fontWeight: FontWeight.bold))),
+                    Text('We will adopt the app to suit your needs',
+                        style: TextStyle(fontSize: 23))
+                  ],
+                ),
               ),
-
-            ),
             ),
             decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/images/bg-app-cloud.png'), repeat: ImageRepeat.repeatY)
-            ),
+                image: DecorationImage(
+                    image: AssetImage('assets/images/bg-app-cloud.png'),
+                    repeat: ImageRepeat.repeatY)),
           ),
           Container(
             height: screenHeight * 0.5,
@@ -53,15 +54,14 @@ class AccountTypePage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         shape: StadiumBorder(),
                         minimumSize: Size(200, 100),
-                        textStyle: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                        textStyle: TextStyle(
+                            fontSize: 40, fontWeight: FontWeight.bold),
                         primary: Color(0xFF46A5B9),
                         onPrimary: Colors.white,
                       ),
                       onPressed: () {
-                        Navigator.of(context)
-                            .push(
-                          MaterialPageRoute(builder: (context) => PersonalAccountSignUpPage())
-                        );
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PersonalAccountSignUpPage()));
                       },
                       child: Text('Personal'),
                     ),
@@ -72,24 +72,24 @@ class AccountTypePage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         shape: StadiumBorder(),
                         minimumSize: Size(200, 100),
-                        textStyle: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                        textStyle: TextStyle(
+                            fontSize: 40, fontWeight: FontWeight.bold),
                         primary: Color(0xFF46A5B9),
                         onPrimary: Colors.white,
                       ),
                       onPressed: () {
-                        Navigator.of(context)
-                            .push(
-                            MaterialPageRoute(builder: (context) => EcommerceAccountSignUpPage())
-                        );
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                EcommerceAccountSignUpPage()));
                       },
-                      child: Text('E-commerce',
-                          ),
+                      child: Text(
+                        'E-commerce',
+                      ),
                     ),
                   )
                 ],
               ),
             ),
-
           ),
         ],
       ),
