@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import '../track_location_page.dart';
 
 class TrackWaybillWidget_ extends StatelessWidget {
   const TrackWaybillWidget_({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       height: 150,
@@ -79,10 +79,10 @@ class TrackWaybillWidget_ extends StatelessWidget {
                       minimumSize: Size(20, 43),
                     ),
                     onPressed: () {
-                      // Navigator.of(context)
-                      //     .push(
-                      //     MaterialPageRoute(builder: (context) => HomePage())
-                      // );
+                      Navigator.of(context)
+                          .push(
+                          MaterialPageRoute(builder: (context) => TrackLocationPage())
+                      );
                     },
                     child: Container(child: Text('Track')),
                   ),
