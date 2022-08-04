@@ -7,6 +7,7 @@ import 'package:mobile_assessment_flutter/features/registration/screens/login_sc
 import 'package:mobile_assessment_flutter/features/registration/screens/registration_success_screen.dart';
 import 'package:mobile_assessment_flutter/features/registration/screens/sign_up_screen.dart';
 import 'package:mobile_assessment_flutter/features/registration/screens/verification_screen.dart';
+import 'package:mobile_assessment_flutter/features/waybill/screens/tracking_screen.dart';
 
 void main() {
   runApp(const ShipifyApp());
@@ -23,7 +24,7 @@ class ShipifyApp extends StatelessWidget {
       theme: ShipifyTheme.theme,
       navigatorKey: AppRoute.navigatorKey,
       onGenerateRoute: AppRoute.generateRoute,
-      home: const HomeScreen(),
+      home: const TrackingScreen(),
     );
   }
 }
