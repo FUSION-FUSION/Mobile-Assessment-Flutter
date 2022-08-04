@@ -1,21 +1,20 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-// import 'package:mobile_assessment_flutter/app/presentation/log_in_screen.dart';
 // import 'package:mobile_assessment_flutter/app/presentation/verification_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/reuseables.dart';
 
 import 'package:mobile_assessment_flutter/core/size_config.dart';
 
-class PersonalSignUpScreen extends StatefulWidget {
-  const PersonalSignUpScreen({Key? key}) : super(key: key);
+class EcommerceSignUpScreen extends StatefulWidget {
+  const EcommerceSignUpScreen({Key? key}) : super(key: key);
 
   @override
-  State<PersonalSignUpScreen> createState() => _PersonalSignUpScreenState();
+  State<EcommerceSignUpScreen> createState() => _EcommerceSignUpScreenState();
 }
 
-class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
+class _EcommerceSignUpScreenState extends State<EcommerceSignUpScreen> {
   @override
   Widget build(BuildContext context) {
     ScreenSizeConfig.init(context);
@@ -44,24 +43,24 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
           ),
           SizedBox(height: getProportionateScreenHeight(22.44)),
           BuildTextInputField(
-            text: 'Full Name',
+            text: 'Business Name',
             keyboardType: TextInputType.text,
           ),
           SizedBox(height: getProportionateScreenHeight(20)),
           BuildTextInputField(
-            text: 'Your E-mail',
+            text: 'Official E-mail',
             keyboardType: TextInputType.emailAddress,
           ),
           SizedBox(height: getProportionateScreenHeight(20)),
           BuildTextInputField(
-            text: 'Phone Number',
+            text: 'Contact Number',
             prefix: Container(
                 padding: EdgeInsets.only(left: getProportionateScreenWidth(10)),
                 height: getProportionateScreenHeight(44),
                 width: getProportionateScreenWidth(102),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
-                    border: Border.all(color: const Color.fromARGB(255, 230, 223, 223))),
+                    border: Border.all(color: Color.fromARGB(255, 230, 223, 223))),
                 child: Row(
                   children: [
                     Text(
@@ -76,7 +75,7 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
                     SizedBox(
                       width: getProportionateScreenWidth(9.65),
                     ),
-                    const Icon(Icons.arrow_drop_down, color: Palette.textColor,)
+                    Icon(Icons.arrow_drop_down, color: Palette.textColor,)
                   ],
                 )),
             keyboardType: TextInputType.number,
@@ -105,14 +104,7 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
                 children: [
                   TextSpan(
                     text: 'Log In',
-                    recognizer: TapGestureRecognizer()..onTap = () {
-                    //   Navigator.push(
-                    // context,
-                    // MaterialPageRoute(
-                    //     builder: (context) => const LogInScreen()));
-
-
-                    },
+                    recognizer: TapGestureRecognizer()..onTap = () {},
                     style: TextStyle(
                         fontSize: getProportionateScreenWidth(18),
                         fontWeight: FontWeight.w600,
@@ -170,5 +162,6 @@ class _PersonalSignUpScreenState extends State<PersonalSignUpScreen> {
         ],
       ),
     ));
+    ;
   }
 }
