@@ -12,6 +12,7 @@ class Palette{
   static Color get kTextFieldColor => const Color(0xffFDFEFF);
   static Color get kHoverColor => const Color(0xff8FF0EA);
   static Color get kPendingColor => const Color(0xff808080);
-  static Color get kDashColor => const Color(0xffA3CAB3);
+  static Color get kDashActiveColor => const Color(0xffA3CAB3);
+  static Color get kPendingTextColor => const Color(0xffD6D6D6);
 }
 

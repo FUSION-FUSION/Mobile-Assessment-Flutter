@@ -1,4 +1,5 @@
 import 'package:expandable_bottom_sheet/expandable_bottom_sheet.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dotted_line/dotted_line.dart';
@@ -79,7 +80,7 @@ class _TrackScreenState extends State<TrackScreen> {
                             DottedLine(
                               direction: Axis.vertical,
                               lineLength: getScreenHeight(50),
-                              dashColor: Palette.kDashColor,
+                              dashColor: Palette.kDashActiveColor,
                             ),
                             RouteTracker(
                                 fill:Palette.kPrimaryColor,
@@ -88,7 +89,7 @@ class _TrackScreenState extends State<TrackScreen> {
                             DottedLine(
                               direction: Axis.vertical,
                               lineLength: getScreenHeight(50),
-                              dashColor: Palette.kDashColor,
+                              dashColor: Palette.kDashActiveColor,
                             ),
                             RouteTracker(
                                 fill:Palette.kPendingColor,
@@ -97,7 +98,7 @@ class _TrackScreenState extends State<TrackScreen> {
                             DottedLine(
                               direction: Axis.vertical,
                               lineLength: getScreenHeight(50),
-                              dashColor: Palette.kDashColor,
+                              dashColor: Palette.kPendingColor,
                             ),
                             RouteTracker(
                                 fill:Palette.kPendingColor,
@@ -311,12 +312,135 @@ class _TrackScreenState extends State<TrackScreen> {
                       padding: EdgeInsets.only(
                         left: getScreenWidth(15.21),
                         top: getScreenHeight(21.73),
-
+                        right: getScreenWidth(9.76)
                       ),
                       height: getScreenHeight(126.06),
                       decoration: BoxDecoration(
                           color: Palette.kPrimaryColor,
                           borderRadius: BorderRadius.circular(21.73)),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Pickup',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: getScreenWidth(11.95),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: FontFamily.kMediumFamily
+                                ),
+                              ),
+                              Text(
+                                'Jibowo Terminal',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: getScreenWidth(11.95),
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: FontFamily.kMediumFamily
+                                ),
+                              ),
+                              Text(
+                                'Abuja Terminal',
+                                style: TextStyle(
+                                    color: Palette.kPendingTextColor,
+                                    fontSize: getScreenWidth(11.95),
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: FontFamily.kMediumFamily
+                                ),
+                              ),
+                              Text(
+                                'Collected',
+                                style: TextStyle(
+                                    color: Palette.kPendingTextColor,
+                                    fontSize: getScreenWidth(11.95),
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: FontFamily.kMediumFamily
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: getScreenHeight(9.17)),
+                          Row(
+                            children: [
+                              Container(
+                                height: getScreenHeight(12.7),
+                                width: getScreenWidth(12.7),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              SizedBox(
+                                width: getScreenWidth(106.84),
+                                child: Divider(
+                                  color: Colors.white,
+                                  thickness: 2.54,
+                                ),
+                              ),
+                              Container(
+                                height: getScreenHeight(12.7),
+                                width: getScreenWidth(12.7),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    shape: BoxShape.circle
+                                ),
+                              ),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                dashColor: Palette.kPendingTextColor,
+                                lineLength: getScreenWidth(110.45),
+                              ),
+                              Container(
+                                height: getScreenHeight(12.7),
+                                width: getScreenWidth(12.7),
+                                decoration: BoxDecoration(
+                                    color: Palette.kPendingTextColor,
+                                    shape: BoxShape.circle
+                                ),
+                              ),
+                              DottedLine(
+                                direction: Axis.horizontal,
+                                dashColor: Palette.kPendingTextColor,
+                                lineLength: getScreenWidth(103.58),
+                              ),
+                              Container(
+                                height: getScreenHeight(12.7),
+                                width: getScreenWidth(12.7),
+                                decoration: BoxDecoration(
+                                    color: Palette.kPendingTextColor,
+                                    shape: BoxShape.circle
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: getScreenHeight(28.6)),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                '04 Mar, 2022',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: getScreenWidth(11.95),
+                                  fontFamily: FontFamily.kRegularFamily
+                                ),
+                              ),
+                              Text(
+                                  '05 Mar, 2022',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: getScreenWidth(11.95),
+                                    fontFamily: FontFamily.kRegularFamily
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
