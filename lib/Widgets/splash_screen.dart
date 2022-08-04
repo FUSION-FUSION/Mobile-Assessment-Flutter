@@ -1,6 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/Screens/user_type_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  static const id = '/splash';
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
@@ -22,11 +26,19 @@ class _SplashScreenState extends State<SplashScreen>
     animationController.forward();
     animationController.addListener(() {
       setState(() {
-        print(animationController);
+        // print(animationController);
       });
+    });
+    Timer(const Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacementNamed(UserTypeScreen.id);
     });
   }
 
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

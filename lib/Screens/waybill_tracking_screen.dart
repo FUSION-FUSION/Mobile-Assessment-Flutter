@@ -5,6 +5,8 @@ import 'package:mobile_assessment_flutter/Util/utils.dart';
 import 'package:snapping_sheet/snapping_sheet.dart';
 import "package:latlong2/latlong.dart";
 
+import '../Widgets/route_detail.dart';
+
 class WaybillTrackingScreen extends StatelessWidget {
   static const id = '/waybilll';
   const WaybillTrackingScreen({Key? key}) : super(key: key);
@@ -18,24 +20,17 @@ class WaybillTrackingScreen extends StatelessWidget {
           children: [
             Center(
               child: FlutterMap(
-                options: MapOptions(
-                  center: LatLng(51.509364, -0.128928),
-                  zoom: 9.2,
-                ),
-                layers: [
-                  TileLayerOptions(
-                    urlTemplate:
-                        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    userAgentPackageName: 'com.example.app',
+                  options: MapOptions(
+                    center: LatLng(51.509364, -0.128928),
+                    zoom: 9.2,
                   ),
-                ],
-                // nonRotatedChildren: [
-                //     AttributionWidget.defaultWidget(
-                //         source: 'OpenStreetMap contributors',
-                //         onSourceTapped: null,
-                //     ),
-                // ],
-              ),
+                  layers: [
+                    TileLayerOptions(
+                      urlTemplate:
+                          "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                      userAgentPackageName: 'com.example.app',
+                    ),
+                  ]),
             ),
             Positioned(
               top: 50,
@@ -44,17 +39,22 @@ class WaybillTrackingScreen extends StatelessWidget {
                   const SizedBox(
                     width: 20.0,
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        color: kWhiteColor,
-                        borderRadius: BorderRadius.circular(12.0),
-                        boxShadow: [
-                          BoxShadow(
-                              color: kGreyColor.withOpacity(0.1),
-                              blurRadius: 10)
-                        ]),
-                    child: const Icon(Icons.arrow_back),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                          color: kWhiteColor,
+                          borderRadius: BorderRadius.circular(12.0),
+                          boxShadow: [
+                            BoxShadow(
+                                color: kGreyColor.withOpacity(0.1),
+                                blurRadius: 10)
+                          ]),
+                      child: const Icon(Icons.arrow_back),
+                    ),
                   ),
                   const SizedBox(
                     width: 30.0,
@@ -160,18 +160,27 @@ class WaybillTrackingScreen extends StatelessWidget {
         sheetBelow: SnappingSheetContent(
             draggable: true,
             child: Container(
+              color: kWhiteColor,
               padding: const EdgeInsets.symmetric(
                 horizontal: 18.0,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Route Details'),
-                  // ListView.builder(
-                  //   itemCount: 4,
-                  //   itemBuilder: (context, index){
-                  //     return RouteDetail();
-                  // })
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    'Route Details',
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                        itemCount: 4,
+                        itemBuilder: (context, index) {
+                          return const RouteDetail();
+                        }),
+                  )
                 ],
               ),
             )),

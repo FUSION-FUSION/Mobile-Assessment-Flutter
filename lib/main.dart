@@ -6,6 +6,7 @@ import 'package:mobile_assessment_flutter/Screens/user_type_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/verification_screen.dart';
 import 'package:mobile_assessment_flutter/Screens/waybill_tracking_screen.dart';
 import 'package:mobile_assessment_flutter/Util/colors.dart';
+import 'package:mobile_assessment_flutter/Widgets/splash_screen.dart';
 
 import 'Screens/congratulation_screen.dart';
 import 'Screens/home_screen.dart';
@@ -23,9 +24,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(scaffoldBackgroundColor: kscaffoldColor),
-      // initialRoute: UserTypeScreen.id,
-      initialRoute: WaybillTrackingScreen.id,
+      initialRoute: SplashScreen.id,
       routes: {
+        SplashScreen.id: (context) => const SplashScreen(),
         UserTypeScreen.id: (context) => const UserTypeScreen(),
         EcommerceUserScreen.id: (context) => const EcommerceUserScreen(),
         PersonalUserScreen.id: (context) => const PersonalUserScreen(),

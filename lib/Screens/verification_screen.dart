@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:mobile_assessment_flutter/Screens/congratulation_screen.dart';
-import 'package:mobile_assessment_flutter/Screens/signin_screen.dart';
 import 'package:mobile_assessment_flutter/Util/utils.dart';
 
 import '../Util/colors.dart';
 import '../Widgets/background_image.dart';
+import '../Widgets/count_down.dart';
 import '../Widgets/user_topsection.dart';
 import '../Widgets/verification_input.dart';
 
@@ -17,12 +16,36 @@ class VerificationScreen extends StatefulWidget {
   State<VerificationScreen> createState() => _VerificationScreenState();
 }
 
-class _VerificationScreenState extends State<VerificationScreen> {
+class _VerificationScreenState extends State<VerificationScreen>
+    with TickerProviderStateMixin {
+  int _counter = 0;
+  late AnimationController _controller;
+  int levelClock = 180;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
-  // int min;
-  // int sec;
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
     super.initState();
+
+    _controller = AnimationController(
+        vsync: this,
+        duration: Duration(
+            seconds:
+                levelClock) // gameData.levelClock is a user entered number elsewhere in the applciation
+        );
+
+    _controller.forward();
   }
 
   @override
@@ -92,16 +115,17 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                           top: 18.0,
                           right: 28.0,
                         ),
-                        child: Text(
-                          '00:52',
-                          style: TextStyle(
-                              color: Colors.red, fontWeight: FontWeight.w600),
+                        child: Countdown(
+                          animation: StepTween(
+                            begin: levelClock, // THIS IS A USER ENTERED NUMBER
+                            end: 0,
+                          ).animate(_controller),
                         ),
                       )
                     ],

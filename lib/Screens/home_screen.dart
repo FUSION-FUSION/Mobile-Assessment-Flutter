@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_assessment_flutter/Model/action_model.dart';
 import 'package:mobile_assessment_flutter/Model/package_model.dart';
+import 'package:mobile_assessment_flutter/Screens/waybill_tracking_screen.dart';
 import 'package:mobile_assessment_flutter/Util/colors.dart';
 import 'package:mobile_assessment_flutter/Util/utils.dart';
 import 'package:mobile_assessment_flutter/Widgets/action_widget.dart';
@@ -75,9 +76,17 @@ class HomeScreen extends StatelessWidget {
                       itemCount: 2,
                       itemBuilder: (context, index) {
                         ActionModel actionModel = actions[index];
+                        List onTap = [
+                          () {
+                            Navigator.pushNamed(
+                                context, WaybillTrackingScreen.id);
+                          },
+                          () {}
+                        ];
                         return ActionsWidget(
                           title: actionModel.title.toString(),
                           description: actionModel.description.toString(),
+                          onTap: onTap[index],
                         );
                       }),
                 ],

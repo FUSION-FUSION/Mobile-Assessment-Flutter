@@ -18,40 +18,42 @@ class UserTypeScreen extends StatelessWidget {
       body: Stack(
         children: [
           const BackGroundImage(),
-          Container(
-            padding: userPadding(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('What kind of user are \nyou?', style: headerStyle),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text('We will adapt the app to suit your \nneeds.',
-                    style: TextStyle(
-                      color: kGreyColor,
-                      fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
-                      letterSpacing: 1.3,
-                    )),
-                const SizedBox(
-                  height: 60,
-                ),
-                UserTypeButton(
-                  text: 'Personal',
-                  onTap: () {
-                    Navigator.pushNamed(context, PersonalUserScreen.id);
-                  },
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                UserTypeButton(
-                  text: 'E-commerce',
-                  onTap: () {
-                    Navigator.pushNamed(context, EcommerceUserScreen.id);
-                  },
-                )
-              ],
+          SingleChildScrollView(
+            child: Container(
+              padding: userPadding(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('What kind of user are \nyou?', style: headerStyle),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text('We will adapt the app to suit your \nneeds.',
+                      style: TextStyle(
+                        color: kGreyColor,
+                        fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
+                        letterSpacing: 1.3,
+                      )),
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  UserTypeButton(
+                    text: 'Personal',
+                    onTap: () {
+                      Navigator.pushNamed(context, PersonalUserScreen.id);
+                    },
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  UserTypeButton(
+                    text: 'E-commerce',
+                    onTap: () {
+                      Navigator.pushNamed(context, EcommerceUserScreen.id);
+                    },
+                  )
+                ],
+              ),
             ),
           ),
         ],

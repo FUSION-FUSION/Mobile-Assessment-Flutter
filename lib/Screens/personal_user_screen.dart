@@ -7,6 +7,7 @@ import 'package:mobile_assessment_flutter/Widgets/user_topsection.dart';
 import 'package:mobile_assessment_flutter/Widgets/welcome_button.dart';
 
 import '../Widgets/background_image.dart';
+import '../Widgets/number_input.dart';
 
 class PersonalUserScreen extends StatelessWidget {
   static const id = '/personal';
@@ -35,7 +36,7 @@ class PersonalUserScreen extends StatelessWidget {
                   ),
                   const InputWidget(title: 'Full Name'),
                   const InputWidget(title: 'Your E-mail'),
-                  const InputWidget(title: 'Password'),
+                  const NumberInput(title: 'Phone Number'),
                   const InputWidget(title: 'Password'),
                   const InputWidget(title: 'Confirm Password'),
                   const SizedBox(
@@ -104,3 +105,4 @@ class PersonalUserScreen extends StatelessWidget {
     );
   }
 }
+

@@ -7,6 +7,8 @@ import 'package:mobile_assessment_flutter/Widgets/input_widgets.dart';
 import 'package:mobile_assessment_flutter/Widgets/user_topsection.dart';
 import 'package:mobile_assessment_flutter/Widgets/welcome_button.dart';
 
+import '../Widgets/number_input.dart';
+
 class EcommerceUserScreen extends StatelessWidget {
   static const id = '/ecommerce';
   const EcommerceUserScreen({Key? key}) : super(key: key);
@@ -33,7 +35,7 @@ class EcommerceUserScreen extends StatelessWidget {
                 ),
                 const InputWidget(title: 'Business Name'),
                 const InputWidget(title: 'Official E-mail'),
-                const InputWidget(title: 'Contact Number'),
+                const NumberInput(title: 'Contact Number'),
                 const InputWidget(title: 'Password'),
                 const InputWidget(title: 'Confirm Password'),
                 const Spacer(
