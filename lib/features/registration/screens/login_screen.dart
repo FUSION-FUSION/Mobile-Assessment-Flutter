@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                   'Sign in to continue to Cargo Express',
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                 ),
-                const YMargin(kLargespace + ktinyspace),
+                const YMargin(kmediumspace),
                 const CustomTextfield(label: 'Phone Number / E-mail '),
                 const YMargin(kspace),
                 const CustomTextfield(label: 'Password'),

@@ -24,7 +24,7 @@ class ShipifyApp extends StatelessWidget {
       theme: ShipifyTheme.theme,
       navigatorKey: AppRoute.navigatorKey,
       onGenerateRoute: AppRoute.generateRoute,
-      home: const TrackingScreen(),
+      home: const VerificationScreen(),
     );
   }
 }
