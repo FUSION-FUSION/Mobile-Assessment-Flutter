@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/app/presentation/tracking_screen.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/screen_size_config.dart';
 
@@ -191,26 +192,34 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               const Spacer(),
                               Container(
-                                height: getProportionateScreenHeight(38),
-                                width: getProportionateScreenWidth(81),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Palette.primaryColor,
-                                    borderRadius: BorderRadius.circular(14),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      'Track',
-                                      style: TextStyle(
-                                          fontSize: getProportionateScreenWidth(16),
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white,
-                                          fontFamily:
-                                              FontFamily.regular),
+                                  height: getProportionateScreenHeight(38),
+                                  width: getProportionateScreenWidth(81),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Palette.primaryColor,
+                                      borderRadius: BorderRadius.circular(14),
                                     ),
-                                  ),
-                                ),
-                              )
+                                    child: Center(
+                                      child: TextButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        WayBillTrackingScreen()));
+                                          },
+                                          child: Text(
+                                            'Track',
+                                            style: TextStyle(
+                                                fontSize:
+                                                    getProportionateScreenWidth(
+                                                        16),
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.white,
+                                                fontFamily: FontFamily.regular),
+                                          )),
+                                    ),
+                                  ))
                             ],
                           ),
                         )
@@ -239,10 +248,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(42),
-                            right: getProportionateScreenWidth(9.41),
-                            // bottom: getProportionateScreenHeight(11.34)
-                            ),
+                          top: getProportionateScreenHeight(42),
+                          right: getProportionateScreenWidth(9.41),
+                          // bottom: getProportionateScreenHeight(11.34)
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
@@ -320,7 +329,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               alignment: AlignmentDirectional.bottomEnd,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                    bottom: getProportionateScreenHeight(21.34)),
+                                    bottom:
+                                        getProportionateScreenHeight(21.34)),
                                 child: Container(
                                   height: getProportionateScreenHeight(23.18),
                                   width: getProportionateScreenWidth(23.18),
@@ -343,9 +353,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(18.14),
-                            // bottom: getProportionateScreenHeight(6.34)
-                            ),
+                          top: getProportionateScreenHeight(18.14),
+                          // bottom: getProportionateScreenHeight(6.34)
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
@@ -413,7 +423,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-                                
                                 Container(
                                   height: getProportionateScreenHeight(104.07),
                                   width: getProportionateScreenWidth(125.45),
@@ -464,9 +473,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(18.14),
-                            // bottom: getProportionateScreenHeight(6.34)
-                            ),
+                          top: getProportionateScreenHeight(18.14),
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
@@ -580,17 +588,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: getProportionateScreenWidth(186),
                           alignment: AlignmentDirectional.centerStart,
                           padding: EdgeInsets.only(
-                              top: getProportionateScreenHeight(42),
-                              right: getProportionateScreenWidth(9.41),
-                              // bottom: getProportionateScreenHeight(11.34)
-                              ),
+                            top: getProportionateScreenHeight(42),
+                            right: getProportionateScreenWidth(9.41),
+                            // bottom: getProportionateScreenHeight(11.34)
+                          ),
                           foregroundDecoration: BoxDecoration(
                             backgroundBlendMode: BlendMode.lighten,
                             color: Color(0x38F3F4F5),
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
-                           
                             color: Color(0xffF3F4F5),
                           ),
                           child: Stack(
@@ -731,11 +738,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(26),
-                            right: getProportionateScreenWidth(9.41),
-                            left: getProportionateScreenWidth(13.1),
-                            // bottom: getProportionateScreenHeight(11.34)
-                            ),
+                          top: getProportionateScreenHeight(26),
+                          right: getProportionateScreenWidth(9.41),
+                          left: getProportionateScreenWidth(13.1),
+                          // bottom: getProportionateScreenHeight(11.34)
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
                           color: const Color(0xffFDFEFF),
@@ -807,11 +814,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(26),
-                            right: getProportionateScreenWidth(9.41),
-                            left: getProportionateScreenWidth(13.1),
-                            // bottom: getProportionateScreenHeight(11.34)
-                            ),
+                          top: getProportionateScreenHeight(26),
+                          right: getProportionateScreenWidth(9.41),
+                          left: getProportionateScreenWidth(13.1),
+                          // bottom: getProportionateScreenHeight(11.34)
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
                           color: const Color(0xffFDFEFF),

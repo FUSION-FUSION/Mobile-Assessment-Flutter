@@ -11,16 +11,40 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+  late Animation _animation;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    _animationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 5));
+
+    _animation =
+        CurvedAnimation(parent: _animationController, curve: Curves.easeOut);
+
+    _animationController.forward();
+
+    _animation.addListener(() {
+      setState(() {});
+    });
+
     Timer(
-        Duration(seconds: 5),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => GetStartedScreen())
-            ));
+        Duration(seconds: 7),
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => GetStartedScreen())));
+  }
+
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    _animation.removeListener(() { });
+    // TODO: implement dispose
+    super.dispose();
   }
 
   @override
@@ -29,12 +53,14 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Palette.blackColor,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(108)),
-        child: Center(
-            child: Image.asset('assets/images/splash_logo.png') 
-            
-        )),
-      
+          padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenWidth(108)),
+          child: Center(
+            child: Container(
+              height: _animation.value * 200,
+              
+              child: Image.asset('assets/images/splash_logo.png')),
+          )),
     );
   }
 }
