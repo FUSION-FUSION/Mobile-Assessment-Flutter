@@ -14,47 +14,32 @@ class UserType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBackground(
-        body: Padding(
-      padding: const EdgeInsets.all(26.33),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 130,
-          ),
-          SizedBox(
-            width: 320,
-            child: Text('What kind of user are you?',
-                style: Theme.of(context).textTheme.headline1),
-          ),
-          const SizedBox(height: 4),
-          SizedBox(
-            width: 325,
-            child: Text('We will adapt the app to suit your needs.',
-                style: Theme.of(context).textTheme.headline2),
-          ),
-          const SizedBox(
-            height: 48.04,
-          ),
-          AppButton(
-            child: Text(
-              'Personal',
-              style: Theme.of(context).textTheme.button,
+        body: SingleChildScrollView(
+          child: Padding(
+              padding: const EdgeInsets.all(26.33),
+              child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 130,
             ),
-            color: primaryBlue,
-            radius: 24.87,
-            width: double.infinity,
-            height: 136.78,
-            onTap: () {
-              Navigator.pushNamed(context, PersonalSignUp.routeName);
-            },
-          ),
-          const SizedBox(
-            height: 40.96,
-          ),
-          AppButton(
+            SizedBox(
+              width: 320,
+              child: Text('What kind of user are you?',
+                  style: Theme.of(context).textTheme.headline1),
+            ),
+            const SizedBox(height: 4),
+            SizedBox(
+              width: 325,
+              child: Text('We will adapt the app to suit your needs.',
+                  style: Theme.of(context).textTheme.headline2),
+            ),
+            const SizedBox(
+              height: 48.04,
+            ),
+            AppButton(
               child: Text(
-                'E-commerce',
+                'Personal',
                 style: Theme.of(context).textTheme.button,
               ),
               color: primaryBlue,
@@ -62,10 +47,27 @@ class UserType extends StatelessWidget {
               width: double.infinity,
               height: 136.78,
               onTap: () {
-                Navigator.pushNamed(context, EcommerceSignUp.routeName);
-              })
-        ],
-      ),
-    ));
+                Navigator.pushNamed(context, PersonalSignUp.routeName);
+              },
+            ),
+            const SizedBox(
+              height: 40.96,
+            ),
+            AppButton(
+                child: Text(
+                  'E-commerce',
+                  style: Theme.of(context).textTheme.button,
+                ),
+                color: primaryBlue,
+                radius: 24.87,
+                width: double.infinity,
+                height: 136.78,
+                onTap: () {
+                  Navigator.pushNamed(context, EcommerceSignUp.routeName);
+                })
+          ],
+              ),
+            ),
+        ));
   }
 }

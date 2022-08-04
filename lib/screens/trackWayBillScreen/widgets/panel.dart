@@ -15,9 +15,10 @@ class PanelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
         child: ListView(
           controller: controller,
+          padding: const EdgeInsets.symmetric(vertical: 15),
           children: [
             GestureDetector(
               onTap: () {

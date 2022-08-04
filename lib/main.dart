@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:mobile_assessment_flutter/providers/verificationProvider.dart';
 import 'package:mobile_assessment_flutter/screens/congratulations.dart';
 import 'package:mobile_assessment_flutter/screens/ecommerce_sign_up/ecommerce_sign_up.dart';
@@ -14,7 +15,8 @@ import 'package:mobile_assessment_flutter/screens/verificiation_screen/verificat
 import 'package:mobile_assessment_flutter/utils/colors.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load();
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
           [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])

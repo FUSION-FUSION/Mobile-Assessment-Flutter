@@ -32,7 +32,7 @@ class TrackAppBar extends StatelessWidget implements PreferredSizeWidget {
             },
           ),
           Container(
-            width: 288,
+            width: 240,
             height: 37,
             decoration: BoxDecoration(
                 color: normalWhite, borderRadius: BorderRadius.circular(12)),
