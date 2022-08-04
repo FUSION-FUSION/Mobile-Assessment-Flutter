@@ -30,13 +30,13 @@ class International extends StatelessWidget {
               child: Stack(
                 children: [
                   Positioned(
-                    left: Dimensions.sizeWidthPercent(-30),
-                    bottom: 0,
+                    left: Dimensions.sizeWidthPercent(1.57),
+                    bottom: Dimensions.sizeHeightPercent(0.7),
                     child: SizedBox(
-                      height: Dimensions.sizeHeightPercent(108.56),
-                      width: Dimensions.sizeWidthPercent(184.1),
+                      height: Dimensions.sizeHeightPercent(122.56),
+                      width: Dimensions.sizeWidthPercent(122.1),
                       child: Image.asset(
-                        'assets/images/ic-truck.png',
+                        'assets/images/ic-aeroplane.png',
                       ),
                     ),
                   ),
@@ -89,12 +89,23 @@ class International extends StatelessWidget {
                 )),
 
             Positioned(
-              bottom: Dimensions.sizeHeightPercent(20),
+              bottom: Dimensions.sizeHeightPercent(31.86),
+              right: Dimensions.sizeWidthPercent(3.33),
               child: Container(
                 height: Dimensions.sizeHeightPercent(18.14),
                 width: Dimensions.sizeWidthPercent(75.58),
-                decoration: const BoxDecoration(
-                    color: AppColors.primaryWhite, shape: BoxShape.circle),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.primaryBlack.withOpacity(0.5),
+                      offset: const Offset(0, 0),
+                      blurRadius: 10,
+                    ),
+                  ],
+                  borderRadius:
+                      BorderRadius.circular(Dimensions.sizeWidthPercent(9.18)),
+                  color: AppColors.primaryWhite,
+                ),
                 child: Center(
                   child: AppText(
                     text: 'Coming soon',
