@@ -75,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ? 'Your E-mail'
                         : 'Official E-mail'),
                 const SizedBox(height: 18),
-                TextFieldWithHeader(
+                TextFieldWithDropDown(
                     headerText: widget.type == 'personal'
                         ? 'Phone Number'
                         : 'Contact Number'),
