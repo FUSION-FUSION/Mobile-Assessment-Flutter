@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/screens/sign_in_screen.dart';
 import 'package:mobile_assessment_flutter/themes/theme_styles.dart';
+
+import '../widgets/shipify_button.dart';
 
 class SuccessScreen extends StatefulWidget {
   const SuccessScreen({Key? key}) : super(key: key);
@@ -25,7 +28,16 @@ class _SuccessScreenState extends State<SuccessScreen> {
                     Text('Your account has been successfully\ncreated.',style: ThemeStyles.secondaryText,),
                     Image.asset('assets/ic-congratulations.png',),
                     SizedBox(
-                      child: ElevatedButton(onPressed: _onPressed,
+                      child: ShipifyButton(
+                        onPressed: _onPressed,
+                        text: 'Continue',
+                        fontSize: 35,
+                        radius: 15,
+                        backgroundColor: Colors.blue,
+                        color: Colors.white,
+
+                      ),
+                      /*ElevatedButton(onPressed: _onPressed,
                           child: Text('Continue',
                       style: TextStyle(
                         fontSize: 35,
@@ -36,7 +48,7 @@ class _SuccessScreenState extends State<SuccessScreen> {
                           ))
                         ),
 
-                      ),
+                      ),*/
                     ),],
 
             ))
@@ -49,6 +61,6 @@ class _SuccessScreenState extends State<SuccessScreen> {
 
   void _onPressed() {
     Navigator.push(context, MaterialPageRoute(
-        builder: (context)=>SignInScreen()))
+        builder: (context)=>SignInScreen()));
   }
 }

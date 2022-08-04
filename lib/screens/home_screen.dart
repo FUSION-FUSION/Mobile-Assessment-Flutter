@@ -16,20 +16,20 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
         child: Scaffold(
           backgroundColor: Colors.white,
-          body: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/bg-app-cloud.png'),
-                fit: BoxFit.cover
-              )
+          body: Stack(
+            children: [
+              Hero(child: Image.asset('assets/bg-app-cloud.png'), tag: 'bg',),
+              Padding(
+              padding: const EdgeInsets.only(top: 60),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Appbar(),
+                  UserChoice(),
+                ],
+              ),
             ),
-            child: Column(
-              children: [
-                Appbar(),
-                UserChoice(),
-              ],
-            ),
-          ),
+          ],),
         ));
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:mobile_assessment_flutter/screens/success_screen.dart';
 import 'package:mobile_assessment_flutter/themes/theme_styles.dart';
 import 'package:mobile_assessment_flutter/widgets/otp_field.dart';
+import 'package:mobile_assessment_flutter/widgets/shipify_text_button.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({Key? key}) : super(key: key);
@@ -29,8 +30,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 style: ThemeStyles.primaryText,
               ),
               Text(
-                'We sent you an SMS code on\nnumber +2348108960610',
+                'We sent you an ',
                 style: ThemeStyles.secondaryText,
+              ),
+              Text(
+                'SMS',
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -41,9 +48,23 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   OtpField(),
                 ],
               ),
-              IconButton(
-                  onPressed: _onPressed,
-                  icon: Icon(Icons.arrow_forward)),
+              ShipifyTextButton(
+                onPressed: null,
+                text: 'Resend Code',
+                color: Colors.black,
+                fontSize: 20,
+              ),
+              Container(
+                height: 44,
+                width: 44,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: IconButton(
+                    onPressed: _onPressed,
+                    icon: Icon(Icons.arrow_forward)),
+              ),
             ],
           ),
         ),

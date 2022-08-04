@@ -16,6 +16,9 @@ class _OtpFieldState extends State<OtpField> {
             child: TextFormField(
               decoration: const InputDecoration(
                 hintText: '0',
+                border: OutlineInputBorder(
+
+                ),
               ),
               onChanged: (value){
                 if (value.length == 1){

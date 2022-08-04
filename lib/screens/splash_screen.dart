@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'home_screen.dart';
 
 
@@ -11,29 +11,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    load();
-    super.initState();
-  }
+
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-          color: Colors.black,
-          child: Image.asset('assets/splash_logo.png',
-          width: 10,),
-
-      ),
+    return AnimatedSplashScreen(
+      duration: 10,
+      splashTransition: SplashTransition.scaleTransition,
+            splash: Image.asset('assets/splash_logo.png',
+            width: 10,), nextScreen: HomeScreen(),
     );
   }
 
-  void load() async {
-    await Future.delayed(Duration(seconds: 5));
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => HomeScreen()));
-  }
 }

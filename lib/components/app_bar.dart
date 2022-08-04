@@ -12,12 +12,14 @@ class _AppbarState extends State<Appbar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 8.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('What kind of user are\nyou?',
           style: ThemeStyles.primaryText,),
-          Text('We will adapt the app to suit your needs',
+          SizedBox(height: 10),
+          Text('We will adapt the app to suit your\nneeds',
           style: ThemeStyles.secondaryText,),
         ],
 
