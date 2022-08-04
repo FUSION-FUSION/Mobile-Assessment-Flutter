@@ -20,7 +20,10 @@ Widget inputFeild(
     keyboardType}) {
   return col(
     children: [
-      text(label),
+      Padding(
+        padding: const EdgeInsets.only(left: 8.0),
+        child: text(label),
+      ),
       if (label.isNotEmpty) verticalSpace(height: 6),
       TextFormField(
         maxLines: maxLines,
@@ -37,19 +40,19 @@ Widget inputFeild(
               fontWeight: FontWeight.w600,
               fontSize: 16),
           filled: true,
-          fillColor:AppColors.black.withOpacity(.1),
+          fillColor: AppColors.offWhite,
           contentPadding: pad(horiz: 20, vert: 10),
           disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(17),
-            borderSide: BorderSide(color:AppColors.black.withOpacity(.1)),
+            borderSide: BorderSide(color: AppColors.offWhite),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(17),
-            borderSide: BorderSide(color:AppColors.black.withOpacity(.1)),
+            borderSide: BorderSide(color: AppColors.offWhite),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(17),
-            borderSide: BorderSide(color:AppColors.black.withOpacity(.1)),
+            borderSide: BorderSide(color: AppColors.offWhite),
           ),
         ),
         validator: validator,
@@ -69,16 +72,20 @@ Widget phoneFormFeild({
   return Container(
     child: col(
       children: [
-        text(label),
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: text(label),
+        ),
         verticalSpace(height: 6),
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(17),
-            border: Border.all(color: AppColors.black.withOpacity(.1)),
-            color: AppColors.black.withOpacity(.1),
+            border: Border.all(color: AppColors.offWhite),
+            color: AppColors.offWhite,
           ),
           child: InternationalPhoneNumberInput(
             selectorConfig: const SelectorConfig(
+              showFlags: false,
               selectorType: PhoneInputSelectorType.DROPDOWN,
             ),
             textFieldController: controller,
@@ -92,23 +99,24 @@ Widget phoneFormFeild({
                   fontWeight: FontWeight.w600,
                   fontSize: 16),
               filled: true,
-              fillColor: AppColors.black.withOpacity(.1),
+              fillColor: AppColors.offWhite,
               contentPadding: pad(horiz: 20, vert: 10),
               disabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(17),
-                borderSide: BorderSide(color:AppColors.black.withOpacity(.1)),
+                borderSide: BorderSide(color: AppColors.offWhite),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(17),
-                borderSide: BorderSide(color:AppColors.black.withOpacity(.1)),
+                borderSide: BorderSide(color: AppColors.offWhite),
               ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(17),
-                borderSide: BorderSide(color:AppColors.black.withOpacity(.1)),
+                borderSide: BorderSide(color: AppColors.offWhite),
+              ),
             ),
           ),
         ),
-    ),],
+      ],
     ),
   );
 }
@@ -124,7 +132,10 @@ Widget passwordFeild({
 }) {
   return col(
     children: [
-      text(label),
+      Padding(
+        padding: const EdgeInsets.only(left: 8.0),
+        child: text(label),
+      ),
       verticalSpace(height: 3),
       TextFormField(
         inputFormatters: inputFormatters,
@@ -139,10 +150,10 @@ Widget passwordFeild({
           contentPadding: pad(horiz: 12),
           errorMaxLines: 3,
           filled: true,
-          fillColor: AppColors.black.withOpacity(.1),
+          fillColor: AppColors.offWhite,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(17),
-            borderSide: BorderSide(color:AppColors.black.withOpacity(.1)),
+            borderSide: BorderSide(color: AppColors.offWhite),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(17),
@@ -152,5 +163,3 @@ Widget passwordFeild({
     ],
   );
 }
-
-

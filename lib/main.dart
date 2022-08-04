@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
       title: AppInfo.appTitle,
       theme: ThemeData(
         primarySwatch: AppInfo.appPrimarySwatch,
+        scaffoldBackgroundColor: Colors.white,
         textTheme: AppInfo.appTextTheme,
       ),
       home: const SplashScreen(),

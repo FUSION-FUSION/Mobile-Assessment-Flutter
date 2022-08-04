@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^3.0.1
   get: ^4.6.5
   intl_phone_number_input: ^0.7.0+2
+  pin_code_text_field: ^1.8.0
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  To add assets to your application, add an assets section, like this:
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
 

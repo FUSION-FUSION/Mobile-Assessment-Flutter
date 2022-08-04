@@ -25,7 +25,7 @@ Text text(
     overflow: maxLines != null ? TextOverflow.ellipsis : null,
     style: GoogleFonts.lato(
       fontWeight: weight ?? FontWeight.w400,
-      fontSize: size ?? 14,
+      fontSize: size ?? 16,
       color: color ?? AppColors.defTextColor,
     ),
   );
