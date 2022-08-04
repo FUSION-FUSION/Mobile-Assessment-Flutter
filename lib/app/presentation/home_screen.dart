@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_assessment_flutter/app/presentation/tracking.dart';
 import 'package:mobile_assessment_flutter/core/constants.dart';
 import 'package:mobile_assessment_flutter/core/size_config.dart';
 
@@ -42,8 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                           height: getProportionateScreenHeight(29),
                           width: getProportionateScreenWidth(29),
-                          child:
-                              Image.asset('images/ic-notification.png')),
+                          child: Image.asset('images/ic-notification.png')),
                     ],
                   ),
                   SizedBox(
@@ -58,9 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       right: getProportionateScreenWidth(18),
                     ),
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(
-                              'images/bg-dashboard-balance.png'),
+                      image: const DecorationImage(
+                          image: AssetImage('images/bg-dashboard-balance.png'),
                           alignment: Alignment.bottomRight),
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
@@ -166,8 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                   height: getProportionateScreenHeight(14.26),
                                   width: getProportionateScreenWidth(14.26),
-                                  child: Image.asset(
-                                      'images/ic-search.png')),
+                                  child: Image.asset('images/ic-search.png')),
                               SizedBox(
                                 width: getProportionateScreenWidth(9.51),
                               ),
@@ -177,7 +175,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: TextField(
                                   cursorColor: Palette.textColor,
                                   decoration: InputDecoration(
-                                      // contentPadding: EdgeInsets.all(),
                                       hintText: 'Waybill Number',
                                       hintStyle: TextStyle(
                                           color: Palette.searchColor,
@@ -198,17 +195,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                     color: Palette.primaryColor,
                                     borderRadius: BorderRadius.circular(14),
                                   ),
-                                  child: Center(
-                                    child: Text(
-                                      'Track',
-                                      style: TextStyle(
-                                          fontSize: getProportionateScreenWidth(16),
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white,
-                                          fontFamily:
-                                              FontFamily.regular),
-                                    ),
-                                  ),
+                                  child: TextButton(
+                                      onPressed: () {
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    TrackingScreen()));
+                                      },
+                                      child: Text(
+                                        'Track',
+                                        style: TextStyle(
+                                            color: Palette.textFieldColor,
+                                            fontSize:
+                                                getProportionateScreenWidth(16),
+                                            fontFamily: FontFamily.regular,
+                                            fontWeight: FontWeight.w400),
+                                      )),
                                 ),
                               )
                             ],
@@ -239,16 +242,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(42),
-                            right: getProportionateScreenWidth(9.41),
-                            // bottom: getProportionateScreenHeight(11.34)
-                            ),
+                          top: getProportionateScreenHeight(42),
+                          right: getProportionateScreenWidth(9.41),
+                          // bottom: getProportionateScreenHeight(11.34)
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
                             image: DecorationImage(
-                                image: AssetImage(
-                                    'images/ic-road-same-state.png'),
+                                image:
+                                    AssetImage('images/ic-road-same-state.png'),
                                 alignment: Alignment.bottomCenter)),
                         child: Stack(
                           children: [
@@ -320,7 +323,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               alignment: AlignmentDirectional.bottomEnd,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                    bottom: getProportionateScreenHeight(21.34)),
+                                    bottom:
+                                        getProportionateScreenHeight(21.34)),
                                 child: Container(
                                   height: getProportionateScreenHeight(23.18),
                                   width: getProportionateScreenWidth(23.18),
@@ -343,15 +347,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(18.14),
-                            // bottom: getProportionateScreenHeight(6.34)
-                            ),
+                          top: getProportionateScreenHeight(18.14),
+                          // bottom: getProportionateScreenHeight(6.34)
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
                             image: DecorationImage(
-                                image: AssetImage(
-                                    'images/ic-road-interstate.png'),
+                                image:
+                                    AssetImage('images/ic-road-interstate.png'),
                                 alignment: Alignment.bottomCenter)),
                         child: Stack(
                           children: [
@@ -413,14 +417,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-                                
                                 Container(
                                   height: getProportionateScreenHeight(104.07),
                                   width: getProportionateScreenWidth(125.45),
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
-                                    image: AssetImage(
-                                        'images/Delivery Van.png'),
+                                    image:
+                                        AssetImage('images/Delivery Van.png'),
                                     alignment:
                                         AlignmentDirectional.bottomCenter,
                                     fit: BoxFit.cover,
@@ -464,15 +467,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(18.14),
-                            // bottom: getProportionateScreenHeight(6.34)
-                            ),
+                          top: getProportionateScreenHeight(18.14),
+                          // bottom: getProportionateScreenHeight(6.34)
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
                             color: const Color(0xffFDFEFF),
                             image: DecorationImage(
-                                image: AssetImage(
-                                    'images/ic-road-charter.png'),
+                                image: AssetImage('images/ic-road-charter.png'),
                                 alignment: Alignment.bottomCenter)),
                         child: Stack(
                           children: [
@@ -542,8 +544,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: getProportionateScreenWidth(130.81),
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
-                                    image: AssetImage(
-                                        'images/ic-truck.png'),
+                                    image: AssetImage('images/ic-truck.png'),
                                     alignment: AlignmentDirectional.bottomStart,
                                     fit: BoxFit.contain,
                                   )),
@@ -580,17 +581,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: getProportionateScreenWidth(186),
                           alignment: AlignmentDirectional.centerStart,
                           padding: EdgeInsets.only(
-                              top: getProportionateScreenHeight(42),
-                              right: getProportionateScreenWidth(9.41),
-                              // bottom: getProportionateScreenHeight(11.34)
-                              ),
+                            top: getProportionateScreenHeight(42),
+                            right: getProportionateScreenWidth(9.41),
+                            // bottom: getProportionateScreenHeight(11.34)
+                          ),
                           foregroundDecoration: BoxDecoration(
                             backgroundBlendMode: BlendMode.lighten,
                             color: Color(0x38F3F4F5),
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(11.09),
-                           
                             color: Color(0xffF3F4F5),
                           ),
                           child: Stack(
@@ -731,11 +731,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(26),
-                            right: getProportionateScreenWidth(9.41),
-                            left: getProportionateScreenWidth(13.1),
-                            // bottom: getProportionateScreenHeight(11.34)
-                            ),
+                          top: getProportionateScreenHeight(26),
+                          right: getProportionateScreenWidth(9.41),
+                          left: getProportionateScreenWidth(13.1),
+                          // bottom: getProportionateScreenHeight(11.34)
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
                           color: const Color(0xffFDFEFF),
@@ -807,11 +807,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: getProportionateScreenWidth(186),
                         alignment: AlignmentDirectional.centerStart,
                         padding: EdgeInsets.only(
-                            top: getProportionateScreenHeight(26),
-                            right: getProportionateScreenWidth(9.41),
-                            left: getProportionateScreenWidth(13.1),
-                            // bottom: getProportionateScreenHeight(11.34)
-                            ),
+                          top: getProportionateScreenHeight(26),
+                          right: getProportionateScreenWidth(9.41),
+                          left: getProportionateScreenWidth(13.1),
+                          // bottom: getProportionateScreenHeight(11.34)
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(11.09),
                           color: const Color(0xffFDFEFF),

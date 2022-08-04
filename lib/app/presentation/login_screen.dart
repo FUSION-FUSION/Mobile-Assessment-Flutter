@@ -73,10 +73,10 @@ class _LogInScreenState extends State<LogInScreen> {
             alignment: Alignment.center,
             child: BuildButton(
               onPressed: () {
-                // Navigator.pushReplacement(
-                // context,
-                // MaterialPageRoute(
-                //     builder: (context) => LogInScreen()));
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const LogInScreen()));
               },
               buttonText: 'Sign In',
               containerHeight: 71.15,
