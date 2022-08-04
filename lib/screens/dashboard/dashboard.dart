@@ -14,6 +14,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0XFFF8F8FA),
       body: Padding(
         padding: EdgeInsets.only(
           left: Dimensions.sizeWidthPercent(20),
@@ -87,6 +88,7 @@ class Dashboard extends StatelessWidget {
               bold: true,
               color: AppColors.primaryBlack,
             ),
+            SizedBox(height: Dimensions.sizeHeightPercent(13)),
             const PackageGrid()
           ],
         ),
