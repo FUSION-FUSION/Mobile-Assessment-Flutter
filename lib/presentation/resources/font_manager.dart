@@ -14,13 +14,14 @@ class FontWeightManager {
 }
 
 class FontSizeManager {
-  static final double s12 = getHeight(12);
-  static final double s14 = getHeight(14);
-  static final double s13 = getHeight(13);
-  static final double s15 = getHeight(15);
-  static final double s16 = getHeight(16);
-  static final double s17 = getHeight(17);
-  static final double s18 = getHeight(18);
-  static final double s19 = getHeight(19);
-  static final double s20 = getHeight(20);
+  static const double s12 = 12;
+  static const double s14 = 14;
+  static const double s13 = 13;
+  static const double s15 = 15;
+  static const double s16 = 16;
+  static const double s17 = 17;
+  static const double s18 = 18;
+  static const double s19 = 19;
+  static const double s20 = 20;
+  static const double s75 = 75;
 }

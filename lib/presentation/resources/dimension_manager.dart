@@ -1,17 +1,17 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-final double screenHeight = Get.context!.height;
-final double screenWidth = Get.context!.width;
-// final double screenDrawerWidth= Get.context!
+double getScreenHeight = Get.context!.size!.height;
+double getScreenWidth = Get.context!.width;
 
 double getHeight(double convertHeight) {
   const figmaDesignHeight = 926;
   double newScreenHeight = figmaDesignHeight / convertHeight;
-  return screenHeight / newScreenHeight;
+  return getScreenHeight / newScreenHeight;
 }
 
 double getWidth(double convertWidth) {
   const figmaDesignWidth = 428;
   double newScreenWidth = figmaDesignWidth / convertWidth;
-  return screenWidth / newScreenWidth;
+  return getScreenWidth / newScreenWidth;
 }

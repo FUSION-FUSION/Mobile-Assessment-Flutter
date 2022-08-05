@@ -27,18 +27,18 @@ class RouteManager {
   static const String onTrackingThreeRoute = '/tracking_three';
 
   //  route functions
-  static goTosplashRoute() => splashRoute;
-  static goToOnboardingRoute() => onBoardRoute;
-  static goToLoginRoute() => onLoginRoute;
-  static goToRegPersonalRoute() => onRegisterPersonalRoute;
-  static goToRegEcommerceRoute() => onRegisterEcommerenceRoute;
-  static goToRegSuccesRoute() => onRegisterSuccessRoute;
-  static goToHomeRoute() => onHomeRoute;
-  static goToVerificationGoingRoute() => onVerificationGoingRoute;
-  static goToVerificationExpiredRoute() => onVerificationRExpiredRoute;
-  static goToTrackingOneRoute() => onTrackingOneRoute;
-  static goToTrackingTwoRoute() => onTrackingTwoRoute;
-  static goToTrackingThreeRoute() => onTrackingThreeRoute;
+  static String goToOnboardingRoute() => onBoardRoute;
+  static String goTosplashRoute() => splashRoute;
+  static String goToLoginRoute() => onLoginRoute;
+  static String goToRegPersonalRoute() => onRegisterPersonalRoute;
+  static String goToRegEcommerceRoute() => onRegisterEcommerenceRoute;
+  static String goToRegSuccesRoute() => onRegisterSuccessRoute;
+  static String goToHomeRoute() => onHomeRoute;
+  static String goToVerificationGoingRoute() => onVerificationGoingRoute;
+  static String goToVerificationExpiredRoute() => onVerificationRExpiredRoute;
+  static String goToTrackingOneRoute() => onTrackingOneRoute;
+  static String goToTrackingTwoRoute() => onTrackingTwoRoute;
+  static String goToTrackingThreeRoute() => onTrackingThreeRoute;
 
 // list of route
   static List<GetPage> routes = [

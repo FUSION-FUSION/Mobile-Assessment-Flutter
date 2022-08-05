@@ -8,24 +8,25 @@ ThemeData getApplicationTheme() {
   return ThemeData(
     // main color of the app
     primaryColor: ColorManager.primary,
-    primaryColorLight: ColorManager.darkGrey,
-    primaryColorDark: ColorManager.darkPrimary,
-    disabledColor: ColorManager.grey1,
-    accentColor: ColorManager.grey,
+    primaryColorLight: ColorManager.primary,
+
+    disabledColor: ColorManager.lightBlue,
+    accentColor: ColorManager.lightBlue,
+    fontFamily: 'ConcertOne',
     // card view  theme
     cardTheme: CardTheme(
       color: ColorManager.white,
       elevation: AppSize.s4,
-      shadowColor: ColorManager.grey,
+      shadowColor: Colors.grey,
     ),
     // ripple
-    shadowColor: ColorManager.primaryOpacity70,
+    shadowColor: Colors.grey,
     //  button view theme
     buttonTheme: ButtonThemeData(
       buttonColor: ColorManager.primary,
-      disabledColor: ColorManager.grey1,
+      disabledColor: ColorManager.white,
       shape: StadiumBorder(),
-      splashColor: ColorManager.primaryOpacity70,
+      splashColor: ColorManager.lightBlue,
     ),
     //  elevated button
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -47,7 +48,7 @@ ThemeData getApplicationTheme() {
       elevation: AppSize.s4,
       color: ColorManager.primary,
       centerTitle: true,
-      shadowColor: ColorManager.primaryOpacity70,
+      shadowColor: Colors.grey,
       titleTextStyle: getRegularTextStyle(
         color: ColorManager.white,
         fontSize: FontSizeManager.s16,
@@ -57,11 +58,11 @@ ThemeData getApplicationTheme() {
 
     textTheme: TextTheme(
       headline1: getSemiBoldTextStyle(
-        color: ColorManager.darkGrey,
+        color: ColorManager.textcolor,
         fontSize: FontSizeManager.s16,
       ),
       subtitle1: getMediumTextStyle(
-        color: ColorManager.lightGrey,
+        color: ColorManager.textcolor,
         fontSize: FontSizeManager.s14,
       ),
       subtitle2: getMediumTextStyle(
@@ -69,11 +70,11 @@ ThemeData getApplicationTheme() {
         fontSize: FontSizeManager.s14,
       ),
       caption: getRegularTextStyle(
-        color: ColorManager.grey,
+        color: ColorManager.textcolor,
         fontSize: FontSizeManager.s12,
       ),
       bodyText1: getRegularTextStyle(
-        color: ColorManager.grey,
+        color: ColorManager.textcolor,
         fontSize: FontSizeManager.s12,
       ),
     ),
@@ -82,11 +83,11 @@ ThemeData getApplicationTheme() {
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: EdgeInsets.all(AppPadding.p8),
       hintStyle: getRegularTextStyle(
-        color: ColorManager.grey1,
+        color: ColorManager.textcolor,
         fontSize: FontSizeManager.s12,
       ),
       labelStyle: getRegularTextStyle(
-        color: ColorManager.darkGrey,
+        color: ColorManager.textcolor,
         fontSize: FontSizeManager.s12,
       ),
       errorStyle: getRegularTextStyle(
@@ -94,7 +95,8 @@ ThemeData getApplicationTheme() {
         fontSize: FontSizeManager.s12,
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: ColorManager.grey, width: AppSize.s1_5),
+        borderSide:
+            BorderSide(color: ColorManager.lightBlue, width: AppSize.s1_5),
         borderRadius: const BorderRadius.all(
           Radius.circular(AppSize.s8),
         ),
