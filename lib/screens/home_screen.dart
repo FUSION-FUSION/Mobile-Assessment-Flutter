@@ -639,11 +639,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               right: getScreenWidth(9.41),
                               bottom: getScreenHeight(11.34)),
                           foregroundDecoration: BoxDecoration(
-                            backgroundBlendMode: BlendMode.saturation,
                             color: Color(0x38F3F4F5),
                           ),
                           decoration: BoxDecoration(
-                              backgroundBlendMode: BlendMode.srcATop,
                               borderRadius: BorderRadius.circular(11.09),
                               color: Color(0x98F3F4F5)),
                           child: Align(
